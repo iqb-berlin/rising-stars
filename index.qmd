@@ -23,7 +23,7 @@ Dieser Webauftritt basiert auf Texten in einer einfachen Syntax [Markdown](https
 
 # Kontakt
 
-Anmerkungen Für die Inhalte dieser Webseite ist  [Martin Mechtel](mailto:mechtel@iqb.hu-berlin.de) richten.
+Hinweise und Anmerkungen richten Sie bitte an [Martin Mechtel](mailto:mechtel@iqb.hu-berlin.de).
 
 **Postanschrift**
 
