@@ -1,0 +1,1 @@
+This repo holds all files to create the static website [iqb-berlin.github.io/rising-stars](https://iqb-berlin.github.io/rising-stars).

@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  page-navigation: false
+  back-to-top-navigation: true
+  site-url: https://iqb-berlin.github.io/rising-stars
+  favicon: assets/favicon.ico
+  repo-url: https://github.com/iqb-berlin/rising-stars
+  title: "IQB-StarS"
+  navbar:
+    pinned: true
+    search: true
+    logo: assets/iqb-logo-grey.png
+  page-footer:
+    border: true
+    background: light
+    right:
+      - text: "IQB 2025"
+        href: https://www.iqb.hu-berlin.de
+    left:
+      - href: index.qmd
+        text: "{{< fa house >}}"
+
+format:
+  html:
+    theme: cyborg
+    anchor-sections: true
+    link-external-newwindow: true
+    
