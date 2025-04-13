@@ -1,0 +1,34 @@
+---
+lang: de
+title: Studie - Survey
+description: Begriffe und Datenstrukturen
+---
+
+# Studie - Survey
+
+Im Englischen steht "Survey" für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch "Studie" als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: Feststellung des Leistungsniveaus und Befragungen im Bildungswesen.
+
+```{mermaid}
+stateDiagram-v2
+    sc: Survey Content
+    td: Testtakers
+    tr: Run Test
+    cr: Code Responses
+    ra: Run Analyses
+
+    sc --> tr
+    td --> tr
+    sc --> cr
+    tr --> cr
+    sc --> ra
+    cr --> ra
+    ra --> [*]
+```
+
+# Survey Content
+
+Als Inhalte für eine Studie gelten alle Materialien und Daten, die unabhängig von konkreten Personen bereitgestellt werden. Das Modell geht hier von einem Content Provider aus: Eine Institution oder Firma stellt Inhalte bereit, mit denen Studien durchgeführt werden **KÖNNEN**. Ob und wann und wozu genau diese Studie dann durchgeführt wird, ist unbekannt.
+
+Die Inhalte sind folgendermaßen gegliedert:
+
+* 
