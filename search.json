@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "survey/index.html",
+    "href": "survey/index.html",
+    "title": "Studie - Survey",
+    "section": "",
+    "text": "Studie - Survey\nIm Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch “Studie” als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: Feststellung des Leistungsniveaus und Befragungen im Bildungswesen.\n\n\n\n\n\nstateDiagram-v2\n    sc: Survey Content\n    td: Testtakers\n    tr: Run Test\n    cr: Code Responses\n    ra: Run Analyses\n\n    sc --&gt; tr\n    td --&gt; tr\n    sc --&gt; cr\n    tr --&gt; cr\n    sc --&gt; ra\n    cr --&gt; ra\n    ra --&gt; [*]\n\n\n\n\n\n\n\n\nSurvey Content\nAls Inhalte für eine Studie gelten alle Materialien und Daten, die unabhängig von konkreten Personen bereitgestellt werden. Das Modell geht hier von einem Content Provider aus: Eine Institution oder Firma stellt Inhalte bereit, mit denen Studien durchgeführt werden KÖNNEN. Ob und wann und wozu genau diese Studie dann durchgeführt wird, ist unbekannt.\nDie Inhalte sind folgendermaßen gegliedert:\n\n\n\n\n\n\n\n Zurück nach oben"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "StarS",
