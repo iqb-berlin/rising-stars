@@ -1,5 +1,45 @@
 [
   {
+    "objectID": "survey/concepts.html",
+    "href": "survey/concepts.html",
+    "title": "Konzepte",
+    "section": "",
+    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\n2.5 CAWI (Computerunterstütztes Web-Interview) https://w3id.org/iqb/v85/v2/13\n5.2.1 Laborbeobachtung teilnehmend https://w3id.org/iqb/v85/v2/22\n12.1.2 Computerbasierter Test https://w3id.org/iqb/v85/v2/28\n\n\n\n\n\n\nZiele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte: https://w3id.org/iqb/v87/cq/; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)\n\n\n\n\n\n\nBeobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen",
+    "crumbs": [
+      "Konzepte"
+    ]
+  },
+  {
+    "objectID": "survey/concepts.html#allgemein",
+    "href": "survey/concepts.html#allgemein",
+    "title": "Konzepte",
+    "section": "",
+    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\n2.5 CAWI (Computerunterstütztes Web-Interview) https://w3id.org/iqb/v85/v2/13\n5.2.1 Laborbeobachtung teilnehmend https://w3id.org/iqb/v85/v2/22\n12.1.2 Computerbasierter Test https://w3id.org/iqb/v85/v2/28",
+    "crumbs": [
+      "Konzepte"
+    ]
+  },
+  {
+    "objectID": "survey/concepts.html#befragung",
+    "href": "survey/concepts.html#befragung",
+    "title": "Konzepte",
+    "section": "",
+    "text": "Ziele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte: https://w3id.org/iqb/v87/cq/; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)",
+    "crumbs": [
+      "Konzepte"
+    ]
+  },
+  {
+    "objectID": "survey/concepts.html#beobachtung-oder-leistungstest",
+    "href": "survey/concepts.html#beobachtung-oder-leistungstest",
+    "title": "Konzepte",
+    "section": "",
+    "text": "Beobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen",
+    "crumbs": [
+      "Konzepte"
+    ]
+  },
+  {
     "objectID": "survey/index.html",
     "href": "survey/index.html",
     "title": "Studie - Survey",

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/concepts.html</loc>
+    <lastmod>2025-04-16T05:31:01.564Z</lastmod>
+  </url>
+  <url>
     <loc>https://iqb-berlin.github.io/rising-stars/survey/index.html</loc>
-    <lastmod>2025-04-13T20:41:58.517Z</lastmod>
+    <lastmod>2025-04-16T05:31:01.564Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-berlin.github.io/rising-stars/index.html</loc>
-    <lastmod>2025-04-13T20:41:58.517Z</lastmod>
+    <lastmod>2025-04-16T05:31:01.563Z</lastmod>
   </url>
 </urlset>
