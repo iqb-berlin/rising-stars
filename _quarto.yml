@@ -2,12 +2,12 @@ project:
   type: website
 
 website:
-  page-navigation: true
   back-to-top-navigation: true
   site-url: https://iqb-berlin.github.io/rising-stars
   favicon: assets/favicon.ico
   repo-url: https://github.com/iqb-berlin/rising-stars
   title: StarS
+  page-navigation: true
   navbar:
     pinned: true
     search: true
@@ -30,7 +30,8 @@ website:
 
 format:
   html:
-    theme: lumen
+    theme: yeti
     anchor-sections: true
+    link-external-icon: true
     link-external-newwindow: true
-    
+    toc: true
