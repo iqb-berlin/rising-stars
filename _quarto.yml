@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  page-navigation: false
+  page-navigation: true
   back-to-top-navigation: true
   site-url: https://iqb-berlin.github.io/rising-stars
   favicon: assets/favicon.ico
@@ -21,10 +21,16 @@ website:
     left:
       - href: index.qmd
         text: "{{< fa house >}}"
+  sidebar: 
+    style: "docked"
+    search: true
+    lang: de
+    contents:
+      - href: survey/concepts.qmd
 
 format:
   html:
-    theme: cyborg
+    theme: lumen
     anchor-sections: true
     link-external-newwindow: true
     
