@@ -38,26 +38,31 @@ Diese Datenstruktur befindet sich in Vorbereitung.
 
 ```{mermaid}
 flowchart TD
+    classDef insurveybox fill:white,stroke:black
+    classDef others fill:#cff,stroke:black
+    linkStyle default stroke:black,stroke-width:2px,color:black;
+
     subgraph s[Survey]
-        s1[Metadaten]
-        s2[Booklet-Liste]
-        s3[Kodierung]
-        s4[Datenanalyse]
-        s5[Feedback]
+        s1[Metadaten]:::insurveybox
+        s2[Booklet-Liste]:::insurveybox
+        s3[Kodierung]:::insurveybox
+        s4[Datenanalyse]:::insurveybox
+        s5[Feedback]:::insurveybox
     end
+    style s fill:#cff,stroke:black
 
-    s --> Booklet1
-    s --> Booklet2
-    s --> Booklet3
+    s --> Booklet1:::others
+    s --> Booklet2:::others
+    s --> Booklet3:::others
 
-    Booklet1 --> Unit1
-    Booklet1 --> Unit2
-    Booklet1 --> Unit3
+    Booklet1 --> Unit1:::others
+    Booklet1 --> Unit2:::others
+    Booklet1 --> Unit3:::others
     Booklet2 --> Unit3
-    Booklet2 --> Unit4
-    Booklet2 --> Unit5
+    Booklet2 --> Unit4:::others
+    Booklet2 --> Unit5:::others
     Booklet3 --> Unit5
-    Booklet3 --> Unit6
+    Booklet3 --> Unit6:::others
 
 ```
 
