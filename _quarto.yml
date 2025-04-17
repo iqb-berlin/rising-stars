@@ -26,8 +26,17 @@ website:
     search: true
     lang: de
     contents:
-      - href: survey/concepts.qmd
-
+      - section: Überblick
+        href: survey/index.qmd
+        contents:
+          - text: Testtakers festlegen
+          - href: survey/content.qmd
+          - text: Test durchführen
+          - text: Antworten kodieren
+          - text: Daten analysieren
+          - text: Individuelles Feedback
+          - text: Aggregiertes Feedback
+      
 format:
   html:
     theme: yeti
