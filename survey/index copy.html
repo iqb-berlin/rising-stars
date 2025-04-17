@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Begriffe und allgemeine Datenstrukturen">
 
-<title>Konzepte – StarS</title>
+<title>Überblick – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Suchen"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -96,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Konzepte</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Überblick</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -161,12 +165,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#art-der-studien-und-verfahren" id="toc-art-der-studien-und-verfahren" class="nav-link active" data-scroll-target="#art-der-studien-und-verfahren">Art der Studien und Verfahren</a>
+  <li><a href="#ziele" id="toc-ziele" class="nav-link active" data-scroll-target="#ziele">Ziele</a>
   <ul class="collapse">
-  <li><a href="#allgemein" id="toc-allgemein" class="nav-link" data-scroll-target="#allgemein">Allgemein</a></li>
-  <li><a href="#befragung" id="toc-befragung" class="nav-link" data-scroll-target="#befragung">Befragung</a></li>
-  <li><a href="#beobachtung-oder-leistungstest" id="toc-beobachtung-oder-leistungstest" class="nav-link" data-scroll-target="#beobachtung-oder-leistungstest">Beobachtung oder Leistungstest</a></li>
+  <li><a href="#testpopulation" id="toc-testpopulation" class="nav-link" data-scroll-target="#testpopulation">Testpopulation</a></li>
+  <li><a href="#nützliche-erkenntnisse" id="toc-nützliche-erkenntnisse" class="nav-link" data-scroll-target="#nützliche-erkenntnisse">Nützliche Erkenntnisse</a></li>
+  <li><a href="#präsentation" id="toc-präsentation" class="nav-link" data-scroll-target="#präsentation">Präsentation</a></li>
   </ul></li>
+  <li><a href="#verfahren" id="toc-verfahren" class="nav-link" data-scroll-target="#verfahren">Verfahren</a>
+  <ul class="collapse">
+  <li><a href="#testtakers-definieren" id="toc-testtakers-definieren" class="nav-link" data-scroll-target="#testtakers-definieren">Testtakers definieren</a></li>
+  </ul></li>
+  <li><a href="#survey-content" id="toc-survey-content" class="nav-link" data-scroll-target="#survey-content">Survey Content</a></li>
   </ul>
 </nav>
     </div>
@@ -175,9 +184,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Konzepte</h1>
+<h1 class="title">Überblick</h1>
 </div>
 
+<div>
+  <div class="description">
+    Begriffe und allgemeine Datenstrukturen
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -192,83 +206,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="art-der-studien-und-verfahren" class="level1">
-<h1>Art der Studien und Verfahren</h1>
-<section id="allgemein" class="level2">
-<h2 class="anchored" data-anchor-id="allgemein">Allgemein</h2>
+<p>Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch “Studie” als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: Feststellung des Leistungsniveaus und Befragungen im Bildungswesen.</p>
+<section id="ziele" class="level1">
+<h1>Ziele</h1>
+<p>Am Anfang einer Studie steht stets das Ziel: Über eine bestimmte <em>Testpopulation</em> sollen <em>nützliche Erkenntnisse</em> gesammelt und bestimmten Zielpersonen <em>präsentiert</em> werden.</p>
+<section id="testpopulation" class="level2">
+<h2 class="anchored" data-anchor-id="testpopulation">Testpopulation</h2>
 <ul>
-<li>Zuordnung der Items
+<li>Im Bildungskontext sind dies vor allem <strong>Schüler*innen</strong> bestimmter Alters- bzw. Klassenstufen.</li>
+<li>Weiterhin sind oft die <strong>Lehrkräfte</strong> Gegenstand der Erhebung. Erkenntnisse über Einstellungen, Methoden und Arbeitsumstände können wichtige Anregungen liefern.</li>
+<li>In einigen Studien werden auch <strong>Eltern</strong> befragt, um häusliche Entwicklungs- bzw. Lernumgebungen zu erfassen und in die Auswertung einfließen zu lassen.</li>
+<li>Schulleitung und Bildungsadministration können ebenfalls einbezogen werden.</li>
+</ul>
+<p>Aus Sicht der Datenmodellierung sind folgende Punkte zu beachten:</p>
 <ul>
-<li>Markierung über Metadaten (Item oder Unit)</li>
-<li>explizite Liste (Item oder Unit)</li>
+<li>Die Testpopulation ist die Erhebungseinheit. Sie ist entweder direkt aktiv im Erhebungsprozess oder ihre Kompetenzen/Fähigkeiten werden von anderen über Beobachtungen oder Interviews erfasst. Im zweiten Fall sind auch die Einflüsse der Beobachter/Interviewer einzubeziehen.</li>
+<li>Personenmerkmale sind von herausragender Bedeutung für die Datenauswertung. Darüber werden Hypothesen geprüft und Handlungswissen abgeleitet. Beispiele:
+<ul>
+<li>Geschlecht</li>
+<li>Sozioökonomischer Status</li>
+<li>geografisch/administrative Zuordnung (Land, Bezirk, Gemeinde usw.)</li>
+<li>Art/Typ des Schulträgers</li>
+<li>Schulform usw.</li>
 </ul></li>
-<li>Erhebungsverfahren https://w3id.org/iqb/v85/v2/
-<ul>
-<li><a href="https://w3id.org/iqb/v85/v2/13">CAWI</a> (Computerunterstütztes Web-Interview)</li>
-<li><a href="https://w3id.org/iqb/v85/v2/22">Laborbeobachtung teilnehmend</a></li>
-<li><a href="https://w3id.org/iqb/v85/v2/28">Computerbasierter Test</a></li>
-</ul></li>
+<li>Personenmerkmale werden oft extern zugeführt, auch indirekt. Beispielsweise kann für eine Schule ein sozioökonomischer Index verfügbar sein, der dann auf alle Schüler*innen der Schule übertragen wird.</li>
 </ul>
 </section>
-<section id="befragung" class="level2">
-<h2 class="anchored" data-anchor-id="befragung">Befragung</h2>
-<ul>
-<li>Ziele
-<ul>
-<li>Klassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)</li>
-<li>Evaluation</li>
-<li>Feedback an Survey Authority</li>
-<li>Erhebung Testteilnahme-Motivation für Wichtung der Beantwortung</li>
-</ul></li>
-<li>Kodierung
-<ul>
-<li>automatische Kodierung</li>
-<li>nicht alles wird kodiert (freie Kommentare)</li>
-</ul></li>
-<li>Auswertung
-<ul>
-<li>Achtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal</li>
-<li>Erhebungswerte können zu Skalen aggregiert werden (<a href="https://w3id.org/iqb/v87/cq/">Konstrukte</a>; wie Skalenbildung?)</li>
-</ul></li>
-<li>Rückmeldedaten
-<ul>
-<li>Häufigkeiten</li>
-<li>ordinale Skalen (Abstände nicht interpretierbar)</li>
-</ul></li>
-</ul>
+<section id="nützliche-erkenntnisse" class="level2">
+<h2 class="anchored" data-anchor-id="nützliche-erkenntnisse">Nützliche Erkenntnisse</h2>
+<p>Die Erhebungen im Bildungssektor sind darauf ausgerichtet, allgemein zur Verbesserung der Tätigkeit der Beteiligten und der Rahmenbedingungen beizutragen. Die Quelle dafür ist die Ermittlung eines Leistungsstandes und der anschließende Vergleich: mit ähnlicher Population (Nachbarschule, innerhalb Klasse, anderes Land), mit Werten des Vorjahres derselben Person oder mit einer Norm (z. B. Bildungsstandards). Zusammen mit Personenmerkmalen und in Auseinandersetzung mit dem Erhebungsverfahren können Beziehungen konstruiert und damit Einflussfaktoren identifiziert werden.</p>
 </section>
-<section id="beobachtung-oder-leistungstest" class="level2">
-<h2 class="anchored" data-anchor-id="beobachtung-oder-leistungstest">Beobachtung oder Leistungstest</h2>
+<section id="präsentation" class="level2">
+<h2 class="anchored" data-anchor-id="präsentation">Präsentation</h2>
+<p>Um eine Wirksamkeit des Verfahrens zu erreichen, muss die Verwertung der Erkenntnisse bereits zu einem frühen Stadium der Planung berücksichtigt werden. Die theoretische Nützlichkeit der Erkenntnisse reicht nicht aus, sondern die Präsentation gegenüber einer Zielgruppe (Lehrkräfte, Bildungsadministration) muss zu praktisch umsetzbaren Fortschritten führen. Daher (a) ist die Gestaltung der Rückmeldung ein wesentlicher Erfolgsfaktor der Erhebung und (b) können passende Materialien oder Links zu Beginn der Erhebung mit entwickelt und entsprechend über Metadaten nutzbar gemacht werdne.</p>
+</section>
+</section>
+<section id="verfahren" class="level1">
+<h1>Verfahren</h1>
+<p>Die folgende Darstellung bildet die Grundlage der folgenden Modellierungen. Jedes</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">stateDiagram-v2
+    classDef test fill:#6ff,stroke:black
+    classDef others fill:#cff,stroke:black
+    td: Testtakers definieren
+    class td others
+    sc: Survey Content erstellen
+    class sc others
+    tr: Test durchführen
+    class tr test
+    cr: Antworten kodieren
+    class cr others
+    ra: Daten analysieren
+    class ra others
+    fb1: Feedback an Individuen+Testgruppe
+    class fb1 others
+    fb2: Aggregiertes Feedback an Adminstration
+    class fb2 others
+
+    td --&gt; tr
+    sc --&gt; tr
+    tr --&gt; cr
+    cr --&gt; ra
+    ra --&gt; fb1
+    ra --&gt; fb2
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="testtakers-definieren" class="level2">
+<h2 class="anchored" data-anchor-id="testtakers-definieren">Testtakers definieren</h2>
+</section>
+</section>
+<section id="survey-content" class="level1">
+<h1>Survey Content</h1>
+<p>Als Inhalte für eine Studie gelten alle Materialien und Daten, die unabhängig von konkreten Personen bereitgestellt werden. Das Modell geht hier von einem Content Provider aus: Eine Institution oder Firma stellt Inhalte bereit, mit denen Studien durchgeführt werden <strong>KÖNNEN</strong>. Ob und wann und wozu genau diese Studie dann durchgeführt wird, ist unbekannt.</p>
+<p>Die Inhalte sind folgendermaßen gegliedert:</p>
 <ul>
-<li>Beobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d.&nbsp;h. die Erhebungseinheit führt den Leistungstest nicht selbst durch</li>
-<li>Ziel
-<ul>
-<li>Feststellung relatives Leistungsniveau</li>
-<li>isoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)</li>
-</ul></li>
-<li>Kodierung
-<ul>
-<li>automatisch</li>
-<li>manuell zentral</li>
-<li>manuell dezentral durch Lehrkräfte</li>
-</ul></li>
-<li>Auswertung
-<ul>
-<li>Summe der Item-Scores pro Testheft und (Sub-)Domäne</li>
-<li>Schätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik</li>
-</ul></li>
-<li>Rückmeldedaten
-<ul>
-<li>Vergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm</li>
-<li>Score-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)</li>
-<li>IRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell</li>
-<li>individuelle Rückmeldung zeigt Score pro Item an</li>
-<li>Gruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen</li>
-</ul></li>
+<li></li>
 </ul>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->

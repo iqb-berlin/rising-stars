@@ -1,50 +1,153 @@
 [
   {
+    "objectID": "survey/content.html",
+    "href": "survey/content.html",
+    "title": "Survey Content",
+    "section": "",
+    "text": "Die Frage-Einheiten eines Test oder einer Befragung, die die für die Auswertung relevanten Antworten erzeugen, sind gruppiert in Units. Dieser eigentlich nichtssagende Begriff steht außerdem für Seiten mit Sonderfunktion, die später nicht ausgewertet werden: Begrüßung, Danksagung am Ende, einführende Worte vor einem Block etc. oder Trainingseinheiten zum Kennenlernen der Antwortformate. Dass diese Seiten mit Sonderfunktion technisch wie Units mit Antworten behandelt werden, ist der Vereinfachung der Testablaufsteuerung geschuldet. Nachfolgend werden allerdings nur Units behandelt, die Antwortdaten liefern für die Auswertung.\nEine Unit soll möglichst unabhängig von anderen Units und auch von der konkreten Position innerhalb des Testablaufes sein. Dies ist für viele Auswertungsmodelle eine Voraussetzung. Außerdem vereinfacht dies das Management.\nFolgende Daten enthält eine Unit:\n\ndefinition: Daten zur Darstellung und zur Festlegung der Interaktion während der Beantwortung. Hier muss auch ein player festgelegt sein (Verona-Modul, das die Unitdefinition auswertet und im Test darstellt). Für eine Unitdefinition gibt es keine übergreifende Spezifizierung. Technisch handelt es sich um Strings.\nmetadata: Metadaten, die keine technische Bedeutung haben, sondern nur der Kategorisierung bei Auswertung und Anzeige dienen. Wie Werte für Metadaten gespeichert werden, ist hier spezifiziert.\ncoding-scheme: Das Kodierschema legt fest, wie eine Antwort kodiert werden soll. Als Antwort wird hier die kleinste erfassbare Eingabe der Testperson verstanden oder auch ein Zustand (Fortschritt der Audiosequenz) und heißt in den Daten Variable. Die Vorschrift kann als Regel hinterlegt werden - dann erfolgt eine automatische Kodierung. Sie kann aber auch als Instruktion (Text, Bild) gespeichert sein zur Anzeige bei der manuellen Kodierung. Um einen Wert für ein Item (Analyse-Bewertungsebene) zu liefern, können neue Variablen abgeleitet werden, d. h. ein Itemwert kann das Ergebnis der Kodierung mehrerer Antworten sein. Die Datenstruktur eines Kodierschemas ist hier spezifiziert und hier beschrieben.\nitems: Eine oder mehrere Antworten führen zur Ebene, die eine Bewertung ermöglicht. Das bedeutet, dass der Itemwert (i.d.R. 0/1/missing) erst nach der Kodierung zur Verfügung steht. Ein Item hat außerdem Metadaten, zusätzlich zu den Unit-Metadaten. Diese betreffen die Zuordnung zu Kategorien für Anzeige und Auswertung sowie numerische Werte für die Datenanalyse (z. B. Schwierigkeit). Wie Werte für Metadaten gespeichert werden, ist hier spezifiziert.\n\nSämtliche Daten einer Unit sind in einer Datenstruktur zusammengefasst. Es handelt sich um eine XML-Datei ggf. mit ergänzenden Dateien und Abhängigkeiten. Es ist eine Spezifikation(XSD-Datei) verfügbar sowie eine Erläuterung/Kurzdokumentation.",
+    "crumbs": [
+      "Überblick",
+      "Survey Content"
+    ]
+  },
+  {
+    "objectID": "survey/content.html#id",
+    "href": "survey/content.html#id",
+    "title": "Survey Content",
+    "section": "ID",
+    "text": "ID\nEine Studie hat eine eindeutige ID (w3id) und einen Namen.",
+    "crumbs": [
+      "Überblick",
+      "Survey Content"
+    ]
+  },
+  {
+    "objectID": "survey/content.html#metadaten",
+    "href": "survey/content.html#metadaten",
+    "title": "Survey Content",
+    "section": "Metadaten",
+    "text": "Metadaten\nDie Studie hat Metadaten, die über ein Profil festgelegt sind. Wie Werte für Metadaten gespeichert werden, ist hier spezifiziert. Neben einer Kurzbeschreibung, dem/der Owner/Maintainer, dem Zeitpunkt der Veröffentlichung sind hier folgende Informationen zu finden:\n\nKonstrukte: Die Studie erfasst konkrete Daten, die bestimmten Domänen bzw. inhaltlichen Bereichen zugeordnet werden. Wer auf der Suche nach einer passenden Studie ist, wird sich zuerst hier orientieren. Zur Darstellung werden folgende Vokabulare genutzt: Fragebogen-Konstrukte und Konstrukte für Leistungstests.\nTestpopulation: Es ist eine Beschreibung erforderlich, für welchen Personenkreis die Studieninhalte gedacht sind. Im Bildungskontext sind dies vor allem Schüler*innen bestimmter Alters- bzw. Klassenstufen, aber auch Lehrkräfte, Eltern, Schulleitung und Bildungsadministration. Zur Darstellung wird dieses Vokabular genutzt.\nErhebungsverfahren: Für die Administration eines Tests muss das Erhebungsverfahren (z. B. nach diesem Vokabular) bekannt sein. Für die hier beschriebenen Studien kommen CAWI (Computerunterstütztes Web-Interview), ‘Laborbeobachtung teilnehmend’ oder ‘Computerbasierter Test’ in Frage.",
+    "crumbs": [
+      "Überblick",
+      "Survey Content"
+    ]
+  },
+  {
+    "objectID": "survey/content.html#booklets-1",
+    "href": "survey/content.html#booklets-1",
+    "title": "Survey Content",
+    "section": "Booklets",
+    "text": "Booklets\nEs sind alle Booklets der Studie aufgeführt und dazu auch jeweils Metadaten, aus denen die Unterschiede der Booklets deutlich werden. Es handelt sich also um ID, Titel/Name, Bearbeitszeit, notwendige/erlaubte Hilfsmittel, Hinweise zur Administration.",
+    "crumbs": [
+      "Überblick",
+      "Survey Content"
+    ]
+  },
+  {
+    "objectID": "survey/content.html#kodierung",
+    "href": "survey/content.html#kodierung",
+    "title": "Survey Content",
+    "section": "Kodierung",
+    "text": "Kodierung\nFür die Planung der Kodierung ist der Anteil der automatisch kodierbaren Variablen angegeben. Für die manuelle Kodierung ist angegeben, ob bzw. in welchem Maße ein Replay (Anzeige der Unit mit den Antworten der Testperson) für die Kodierung erforderlich ist.",
+    "crumbs": [
+      "Überblick",
+      "Survey Content"
+    ]
+  },
+  {
+    "objectID": "survey/content.html#datenanalyse",
+    "href": "survey/content.html#datenanalyse",
+    "title": "Survey Content",
+    "section": "Datenanalyse",
+    "text": "Datenanalyse\nDa meist mehrere Skalen für verschiedene (Sub-)Domänen gebildet werden, muss es möglich sein, die Items den (Sub-)Domänen zuzuordnen. Das kann auf zwei Wege geschehen:\n\nexplizite Nennung der Items\nAufzählung von Metadaten, die auf Item- oder Unitebene verfügbar sind\n\nEs ist angegeben, welche numerischen Werte die Personenfähigkeit repräsentieren:\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik unter Verwendung der Itemkennwerte",
+    "crumbs": [
+      "Überblick",
+      "Survey Content"
+    ]
+  },
+  {
+    "objectID": "survey/content.html#feedback",
+    "href": "survey/content.html#feedback",
+    "title": "Survey Content",
+    "section": "Feedback",
+    "text": "Feedback\nOb bei der Durchführung der Studie Vergleiche mit ähnlicher Population oder mit Werten des Vorjahres derselben Person vorgesehen sind, wird im Survey Content Package nicht festgelegt. Es werden aber Bezüge vorgeschlagen zur Interpretation:\n\nVorgabe einer Norm: Dies ist erforderlich, wenn die Schätzung der Personenfähigkeit nicht über IRT erfolgt. Dann muss für jedes Testheft ein Normwert mitgeteilt werden, an dem sich die Darstellung der Ergebniswerte orientiert.\nVorgabe von Ordinalskalen: Der numerische Wert der Personenfähigkeit kann übersetzt werden auf eine ordinale Skale. Das können beispielsweise die Kompetenzstufenmodelle der Bildungsstandards sein, die dann eine Zuordnung zu Kategorien wie “unterhalb Mindeststandard” oder “B2” ermöglichen.\n\nAußerdem können Interpretationen vorgeschlagen (Text) und Material geliefert werden, um die Auswertung zu unterstützen.",
+    "crumbs": [
+      "Überblick",
+      "Survey Content"
+    ]
+  },
+  {
     "objectID": "survey/concepts.html",
     "href": "survey/concepts.html",
     "title": "Konzepte",
     "section": "",
-    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\nCAWI (Computerunterstütztes Web-Interview)\nLaborbeobachtung teilnehmend\nComputerbasierter Test\n\n\n\n\n\n\nZiele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)\n\n\n\n\n\n\nBeobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen",
-    "crumbs": [
-      "Konzepte"
-    ]
+    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\nCAWI (Computerunterstütztes Web-Interview)\nLaborbeobachtung teilnehmend\nComputerbasierter Test\n\n\n\n\n\n\nZiele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)\n\n\n\n\n\n\nBeobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen"
   },
   {
     "objectID": "survey/concepts.html#allgemein",
     "href": "survey/concepts.html#allgemein",
     "title": "Konzepte",
     "section": "",
-    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\nCAWI (Computerunterstütztes Web-Interview)\nLaborbeobachtung teilnehmend\nComputerbasierter Test",
-    "crumbs": [
-      "Konzepte"
-    ]
+    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\nCAWI (Computerunterstütztes Web-Interview)\nLaborbeobachtung teilnehmend\nComputerbasierter Test"
   },
   {
     "objectID": "survey/concepts.html#befragung",
     "href": "survey/concepts.html#befragung",
     "title": "Konzepte",
     "section": "",
-    "text": "Ziele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)",
-    "crumbs": [
-      "Konzepte"
-    ]
+    "text": "Ziele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)"
   },
   {
     "objectID": "survey/concepts.html#beobachtung-oder-leistungstest",
     "href": "survey/concepts.html#beobachtung-oder-leistungstest",
     "title": "Konzepte",
     "section": "",
-    "text": "Beobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen",
-    "crumbs": [
-      "Konzepte"
-    ]
+    "text": "Beobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen"
   },
   {
     "objectID": "survey/index.html",
     "href": "survey/index.html",
-    "title": "Studie - Survey",
+    "title": "Überblick",
     "section": "",
-    "text": "Studie - Survey\nIm Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch “Studie” als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: Feststellung des Leistungsniveaus und Befragungen im Bildungswesen.\n\n\n\n\n\nstateDiagram-v2\n    sc: Survey Content\n    td: Testtakers\n    tr: Run Test\n    cr: Code Responses\n    ra: Run Analyses\n\n    sc --&gt; tr\n    td --&gt; tr\n    sc --&gt; cr\n    tr --&gt; cr\n    sc --&gt; ra\n    cr --&gt; ra\n    ra --&gt; [*]\n\n\n\n\n\n\n\n\nSurvey Content\nAls Inhalte für eine Studie gelten alle Materialien und Daten, die unabhängig von konkreten Personen bereitgestellt werden. Das Modell geht hier von einem Content Provider aus: Eine Institution oder Firma stellt Inhalte bereit, mit denen Studien durchgeführt werden KÖNNEN. Ob und wann und wozu genau diese Studie dann durchgeführt wird, ist unbekannt.\nDie Inhalte sind folgendermaßen gegliedert:\n\n\n\n\n\n\n\n Zurück nach oben"
+    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch “Studie” als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: Befragungen und Feststellung des Leistungsniveaus im Bildungswesen.\nAus diesem konkreten praktischen Bezug ergeben sich zahlreiche Anforderungen an die Datenmodellierung. Es geht beispielsweise um die Ankopplung an vorhandene Schulverwaltungssysteme und Weiterbildungsstrukturen.\n\n\n\n\n\n\nBasismodell\n\n\n\nDie folgende Darstellung bildet die Grundlage der folgenden Modellierungen. Jeder Kasten wird auf den folgenden Seiten weiter ausdifferenziert und mündet in diversen Spezifikationen.\n\n\n\n\n\n\n\nflowchart TD\n    classDef test fill:#6ff,stroke:black\n    classDef others fill:#cff,stroke:black\n    td[Testtakers festlegen]:::others\n    sc[Testinhalte auswählen]:::others\n    click sc \"content.html\"\n    tr[Test durchführen]:::test\n    cr[Antworten kodieren]:::others\n    ra[Daten analysieren]:::others\n    fb1[Individuelles Feedback]:::others\n    fb2[Aggregiertes Feedback]:::others\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    td --&gt; tr\n    sc --&gt; tr\n    tr --&gt; cr\n    cr --&gt; ra\n    ra --&gt; fb1\n    ra --&gt; fb2\n\n\n\n\n\n\n\nTesttakers festlegen: Auf Schul- oder Klassenebene definiert eine Lehrkraft die Schüler*innen der Klasse, die gestestet bzw. befragt werden sollen. Die Daten können aus einem Schulverwaltungssystem importiert werden. Es sind hohe Anforderungen an den Datenschutz zu beachten.\nTestinhalte auswählen: Passend zu den Zielen der Erhebung werden die Testinhalte (Survey Content) ausgewählt: Aufgaben, Aufgabenfolgen (Testhefte). Hierdurch wird auch über große Teile der Kodierung, der Datenanalyse und des Feedbacks entschieden.\nTest durchführen: Die Testpersonen führen den Test bzw. die Befragung aus.\nAntworten kodieren: Die gegebenen Antworten werden einer Kategorie zugeordnet. Je nach Art der Items ist eine automatische Kodierung möglich oder eine Person muss nachträglich die Antworten anschauen und bewerten.\nDaten analysieren: Die kodierten Antworten werden entweder mit einfacher klassischer Statistik oder über eine aufwändige Methodik IRT verarbeitet. Voraussetzung hierfür sind Metadaten auf Itemebene, beispielsweise Zuordnung zu Domänen oder psychometrische Kennwerte.\nIndividuelles Feedback: Bei dieser Form der Rückmeldung kann auf die Daten einzelner Schüler*innen zugegriffen werden. Dadurch unterliegt dieses Feedback besonderen Anforderungen an den Datenschutz. Außerdem kann man auf einzelne Aufgaben zugreifen, um die Beantwortung besser zu verstehen. Es gibt eine Aggregation nur auf Ebene der Testgruppe - also der Klasse.\nAggregiertes Feedback: Die Adressaten dieser Rückmeldung sind Akteure im Bildungsbereich, die sich nicht mehr für die einzelne Testperson oder die einzelne Aufgabe interessieren, sondern auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.\n\n\n\n\n\n\n\nBegriffe in Englisch\n\n\n\nFür die Datenmodellierung werden die Texte schrittweise Begriffe nicht mehr in Deutsch, sondern in Englisch verwenden. Dies ist üblich in der Programmierung und auch in komplexen Strukturdiagrammen.\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Überblick"
+    ]
+  },
+  {
+    "objectID": "survey/index copy.html",
+    "href": "survey/index copy.html",
+    "title": "Überblick",
+    "section": "",
+    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch “Studie” als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: Feststellung des Leistungsniveaus und Befragungen im Bildungswesen."
+  },
+  {
+    "objectID": "survey/index copy.html#testpopulation",
+    "href": "survey/index copy.html#testpopulation",
+    "title": "Überblick",
+    "section": "Testpopulation",
+    "text": "Testpopulation\n\nIm Bildungskontext sind dies vor allem Schüler*innen bestimmter Alters- bzw. Klassenstufen.\nWeiterhin sind oft die Lehrkräfte Gegenstand der Erhebung. Erkenntnisse über Einstellungen, Methoden und Arbeitsumstände können wichtige Anregungen liefern.\nIn einigen Studien werden auch Eltern befragt, um häusliche Entwicklungs- bzw. Lernumgebungen zu erfassen und in die Auswertung einfließen zu lassen.\nSchulleitung und Bildungsadministration können ebenfalls einbezogen werden.\n\nAus Sicht der Datenmodellierung sind folgende Punkte zu beachten:\n\nDie Testpopulation ist die Erhebungseinheit. Sie ist entweder direkt aktiv im Erhebungsprozess oder ihre Kompetenzen/Fähigkeiten werden von anderen über Beobachtungen oder Interviews erfasst. Im zweiten Fall sind auch die Einflüsse der Beobachter/Interviewer einzubeziehen.\nPersonenmerkmale sind von herausragender Bedeutung für die Datenauswertung. Darüber werden Hypothesen geprüft und Handlungswissen abgeleitet. Beispiele:\n\nGeschlecht\nSozioökonomischer Status\ngeografisch/administrative Zuordnung (Land, Bezirk, Gemeinde usw.)\nArt/Typ des Schulträgers\nSchulform usw.\n\nPersonenmerkmale werden oft extern zugeführt, auch indirekt. Beispielsweise kann für eine Schule ein sozioökonomischer Index verfügbar sein, der dann auf alle Schüler*innen der Schule übertragen wird."
+  },
+  {
+    "objectID": "survey/index copy.html#nützliche-erkenntnisse",
+    "href": "survey/index copy.html#nützliche-erkenntnisse",
+    "title": "Überblick",
+    "section": "Nützliche Erkenntnisse",
+    "text": "Nützliche Erkenntnisse\nDie Erhebungen im Bildungssektor sind darauf ausgerichtet, allgemein zur Verbesserung der Tätigkeit der Beteiligten und der Rahmenbedingungen beizutragen. Die Quelle dafür ist die Ermittlung eines Leistungsstandes und der anschließende Vergleich: mit ähnlicher Population (Nachbarschule, innerhalb Klasse, anderes Land), mit Werten des Vorjahres derselben Person oder mit einer Norm (z. B. Bildungsstandards). Zusammen mit Personenmerkmalen und in Auseinandersetzung mit dem Erhebungsverfahren können Beziehungen konstruiert und damit Einflussfaktoren identifiziert werden."
+  },
+  {
+    "objectID": "survey/index copy.html#präsentation",
+    "href": "survey/index copy.html#präsentation",
+    "title": "Überblick",
+    "section": "Präsentation",
+    "text": "Präsentation\nUm eine Wirksamkeit des Verfahrens zu erreichen, muss die Verwertung der Erkenntnisse bereits zu einem frühen Stadium der Planung berücksichtigt werden. Die theoretische Nützlichkeit der Erkenntnisse reicht nicht aus, sondern die Präsentation gegenüber einer Zielgruppe (Lehrkräfte, Bildungsadministration) muss zu praktisch umsetzbaren Fortschritten führen. Daher (a) ist die Gestaltung der Rückmeldung ein wesentlicher Erfolgsfaktor der Erhebung und (b) können passende Materialien oder Links zu Beginn der Erhebung mit entwickelt und entsprechend über Metadaten nutzbar gemacht werdne."
+  },
+  {
+    "objectID": "survey/index copy.html#testtakers-definieren",
+    "href": "survey/index copy.html#testtakers-definieren",
+    "title": "Überblick",
+    "section": "Testtakers definieren",
+    "text": "Testtakers definieren"
   },
   {
     "objectID": "index.html",
