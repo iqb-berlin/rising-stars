@@ -43,3 +43,9 @@ flowchart TD
 * **Daten analysieren**: Die kodierten Antworten werden entweder mit einfacher klassischer Statistik oder über eine aufwändige Methodik IRT verarbeitet. Voraussetzung hierfür sind Metadaten auf Itemebene, beispielsweise Zuordnung zu Domänen oder psychometrische Kennwerte.
 * **Individuelles Feedback**: Bei dieser Form der Rückmeldung kann auf die Daten einzelner Schüler*innen zugegriffen werden. Dadurch unterliegt dieses Feedback besonderen Anforderungen an den Datenschutz. Außerdem kann man auf einzelne Aufgaben zugreifen, um die Beantwortung besser zu verstehen. Es gibt eine Aggregation nur auf Ebene der Testgruppe - also der Klasse.
 * **Aggregiertes Feedback**: Die Adressaten dieser Rückmeldung sind Akteure im Bildungsbereich, die sich nicht mehr für die einzelne Testperson oder die einzelne Aufgabe interessieren, sondern auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.
+
+::: {.callout-note}
+## Begriffe in Englisch
+
+Für die Datenmodellierung werden die Texte schrittweise Begriffe nicht mehr in Deutsch, sondern in Englisch verwenden. Dies ist üblich in der Programmierung und auch in komplexen Strukturdiagrammen.
+:::

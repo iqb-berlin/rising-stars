@@ -3,3 +3,103 @@ lang: de
 title: Survey Content
 ---
 
+# Units
+
+Die Frage-Einheiten eines Test oder einer Befragung, die die für die Auswertung relevanten Antworten erzeugen, sind gruppiert in Units. Dieser eigentlich nichtssagende Begriff steht außerdem für Seiten mit Sonderfunktion, die später nicht ausgewertet werden: Begrüßung, Danksagung am Ende, einführende Worte vor einem Block etc. oder Trainingseinheiten zum Kennenlernen der Antwortformate. Dass diese Seiten mit Sonderfunktion technisch wie Units mit Antworten behandelt werden, ist der Vereinfachung der Testablaufsteuerung geschuldet. Nachfolgend werden allerdings nur Units behandelt, die Antwortdaten liefern für die Auswertung.
+
+Eine Unit soll möglichst unabhängig von anderen Units und auch von der konkreten Position innerhalb des Testablaufes sein. Dies ist für viele Auswertungsmodelle eine Voraussetzung. Außerdem vereinfacht dies das Management.
+
+Folgende Daten enthält eine Unit:
+
+* `definition`: Daten zur Darstellung und zur Festlegung der Interaktion während der Beantwortung. Hier muss auch ein `player` festgelegt sein (Verona-Modul, das die Unitdefinition auswertet und im Test darstellt). Für eine Unitdefinition gibt es keine übergreifende Spezifizierung. Technisch handelt es sich um Strings.
+* `metadata`: Metadaten, die keine technische Bedeutung haben, sondern nur der Kategorisierung bei Auswertung und Anzeige dienen. Wie Werte für Metadaten gespeichert werden, ist [hier spezifiziert](https://iqb-specifications.github.io/metadata-values/).
+* `coding-scheme`: Das Kodierschema legt fest, wie eine Antwort kodiert werden soll. Als Antwort wird hier die kleinste erfassbare Eingabe der Testperson verstanden oder auch ein Zustand (Fortschritt der Audiosequenz) und heißt in den Daten *Variable*. Die Vorschrift kann als Regel hinterlegt werden - dann erfolgt eine automatische Kodierung. Sie kann aber auch als Instruktion (Text, Bild) gespeichert sein zur Anzeige bei der manuellen Kodierung. Um einen Wert für ein Item (Analyse-Bewertungsebene) zu liefern, können neue Variablen abgeleitet werden, d. h. ein Itemwert kann das Ergebnis der Kodierung mehrerer Antworten sein. Die Datenstruktur eines Kodierschemas ist [hier spezifiziert](https://iqb-specifications.github.io/coding-scheme/) und [hier beschrieben](https://iqb-berlin.github.io/tba-info/coding/data-structures/coding-scheme.html).
+* `items`: Eine oder mehrere Antworten führen zur Ebene, die eine Bewertung ermöglicht. Das bedeutet, dass der Itemwert (i.d.R. 0/1/missing) erst nach der Kodierung zur Verfügung steht. Ein Item hat außerdem Metadaten, zusätzlich zu den Unit-Metadaten. Diese betreffen die Zuordnung zu Kategorien für Anzeige und Auswertung sowie numerische Werte für die Datenanalyse (z. B. Schwierigkeit). Wie Werte für Metadaten gespeichert werden, ist [hier spezifiziert](https://iqb-specifications.github.io/metadata-values/).
+
+Sämtliche Daten einer Unit sind in einer Datenstruktur zusammengefasst. Es handelt sich um eine XML-Datei ggf. mit ergänzenden Dateien und Abhängigkeiten. Es ist eine [Spezifikation](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Unit.xsd)(XSD-Datei) verfügbar sowie eine [Erläuterung/Kurzdokumentation](https://iqb-berlin.github.io/tba-info/Testcenter/Testinhalte/unit-xml.html).
+
+# Booklets
+
+Ein Booklet (analog zu Papier "Testheft") legt die Abfolge der Units fest. Das Grundmodell sieht eine Sequenz vor, also eine einfache Aneinanderreihung, die alle Testpersonen absolvieren sollen. Hauptinhalt eines Booklets sind also Verweise auf Units.
+
+Jedes Booklet ist als XML-Datei gespeichert. Dafür ist eine [Spezifikation](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Bookklet.xsd)(XSD-Datei) verfügbar und es gibt eine [Dokumentation für Testverantwortliche](https://iqb-berlin.github.io/tba-info/Testcenter/Testinhalte/booklet-xml.html). Diese Booklet-Datei ist erforderlich für die Testdurchführung und wird in das Testcenter hochgeladen. Hier eine Auswahl der Steuerungsmöglichkeiten über Booklet-Parameter:
+
+* Zeitsteuerung (für die Bearbeitung bestimmter Units gibt es eine Zeitobergrenze)
+* Synchronisation des Testablaufes durch Freigabeworte für Blöcke
+* adaptives Testen (Präsentation von Units in Abhängigkeit vorher gegebener Antworten)
+
+# Survey Content Package
+
+::: {.callout-caution}
+## tbd
+
+Diese Datenstruktur befindet sich in Vorbereitung.
+:::
+
+```{mermaid}
+flowchart TD
+    subgraph s[Survey]
+        s1[Metadaten]
+        s2[Booklet-Liste]
+        s3[Kodierung]
+        s4[Datenanalyse]
+        s5[Feedback]
+    end
+
+    s --> Booklet1
+    s --> Booklet2
+    s --> Booklet3
+
+    Booklet1 --> Unit1
+    Booklet1 --> Unit2
+    Booklet1 --> Unit3
+    Booklet2 --> Unit3
+    Booklet2 --> Unit4
+    Booklet2 --> Unit5
+    Booklet3 --> Unit5
+    Booklet3 --> Unit6
+
+```
+
+Wenn eine Studie durchgeführt werden soll, sind weitere Daten erforderlich. Die nachfolgende Liste geht davon aus, dass ein Survey Content Provider (z. B. IQB) diese Daten zusammen mit den Booklets und den Units liefert und damit andere in die Lage versetzt, mit konkreten Testpersonen die Studie in vergleichbarer Art durchzuführen.
+
+## ID
+
+Eine Studie hat eine eindeutige ID (w3id) und einen Namen.
+
+## Metadaten
+
+Die Studie hat Metadaten, die über ein Profil festgelegt sind. Wie Werte für Metadaten gespeichert werden, ist [hier spezifiziert](https://iqb-specifications.github.io/metadata-values/). Neben einer Kurzbeschreibung, dem/der Owner/Maintainer, dem Zeitpunkt der Veröffentlichung sind hier folgende Informationen zu finden:
+
+* **Konstrukte**: Die Studie erfasst konkrete Daten, die bestimmten Domänen bzw. inhaltlichen Bereichen zugeordnet werden. Wer auf der Suche nach einer passenden Studie ist, wird sich zuerst hier orientieren. Zur Darstellung werden folgende Vokabulare genutzt: [Fragebogen-Konstrukte](https://w3id.org/iqb/v87/cq/) und [Konstrukte für Leistungstests](https://w3id.org/iqb/v87/ca/).
+* **Testpopulation**: Es ist eine Beschreibung erforderlich, für welchen Personenkreis die Studieninhalte gedacht sind. Im Bildungskontext sind dies vor allem Schüler\*innen bestimmter Alters- bzw. Klassenstufen, aber auch Lehrkräfte, Eltern, Schulleitung und Bildungsadministration. Zur Darstellung wird [dieses Vokabular](https://w3id.org/iqb/v85/ee/) genutzt.
+* **Erhebungsverfahren**: Für die Administration eines Tests muss das Erhebungsverfahren (z. B. nach [diesem Vokabular](https://w3id.org/iqb/v85/v2/)) bekannt sein. Für die hier beschriebenen Studien kommen CAWI (Computerunterstütztes Web-Interview), 'Laborbeobachtung teilnehmend' oder 'Computerbasierter Test' in Frage.
+
+## Booklets
+
+Es sind alle Booklets der Studie aufgeführt und dazu auch jeweils Metadaten, aus denen die Unterschiede der Booklets deutlich werden. Es handelt sich also um ID, Titel/Name, Bearbeitszeit, notwendige/erlaubte Hilfsmittel, Hinweise zur Administration.
+
+## Kodierung
+
+Für die Planung der Kodierung ist der Anteil der automatisch kodierbaren Variablen angegeben. Für die manuelle Kodierung ist angegeben, ob bzw. in welchem Maße ein Replay (Anzeige der Unit mit den Antworten der Testperson) für die Kodierung erforderlich ist.
+
+## Datenanalyse
+
+Da meist mehrere Skalen für verschiedene (Sub-)Domänen gebildet werden, muss es möglich sein, die Items den (Sub-)Domänen zuzuordnen. Das kann auf zwei Wege geschehen:
+
+* explizite Nennung der Items
+* Aufzählung von Metadaten, die auf Item- oder Unitebene verfügbar sind
+
+Es ist angegeben, welche numerischen Werte die Personenfähigkeit repräsentieren:
+
+* Summe der Item-Scores pro Testheft und (Sub-)Domäne
+* Schätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik unter Verwendung der Itemkennwerte
+
+## Feedback
+
+Ob bei der Durchführung der Studie Vergleiche mit ähnlicher Population oder mit Werten des Vorjahres derselben Person vorgesehen sind, wird im Survey Content Package nicht festgelegt. Es werden aber Bezüge vorgeschlagen zur Interpretation:
+
+* Vorgabe einer Norm: Dies ist erforderlich, wenn die Schätzung der Personenfähigkeit nicht über IRT erfolgt. Dann muss für jedes Testheft ein Normwert mitgeteilt werden, an dem sich die Darstellung der Ergebniswerte orientiert.
+* Vorgabe von Ordinalskalen: Der numerische Wert der Personenfähigkeit kann übersetzt werden auf eine ordinale Skale. Das können beispielsweise die Kompetenzstufenmodelle der Bildungsstandards sein, die dann eine Zuordnung zu Kategorien wie "unterhalb Mindeststandard" oder "B2" ermöglichen.
+
+Außerdem können Interpretationen vorgeschlagen (Text) und Material geliefert werden, um die Auswertung zu unterstützen.
