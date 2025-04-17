@@ -245,26 +245,31 @@ tbd
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
+    classDef insurveybox fill:white,stroke:black
+    classDef others fill:#cff,stroke:black
+    linkStyle default stroke:black,stroke-width:2px,color:black;
+
     subgraph s[Survey]
-        s1[Metadaten]
-        s2[Booklet-Liste]
-        s3[Kodierung]
-        s4[Datenanalyse]
-        s5[Feedback]
+        s1[Metadaten]:::insurveybox
+        s2[Booklet-Liste]:::insurveybox
+        s3[Kodierung]:::insurveybox
+        s4[Datenanalyse]:::insurveybox
+        s5[Feedback]:::insurveybox
     end
+    style s fill:#cff,stroke:black
 
-    s --&gt; Booklet1
-    s --&gt; Booklet2
-    s --&gt; Booklet3
+    s --&gt; Booklet1:::others
+    s --&gt; Booklet2:::others
+    s --&gt; Booklet3:::others
 
-    Booklet1 --&gt; Unit1
-    Booklet1 --&gt; Unit2
-    Booklet1 --&gt; Unit3
+    Booklet1 --&gt; Unit1:::others
+    Booklet1 --&gt; Unit2:::others
+    Booklet1 --&gt; Unit3:::others
     Booklet2 --&gt; Unit3
-    Booklet2 --&gt; Unit4
-    Booklet2 --&gt; Unit5
+    Booklet2 --&gt; Unit4:::others
+    Booklet2 --&gt; Unit5:::others
     Booklet3 --&gt; Unit5
-    Booklet3 --&gt; Unit6
+    Booklet3 --&gt; Unit6:::others
 
 </pre>
 </div>
