@@ -7,8 +7,8 @@ Im Englischen steht "Survey" für Befragungen und Leistungstests gleichermaßen.
 
 ```{mermaid}
 flowchart TD
-    classDef test fill:#0ff,stroke:black
-    classDef others fill:#cff,stroke:black
+    classDef test fill:#0ff,stroke:black;
+    classDef others fill:#cff,stroke:black;
     goals[Ziele festlegen]:::others
     sc[Testinhalte auswählen]:::others
     td[Testpersonen festlegen]:::others
@@ -18,15 +18,17 @@ flowchart TD
     cd[Vergleichsdaten bereitstellen]:::others
     fb[Ergebnisse darstellen]:::others
 
-    goals --> sc
-    goals --> td
-    sc --> tr
-    td --> tr
-    tr --> cr
-    cr --> ra
-    ra --> fb
-    goals --> cd
-    cd --> fb
+    goals ==> sc
+    goals ==> td
+    sc ==> tr
+    td ==> tr
+    tr ==> cr
+    cr ==> ra
+    ra ==> fb
+    goals ==> cd
+    cd ==> fb
+    linkStyle 0,1,2,3,4,5,6,7,8 stroke:black,stroke-width:4px;
+
 ```
 
 * **Ziele festlegen**: Befragungen und Tests sind teuer. Sie müssen daher klar definierten Ziele folgen. Danach richten sich sämtliche nachfolgende Entscheidungen. Typische Beispiele sind die *Unterrichtsentwicklung* (Lehrkräfte erhalten Erkenntnisse für die Gestaltung von Unterricht) und *Systemmonitoring* (Politik und Bildungsadministration erhalten Erkenntnisse über die Steuerung/Unterstützung von Schulen).
