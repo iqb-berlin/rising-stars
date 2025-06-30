@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Testinhalte - Survey Content Package – StarS</title>
+<title>Datenanalyse – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../survey/testtakers.html" rel="next">
-<link href="../survey/index.html" rel="prev">
+<link href="../survey/feedback.html" rel="next">
+<link href="../survey/test-output.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey/index.html">Überblick</a></li><li class="breadcrumb-item"><a href="../survey/content.html">Testinhalte</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey/index.html">Überblick</a></li><li class="breadcrumb-item"><a href="../survey/analysis.html">Datenanalyse</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey/content.html" class="sidebar-item-text sidebar-link active">
+  <a href="../survey/content.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testinhalte</span></a>
   </div>
 </li>
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey/analysis.html" class="sidebar-item-text sidebar-link">
+  <a href="../survey/analysis.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Datenanalyse</span></a>
   </div>
 </li>
@@ -168,25 +168,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Auf dieser Seite</h2>
-   
-  <ul>
-  <li><a href="#metadaten" id="toc-metadaten" class="nav-link active" data-scroll-target="#metadaten">Metadaten</a></li>
-  <li><a href="#units" id="toc-units" class="nav-link" data-scroll-target="#units">Units</a></li>
-  <li><a href="#testlets" id="toc-testlets" class="nav-link" data-scroll-target="#testlets">Testlets</a></li>
-  <li><a href="#booklets" id="toc-booklets" class="nav-link" data-scroll-target="#booklets">Booklets</a></li>
-  <li><a href="#analyse-schema" id="toc-analyse-schema" class="nav-link" data-scroll-target="#analyse-schema">Analyse-Schema</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey/index.html">Überblick</a></li><li class="breadcrumb-item"><a href="../survey/content.html">Testinhalte</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey/index.html">Überblick</a></li><li class="breadcrumb-item"><a href="../survey/analysis.html">Datenanalyse</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Testinhalte - Survey Content Package</h1>
+<h1 class="title">Datenanalyse</h1>
 </div>
 
 
@@ -203,75 +193,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Die Datenstruktur <strong>survey content package</strong> enthält alle Daten, die für die Durchführung und Auswertung einer Testung erforderlich sind. Es sind lediglich die Testpersonen hinzuzufügen. Außerdem müssen an mehreren Stellen Entscheidungen getroffen werden, um die Testung und die Rückmeldung auf die Ziele abzustimmen.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-classDef root fill:#0ff,stroke:black
+    classDef root fill:#0ff,stroke:black
     classDef level1 fill:#0ff,stroke:black
     classDef level2 fill:#cff,stroke:black
     classDef metadata fill:whitesmoke,stroke:black
     linkStyle default stroke:black,stroke-width:2px,color:black;
 
-    content[survey content package]:::level1
-    click content "content.html" "Gehe zu Testinhalte"
-    cmd(metadata):::metadata
-    units[units]:::level2
-    testlets[testlets]:::level2
-    booklets[booklets]:::level2
-    analysis_s[analysis scheme]:::level2
-    content --&gt; cmd
-    content --&gt; units
-    content --&gt; testlets
-    content --&gt; booklets
-    content --&gt; analysis_s
+    analysis[analysis output]:::level1
+    numeric[numeric scales]:::level2
+    analysis --&gt; numeric
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<section id="metadaten" class="level1">
-<h1>Metadaten</h1>
-<p>Es handelt sich um eine Datenstruktur, die in einem Register oder Datenpool bereitsteht für die Verwendung. Daher sind diverse Metadaten erforderlich, die die Auswahl eines Inhaltspaketes für eine spezifische Testung unterstützen. Beispiele: Testdomänen (z. B. Englisch Leseverstehen), empfohlene Testpopulation (z. B. Klasse 5), Autoren, Erstellungsjahr, Nutzungsrechte, erforderliche Hilfsmittel (Taschenrechner) usw.</p>
-</section>
-<section id="units" class="level1">
-<h1>Units</h1>
-<p>Ein Unit ist nicht nur eine Gruppierung von Frage-Einheiten eines Test oder einer Befragung, die die für die Auswertung relevanten Antworten erzeugen. Der Begriff Unit deckt auch Zwischenseiten für die Einleitung (Willkommen-Seite) oder Erläuterungen für den folgenden Testablauf ab (Bitte Kopfhörer aufsetzen). Diese Art Units werden Orientierungsseiten <code>orientation units</code> genannt. Eine weitere Art von Units stellen die Übungsaufgaben <code>training units</code> dar, die meist zu Beginn einer Testung in den Umgang mit den Antwortelementen einführen. Diese besonderen Units sind zwar Teil des Inhaltspaketes, sind aber grundsätzlich technisch mit den <code>assessment units</code> identisch.</p>
-<p>Eine Unit soll möglichst unabhängig von anderen Units und auch von der konkreten Position innerhalb des Testablaufes sein. Dies ist für viele Auswertungsmodelle eine Voraussetzung. Außerdem vereinfacht dies das Management.</p>
-<p>Folgende Daten enthält eine Unit:</p>
-<ul>
-<li><code>UI definition</code>: Daten zur Darstellung und zur Festlegung der Interaktion während der Beantwortung. Hier muss auch ein <code>player</code> festgelegt sein (Verona-Modul, das die Unitdefinition auswertet und im Test darstellt). Für eine Unitdefinition gibt es keine übergreifende Spezifizierung. Technisch handelt es sich um Strings.</li>
-<li><code>metadata</code>: Metadaten, die keine technische Bedeutung haben, sondern nur der Kategorisierung bei Auswertung und Anzeige dienen. Wie Werte für Metadaten gespeichert werden, ist <a href="https://iqb-specifications.github.io/metadata-values/">hier spezifiziert</a>.</li>
-<li><code>coding-scheme</code>: Das Kodierschema legt fest, wie eine Antwort kodiert werden soll. Als Antwort wird hier die kleinste erfassbare Eingabe der Testperson verstanden oder auch ein Zustand (Fortschritt der Audiosequenz) und heißt in den Daten <em>Variable</em>. Die Vorschrift kann als Regel hinterlegt werden - dann erfolgt eine automatische Kodierung. Sie kann aber auch als Instruktion (Text, Bild) gespeichert sein zur Anzeige bei der manuellen Kodierung. Um einen Wert für ein Item (Analyse-Bewertungsebene) zu liefern, können neue Variablen abgeleitet werden, d.&nbsp;h. ein Itemwert kann das Ergebnis der Kodierung mehrerer Antworten sein. Die Datenstruktur eines Kodierschemas ist <a href="https://iqb-specifications.github.io/coding-scheme/">hier spezifiziert</a> und <a href="https://iqb-berlin.github.io/tba-info/coding/data-structures/coding-scheme.html">hier beschrieben</a>.</li>
-<li><code>items</code>: Eine oder mehrere Antworten führen zur Ebene, die eine Bewertung ermöglicht. Das bedeutet, dass der Itemwert (i.d.R. 0/1/missing) erst nach der Kodierung zur Verfügung steht. Ein Item hat außerdem Metadaten, zusätzlich zu den Unit-Metadaten. Diese betreffen die Zuordnung zu Kategorien für Anzeige und Auswertung sowie numerische Werte für die Datenanalyse (z. B. Schwierigkeit). Wie Werte für Metadaten gespeichert werden, ist <a href="https://iqb-specifications.github.io/metadata-values/">hier spezifiziert</a>.</li>
-</ul>
-<p>Sämtliche Daten einer Unit sind in einer Datenstruktur zusammengefasst. Es handelt sich um eine XML-Datei ggf. mit ergänzenden Dateien und Abhängigkeiten. Es ist eine <a href="https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Unit.xsd">Spezifikation</a>(XSD-Datei) verfügbar sowie eine <a href="https://iqb-berlin.github.io/tba-info/Testcenter/Testinhalte/unit-xml.html">Erläuterung/Kurzdokumentation</a>.</p>
-</section>
-<section id="testlets" class="level1">
-<h1>Testlets</h1>
-<p>Für die Erstellung der Testhefte (Booklets) werden zunächst Blöcke (testlets) zusammengestellt. Es handelt sich um Unit-Folgen für eine definierte Testzeit (10 min, 20 min). Die Auswahl bezieht sich meist auf eine bestimmten Subdomäne, und die Reihenfolge ergibt sich aus aufwändigen Überlegungen z. B. über die Verteilung der Schwierigkeit.</p>
-</section>
-<section id="booklets" class="level1">
-<h1>Booklets</h1>
-<p>Ein Booklet (analog zu Papier “Testheft”) legt die Abfolge der Units fest. Das Grundmodell sieht eine Sequenz vor, also eine einfache Aneinanderreihung, die alle Testpersonen absolvieren sollen. Hauptinhalt eines Booklets sind also Verweise auf Units.</p>
-<p>Dass vorher Blöcke (testlets) definiert werden, ist nicht erforderlich, aber zu empfehlen. Das Booklet besteht dann aus einer Folge von Blöcken, verbunden mit Orientierungsseiten.</p>
-<p>Jedes Booklet ist als XML-Datei gespeichert. Dafür ist eine <a href="https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Bookklet.xsd">Spezifikation</a>(XSD-Datei) verfügbar und es gibt eine <a href="https://iqb-berlin.github.io/tba-info/Testcenter/Testinhalte/booklet-xml.html">Dokumentation für Testverantwortliche</a>. Diese Booklet-Datei ist erforderlich für die Testdurchführung und wird in das Testcenter hochgeladen. Hier eine Auswahl der Steuerungsmöglichkeiten über Booklet-Parameter:</p>
-<ul>
-<li>Zeitsteuerung (für die Bearbeitung bestimmter Units gibt es eine Zeitobergrenze)</li>
-<li>Synchronisation des Testablaufes durch Freigabeworte für Blöcke</li>
-<li>adaptives Testen (Präsentation von Units in Abhängigkeit vorher gegebener Antworten)</li>
-</ul>
-</section>
-<section id="analyse-schema" class="level1">
-<h1>Analyse-Schema</h1>
-<p>Diese Datenstruktur enthält Vorschriften und Daten für die Datenanalyse.</p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -682,13 +626,13 @@ classDef root fill:#0ff,stroke:black
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../survey/index.html" class="pagination-link" aria-label="Überblick">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Überblick</span>
+      <a href="../survey/test-output.html" class="pagination-link" aria-label="Testergebnisse">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Testergebnisse</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../survey/testtakers.html" class="pagination-link" aria-label="Testpersonen">
-        <span class="nav-page-text">Testpersonen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../survey/feedback.html" class="pagination-link" aria-label="Ergebnisrückmeldung">
+        <span class="nav-page-text">Ergebnisrückmeldung</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

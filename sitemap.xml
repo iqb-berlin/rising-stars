@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/content.html</loc>
-    <lastmod>2025-04-17T16:53:03.626Z</lastmod>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/index copy.html</loc>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
   </url>
   <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/concepts.html</loc>
-    <lastmod>2025-04-17T16:53:03.626Z</lastmod>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/content.html</loc>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-berlin.github.io/rising-stars/survey/index.html</loc>
-    <lastmod>2025-04-17T16:53:03.626Z</lastmod>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
   </url>
   <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/index copy.html</loc>
-    <lastmod>2025-04-17T16:53:03.626Z</lastmod>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/concepts.html</loc>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-berlin.github.io/rising-stars/index.html</loc>
-    <lastmod>2025-04-17T16:53:03.625Z</lastmod>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/analysis.html</loc>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/feedback.html</loc>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/test-output.html</loc>
+    <lastmod>2025-06-30T05:53:27.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/testtakers.html</loc>
+    <lastmod>2025-06-30T05:53:27.016Z</lastmod>
   </url>
 </urlset>
