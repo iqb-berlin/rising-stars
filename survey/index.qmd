@@ -15,7 +15,7 @@ flowchart TD
     tr([Test durchführen]):::test
     cr[Antworten kodieren]:::others
     ra[Daten analysieren]:::others
-    cd[Vergleichsdaten bereitstellen]:::others
+    cd[Vergleichsdaten]:::others
     fb[Ergebnisse darstellen]:::others
 
     goals ==> sc
