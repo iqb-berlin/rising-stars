@@ -106,7 +106,7 @@
     "href": "survey/feedback.html",
     "title": "Ergebnisrückmeldung - feedback config",
     "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    feedback[feedback config]:::level1\n    ordinal[ordinal scales]:::level2\n    relational[relational data]:::level2\n    feedback --&gt; ordinal\n    feedback --&gt; relational\n\n\n\n\n\n\n\n\n\n Zurück nach oben",
+    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    feedback[feedback config]:::level1\n    ordinal[ordinal scales]:::level2\n    relational[relational data]:::level2\n    feedback --&gt; ordinal\n    feedback --&gt; relational\n\n\n\n\n\n\n\n\n\n\n Zurück nach obenLiteratur\n\nGross, S., Hankeln, C., Rösike, K.-A., & Prediger, S. (2025). How do Expert and Novice Teachers Monitor and Enhance Student Understanding? Qualitative Comparisons Informing the Design of a Digital Formative Assessment Platform. Tech Know Learn, 30(1), 991–1020. https://doi.org/10.1007/s10758-024-09755-0\n\n\nPukrop, J. (2019). Rückmeldungen aus Schulleistungstests an Lehrkräfte durch interaktive Informationsvisualisierungen. Universität Bremen. https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12",
     "crumbs": [
       "Überblick",
       "Ergebnisrückmeldung"
