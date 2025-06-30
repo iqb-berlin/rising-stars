@@ -1,6 +1,10 @@
 ---
 lang: de
 title: Ergebnisrückmeldung - feedback config
+bibliography: ../assets/bibliography.bib
+csl: ../assets/apa.csl
+nocite: |
+  @Gross.2025, @Pukrop.2019
 ---
 
 ```{mermaid}
@@ -17,3 +21,4 @@ flowchart LR
     feedback --> ordinal
     feedback --> relational
 ```
+
