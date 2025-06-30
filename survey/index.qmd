@@ -3,49 +3,47 @@ lang: de
 title: Überblick
 ---
 
-Im Englischen steht "Survey" für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch "Studie" als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: **Befragungen und Feststellung des Leistungsniveaus im Bildungswesen**.
-
-Aus diesem konkreten praktischen Bezug ergeben sich zahlreiche Anforderungen an die Datenmodellierung. Es geht beispielsweise um die Ankopplung an vorhandene Schulverwaltungssysteme und Weiterbildungsstrukturen.
-
-::: {.callout-note}
-## Basismodell
-
-Die folgende Darstellung bildet die Grundlage der folgenden Modellierungen. Jeder Kasten wird auf den folgenden Seiten weiter ausdifferenziert und mündet in diversen Spezifikationen.
-:::
-
+Im Englischen steht "Survey" für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf **Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen**. Dafür wird der Begriff "Test" im allgemeineren Sinne verwendet. 
 
 ```{mermaid}
 flowchart TD
-    classDef test fill:#6ff,stroke:black
+    classDef test fill:#0ff,stroke:black
     classDef others fill:#cff,stroke:black
-    td[Testtakers festlegen]:::others
+    goals[Ziele festlegen]:::others
     sc[Testinhalte auswählen]:::others
-    click sc "content.html"
-    tr[Test durchführen]:::test
+    td[Testpersonen festlegen]:::others
+    tr([Test durchführen]):::test
     cr[Antworten kodieren]:::others
     ra[Daten analysieren]:::others
-    fb1[Individuelles Feedback]:::others
-    fb2[Aggregiertes Feedback]:::others
-    linkStyle default stroke:black,stroke-width:2px,color:black;
+    cd[Vergleichsdaten bereitstellen]:::others
+    fb[Ergebnisse darstellen]:::others
 
-    td --> tr
+    goals --> sc
+    goals --> td
     sc --> tr
+    td --> tr
     tr --> cr
     cr --> ra
-    ra --> fb1
-    ra --> fb2
+    ra --> fb
+    goals --> cd
+    cd --> fb
 ```
 
-* **Testtakers festlegen**: Auf Schul- oder Klassenebene definiert eine Lehrkraft die Schüler*innen der Klasse, die gestestet bzw. befragt werden sollen. Die Daten können aus einem Schulverwaltungssystem importiert werden. Es sind hohe Anforderungen an den Datenschutz zu beachten.
-* [Testinhalte auswählen](content.qmd): Passend zu den Zielen der Erhebung werden die Testinhalte (Survey Content) ausgewählt: Aufgaben, Aufgabenfolgen (Testhefte). Hierdurch wird auch über große Teile der Kodierung, der Datenanalyse und des Feedbacks entschieden.
+* **Ziele festlegen**: Befragungen und Tests sind teuer. Sie müssen daher klar definierten Ziele folgen. Danach richten sich sämtliche nachfolgende Entscheidungen. Typische Beispiele sind die *Unterrichtsentwicklung* (Lehrkräfte erhalten Erkenntnisse für die Gestaltung von Unterricht) und *Systemmonitoring* (Politik und Bildungsadministration erhalten Erkenntnisse über die Steuerung/Unterstützung von Schulen).
+* **Testinhalte auswählen**: Passend zu den Zielen der Erhebung werden die Testinhalte (Survey Content) ausgewählt: Aufgaben, Aufgabenfolgen (Testhefte). Hierdurch wird auch über große Teile der Kodierung, der Datenanalyse und der Ergebnispräsentation entschieden.
+* **Testpersonen festlegen**: Hier wird die Frage beantwortet, wer am Test teilnehmen soll. Das wird zunächst abstrakt festgelegt (z. B. "Schülerinnen und Schüler der 3. Jahrgangsstufe") und dann konkret auf Schul- oder Klassenebene.
 * **Test durchführen**: Die Testpersonen führen den Test bzw. die Befragung aus.
-* **Antworten kodieren**: Die gegebenen Antworten werden einer Kategorie zugeordnet. Je nach Art der Items ist eine automatische Kodierung möglich oder eine Person muss nachträglich die Antworten anschauen und bewerten.
+* **Antworten kodieren**: Die gegebenen Antworten werden einer Kategorie zugeordnet. Je nach Art der Items ist eine automatische Kodierung möglich oder eine Person muss nachträglich die Antworten anschauen und bewerten (sog. manuelle Kodierung).
 * **Daten analysieren**: Die kodierten Antworten werden entweder mit einfacher klassischer Statistik oder über eine aufwändige Methodik IRT verarbeitet. Voraussetzung hierfür sind Metadaten auf Itemebene, beispielsweise Zuordnung zu Domänen oder psychometrische Kennwerte.
-* **Individuelles Feedback**: Bei dieser Form der Rückmeldung kann auf die Daten einzelner Schüler*innen zugegriffen werden. Dadurch unterliegt dieses Feedback besonderen Anforderungen an den Datenschutz. Außerdem kann man auf einzelne Aufgaben zugreifen, um die Beantwortung besser zu verstehen. Es gibt eine Aggregation nur auf Ebene der Testgruppe - also der Klasse.
-* **Aggregiertes Feedback**: Die Adressaten dieser Rückmeldung sind Akteure im Bildungsbereich, die sich nicht mehr für die einzelne Testperson oder die einzelne Aufgabe interessieren, sondern auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.
+* **Ergebnisse darstellen**: Die Adressaten der Ergebnisrückmeldung sind Akteure im Bildungsbereich, die sich für die einzelne Testperson und deren Lösungen interessieren (Lehrkraft), aber auch auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.
+* **Vergleichsdaten bereitstellen**: Entsprechend den Zielen der Erhebung werden für die Ergebnisdarstellung Orientierungsdaten zur Verfügung gestellt. Dies soll bestmöglich die Interpretation und dann die Anwendung der Erkenntnisse unterstützen.
 
-::: {.callout-note}
-## Begriffe in Englisch
+# Datenstrukturen
 
-Für die Datenmodellierung werden die Texte schrittweise Begriffe nicht mehr in Deutsch, sondern in Englisch verwenden. Dies ist üblich in der Programmierung und auch in komplexen Strukturdiagrammen.
-:::
+Das obige Prozess-Schema ist Grundlage für die Modellierung der Daten:
+
+* [Testinhalte](content.qmd)
+* [Testpersonen](testtakers.qmd)
+* [Testergebnisse](test-output.qmd)
+* [Konfiguration der Datenanalyse](analysis.qmd)
+* [Konfiguration und Daten für die Ergebnisrückmeldung](feedback.qmd)

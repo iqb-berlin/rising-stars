@@ -1,0 +1,19 @@
+---
+lang: de
+title: Testergebnisse - test output
+---
+
+```{mermaid}
+flowchart LR
+    classDef root fill:#0ff,stroke:black
+    classDef level1 fill:#0ff,stroke:black
+    classDef level2 fill:#cff,stroke:black
+    classDef metadata fill:whitesmoke,stroke:black
+    linkStyle default stroke:black,stroke-width:2px,color:black;
+
+    output[test output]:::level1
+    responses[responses]:::level2
+    logs[logs]:::level2
+    output --> responses
+    output --> logs
+```

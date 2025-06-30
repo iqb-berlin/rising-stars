@@ -1,0 +1,19 @@
+---
+lang: de
+title: Ergebnisrückmeldung - feedback config
+---
+
+```{mermaid}
+flowchart LR
+    classDef root fill:#0ff,stroke:black
+    classDef level1 fill:#0ff,stroke:black
+    classDef level2 fill:#cff,stroke:black
+    classDef metadata fill:whitesmoke,stroke:black
+    linkStyle default stroke:black,stroke-width:2px,color:black;
+
+    feedback[feedback config]:::level1
+    ordinal[ordinal scales]:::level2
+    relational[relational data]:::level2
+    feedback --> ordinal
+    feedback --> relational
+```
