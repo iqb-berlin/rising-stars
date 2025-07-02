@@ -3,7 +3,7 @@ lang: de
 title: StarS
 description: Architektur und technische Spezifikationen
 ---
-![](assets/banner.jpg)
+![](assets/banner.png)
 
 # Willkommen
 
