@@ -39,6 +39,8 @@ website:
             href: survey/analysis.qmd
           - text: Ergebnisrückmeldung
             href: survey/feedback.qmd
+      - text: Spezifikationen
+        href: specs/index.qmd
       
 format:
   html:

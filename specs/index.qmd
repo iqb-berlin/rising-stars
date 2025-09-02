@@ -1,0 +1,15 @@
+---
+lang: de
+title: Spezifikationen
+---
+
+::: {.callout-caution}
+## Work In Progress
+
+Die folgenden Spezifikationen befinden sich in Entwicklung
+:::
+
+# Survey Content Package
+
+* [Index](https://iqb-specifications.github.io/scp-index)
+* [Datenanalyse](https://iqb-specifications.github.io/scp-analysis)
