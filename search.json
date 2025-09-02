@@ -1,5 +1,23 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "StarS",
+    "section": "",
+    "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert. Hier ist auch eine Anleitung für Änderungen an den Inhalten zu finden.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
+  },
+  {
+    "objectID": "survey/analysis.html",
+    "href": "survey/analysis.html",
+    "title": "Datenanalyse",
+    "section": "",
+    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    analysis[analysis output]:::level1\n    numeric[numeric scales]:::level2\n    analysis --&gt; numeric\n\n\n\n\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Überblick",
+      "Datenanalyse"
+    ]
+  },
+  {
     "objectID": "survey/index copy.html",
     "href": "survey/index copy.html",
     "title": "Überblick",
@@ -35,6 +53,49 @@
     "text": "Testtakers definieren"
   },
   {
+    "objectID": "survey/index.html",
+    "href": "survey/index.html",
+    "title": "Überblick",
+    "section": "",
+    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet.\n\n\n\n\n\nflowchart TD\n    classDef test fill:#0ff,stroke:black;\n    classDef others fill:#cff,stroke:black;\n    goals[Ziele festlegen]:::others\n    sc[Testinhalte auswählen]:::others\n    td[Testpersonen festlegen]:::others\n    tr([Test durchführen]):::test\n    cr[Antworten kodieren]:::others\n    ra[Daten analysieren]:::others\n    cd[Vergleichsdaten]:::others\n    fb[Ergebnisse darstellen]:::others\n\n    goals ==&gt; sc\n    goals ==&gt; td\n    sc ==&gt; tr\n    td ==&gt; tr\n    tr ==&gt; cr\n    cr ==&gt; ra\n    ra ==&gt; fb\n    goals ==&gt; cd\n    cd ==&gt; fb\n    linkStyle 0,1,2,3,4,5,6,7,8 stroke:black,stroke-width:4px;\n\n\n\n\n\n\n\n\nZiele festlegen: Befragungen und Tests sind teuer. Sie müssen daher klar definierten Ziele folgen. Danach richten sich sämtliche nachfolgende Entscheidungen. Typische Beispiele sind die Unterrichtsentwicklung (Lehrkräfte erhalten Erkenntnisse für die Gestaltung von Unterricht) und Systemmonitoring (Politik und Bildungsadministration erhalten Erkenntnisse über die Steuerung/Unterstützung von Schulen).\nTestinhalte auswählen: Passend zu den Zielen der Erhebung werden die Testinhalte (Survey Content) ausgewählt: Aufgaben, Aufgabenfolgen (Testhefte). Hierdurch wird auch über große Teile der Kodierung, der Datenanalyse und der Ergebnispräsentation entschieden.\nTestpersonen festlegen: Hier wird die Frage beantwortet, wer am Test teilnehmen soll. Das wird zunächst abstrakt festgelegt (z. B. “Schülerinnen und Schüler der 3. Jahrgangsstufe”) und dann konkret auf Schul- oder Klassenebene.\nTest durchführen: Die Testpersonen führen den Test bzw. die Befragung aus.\nAntworten kodieren: Die gegebenen Antworten werden einer Kategorie zugeordnet. Je nach Art der Items ist eine automatische Kodierung möglich oder eine Person muss nachträglich die Antworten anschauen und bewerten (sog. manuelle Kodierung).\nDaten analysieren: Die kodierten Antworten werden entweder mit einfacher klassischer Statistik oder über eine aufwändige Methodik IRT verarbeitet. Voraussetzung hierfür sind Metadaten auf Itemebene, beispielsweise Zuordnung zu Domänen oder psychometrische Kennwerte.\nErgebnisse darstellen: Die Adressaten der Ergebnisrückmeldung sind Akteure im Bildungsbereich, die sich für die einzelne Testperson und deren Lösungen interessieren (Lehrkraft), aber auch auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.\nVergleichsdaten bereitstellen: Entsprechend den Zielen der Erhebung werden für die Ergebnisdarstellung Orientierungsdaten zur Verfügung gestellt. Dies soll bestmöglich die Interpretation und dann die Anwendung der Erkenntnisse unterstützen.\n\n\nDatenstrukturen\nDas obige Prozess-Schema ist Grundlage für die Modellierung der Daten:\n\nTestinhalte\nTestpersonen\nTestergebnisse\nKonfiguration der Datenanalyse\nKonfiguration und Daten für die Ergebnisrückmeldung\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Überblick"
+    ]
+  },
+  {
+    "objectID": "survey/test-output.html",
+    "href": "survey/test-output.html",
+    "title": "Testergebnisse - test output",
+    "section": "",
+    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    output[test output]:::level1\n    responses[responses]:::level2\n    logs[logs]:::level2\n    output --&gt; responses\n    output --&gt; logs\n\n\n\n\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Überblick",
+      "Testergebnisse"
+    ]
+  },
+  {
+    "objectID": "survey/feedback.html",
+    "href": "survey/feedback.html",
+    "title": "Ergebnisrückmeldung - feedback config",
+    "section": "",
+    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    feedback[feedback config]:::level1\n    ordinal[ordinal scales]:::level2\n    relational[relational data]:::level2\n    feedback --&gt; ordinal\n    feedback --&gt; relational\n\n\n\n\n\n\n\n\n\n\n Zurück nach obenLiteratur\n\nGross, S., Hankeln, C., Rösike, K.-A., & Prediger, S. (2025). How do Expert and Novice Teachers Monitor and Enhance Student Understanding? Qualitative Comparisons Informing the Design of a Digital Formative Assessment Platform. Tech Know Learn, 30(1), 991–1020. https://doi.org/10.1007/s10758-024-09755-0\n\n\nPukrop, J. (2019). Rückmeldungen aus Schulleistungstests an Lehrkräfte durch interaktive Informationsvisualisierungen. Universität Bremen. https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12",
+    "crumbs": [
+      "Überblick",
+      "Ergebnisrückmeldung"
+    ]
+  },
+  {
+    "objectID": "survey/testtakers.html",
+    "href": "survey/testtakers.html",
+    "title": "Testpersonen - Population",
+    "section": "",
+    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    population[population]:::level1\n    click population \"testtakers.html\" \"Gehe zu Testpersonen\"\n    organisation[organisational structure]:::level2\n    sources[data sources]:::level2\n    testtakers[testtakers]:::level2\n    id[id mapping scheme]:::level2\n    population --&gt; organisation\n    population --&gt; sources\n    population --&gt; testtakers\n    population --&gt; id\n\n\n\n\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Überblick",
+      "Testpersonen"
+    ]
+  },
+  {
     "objectID": "survey/content.html",
     "href": "survey/content.html",
     "title": "Testinhalte - Survey Content Package",
@@ -43,16 +104,6 @@
     "crumbs": [
       "Überblick",
       "Testinhalte"
-    ]
-  },
-  {
-    "objectID": "survey/index.html",
-    "href": "survey/index.html",
-    "title": "Überblick",
-    "section": "",
-    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet.\n\n\n\n\n\nflowchart TD\n    classDef test fill:#0ff,stroke:black;\n    classDef others fill:#cff,stroke:black;\n    goals[Ziele festlegen]:::others\n    sc[Testinhalte auswählen]:::others\n    td[Testpersonen festlegen]:::others\n    tr([Test durchführen]):::test\n    cr[Antworten kodieren]:::others\n    ra[Daten analysieren]:::others\n    cd[Vergleichsdaten]:::others\n    fb[Ergebnisse darstellen]:::others\n\n    goals ==&gt; sc\n    goals ==&gt; td\n    sc ==&gt; tr\n    td ==&gt; tr\n    tr ==&gt; cr\n    cr ==&gt; ra\n    ra ==&gt; fb\n    goals ==&gt; cd\n    cd ==&gt; fb\n    linkStyle 0,1,2,3,4,5,6,7,8 stroke:black,stroke-width:4px;\n\n\n\n\n\n\n\n\nZiele festlegen: Befragungen und Tests sind teuer. Sie müssen daher klar definierten Ziele folgen. Danach richten sich sämtliche nachfolgende Entscheidungen. Typische Beispiele sind die Unterrichtsentwicklung (Lehrkräfte erhalten Erkenntnisse für die Gestaltung von Unterricht) und Systemmonitoring (Politik und Bildungsadministration erhalten Erkenntnisse über die Steuerung/Unterstützung von Schulen).\nTestinhalte auswählen: Passend zu den Zielen der Erhebung werden die Testinhalte (Survey Content) ausgewählt: Aufgaben, Aufgabenfolgen (Testhefte). Hierdurch wird auch über große Teile der Kodierung, der Datenanalyse und der Ergebnispräsentation entschieden.\nTestpersonen festlegen: Hier wird die Frage beantwortet, wer am Test teilnehmen soll. Das wird zunächst abstrakt festgelegt (z. B. “Schülerinnen und Schüler der 3. Jahrgangsstufe”) und dann konkret auf Schul- oder Klassenebene.\nTest durchführen: Die Testpersonen führen den Test bzw. die Befragung aus.\nAntworten kodieren: Die gegebenen Antworten werden einer Kategorie zugeordnet. Je nach Art der Items ist eine automatische Kodierung möglich oder eine Person muss nachträglich die Antworten anschauen und bewerten (sog. manuelle Kodierung).\nDaten analysieren: Die kodierten Antworten werden entweder mit einfacher klassischer Statistik oder über eine aufwändige Methodik IRT verarbeitet. Voraussetzung hierfür sind Metadaten auf Itemebene, beispielsweise Zuordnung zu Domänen oder psychometrische Kennwerte.\nErgebnisse darstellen: Die Adressaten der Ergebnisrückmeldung sind Akteure im Bildungsbereich, die sich für die einzelne Testperson und deren Lösungen interessieren (Lehrkraft), aber auch auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.\nVergleichsdaten bereitstellen: Entsprechend den Zielen der Erhebung werden für die Ergebnisdarstellung Orientierungsdaten zur Verfügung gestellt. Dies soll bestmöglich die Interpretation und dann die Anwendung der Erkenntnisse unterstützen.\n\n\nDatenstrukturen\nDas obige Prozess-Schema ist Grundlage für die Modellierung der Daten:\n\nTestinhalte\nTestpersonen\nTestergebnisse\nKonfiguration der Datenanalyse\nKonfiguration und Daten für die Ergebnisrückmeldung\n\n\n\n\n\n Zurück nach oben",
-    "crumbs": [
-      "Überblick"
     ]
   },
   {
@@ -84,54 +135,13 @@
     "text": "Beobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "StarS",
+    "objectID": "specs/index.html",
+    "href": "specs/index.html",
+    "title": "Spezifikationen",
     "section": "",
-    "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert. Hier ist auch eine Anleitung für Änderungen an den Inhalten zu finden.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
-  },
-  {
-    "objectID": "survey/analysis.html",
-    "href": "survey/analysis.html",
-    "title": "Datenanalyse",
-    "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    analysis[analysis output]:::level1\n    numeric[numeric scales]:::level2\n    analysis --&gt; numeric\n\n\n\n\n\n\n\n\n\n Zurück nach oben",
+    "text": "Work In Progress\n\n\n\nDie folgenden Spezifikationen befinden sich in Entwicklung\n\n\n\nSurvey Content Package\n\nIndex\nDatenanalyse\n\n\n\n\n\n Zurück nach oben",
     "crumbs": [
-      "Überblick",
-      "Datenanalyse"
-    ]
-  },
-  {
-    "objectID": "survey/feedback.html",
-    "href": "survey/feedback.html",
-    "title": "Ergebnisrückmeldung - feedback config",
-    "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    feedback[feedback config]:::level1\n    ordinal[ordinal scales]:::level2\n    relational[relational data]:::level2\n    feedback --&gt; ordinal\n    feedback --&gt; relational\n\n\n\n\n\n\n\n\n\n\n Zurück nach obenLiteratur\n\nGross, S., Hankeln, C., Rösike, K.-A., & Prediger, S. (2025). How do Expert and Novice Teachers Monitor and Enhance Student Understanding? Qualitative Comparisons Informing the Design of a Digital Formative Assessment Platform. Tech Know Learn, 30(1), 991–1020. https://doi.org/10.1007/s10758-024-09755-0\n\n\nPukrop, J. (2019). Rückmeldungen aus Schulleistungstests an Lehrkräfte durch interaktive Informationsvisualisierungen. Universität Bremen. https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12",
-    "crumbs": [
-      "Überblick",
-      "Ergebnisrückmeldung"
-    ]
-  },
-  {
-    "objectID": "survey/test-output.html",
-    "href": "survey/test-output.html",
-    "title": "Testergebnisse - test output",
-    "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    output[test output]:::level1\n    responses[responses]:::level2\n    logs[logs]:::level2\n    output --&gt; responses\n    output --&gt; logs\n\n\n\n\n\n\n\n\n\n Zurück nach oben",
-    "crumbs": [
-      "Überblick",
-      "Testergebnisse"
-    ]
-  },
-  {
-    "objectID": "survey/testtakers.html",
-    "href": "survey/testtakers.html",
-    "title": "Testpersonen - Population",
-    "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    population[population]:::level1\n    click population \"testtakers.html\" \"Gehe zu Testpersonen\"\n    organisation[organisational structure]:::level2\n    sources[data sources]:::level2\n    testtakers[testtakers]:::level2\n    id[id mapping scheme]:::level2\n    population --&gt; organisation\n    population --&gt; sources\n    population --&gt; testtakers\n    population --&gt; id\n\n\n\n\n\n\n\n\n\n Zurück nach oben",
-    "crumbs": [
-      "Überblick",
-      "Testpersonen"
+      "Spezifikationen"
     ]
   }
 ]

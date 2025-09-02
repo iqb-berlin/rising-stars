@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/index copy.html</loc>
-    <lastmod>2025-07-02T06:55:34.778Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/content.html</loc>
-    <lastmod>2025-07-02T06:55:34.778Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/index.html</loc>
-    <lastmod>2025-07-02T06:55:34.778Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/concepts.html</loc>
-    <lastmod>2025-07-02T06:55:34.778Z</lastmod>
-  </url>
-  <url>
     <loc>https://iqb-berlin.github.io/rising-stars/index.html</loc>
-    <lastmod>2025-07-02T06:55:34.778Z</lastmod>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-berlin.github.io/rising-stars/survey/analysis.html</loc>
-    <lastmod>2025-07-02T06:55:34.778Z</lastmod>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
   </url>
   <url>
-    <loc>https://iqb-berlin.github.io/rising-stars/survey/feedback.html</loc>
-    <lastmod>2025-07-02T06:55:34.778Z</lastmod>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/index copy.html</loc>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/index.html</loc>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-berlin.github.io/rising-stars/survey/test-output.html</loc>
-    <lastmod>2025-07-02T06:55:34.779Z</lastmod>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/feedback.html</loc>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-berlin.github.io/rising-stars/survey/testtakers.html</loc>
-    <lastmod>2025-07-02T06:55:34.779Z</lastmod>
+    <lastmod>2025-09-02T13:28:59.134Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/content.html</loc>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/survey/concepts.html</loc>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-berlin.github.io/rising-stars/specs/index.html</loc>
+    <lastmod>2025-09-02T13:28:59.133Z</lastmod>
   </url>
 </urlset>
