@@ -30,7 +30,8 @@ flowchart TD
     cr ==> ra
     Testcontent --> fb
     ra ==> fb
-    linkStyle 0,5,7,9 stroke-width:1px;
+    linkStyle 1,2,3,4,6,8 stroke:black
+    linkStyle 0,5,7,9 stroke:black;stroke-width:1px;
 
 ```
 
@@ -58,6 +59,8 @@ flowchart TD
     C -->|Antworten| E[IQB-CodingService]
     E -->|Fähigkeitswerte| C
     C -->|Fähigkeitswerte| F(Rückmeldung)
+
+    linkStyle 0,1,2,3,4,5,6 stroke:black
   
 ```
 
