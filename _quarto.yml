@@ -26,7 +26,7 @@ website:
     search: true
     lang: de
     contents:
-      - section: Überblick
+      - text: Überblick
         href: survey/index.qmd
       - text: Spezifikationen
         href: specs/index.qmd
