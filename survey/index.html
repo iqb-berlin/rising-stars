@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../survey/content.html" rel="next">
+<link href="../specs/index.html" rel="next">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -122,45 +122,8 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../survey/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Überblick</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../survey/content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Testinhalte</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../survey/testtakers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Testpersonen</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../survey/test-output.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Testergebnisse</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../survey/analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Datenanalyse</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../survey/feedback.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ergebnisrückmeldung</span></a>
-  </div>
-</li>
-      </ul>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Überblick</span></span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -178,7 +141,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#datenstrukturen" id="toc-datenstrukturen" class="nav-link active" data-scroll-target="#datenstrukturen">Datenstrukturen</a></li>
+  <li><a href="#software-komponenten" id="toc-software-komponenten" class="nav-link active" data-scroll-target="#software-komponenten">Software-Komponenten</a></li>
+  <li><a href="#umsetzung-in-stars" id="toc-umsetzung-in-stars" class="nav-link" data-scroll-target="#umsetzung-in-stars">Umsetzung in StarS</a></li>
   </ul>
 </nav>
     </div>
@@ -213,25 +177,28 @@ ul.task-list li input[type="checkbox"] {
 <pre class="mermaid mermaid-js">flowchart TD
     classDef test fill:#0ff,stroke:black;
     classDef others fill:#cff,stroke:black;
+    classDef input fill:#fff,stroke:black;
     goals[Ziele festlegen]:::others
     sc[Testinhalte auswählen]:::others
     td[Testpersonen festlegen]:::others
     tr([Test durchführen]):::test
     cr[Antworten kodieren]:::others
     ra[Daten analysieren]:::others
-    cd[Vergleichsdaten]:::others
-    fb[Ergebnisse darstellen]:::others
+    fb[Ergebnisse berichten]:::others
+    Testcontent:::input
 
+    Testcontent --&gt; sc
     goals ==&gt; sc
     goals ==&gt; td
     sc ==&gt; tr
     td ==&gt; tr
+    Testcontent --&gt; cr
     tr ==&gt; cr
+    Testcontent --&gt; ra
     cr ==&gt; ra
+    Testcontent --&gt; fb
     ra ==&gt; fb
-    goals ==&gt; cd
-    cd ==&gt; fb
-    linkStyle 0,1,2,3,4,5,6,7,8 stroke:black,stroke-width:4px;
+    linkStyle 0,5,7,9 stroke-width:1px;
 
 </pre>
 </div>
@@ -239,26 +206,51 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Das obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.</p>
+<p>Oben links in der Darstellung ist mit <strong>Testcontent</strong> das Material für den Test dargestellt:</p>
 <ul>
-<li><strong>Ziele festlegen</strong>: Befragungen und Tests sind teuer. Sie müssen daher klar definierten Ziele folgen. Danach richten sich sämtliche nachfolgende Entscheidungen. Typische Beispiele sind die <em>Unterrichtsentwicklung</em> (Lehrkräfte erhalten Erkenntnisse für die Gestaltung von Unterricht) und <em>Systemmonitoring</em> (Politik und Bildungsadministration erhalten Erkenntnisse über die Steuerung/Unterstützung von Schulen).</li>
-<li><strong>Testinhalte auswählen</strong>: Passend zu den Zielen der Erhebung werden die Testinhalte (Survey Content) ausgewählt: Aufgaben, Aufgabenfolgen (Testhefte). Hierdurch wird auch über große Teile der Kodierung, der Datenanalyse und der Ergebnispräsentation entschieden.</li>
-<li><strong>Testpersonen festlegen</strong>: Hier wird die Frage beantwortet, wer am Test teilnehmen soll. Das wird zunächst abstrakt festgelegt (z. B. “Schülerinnen und Schüler der 3. Jahrgangsstufe”) und dann konkret auf Schul- oder Klassenebene.</li>
-<li><strong>Test durchführen</strong>: Die Testpersonen führen den Test bzw. die Befragung aus.</li>
-<li><strong>Antworten kodieren</strong>: Die gegebenen Antworten werden einer Kategorie zugeordnet. Je nach Art der Items ist eine automatische Kodierung möglich oder eine Person muss nachträglich die Antworten anschauen und bewerten (sog. manuelle Kodierung).</li>
-<li><strong>Daten analysieren</strong>: Die kodierten Antworten werden entweder mit einfacher klassischer Statistik oder über eine aufwändige Methodik IRT verarbeitet. Voraussetzung hierfür sind Metadaten auf Itemebene, beispielsweise Zuordnung zu Domänen oder psychometrische Kennwerte.</li>
-<li><strong>Ergebnisse darstellen</strong>: Die Adressaten der Ergebnisrückmeldung sind Akteure im Bildungsbereich, die sich für die einzelne Testperson und deren Lösungen interessieren (Lehrkraft), aber auch auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.</li>
-<li><strong>Vergleichsdaten bereitstellen</strong>: Entsprechend den Zielen der Erhebung werden für die Ergebnisdarstellung Orientierungsdaten zur Verfügung gestellt. Dies soll bestmöglich die Interpretation und dann die Anwendung der Erkenntnisse unterstützen.</li>
+<li>Für die Testdurchführung sind Testaufgaben (Units) und deren Anordnung im Test (Booklets) nötig.</li>
+<li>Für die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.</li>
+<li>Für die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.</li>
+<li>Für das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.</li>
 </ul>
-<section id="datenstrukturen" class="level1">
-<h1>Datenstrukturen</h1>
-<p>Das obige Prozess-Schema ist Grundlage für die Modellierung der Daten:</p>
+<p>Sämtliche Daten stellt das IQB im StarS-Projekt über das <strong>Survey Content Package</strong> bereit. Diese Datenstruktur ist <a href="../specs/index.html">hier spezifiziert</a>.</p>
+<section id="software-komponenten" class="level1">
+<h1>Software-Komponenten</h1>
+<p>Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[IQB-ContentPool] --&gt;|Import Testcontent| C((Management Portal))
+    B(Schulverwaltungssystem)--&gt;|Import Personendaten| C
+    C --&gt;|Units, Booklets| D[IQB-Testcenter]
+    D --&gt;|Antwortdaten| C
+    C --&gt;|Antworten| E[IQB-CodingService]
+    E --&gt;|Fähigkeitswerte| C
+    C --&gt;|Fähigkeitswerte| F(Rückmeldung)
+  
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <ul>
-<li><a href="../survey/content.html">Testinhalte</a></li>
-<li><a href="../survey/testtakers.html">Testpersonen</a></li>
-<li><a href="../survey/test-output.html">Testergebnisse</a></li>
-<li><a href="../survey/analysis.html">Konfiguration der Datenanalyse</a></li>
-<li><a href="../survey/feedback.html">Konfiguration und Daten für die Ergebnisrückmeldung</a></li>
+<li><strong>Management-Portal</strong>: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.</li>
+<li><strong>IQB-ContentPool</strong>: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.</li>
+<li><strong>Schulverwaltungssystem</strong>: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.</li>
+<li><strong>IQB-Testcenter</strong>: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.</li>
+<li><strong>IQB-CodingService</strong>: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.</li>
+<li><strong>Rückmeldung</strong>: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte.</li>
 </ul>
+</section>
+<section id="umsetzung-in-stars" class="level1">
+<h1>Umsetzung in StarS</h1>
+<p>Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.</p>
+<p>Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.</p>
 
 
 </section>
@@ -674,8 +666,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../survey/content.html" class="pagination-link" aria-label="Testinhalte">
-        <span class="nav-page-text">Testinhalte</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../specs/index.html" class="pagination-link" aria-label="Spezifikationen">
+        <span class="nav-page-text">Spezifikationen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
