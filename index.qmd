@@ -9,6 +9,12 @@ description: Architektur und technische Spezifikationen
 
 Das Projekt [StarS - Stark in die Grundschule starten](https://www.iqb.hu-berlin.de/research/dm/StarS/) beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des [IQB](https://www.iqb.hu-berlin.de/) werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.
 
+::: {.callout-caution}
+## Work In Progress
+
+Die Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die [Versionierung](https://semver.org/lang/de/): Eine "0" zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein *stable* Release gibt.
+:::
+
 # Lizenz
 
 Alle Texte und Spezifikationen sind unter der [Lizenz CC0](https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/) veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. [DFG-pdf](https://www.dfg.de/resource/blob/173732/4166759430af8dc2256f0fa54e009f03/kodex-gwp-data.pdf)) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.

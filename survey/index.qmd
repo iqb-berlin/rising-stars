@@ -9,43 +9,67 @@ Im Englischen steht "Survey" für Befragungen und Leistungstests gleichermaßen.
 flowchart TD
     classDef test fill:#0ff,stroke:black;
     classDef others fill:#cff,stroke:black;
+    classDef input fill:#fff,stroke:black;
     goals[Ziele festlegen]:::others
     sc[Testinhalte auswählen]:::others
     td[Testpersonen festlegen]:::others
     tr([Test durchführen]):::test
     cr[Antworten kodieren]:::others
     ra[Daten analysieren]:::others
-    cd[Vergleichsdaten]:::others
-    fb[Ergebnisse darstellen]:::others
+    fb[Ergebnisse berichten]:::others
+    Testcontent:::input
 
+    Testcontent --> sc
     goals ==> sc
     goals ==> td
     sc ==> tr
     td ==> tr
+    Testcontent --> cr
     tr ==> cr
+    Testcontent --> ra
     cr ==> ra
+    Testcontent --> fb
     ra ==> fb
-    goals ==> cd
-    cd ==> fb
-    linkStyle 0,1,2,3,4,5,6,7,8 stroke:black,stroke-width:4px;
+    linkStyle 0,5,7,9 stroke-width:1px;
 
 ```
 
-* **Ziele festlegen**: Befragungen und Tests sind teuer. Sie müssen daher klar definierten Ziele folgen. Danach richten sich sämtliche nachfolgende Entscheidungen. Typische Beispiele sind die *Unterrichtsentwicklung* (Lehrkräfte erhalten Erkenntnisse für die Gestaltung von Unterricht) und *Systemmonitoring* (Politik und Bildungsadministration erhalten Erkenntnisse über die Steuerung/Unterstützung von Schulen).
-* **Testinhalte auswählen**: Passend zu den Zielen der Erhebung werden die Testinhalte (Survey Content) ausgewählt: Aufgaben, Aufgabenfolgen (Testhefte). Hierdurch wird auch über große Teile der Kodierung, der Datenanalyse und der Ergebnispräsentation entschieden.
-* **Testpersonen festlegen**: Hier wird die Frage beantwortet, wer am Test teilnehmen soll. Das wird zunächst abstrakt festgelegt (z. B. "Schülerinnen und Schüler der 3. Jahrgangsstufe") und dann konkret auf Schul- oder Klassenebene.
-* **Test durchführen**: Die Testpersonen führen den Test bzw. die Befragung aus.
-* **Antworten kodieren**: Die gegebenen Antworten werden einer Kategorie zugeordnet. Je nach Art der Items ist eine automatische Kodierung möglich oder eine Person muss nachträglich die Antworten anschauen und bewerten (sog. manuelle Kodierung).
-* **Daten analysieren**: Die kodierten Antworten werden entweder mit einfacher klassischer Statistik oder über eine aufwändige Methodik IRT verarbeitet. Voraussetzung hierfür sind Metadaten auf Itemebene, beispielsweise Zuordnung zu Domänen oder psychometrische Kennwerte.
-* **Ergebnisse darstellen**: Die Adressaten der Ergebnisrückmeldung sind Akteure im Bildungsbereich, die sich für die einzelne Testperson und deren Lösungen interessieren (Lehrkraft), aber auch auf aggregierter Ebene (Schule, Land, Bezirk, alle Gymnasien etc.) den Stand und die Zusammenhänge untersuchen möchten.
-* **Vergleichsdaten bereitstellen**: Entsprechend den Zielen der Erhebung werden für die Ergebnisdarstellung Orientierungsdaten zur Verfügung gestellt. Dies soll bestmöglich die Interpretation und dann die Anwendung der Erkenntnisse unterstützen.
+Das obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.
 
-# Datenstrukturen
+Oben links in der Darstellung ist mit **Testcontent** das Material für den Test dargestellt:
 
-Das obige Prozess-Schema ist Grundlage für die Modellierung der Daten:
+* Für die Testdurchführung sind Testaufgaben (Units) und deren Anordnung im Test (Booklets) nötig.
+* Für die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.
+* Für die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.
+* Für das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.
 
-* [Testinhalte](content.qmd)
-* [Testpersonen](testtakers.qmd)
-* [Testergebnisse](test-output.qmd)
-* [Konfiguration der Datenanalyse](analysis.qmd)
-* [Konfiguration und Daten für die Ergebnisrückmeldung](feedback.qmd)
+Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Package** bereit. Diese Datenstruktur ist [hier spezifiziert](../specs/index.qmd).
+
+# Software-Komponenten
+
+Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:
+
+```{mermaid}
+flowchart TD
+    A[IQB-ContentPool] -->|Import Testcontent| C((Management Portal))
+    B(Schulverwaltungssystem)-->|Import Personendaten| C
+    C -->|Units, Booklets| D[IQB-Testcenter]
+    D -->|Antwortdaten| C
+    C -->|Antworten| E[IQB-CodingService]
+    E -->|Fähigkeitswerte| C
+    C -->|Fähigkeitswerte| F(Rückmeldung)
+  
+```
+
+* **Management-Portal**: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.
+* **IQB-ContentPool**: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.
+* **Schulverwaltungssystem**: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler\*innen liefert.
+* **IQB-Testcenter**: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.
+* **IQB-CodingService**: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.
+* **Rückmeldung**: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte.
+
+# Umsetzung in StarS
+
+Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.
+
+Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.

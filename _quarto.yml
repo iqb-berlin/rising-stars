@@ -28,17 +28,6 @@ website:
     contents:
       - section: Überblick
         href: survey/index.qmd
-        contents:
-          - text: Testinhalte
-            href: survey/content.qmd
-          - text: Testpersonen
-            href: survey/testtakers.qmd
-          - text: Testergebnisse
-            href: survey/test-output.qmd
-          - text: Datenanalyse
-            href: survey/analysis.qmd
-          - text: Ergebnisrückmeldung
-            href: survey/feedback.qmd
       - text: Spezifikationen
         href: specs/index.qmd
       
