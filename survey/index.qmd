@@ -30,8 +30,8 @@ flowchart TD
     cr ==> ra
     Testcontent --> fb
     ra ==> fb
-    linkStyle 1,2,3,4,6,8 stroke:black
-    linkStyle 0,5,7,9 stroke:black;stroke-width:1px;
+    linkStyle 1,2,3,4,6,8,10 stroke:black
+    linkStyle 0,5,7,9 stroke:black,stroke-width:1px;
 
 ```
 
