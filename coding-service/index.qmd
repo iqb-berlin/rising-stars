@@ -1,0 +1,43 @@
+---
+lang: de
+title: Coding-Service
+lightbox: true
+format:
+    html:
+        other-links:
+            - text: API-Spezifikation
+              href: https://iqb-specifications.github.io/coding-service-api
+---
+
+Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.
+
+![](../assets/coding-service.png){width="500"}
+
+# Funktionen
+
+Die Funktionen bauen aufeinander auf. Sie müssen also genau in der Reihenfolge abgearbeitet werden.
+
+## Kodieren
+
+Die erste Aufgabe des CodingService besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der **Ebene der Variablen** passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.
+
+Im Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d. h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.
+
+## Item-Matrix erstellen
+
+Im häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d. h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: "Wähle aus und begründe" ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist ebenfalls Teil des Kodierschemas der Aufgabe: Es wird für das Item eine neue Variable abgeleitet.
+
+Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur **zwei Dimensionen**: Item-Id und ein numerischer Wert. Sollte es einen Fehler gegeben haben, wird überlicherweise die Konvention "negativer Wert" - z. B. -99 - umgesetzt.
+
+## Skalenwerte ermitteln
+
+Im Survey Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:
+
+* Liste der Items, die zu dieser Skale beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)
+* Methode der Ermittlung und dafür nötige Parameter
+
+# API-Dokumentation
+
+Um mit dem IQB-CodingService zu kommunizieren bzw. dessen Funktionen zu nutzen, wurde ein API spezifiziert. Dies an folgender Stelle zu finden:
+
+[API-Spezifikation](https://iqb-specifications.github.io/coding-service-api)

@@ -31,8 +31,10 @@ website:
     contents:
       - text: Überblick
         href: intro.qmd
-      - text: Spezifikationen
-        href: specs/index.qmd
+      - text: Survey Content
+        href: survey-content/index.qmd
+      - text: Coding-Service
+        href: coding-service/index.qmd
       
 format:
   html:

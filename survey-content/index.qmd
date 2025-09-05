@@ -1,20 +1,9 @@
 ---
 lang: de
-title: Spezifikationen
+title: Survey Content Package
 ---
-
-::: {.callout-caution}
-## Work In Progress
-
-Die folgenden Spezifikationen befinden sich in Entwicklung
-:::
-
-# Survey Content Package
 
 * Index: [Spec](https://iqb-specifications.github.io/scp-index), [Example](https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json)
   * Datenanalyse (Teil von Index): [Spec](https://iqb-specifications.github.io/scp-analysis), [Beispiel 1](https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_wo_scales.json), [Beispiel 2](https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_with_scales.json)
 * [Metadaten-Profile](https://iqb-vocabs.github.io/p44/)
 
-# Codingservice
-
-[API-Spec](https://iqb-specifications.github.io/coding-service-api)

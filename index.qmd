@@ -2,7 +2,11 @@
 lang: de
 title: StarS
 description: Architektur und technische Spezifikationen
+format:
+    html:
+        include-in-header: ld.organisation.html
 ---
+
 ![](assets/banner.png)
 
 # Willkommen
