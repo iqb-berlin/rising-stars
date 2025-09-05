@@ -1,39 +1,12 @@
 ---
 lang: de
 title: Überblick
+lightbox: true
 ---
 
 Im Englischen steht "Survey" für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf **Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen**. Dafür wird der Begriff "Test" im allgemeineren Sinne verwendet. 
 
-```{mermaid}
-flowchart TD
-    classDef test fill:#0ff,stroke:black;
-    classDef others fill:#cff,stroke:black;
-    classDef input fill:#fff,stroke:black;
-    goals[Ziele festlegen]:::others
-    sc[Testinhalte auswählen]:::others
-    td[Testpersonen festlegen]:::others
-    tr([Test durchführen]):::test
-    cr[Antworten kodieren]:::others
-    ra[Daten analysieren]:::others
-    fb[Ergebnisse berichten]:::others
-    Testcontent:::input
-
-    Testcontent --> sc
-    goals ==> sc
-    goals ==> td
-    sc ==> tr
-    td ==> tr
-    Testcontent --> cr
-    tr ==> cr
-    Testcontent --> ra
-    cr ==> ra
-    Testcontent --> fb
-    ra ==> fb
-    linkStyle 1,2,3,4,6,8,10 stroke:black
-    linkStyle 0,5,7,9 stroke:black,stroke-width:1px;
-
-```
+![](../assets/intro1.png){width="500" group="intro"}
 
 Das obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.
 
@@ -50,29 +23,19 @@ Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Pack
 
 Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:
 
-```{mermaid}
-flowchart TD
-    A[IQB-ContentPool] -->|Import Testcontent| C((Management Portal))
-    B(Schulverwaltungssystem)-->|Import Personendaten| C
-    C -->|Units, Booklets| D[IQB-Testcenter]
-    D -->|Antwortdaten| C
-    C -->|Antworten| E[IQB-CodingService]
-    E -->|Fähigkeitswerte| C
-    C -->|Fähigkeitswerte| F(Rückmeldung)
-
-    linkStyle 0,1,2,3,4,5,6 stroke:black
-  
-```
+![](../assets/intro2.png){width="500" group="intro"}
 
 * **Management-Portal**: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.
 * **IQB-ContentPool**: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.
 * **Schulverwaltungssystem**: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler\*innen liefert.
 * **IQB-Testcenter**: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.
 * **IQB-CodingService**: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.
-* **Rückmeldung**: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte.
+* **Dashboard**: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das "Dashboard" in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.
 
 # Umsetzung in StarS
 
 Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.
 
 Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.
+
+Die Betreiber einer StarS-Installation (Land, Dienstleister) entscheiden gezielt, welche der Komponenten eingesetzt werden. Das obige Schema ist daher als Integrationsschema zu verstehen: Die Komponenten haben dokumentierte Schnittstellen (API) und die Daten sind für den optimalen Austausch genau spezifiziert. Die Seiten dieses Auftrittes thematisieren diese Spezifikationen für die optimale Unterstützung eines flexiblen Testsystems.

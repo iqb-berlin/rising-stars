@@ -12,6 +12,9 @@ website:
     pinned: true
     search: true
     logo: assets/iqb-logo-grey.png
+    right:
+      - icon: github
+        href: https://github.com/iqb-berlin/rising-stars
   page-footer:
     border: true
     background: light
@@ -27,7 +30,7 @@ website:
     lang: de
     contents:
       - text: Überblick
-        href: survey/index.qmd
+        href: intro.qmd
       - text: Spezifikationen
         href: specs/index.qmd
       
@@ -37,4 +40,5 @@ format:
     anchor-sections: true
     link-external-icon: true
     link-external-newwindow: true
+    css: styles.css
     toc: true
