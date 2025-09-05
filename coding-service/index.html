@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Datenanalyse – StarS</title>
+<title>Coding-Service – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../survey-content/index.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -42,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-7b96c52e75bcb7d16482a5ffdad9c2f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,11 +73,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Suchen"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -90,9 +92,21 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">StarS</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/iqb-berlin/rising-stars"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
 </div>
-          <div id="quarto-search" class="" title="Suchen"></div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
@@ -100,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Datenanalyse</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../coding-service/index.html">Coding-Service</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -122,14 +136,20 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Überblick</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../specs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Spezifikationen</span></a>
+  <a href="../survey-content/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Survey Content</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coding-service/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Coding-Service</span></a>
   </div>
 </li>
     </ul>
@@ -137,15 +157,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#funktionen" id="toc-funktionen" class="nav-link active" data-scroll-target="#funktionen">Funktionen</a>
+  <ul class="collapse">
+  <li><a href="#kodieren" id="toc-kodieren" class="nav-link" data-scroll-target="#kodieren">Kodieren</a></li>
+  <li><a href="#item-matrix-erstellen" id="toc-item-matrix-erstellen" class="nav-link" data-scroll-target="#item-matrix-erstellen">Item-Matrix erstellen</a></li>
+  <li><a href="#skalenwerte-ermitteln" id="toc-skalenwerte-ermitteln" class="nav-link" data-scroll-target="#skalenwerte-ermitteln">Skalenwerte ermitteln</a></li>
+  </ul></li>
+  <li><a href="#api-dokumentation" id="toc-api-dokumentation" class="nav-link" data-scroll-target="#api-dokumentation">API-Dokumentation</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/coding-service-api"><i class="bi bi-link-45deg"></i>API-Spezifikation</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Datenanalyse</h1>
+<h1 class="title">Coding-Service</h1>
 </div>
 
 
@@ -162,29 +194,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    classDef root fill:#0ff,stroke:black
-    classDef level1 fill:#0ff,stroke:black
-    classDef level2 fill:#cff,stroke:black
-    classDef metadata fill:whitesmoke,stroke:black
-    linkStyle default stroke:black,stroke-width:2px,color:black;
+<p>Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d.&nbsp;h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.</p>
+<p><a href="../assets/coding-service.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../assets/coding-service.png" class="img-fluid" width="500"></a></p>
+<section id="funktionen" class="level1">
+<h1>Funktionen</h1>
+<p>Die Funktionen bauen aufeinander auf. Sie müssen also genau in der Reihenfolge abgearbeitet werden.</p>
+<section id="kodieren" class="level2">
+<h2 class="anchored" data-anchor-id="kodieren">Kodieren</h2>
+<p>Die erste Aufgabe des CodingService besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der <strong>Ebene der Variablen</strong> passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.</p>
+<p>Im Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d.&nbsp;h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.</p>
+</section>
+<section id="item-matrix-erstellen" class="level2">
+<h2 class="anchored" data-anchor-id="item-matrix-erstellen">Item-Matrix erstellen</h2>
+<p>Im häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d.&nbsp;h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist ebenfalls Teil des Kodierschemas der Aufgabe: Es wird für das Item eine neue Variable abgeleitet.</p>
+<p>Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur <strong>zwei Dimensionen</strong>: Item-Id und ein numerischer Wert. Sollte es einen Fehler gegeben haben, wird überlicherweise die Konvention “negativer Wert” - z. B. -99 - umgesetzt.</p>
+</section>
+<section id="skalenwerte-ermitteln" class="level2">
+<h2 class="anchored" data-anchor-id="skalenwerte-ermitteln">Skalenwerte ermitteln</h2>
+<p>Im Survey Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:</p>
+<ul>
+<li>Liste der Items, die zu dieser Skale beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)</li>
+<li>Methode der Ermittlung und dafür nötige Parameter</li>
+</ul>
+</section>
+</section>
+<section id="api-dokumentation" class="level1">
+<h1>API-Dokumentation</h1>
+<p>Um mit dem IQB-CodingService zu kommunizieren bzw. dessen Funktionen zu nutzen, wurde ein API spezifiziert. Dies an folgender Stelle zu finden:</p>
+<p><a href="https://iqb-specifications.github.io/coding-service-api">API-Spezifikation</a></p>
 
-    analysis[analysis output]:::level1
-    numeric[numeric scales]:::level2
-    analysis --&gt; numeric
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
 
-
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -593,6 +633,15 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../survey-content/index.html" class="pagination-link" aria-label="Survey Content">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Survey Content</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -619,6 +668,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

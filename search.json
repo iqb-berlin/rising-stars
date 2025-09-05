@@ -7,121 +7,63 @@
     "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\n\n\n\n\nWork In Progress\n\n\n\nDie Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die Versionierung: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein stable Release gibt.\n\n\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert. Hier ist auch eine Anleitung für Änderungen an den Inhalten zu finden.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
   },
   {
-    "objectID": "survey/analysis.html",
-    "href": "survey/analysis.html",
-    "title": "Datenanalyse",
+    "objectID": "survey-content/index.html",
+    "href": "survey-content/index.html",
+    "title": "Survey Content Package",
     "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    analysis[analysis output]:::level1\n    numeric[numeric scales]:::level2\n    analysis --&gt; numeric\n\n\n\n\n\n\n\n\n\n Zurück nach oben"
-  },
-  {
-    "objectID": "survey/index copy.html",
-    "href": "survey/index copy.html",
-    "title": "Überblick",
-    "section": "",
-    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt - eher noch “Studie” als eine Forschungsunternehmung. Allerdings sind die hier beschriebenen Datenstrukturen überwiegend außerhalb konkreter Forschungsprojekte angesiedelt: Feststellung des Leistungsniveaus und Befragungen im Bildungswesen."
-  },
-  {
-    "objectID": "survey/index copy.html#testpopulation",
-    "href": "survey/index copy.html#testpopulation",
-    "title": "Überblick",
-    "section": "Testpopulation",
-    "text": "Testpopulation\n\nIm Bildungskontext sind dies vor allem Schüler*innen bestimmter Alters- bzw. Klassenstufen.\nWeiterhin sind oft die Lehrkräfte Gegenstand der Erhebung. Erkenntnisse über Einstellungen, Methoden und Arbeitsumstände können wichtige Anregungen liefern.\nIn einigen Studien werden auch Eltern befragt, um häusliche Entwicklungs- bzw. Lernumgebungen zu erfassen und in die Auswertung einfließen zu lassen.\nSchulleitung und Bildungsadministration können ebenfalls einbezogen werden.\n\nAus Sicht der Datenmodellierung sind folgende Punkte zu beachten:\n\nDie Testpopulation ist die Erhebungseinheit. Sie ist entweder direkt aktiv im Erhebungsprozess oder ihre Kompetenzen/Fähigkeiten werden von anderen über Beobachtungen oder Interviews erfasst. Im zweiten Fall sind auch die Einflüsse der Beobachter/Interviewer einzubeziehen.\nPersonenmerkmale sind von herausragender Bedeutung für die Datenauswertung. Darüber werden Hypothesen geprüft und Handlungswissen abgeleitet. Beispiele:\n\nGeschlecht\nSozioökonomischer Status\ngeografisch/administrative Zuordnung (Land, Bezirk, Gemeinde usw.)\nArt/Typ des Schulträgers\nSchulform usw.\n\nPersonenmerkmale werden oft extern zugeführt, auch indirekt. Beispielsweise kann für eine Schule ein sozioökonomischer Index verfügbar sein, der dann auf alle Schüler*innen der Schule übertragen wird."
-  },
-  {
-    "objectID": "survey/index copy.html#nützliche-erkenntnisse",
-    "href": "survey/index copy.html#nützliche-erkenntnisse",
-    "title": "Überblick",
-    "section": "Nützliche Erkenntnisse",
-    "text": "Nützliche Erkenntnisse\nDie Erhebungen im Bildungssektor sind darauf ausgerichtet, allgemein zur Verbesserung der Tätigkeit der Beteiligten und der Rahmenbedingungen beizutragen. Die Quelle dafür ist die Ermittlung eines Leistungsstandes und der anschließende Vergleich: mit ähnlicher Population (Nachbarschule, innerhalb Klasse, anderes Land), mit Werten des Vorjahres derselben Person oder mit einer Norm (z. B. Bildungsstandards). Zusammen mit Personenmerkmalen und in Auseinandersetzung mit dem Erhebungsverfahren können Beziehungen konstruiert und damit Einflussfaktoren identifiziert werden."
-  },
-  {
-    "objectID": "survey/index copy.html#präsentation",
-    "href": "survey/index copy.html#präsentation",
-    "title": "Überblick",
-    "section": "Präsentation",
-    "text": "Präsentation\nUm eine Wirksamkeit des Verfahrens zu erreichen, muss die Verwertung der Erkenntnisse bereits zu einem frühen Stadium der Planung berücksichtigt werden. Die theoretische Nützlichkeit der Erkenntnisse reicht nicht aus, sondern die Präsentation gegenüber einer Zielgruppe (Lehrkräfte, Bildungsadministration) muss zu praktisch umsetzbaren Fortschritten führen. Daher (a) ist die Gestaltung der Rückmeldung ein wesentlicher Erfolgsfaktor der Erhebung und (b) können passende Materialien oder Links zu Beginn der Erhebung mit entwickelt und entsprechend über Metadaten nutzbar gemacht werdne."
-  },
-  {
-    "objectID": "survey/index copy.html#testtakers-definieren",
-    "href": "survey/index copy.html#testtakers-definieren",
-    "title": "Überblick",
-    "section": "Testtakers definieren",
-    "text": "Testtakers definieren"
-  },
-  {
-    "objectID": "survey/index.html",
-    "href": "survey/index.html",
-    "title": "Überblick",
-    "section": "",
-    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet.\n\n\n\n\n\nflowchart TD\n    classDef test fill:#0ff,stroke:black;\n    classDef others fill:#cff,stroke:black;\n    classDef input fill:#fff,stroke:black;\n    goals[Ziele festlegen]:::others\n    sc[Testinhalte auswählen]:::others\n    td[Testpersonen festlegen]:::others\n    tr([Test durchführen]):::test\n    cr[Antworten kodieren]:::others\n    ra[Daten analysieren]:::others\n    fb[Ergebnisse berichten]:::others\n    Testcontent:::input\n\n    Testcontent --&gt; sc\n    goals ==&gt; sc\n    goals ==&gt; td\n    sc ==&gt; tr\n    td ==&gt; tr\n    Testcontent --&gt; cr\n    tr ==&gt; cr\n    Testcontent --&gt; ra\n    cr ==&gt; ra\n    Testcontent --&gt; fb\n    ra ==&gt; fb\n    linkStyle 1,2,3,4,6,8,10 stroke:black\n    linkStyle 0,5,7,9 stroke:black,stroke-width:1px;\n\n\n\n\n\n\n\nDas obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.\nOben links in der Darstellung ist mit Testcontent das Material für den Test dargestellt:\n\nFür die Testdurchführung sind Testaufgaben (Units) und deren Anordnung im Test (Booklets) nötig.\nFür die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.\nFür die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.\nFür das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.\n\nSämtliche Daten stellt das IQB im StarS-Projekt über das Survey Content Package bereit. Diese Datenstruktur ist hier spezifiziert.\n\nSoftware-Komponenten\nDie StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:\n\n\n\n\n\nflowchart TD\n    A[IQB-ContentPool] --&gt;|Import Testcontent| C((Management Portal))\n    B(Schulverwaltungssystem)--&gt;|Import Personendaten| C\n    C --&gt;|Units, Booklets| D[IQB-Testcenter]\n    D --&gt;|Antwortdaten| C\n    C --&gt;|Antworten| E[IQB-CodingService]\n    E --&gt;|Fähigkeitswerte| C\n    C --&gt;|Fähigkeitswerte| F(Rückmeldung)\n\n    linkStyle 0,1,2,3,4,5,6 stroke:black\n  \n\n\n\n\n\n\n\nManagement-Portal: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.\nIQB-ContentPool: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.\nSchulverwaltungssystem: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.\nIQB-CodingService: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.\nRückmeldung: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte.\n\n\n\nUmsetzung in StarS\nIm Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.\nAußerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.\n\n\n\n\n Zurück nach oben",
+    "text": "Index: Spec, Example\n\nDatenanalyse (Teil von Index): Spec, Beispiel 1, Beispiel 2\n\nMetadaten-Profile\n\n\n\n\n Zurück nach oben",
     "crumbs": [
-      "Überblick"
+      "Survey Content"
     ]
   },
   {
-    "objectID": "survey/test-output.html",
-    "href": "survey/test-output.html",
-    "title": "Testergebnisse - test output",
+    "objectID": "coding-service/index.html",
+    "href": "coding-service/index.html",
+    "title": "Coding-Service",
     "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    output[test output]:::level1\n    responses[responses]:::level2\n    logs[logs]:::level2\n    output --&gt; responses\n    output --&gt; logs\n\n\n\n\n\n\n\n\n\n Zurück nach oben"
-  },
-  {
-    "objectID": "survey/feedback.html",
-    "href": "survey/feedback.html",
-    "title": "Ergebnisrückmeldung - feedback config",
-    "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    feedback[feedback config]:::level1\n    ordinal[ordinal scales]:::level2\n    relational[relational data]:::level2\n    feedback --&gt; ordinal\n    feedback --&gt; relational\n\n\n\n\n\n\n\n\n\n\n Zurück nach obenLiteratur\n\nGross, S., Hankeln, C., Rösike, K.-A., & Prediger, S. (2025). How do Expert and Novice Teachers Monitor and Enhance Student Understanding? Qualitative Comparisons Informing the Design of a Digital Formative Assessment Platform. Tech Know Learn, 30(1), 991–1020. https://doi.org/10.1007/s10758-024-09755-0\n\n\nPukrop, J. (2019). Rückmeldungen aus Schulleistungstests an Lehrkräfte durch interaktive Informationsvisualisierungen. Universität Bremen. https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12"
-  },
-  {
-    "objectID": "survey/testtakers.html",
-    "href": "survey/testtakers.html",
-    "title": "Testpersonen - Population",
-    "section": "",
-    "text": "flowchart LR\n    classDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    population[population]:::level1\n    click population \"testtakers.html\" \"Gehe zu Testpersonen\"\n    organisation[organisational structure]:::level2\n    sources[data sources]:::level2\n    testtakers[testtakers]:::level2\n    id[id mapping scheme]:::level2\n    population --&gt; organisation\n    population --&gt; sources\n    population --&gt; testtakers\n    population --&gt; id\n\n\n\n\n\n\n\n\n\n Zurück nach oben"
-  },
-  {
-    "objectID": "survey/content.html",
-    "href": "survey/content.html",
-    "title": "Testinhalte - Survey Content Package",
-    "section": "",
-    "text": "Die Datenstruktur survey content package enthält alle Daten, die für die Durchführung und Auswertung einer Testung erforderlich sind. Es sind lediglich die Testpersonen hinzuzufügen. Außerdem müssen an mehreren Stellen Entscheidungen getroffen werden, um die Testung und die Rückmeldung auf die Ziele abzustimmen.\n\n\n\n\n\nflowchart LR\nclassDef root fill:#0ff,stroke:black\n    classDef level1 fill:#0ff,stroke:black\n    classDef level2 fill:#cff,stroke:black\n    classDef metadata fill:whitesmoke,stroke:black\n    linkStyle default stroke:black,stroke-width:2px,color:black;\n\n    content[survey content package]:::level1\n    click content \"content.html\" \"Gehe zu Testinhalte\"\n    cmd(metadata):::metadata\n    units[units]:::level2\n    testlets[testlets]:::level2\n    booklets[booklets]:::level2\n    analysis_s[analysis scheme]:::level2\n    content --&gt; cmd\n    content --&gt; units\n    content --&gt; testlets\n    content --&gt; booklets\n    content --&gt; analysis_s\n\n\n\n\n\n\n\nMetadaten\nEs handelt sich um eine Datenstruktur, die in einem Register oder Datenpool bereitsteht für die Verwendung. Daher sind diverse Metadaten erforderlich, die die Auswahl eines Inhaltspaketes für eine spezifische Testung unterstützen. Beispiele: Testdomänen (z. B. Englisch Leseverstehen), empfohlene Testpopulation (z. B. Klasse 5), Autoren, Erstellungsjahr, Nutzungsrechte, erforderliche Hilfsmittel (Taschenrechner) usw.\n\n\nUnits\nEin Unit ist nicht nur eine Gruppierung von Frage-Einheiten eines Test oder einer Befragung, die die für die Auswertung relevanten Antworten erzeugen. Der Begriff Unit deckt auch Zwischenseiten für die Einleitung (Willkommen-Seite) oder Erläuterungen für den folgenden Testablauf ab (Bitte Kopfhörer aufsetzen). Diese Art Units werden Orientierungsseiten orientation units genannt. Eine weitere Art von Units stellen die Übungsaufgaben training units dar, die meist zu Beginn einer Testung in den Umgang mit den Antwortelementen einführen. Diese besonderen Units sind zwar Teil des Inhaltspaketes, sind aber grundsätzlich technisch mit den assessment units identisch.\nEine Unit soll möglichst unabhängig von anderen Units und auch von der konkreten Position innerhalb des Testablaufes sein. Dies ist für viele Auswertungsmodelle eine Voraussetzung. Außerdem vereinfacht dies das Management.\nFolgende Daten enthält eine Unit:\n\nUI definition: Daten zur Darstellung und zur Festlegung der Interaktion während der Beantwortung. Hier muss auch ein player festgelegt sein (Verona-Modul, das die Unitdefinition auswertet und im Test darstellt). Für eine Unitdefinition gibt es keine übergreifende Spezifizierung. Technisch handelt es sich um Strings.\nmetadata: Metadaten, die keine technische Bedeutung haben, sondern nur der Kategorisierung bei Auswertung und Anzeige dienen. Wie Werte für Metadaten gespeichert werden, ist hier spezifiziert.\ncoding-scheme: Das Kodierschema legt fest, wie eine Antwort kodiert werden soll. Als Antwort wird hier die kleinste erfassbare Eingabe der Testperson verstanden oder auch ein Zustand (Fortschritt der Audiosequenz) und heißt in den Daten Variable. Die Vorschrift kann als Regel hinterlegt werden - dann erfolgt eine automatische Kodierung. Sie kann aber auch als Instruktion (Text, Bild) gespeichert sein zur Anzeige bei der manuellen Kodierung. Um einen Wert für ein Item (Analyse-Bewertungsebene) zu liefern, können neue Variablen abgeleitet werden, d. h. ein Itemwert kann das Ergebnis der Kodierung mehrerer Antworten sein. Die Datenstruktur eines Kodierschemas ist hier spezifiziert und hier beschrieben.\nitems: Eine oder mehrere Antworten führen zur Ebene, die eine Bewertung ermöglicht. Das bedeutet, dass der Itemwert (i.d.R. 0/1/missing) erst nach der Kodierung zur Verfügung steht. Ein Item hat außerdem Metadaten, zusätzlich zu den Unit-Metadaten. Diese betreffen die Zuordnung zu Kategorien für Anzeige und Auswertung sowie numerische Werte für die Datenanalyse (z. B. Schwierigkeit). Wie Werte für Metadaten gespeichert werden, ist hier spezifiziert.\n\nSämtliche Daten einer Unit sind in einer Datenstruktur zusammengefasst. Es handelt sich um eine XML-Datei ggf. mit ergänzenden Dateien und Abhängigkeiten. Es ist eine Spezifikation(XSD-Datei) verfügbar sowie eine Erläuterung/Kurzdokumentation.\n\n\nTestlets\nFür die Erstellung der Testhefte (Booklets) werden zunächst Blöcke (testlets) zusammengestellt. Es handelt sich um Unit-Folgen für eine definierte Testzeit (10 min, 20 min). Die Auswahl bezieht sich meist auf eine bestimmten Subdomäne, und die Reihenfolge ergibt sich aus aufwändigen Überlegungen z. B. über die Verteilung der Schwierigkeit.\n\n\nBooklets\nEin Booklet (analog zu Papier “Testheft”) legt die Abfolge der Units fest. Das Grundmodell sieht eine Sequenz vor, also eine einfache Aneinanderreihung, die alle Testpersonen absolvieren sollen. Hauptinhalt eines Booklets sind also Verweise auf Units.\nDass vorher Blöcke (testlets) definiert werden, ist nicht erforderlich, aber zu empfehlen. Das Booklet besteht dann aus einer Folge von Blöcken, verbunden mit Orientierungsseiten.\nJedes Booklet ist als XML-Datei gespeichert. Dafür ist eine Spezifikation(XSD-Datei) verfügbar und es gibt eine Dokumentation für Testverantwortliche. Diese Booklet-Datei ist erforderlich für die Testdurchführung und wird in das Testcenter hochgeladen. Hier eine Auswahl der Steuerungsmöglichkeiten über Booklet-Parameter:\n\nZeitsteuerung (für die Bearbeitung bestimmter Units gibt es eine Zeitobergrenze)\nSynchronisation des Testablaufes durch Freigabeworte für Blöcke\nadaptives Testen (Präsentation von Units in Abhängigkeit vorher gegebener Antworten)\n\n\n\nAnalyse-Schema\nDiese Datenstruktur enthält Vorschriften und Daten für die Datenanalyse.\n\n\n\n\n Zurück nach oben"
-  },
-  {
-    "objectID": "survey/concepts.html",
-    "href": "survey/concepts.html",
-    "title": "Konzepte",
-    "section": "",
-    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\nCAWI (Computerunterstütztes Web-Interview)\nLaborbeobachtung teilnehmend\nComputerbasierter Test\n\n\n\n\n\n\nZiele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)\n\n\n\n\n\n\nBeobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen"
-  },
-  {
-    "objectID": "survey/concepts.html#allgemein",
-    "href": "survey/concepts.html#allgemein",
-    "title": "Konzepte",
-    "section": "",
-    "text": "Zuordnung der Items\n\nMarkierung über Metadaten (Item oder Unit)\nexplizite Liste (Item oder Unit)\n\nErhebungsverfahren https://w3id.org/iqb/v85/v2/\n\nCAWI (Computerunterstütztes Web-Interview)\nLaborbeobachtung teilnehmend\nComputerbasierter Test"
-  },
-  {
-    "objectID": "survey/concepts.html#befragung",
-    "href": "survey/concepts.html#befragung",
-    "title": "Konzepte",
-    "section": "",
-    "text": "Ziele\n\nKlassifizierung der Befragten (Beruf, Region, Alterstufe, Schulart…)\nEvaluation\nFeedback an Survey Authority\nErhebung Testteilnahme-Motivation für Wichtung der Beantwortung\n\nKodierung\n\nautomatische Kodierung\nnicht alles wird kodiert (freie Kommentare)\n\nAuswertung\n\nAchtung: Evtl. Transformation von Erhebungswert zu Personenmerkmal\nErhebungswerte können zu Skalen aggregiert werden (Konstrukte; wie Skalenbildung?)\n\nRückmeldedaten\n\nHäufigkeiten\nordinale Skalen (Abstände nicht interpretierbar)"
-  },
-  {
-    "objectID": "survey/concepts.html#beobachtung-oder-leistungstest",
-    "href": "survey/concepts.html#beobachtung-oder-leistungstest",
-    "title": "Konzepte",
-    "section": "",
-    "text": "Beobachtung: Erhebungseinheit wird beobachtet durch „Interviewer“, d. h. die Erhebungseinheit führt den Leistungstest nicht selbst durch\nZiel\n\nFeststellung relatives Leistungsniveau\nisoliert bezogen auf eine (Sub-)Domäne (Lesen, Zuhören, Mathematik…)\n\nKodierung\n\nautomatisch\nmanuell zentral\nmanuell dezentral durch Lehrkräfte\n\nAuswertung\n\nSumme der Item-Scores pro Testheft und (Sub-)Domäne\nSchätzung Personenfähigkeit über IRT pro (Sub-)Domäne; Abbildung der Schätzwerte auf einer veröffentlichten normierten Metrik\n\nRückmeldedaten\n\nVergleich mit ähnlicher Population, mit Werten des Vorjahres derselben Person oder mit Norm\nScore-Summe: % von Maximalpunktzahl, % von Norm; Eingruppierung in Leistungsbereiche (z. B. Quartile)\nIRT: Numerischer Wert auf Norm-Skale, Eingruppierung in Stufenmodell\nindividuelle Rückmeldung zeigt Score pro Item an\nGruppenrückmeldung kann Lösungshäufigkeit der Gruppe den Lösungshäufigkeiten aus der Normierung/Pilotierung gegenüberstellen"
-  },
-  {
-    "objectID": "specs/index.html",
-    "href": "specs/index.html",
-    "title": "Spezifikationen",
-    "section": "",
-    "text": "Work In Progress\n\n\n\nDie folgenden Spezifikationen befinden sich in Entwicklung\n\n\n\nSurvey Content Package\n\nIndex: Spec, Example\n\nDatenanalyse (Teil von Index): Spec, Beispiel 1, Beispiel 2\n\nMetadaten-Profile\n\n\n\nCodingservice\nAPI-Spec\n\n\n\n\n Zurück nach oben",
+    "text": "Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.",
     "crumbs": [
-      "Spezifikationen"
+      "Coding-Service"
+    ]
+  },
+  {
+    "objectID": "coding-service/index.html#kodieren",
+    "href": "coding-service/index.html#kodieren",
+    "title": "Coding-Service",
+    "section": "Kodieren",
+    "text": "Kodieren\nDie erste Aufgabe des CodingService besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der Ebene der Variablen passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.\nIm Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d. h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.",
+    "crumbs": [
+      "Coding-Service"
+    ]
+  },
+  {
+    "objectID": "coding-service/index.html#item-matrix-erstellen",
+    "href": "coding-service/index.html#item-matrix-erstellen",
+    "title": "Coding-Service",
+    "section": "Item-Matrix erstellen",
+    "text": "Item-Matrix erstellen\nIm häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d. h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist ebenfalls Teil des Kodierschemas der Aufgabe: Es wird für das Item eine neue Variable abgeleitet.\nDie Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur zwei Dimensionen: Item-Id und ein numerischer Wert. Sollte es einen Fehler gegeben haben, wird überlicherweise die Konvention “negativer Wert” - z. B. -99 - umgesetzt.",
+    "crumbs": [
+      "Coding-Service"
+    ]
+  },
+  {
+    "objectID": "coding-service/index.html#skalenwerte-ermitteln",
+    "href": "coding-service/index.html#skalenwerte-ermitteln",
+    "title": "Coding-Service",
+    "section": "Skalenwerte ermitteln",
+    "text": "Skalenwerte ermitteln\nIm Survey Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:\n\nListe der Items, die zu dieser Skale beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)\nMethode der Ermittlung und dafür nötige Parameter",
+    "crumbs": [
+      "Coding-Service"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Überblick",
+    "section": "",
+    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet.\n\nDas obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.\nOben links in der Darstellung ist mit Testcontent das Material für den Test dargestellt:\n\nFür die Testdurchführung sind Testaufgaben (Units) und deren Anordnung im Test (Booklets) nötig.\nFür die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.\nFür die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.\nFür das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.\n\nSämtliche Daten stellt das IQB im StarS-Projekt über das Survey Content Package bereit. Diese Datenstruktur ist hier spezifiziert.\n\nSoftware-Komponenten\nDie StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:\n\n\nManagement-Portal: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.\nIQB-ContentPool: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.\nSchulverwaltungssystem: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.\nIQB-CodingService: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.\nDashboard: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das “Dashboard” in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.\n\n\n\nUmsetzung in StarS\nIm Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.\nAußerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.\nDie Betreiber einer StarS-Installation (Land, Dienstleister) entscheiden gezielt, welche der Komponenten eingesetzt werden. Das obige Schema ist daher als Integrationsschema zu verstehen: Die Komponenten haben dokumentierte Schnittstellen (API) und die Daten sind für den optimalen Austausch genau spezifiziert. Die Seiten dieses Auftrittes thematisieren diese Spezifikationen für die optimale Unterstützung eines flexiblen Testsystems.\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Überblick"
     ]
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Überblick – StarS</title>
+<title>Survey Content Package – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../specs/index.html" rel="next">
+<link href="../coding-service/index.html" rel="next">
+<link href="../intro.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -70,11 +71,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Suchen"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -91,9 +90,21 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">StarS</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/iqb-berlin/rising-stars"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
 </div>
-          <div id="quarto-search" class="" title="Suchen"></div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
@@ -101,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey/index.html">Überblick</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey-content/index.html">Survey Content</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -123,14 +134,20 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Überblick</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../specs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Spezifikationen</span></a>
+  <a href="../survey-content/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Survey Content</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coding-service/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding-Service</span></a>
   </div>
 </li>
     </ul>
@@ -138,22 +155,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Auf dieser Seite</h2>
-   
-  <ul>
-  <li><a href="#software-komponenten" id="toc-software-komponenten" class="nav-link active" data-scroll-target="#software-komponenten">Software-Komponenten</a></li>
-  <li><a href="#umsetzung-in-stars" id="toc-umsetzung-in-stars" class="nav-link" data-scroll-target="#umsetzung-in-stars">Umsetzung in StarS</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Überblick</h1>
+<h1 class="title">Survey Content Package</h1>
 </div>
 
 
@@ -170,95 +180,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf <strong>Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen</strong>. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    classDef test fill:#0ff,stroke:black;
-    classDef others fill:#cff,stroke:black;
-    classDef input fill:#fff,stroke:black;
-    goals[Ziele festlegen]:::others
-    sc[Testinhalte auswählen]:::others
-    td[Testpersonen festlegen]:::others
-    tr([Test durchführen]):::test
-    cr[Antworten kodieren]:::others
-    ra[Daten analysieren]:::others
-    fb[Ergebnisse berichten]:::others
-    Testcontent:::input
-
-    Testcontent --&gt; sc
-    goals ==&gt; sc
-    goals ==&gt; td
-    sc ==&gt; tr
-    td ==&gt; tr
-    Testcontent --&gt; cr
-    tr ==&gt; cr
-    Testcontent --&gt; ra
-    cr ==&gt; ra
-    Testcontent --&gt; fb
-    ra ==&gt; fb
-    linkStyle 1,2,3,4,6,8,10 stroke:black
-    linkStyle 0,5,7,9 stroke:black,stroke-width:1px;
-
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>Das obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.</p>
-<p>Oben links in der Darstellung ist mit <strong>Testcontent</strong> das Material für den Test dargestellt:</p>
 <ul>
-<li>Für die Testdurchführung sind Testaufgaben (Units) und deren Anordnung im Test (Booklets) nötig.</li>
-<li>Für die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.</li>
-<li>Für die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.</li>
-<li>Für das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.</li>
-</ul>
-<p>Sämtliche Daten stellt das IQB im StarS-Projekt über das <strong>Survey Content Package</strong> bereit. Diese Datenstruktur ist <a href="../specs/index.html">hier spezifiziert</a>.</p>
-<section id="software-komponenten" class="level1">
-<h1>Software-Komponenten</h1>
-<p>Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A[IQB-ContentPool] --&gt;|Import Testcontent| C((Management Portal))
-    B(Schulverwaltungssystem)--&gt;|Import Personendaten| C
-    C --&gt;|Units, Booklets| D[IQB-Testcenter]
-    D --&gt;|Antwortdaten| C
-    C --&gt;|Antworten| E[IQB-CodingService]
-    E --&gt;|Fähigkeitswerte| C
-    C --&gt;|Fähigkeitswerte| F(Rückmeldung)
-
-    linkStyle 0,1,2,3,4,5,6 stroke:black
-  
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<li>Index: <a href="https://iqb-specifications.github.io/scp-index">Spec</a>, <a href="https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json">Example</a>
 <ul>
-<li><strong>Management-Portal</strong>: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.</li>
-<li><strong>IQB-ContentPool</strong>: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.</li>
-<li><strong>Schulverwaltungssystem</strong>: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.</li>
-<li><strong>IQB-Testcenter</strong>: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.</li>
-<li><strong>IQB-CodingService</strong>: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.</li>
-<li><strong>Rückmeldung</strong>: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte.</li>
+<li>Datenanalyse (Teil von Index): <a href="https://iqb-specifications.github.io/scp-analysis">Spec</a>, <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_wo_scales.json">Beispiel 1</a>, <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_with_scales.json">Beispiel 2</a></li>
+</ul></li>
+<li><a href="https://iqb-vocabs.github.io/p44/">Metadaten-Profile</a></li>
 </ul>
-</section>
-<section id="umsetzung-in-stars" class="level1">
-<h1>Umsetzung in StarS</h1>
-<p>Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.</p>
-<p>Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.</p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -669,10 +599,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../intro.html" class="pagination-link" aria-label="Überblick">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Überblick</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../specs/index.html" class="pagination-link" aria-label="Spezifikationen">
-        <span class="nav-page-text">Spezifikationen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../coding-service/index.html" class="pagination-link" aria-label="Coding-Service">
+        <span class="nav-page-text">Coding-Service</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
