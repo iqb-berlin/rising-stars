@@ -155,9 +155,9 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/scp-index"><i class="bi bi-link-45deg"></i>Spezifikation SCP-Index</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -180,12 +180,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Unter einem Survey Content Package SCP verstehen wir alle Daten, die unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um</p>
 <ul>
-<li>Index: <a href="https://iqb-specifications.github.io/scp-index">Spec</a>, <a href="https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json">Example</a>
+<li><strong>SCP-Index</strong>: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),</li>
+<li><strong>Content-Dateien</strong>: Dateien in verschiedenen Formaten, die für die Duchtführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).</li>
+</ul>
+<p>Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:</p>
 <ul>
-<li>Datenanalyse (Teil von Index): <a href="https://iqb-specifications.github.io/scp-analysis">Spec</a>, <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_wo_scales.json">Beispiel 1</a>, <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_with_scales.json">Beispiel 2</a></li>
-</ul></li>
-<li><a href="https://iqb-vocabs.github.io/p44/">Metadaten-Profile</a></li>
+<li>Listen der Testpersonen,</li>
+<li>ggf. Leistungsdaten der Testpersonen aus vorangegangenen Testungen zum Vergleich</li>
+<li>ggf. Leistungsdaten auf Landes- oder Regionalebene zum Vergleich</li>
+</ul>
+<p>Folgende Informationen enthält der SCP-Index:</p>
+<ul>
+<li>Kerndaten: Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.</li>
+<li>Module und Testhefte, jeweils mit Metadaten und Zuordnungen zu Teilen der Testung</li>
+<li>Testmaterial für das Testcenter: Verweise auf Dateien und Zuordnung zu bestimmten Teilen der Testung</li>
+<li>Itemlisten und Skalenbuch: Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden</li>
+<li>Orientierungswerte aus Pilotierungen oder Normierungen für die Rückmeldung</li>
+</ul>
+<p><strong>Spezifikationen</strong></p>
+<ul>
+<li><a href="https://iqb-specifications.github.io/scp-index">Spezifikation für den Index</a></li>
+<li><a href="https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json">Beispiel für den Index</a> (ohne Analysis)</li>
+<li><a href="https://iqb-specifications.github.io/scp-analysis">Separate Spezifikation für das Unterobjekt Analysis</a></li>
+<li>Beispiele für Analysis: <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_wo_scales.json">Beispiel 1</a>, <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_with_scales.json">Beispiel 2</a></li>
+<li><a href="https://iqb-vocabs.github.io/p44/">Metadaten-Profile für SCP</a></li>
 </ul>
 
 
