@@ -11,7 +11,7 @@ format:
 
 Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.
 
-![](../assets/coding-service.png){width="500"}
+![](../assets/coding-service.png){width="600"}
 
 # Funktionen
 
