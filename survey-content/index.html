@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../coding-service/index.html" rel="next">
+<link href="../survey-content/core.html" rel="next">
 <link href="../intro.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -138,12 +138,23 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Überblick</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../survey-content/index.html" class="sidebar-item-text sidebar-link active">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../survey-content/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Survey Content</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../survey-content/core.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kopfdaten</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../coding-service/index.html" class="sidebar-item-text sidebar-link">
@@ -183,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Unter einem Survey Content Package SCP verstehen wir alle Daten, die unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um</p>
 <ul>
 <li><strong>SCP-Index</strong>: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),</li>
-<li><strong>Content-Dateien</strong>: Dateien in verschiedenen Formaten, die für die Duchtführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).</li>
+<li><strong>Content-Dateien</strong>: Dateien in verschiedenen Formaten, die für die Durchführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).</li>
 </ul>
 <p>Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:</p>
 <ul>
@@ -202,9 +213,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Spezifikationen</strong></p>
 <ul>
 <li><a href="https://iqb-specifications.github.io/scp-index">Spezifikation für den Index</a></li>
-<li><a href="https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json">Beispiel für den Index</a> (ohne Analysis)</li>
-<li><a href="https://iqb-specifications.github.io/scp-analysis">Separate Spezifikation für das Unterobjekt Analysis</a></li>
-<li>Beispiele für Analysis: <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_wo_scales.json">Beispiel 1</a>, <a href="https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_with_scales.json">Beispiel 2</a></li>
+<li><a href="https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json">Komplettes Beispiel für den Index</a></li>
 <li><a href="https://iqb-vocabs.github.io/p44/">Metadaten-Profile für SCP</a></li>
 </ul>
 
@@ -624,8 +633,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../coding-service/index.html" class="pagination-link" aria-label="Coding-Service">
-        <span class="nav-page-text">Coding-Service</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../survey-content/core.html" class="pagination-link" aria-label="Kopfdaten">
+        <span class="nav-page-text">Kopfdaten</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
