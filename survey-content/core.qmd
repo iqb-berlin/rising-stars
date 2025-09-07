@@ -1,6 +1,6 @@
 ---
 lang: de
-title: "Survey Content Package: Allgemeine Informationen"
+title: Kopfdaten
 ---
 
 # `packageId`
@@ -59,3 +59,48 @@ Es sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich
 
 {{< include ../_metadata.qmd >}}
 
+# `codingParameters`
+
+Über diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.
+
+* `statusMapping`: Wenn der Antwort-Status `CODING_COMPLETE` erreicht wurde, wird der Score genommen. Für alle anderen Werte für den Status wird entweder FALSCH (also Score 0) 
+* `minItemsPercent`: Mindestzahl der Items, die für eine Skale beantwortet sein müssen, damit die Skale für die Testperson berechnet wird (Prozent)
+
+```json
+{
+ "codingParameters": {
+    "statusMapping": [
+      {
+        "itemValue": -99,
+        "status": [
+          "UNSET",
+          "NOT_REACHED",
+          "DISPLAYED",
+          "VALUE_CHANGED",
+          "DERIVE_ERROR"
+        ]
+      },
+      {
+        "itemValue": 0,
+        "status": [
+          "NO_CODING",
+          "INVALID",
+          "CODING_INCOMPLETE",
+          "CODING_ERROR",
+          "PARTLY_DISPLAYED",
+          "DERIVE_PENDING",
+          "INTENDED_INCOMPLETE",
+          "CODE_SELECTION_PENDING"
+        ]
+      }
+    ],
+    "minItemsPercent": 60
+  }
+}
+```
+
+# `surveyParts`
+
+Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `surveyPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Bereiche aufzuteilen.
+
+Auf den folgenden Seiten finden Sie die Eigenschaften des `surveyPart`-Objektes.

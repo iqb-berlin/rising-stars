@@ -1,3 +1,53 @@
-Das IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekte Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.
+Das IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.
 
 Weitere Informationen und Literatur finden Sie [hier](https://iqb-vocabs.github.io). Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie [hier](https://iqb-vocabs.github.io/p44/)
+
+```json
+{
+    "metadata": {
+    "profileId": "https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json",
+    "entries": [
+      {
+        "id": "e1",
+        "label": [
+          {
+            "lang": "de",
+            "value": "Art der Erhebung"
+          }
+        ],
+        "value": [
+          {
+            "id": "https://w3id.org/iqb/v85/dt/1"
+          }
+        ],
+        "valueAsText": [
+          {
+            "lang": "de",
+            "value": "Kompetenz- und Leistungsdaten"
+          }
+        ]
+      },
+      {
+        "id": "kim_type_school",
+        "label": [
+          {
+            "lang": "de",
+            "value": "Schulform"
+          }
+        ],
+        "value": [
+          {
+            "id": "https://w3id.org/kim/schularten/s02"
+          }
+        ],
+        "valueAsText": [
+          {
+            "lang": "de",
+            "value": "Grundschule"
+          }
+        ]
+      }
+    ]
+  }
+}
+```

@@ -11,7 +11,7 @@ format:
 Unter einem Survey Content Package SCP verstehen wir alle Daten, die unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um
 
 * **SCP-Index**: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),
-* **Content-Dateien**: Dateien in verschiedenen Formaten, die für die Duchtführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).
+* **Content-Dateien**: Dateien in verschiedenen Formaten, die für die Durchführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).
 
 Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:
 
@@ -30,7 +30,5 @@ Folgende Informationen enthält der SCP-Index:
 **Spezifikationen**
 
 * [Spezifikation für den Index](https://iqb-specifications.github.io/scp-index)
-* [Beispiel für den Index](https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json) (ohne Analysis)
-* [Separate Spezifikation für das Unterobjekt Analysis](https://iqb-specifications.github.io/scp-analysis)
-* Beispiele für Analysis: [Beispiel 1](https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_wo_scales.json), [Beispiel 2](https://github.com/iqb-specifications/scp-analysis/blob/main/test/analysis_with_scales.json)
+* [Komplettes Beispiel für den Index](https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json)
 * [Metadaten-Profile für SCP](https://iqb-vocabs.github.io/p44/)

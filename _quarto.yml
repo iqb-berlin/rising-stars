@@ -31,8 +31,12 @@ website:
     contents:
       - text: Überblick
         href: intro.qmd
-      - text: Survey Content
+      - section: Survey Content
         href: survey-content/index.qmd
+        contents:
+        - text: Kopfdaten
+          href: survey-content/core.qmd
+
       - text: Coding-Service
         href: coding-service/index.qmd
       
