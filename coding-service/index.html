@@ -162,7 +162,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#funktionen" id="toc-funktionen" class="nav-link active" data-scroll-target="#funktionen">Funktionen</a>
+  <li><a href="#arbeitsweise" id="toc-arbeitsweise" class="nav-link active" data-scroll-target="#arbeitsweise">Arbeitsweise</a></li>
+  <li><a href="#funktionen" id="toc-funktionen" class="nav-link" data-scroll-target="#funktionen">Funktionen</a>
   <ul class="collapse">
   <li><a href="#kodieren" id="toc-kodieren" class="nav-link" data-scroll-target="#kodieren">Kodieren</a></li>
   <li><a href="#item-matrix-erstellen" id="toc-item-matrix-erstellen" class="nav-link" data-scroll-target="#item-matrix-erstellen">Item-Matrix erstellen</a></li>
@@ -195,10 +196,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d.&nbsp;h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.</p>
-<p><a href="../assets/coding-service.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../assets/coding-service.png" class="img-fluid" width="600"></a></p>
+<section id="arbeitsweise" class="level1">
+<h1>Arbeitsweise</h1>
+<p>Nach der Installation werden Arbeitsbereiche “Workspaces” eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. “VERA 2027”. Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Survey Content Package in den Arbeitsbereich geladen (Json-Datei des SCP-Index und Inhaltsdateien). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.</p>
+<p>Danach wird in je <strong>einem Request</strong> die Kodierung und Analyse für genau <strong>eine Testperson</strong> vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-CodingService:</p>
+<ul>
+<li>Input: Alle Antworten der Testperson, egal aus welchen Testheften</li>
+<li>Output (s. u. Funktionen):
+<ul>
+<li>Bewertung für jede Antwort (Kodierung, also Codes und Scores)</li>
+<li>Alle ermittelten Items mit ihrem numerischen Itemwert</li>
+<li>Werte für alle Skalen, die mindestens ein Item der Testperson enthalten oder von einer solchen Skale abgeleitet sind</li>
+</ul></li>
+</ul>
+<p>Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein “Soll”, d.&nbsp;h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten gefunden wurden.</p>
+<p>Nach dem Request verbleiben keine Information über die Testperson auf dem Server.</p>
+</section>
 <section id="funktionen" class="level1">
 <h1>Funktionen</h1>
-<p>Die Funktionen bauen aufeinander auf. Sie müssen also genau in der Reihenfolge abgearbeitet werden.</p>
+<p><a href="../assets/coding-service.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../assets/coding-service.png" class="img-fluid" width="600"></a></p>
+<p>Die Funktionen bauen aufeinander auf. Sie werden also genau in der Reihenfolge abgearbeitet.</p>
 <section id="kodieren" class="level2">
 <h2 class="anchored" data-anchor-id="kodieren">Kodieren</h2>
 <p>Die erste Aufgabe des CodingService besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der <strong>Ebene der Variablen</strong> passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.</p>
@@ -206,8 +223,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="item-matrix-erstellen" class="level2">
 <h2 class="anchored" data-anchor-id="item-matrix-erstellen">Item-Matrix erstellen</h2>
-<p>Im häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d.&nbsp;h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist ebenfalls Teil des Kodierschemas der Aufgabe: Es wird für das Item eine neue Variable abgeleitet.</p>
-<p>Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur <strong>zwei Dimensionen</strong>: Item-Id und ein numerischer Wert. Sollte es einen Fehler gegeben haben, wird überlicherweise die Konvention “negativer Wert” - z. B. -99 - umgesetzt.</p>
+<p>Im häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d.&nbsp;h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist im Kodierschema der Aufgabe beschrieben: Es wird für das Item eine neue Variable abgeleitet. So oder so liefert als eine Variable aus dem Kodierschema den Wert für das Item. Es ist stets der <strong>Score</strong> der Variablen, der für den Itemwert verwendet wird.</p>
+<p>Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur <strong>zwei Dimensionen</strong>: Pro Testperson und Item gibt es einen numerischen Wert. Sollte es einen Fehler gegeben haben, wird überlicherweise die Konvention “negativer Wert” (z. B. -99) umgesetzt.</p>
 </section>
 <section id="skalenwerte-ermitteln" class="level2">
 <h2 class="anchored" data-anchor-id="skalenwerte-ermitteln">Skalenwerte ermitteln</h2>
