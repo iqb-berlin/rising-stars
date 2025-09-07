@@ -11,11 +11,27 @@ format:
 
 Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.
 
-![](../assets/coding-service.png){width="600"}
+# Arbeitsweise
+
+Nach der Installation werden Arbeitsbereiche "Workspaces" eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. "VERA 2027". Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Survey Content Package in den Arbeitsbereich geladen (Json-Datei des SCP-Index und Inhaltsdateien). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.
+
+Danach wird in je **einem Request** die Kodierung und Analyse für genau **eine Testperson** vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-CodingService:
+
+* Input: Alle Antworten der Testperson, egal aus welchen Testheften
+* Output (s. u. Funktionen):
+  * Bewertung für jede Antwort (Kodierung, also Codes und Scores)
+  * Alle ermittelten Items mit ihrem numerischen Itemwert
+  * Werte für alle Skalen, die mindestens ein Item der Testperson enthalten oder von einer solchen Skale abgeleitet sind
+
+Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein "Soll", d. h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten gefunden wurden.
+
+Nach dem Request verbleiben keine Information über die Testperson auf dem Server.
 
 # Funktionen
 
-Die Funktionen bauen aufeinander auf. Sie müssen also genau in der Reihenfolge abgearbeitet werden.
+![](../assets/coding-service.png){width="600"}
+
+Die Funktionen bauen aufeinander auf. Sie werden also genau in der Reihenfolge abgearbeitet.
 
 ## Kodieren
 
@@ -25,9 +41,9 @@ Im Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In an
 
 ## Item-Matrix erstellen
 
-Im häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d. h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: "Wähle aus und begründe" ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist ebenfalls Teil des Kodierschemas der Aufgabe: Es wird für das Item eine neue Variable abgeleitet.
+Im häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d. h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: "Wähle aus und begründe" ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist im Kodierschema der Aufgabe beschrieben: Es wird für das Item eine neue Variable abgeleitet. So oder so liefert als eine Variable aus dem Kodierschema den Wert für das Item. Es ist stets der **Score** der Variablen, der für den Itemwert verwendet wird.
 
-Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur **zwei Dimensionen**: Item-Id und ein numerischer Wert. Sollte es einen Fehler gegeben haben, wird überlicherweise die Konvention "negativer Wert" - z. B. -99 - umgesetzt.
+Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur **zwei Dimensionen**: Pro Testperson und Item gibt es einen numerischen Wert. Sollte es einen Fehler gegeben haben, wird überlicherweise die Konvention "negativer Wert" (z. B. -99) umgesetzt.
 
 ## Skalenwerte ermitteln
 
