@@ -1,0 +1,3 @@
+Das IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekte Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.
+
+Weitere Informationen und Literatur finden Sie [hier](https://iqb-vocabs.github.io). Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie [hier](https://iqb-vocabs.github.io/p44/)
