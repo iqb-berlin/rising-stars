@@ -4,7 +4,7 @@ Weitere Informationen und Literatur finden Sie [hier](https://iqb-vocabs.github.
 
 ```json
 {
-    "metadata": {
+  "metadata": {
     "profileId": "https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json",
     "entries": [
       {

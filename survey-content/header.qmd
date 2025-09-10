@@ -63,12 +63,22 @@ Es sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich
 
 Über diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.
 
-* `statusMapping`: Wenn der Antwort-Status `CODING_COMPLETE` erreicht wurde, wird der Score genommen. Für alle anderen Werte für den Status wird entweder FALSCH (also Score 0) 
+* `itemValues`: Die Itemmatrix, die im Anschluss an die Kodierung aus den Antwortdaten erstellt wird, enthält eigentlich keine numerischen Werte. Statt dessen stehen die Zahlen für Kategorien. Es gibt Konventionen dazu, aber eventuell möchte man davon abweichen. In diesem Fall dient die Eigenschaft `itemValues` dazu, diese Abweichungen zu deklarieren:
+  - `FULL_CREDIT` steht für die vollständig richtige Antwort. Standardwert ist `1`
+  - `NO_CREDIT` steht für eine völlig falsche Antwort. Standardwert ist `0`
+  - `MISSING` weist auf eine fehlende Antwort hin. Der Grund ist an dieser Stelle nicht wichtig, aber es wäre eine Verfälschung der Daten, wenn man hier mit "falsch" oder "richtig" in die Datenanalyse gehen würde. Standardwert ist `-99`
+* `statusMapping`: Wenn der Status der Quellvariablen `CODING_COMPLETE` erreicht wurde, wird deren Score in die Itemmatrix übernommen. Für alle anderen Status-Werte muss definiert werden, welcher Itemwert gewählt wird: `NO_CREDIT` oder `MISSING`. Dies erfolgt über diesen Parameter.
 * `minItemsPercent`: Mindestzahl der Items, die für eine Skale beantwortet sein müssen, damit die Skale für die Testperson berechnet wird (Prozent)
 
 ```json
 {
  "codingParameters": {
+    "itemValues": [
+      {
+        "type": "MISSING",
+        "value": -9
+      }
+    ],
     "statusMapping": [
       {
         "itemValue": -99,
@@ -99,8 +109,8 @@ Es sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich
 }
 ```
 
-# `surveyParts`
+# Abschnitte: `surveyParts`
 
-Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `surveyPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Bereiche aufzuteilen.
+Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `surveyPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
 
 Auf den folgenden Seiten finden Sie die Eigenschaften des `surveyPart`-Objektes.

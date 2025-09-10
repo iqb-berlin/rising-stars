@@ -21,7 +21,7 @@ Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Inst
 
 Folgende Informationen enthält der SCP-Index:
 
-* Kerndaten: Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.
+* [Kopfdaten](header.qmd): Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.
 * Module und Testhefte, jeweils mit Metadaten und Zuordnungen zu Teilen der Testung
 * Testmaterial für das Testcenter: Verweise auf Dateien und Zuordnung zu bestimmten Teilen der Testung
 * Itemlisten und Skalenbuch: Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden
@@ -30,5 +30,5 @@ Folgende Informationen enthält der SCP-Index:
 **Spezifikationen**
 
 * [Spezifikation für den Index](https://iqb-specifications.github.io/scp-index)
-* [Komplettes Beispiel für den Index](https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json)
+* [Beispiel für den Index](https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json)
 * [Metadaten-Profile für SCP](https://iqb-vocabs.github.io/p44/)

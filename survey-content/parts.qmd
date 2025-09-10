@@ -1,0 +1,12 @@
+---
+lang: de
+title: Abschnitte
+---
+
+Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `surveyPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
+
+Auf dieser Seite finden Sie die allgemeinen Parameter und Angaben für Zusatzdokumente. Die anderen Parameter sind auf separaten Seiten beschrieben:
+
+* `bookletModules`, `instruments` und `items` auf der Seite [Instrumente](instruments.qmd),
+* `baseScales` und `derivedScales` auf der Seite [Skalen](scales.qmd)
+
