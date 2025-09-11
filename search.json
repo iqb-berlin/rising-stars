@@ -87,7 +87,29 @@
     "href": "survey-content/instruments.html#units",
     "title": "Instrumente",
     "section": "units",
-    "text": "units\nEs sind alle Units aufgeführt, die Teil des Moduls sind. Sie haben folgende Felder:\n\nid kennzeichnet die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde\nalias bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der alias einer Unit wird dann verwendet, um die Antworten zu speichern – NICHT die id der Unit!\nname, description beschreiben die Unit für die UI\norder kennzeichnet die Position innerhalb des Moduls.\ndependencies: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein type anzugeben. Die möglichen Ausprägungen UNIT_XML, CODING_SCHEME, METADATA, UI_DEFINITION, PLAYER, PLAYER_DEPENDENCY, WIDGET ermöglichen eine korrekte Zuordnung zu Funktionen.",
+    "text": "units\nEs sind alle Units aufgeführt, die Teil des Moduls sind. Jede Unit hat folgende Felder:\n\nid kennzeichnet die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde\nalias bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der alias einer Unit wird verwendet, um die Antworten zu speichern – NICHT die id der Unit!\nname, description beschreiben die Unit für die UI\norder kennzeichnet die Position innerhalb des Moduls.\ndependencies: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein type anzugeben. Die möglichen Ausprägungen UNIT_XML, CODING_SCHEME, METADATA, UI_DEFINITION, PLAYER, PLAYER_DEPENDENCY, WIDGET ermöglichen eine korrekte Zuordnung zu Funktionen.",
+    "crumbs": [
+      "Survey Content",
+      "Instrumente"
+    ]
+  },
+  {
+    "objectID": "survey-content/instruments.html#id-name-metadata",
+    "href": "survey-content/instruments.html#id-name-metadata",
+    "title": "Instrumente",
+    "section": "id, name, metadata",
+    "text": "id, name, metadata\nIm Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt id sowie Erläuterungen über name hinterlegt sein. Das Instrument selbst ist nicht auf die Sprache festgelegt, d. h. der Name muss wieder mit einer Sprachmarkierung versehen sein.\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie hier\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+    "crumbs": [
+      "Survey Content",
+      "Instrumente"
+    ]
+  },
+  {
+    "objectID": "survey-content/instruments.html#testcenterbooklets",
+    "href": "survey-content/instruments.html#testcenterbooklets",
+    "title": "Instrumente",
+    "section": "testcenterBooklets",
+    "text": "testcenterBooklets",
     "crumbs": [
       "Survey Content",
       "Instrumente"
