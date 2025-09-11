@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Architektur und technische Spezifikationen">
 
-<title>StarS</title>
+<title>Skalen – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +23,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7b96c52e75bcb7d16482a5ffdad9c2f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../coding-service/index.html" rel="next">
+<link href="../survey-content/instruments.html" rel="prev">
+<link href="../assets/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7b96c52e75bcb7d16482a5ffdad9c2f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,49 +71,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Suchen"
   }
 }</script>
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "image": "https://www.iqb.hu-berlin.de/system/img/logo_IQB.png",
-      "url": "https://www.iqb.hu-berlin.de",
-      "sameAs": "https://www.kmk.org/themen/qualitaetssicherung-in-schulen/iqb.html",
-      "logo": "https://www.iqb.hu-berlin.de/system/img/logo_IQB.png",
-      "name": "Institut zur Qualitätsentwicklung im Bildungswesen",
-      "alternateName": "IQB",
-      "description": "Das Institut zur Qualitätsentwicklung im Bildungswesen (IQB) ist eine wissenschaftliche Einrichtung aller 16 Länder der Bundesrepublik Deutschland an der Humboldt-Universität zu Berlin und steht für die gemeinsamen Aktivitäten der Länder im Bereich der Qualitätssicherung und -entwicklung im allgemeinbildenden Schulsystem.",
-      "email": "iqboffice@iqb.hu-berlin.de",
-      "telephone": "+49-30-2093-46500",
-      "address": [{
-        "@type": "PostalAddress",
-        "streetAddress": "Luisenstr. 56",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10117"
-      },{
-        "streetAddress": "Hannoversche Straße 19",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10115"
-      },{
-        "streetAddress": "Schönhauser Allee 10",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10119"
-      }],
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "minValue": 150,
-        "maxValue": 180
-      },
-      "keywords": "technology based assessment, tba, digital assessment, computer based assessment, Testing Assisté par Ordinateur",
-      "vatID": "DE296396660",
-      "iso6523Code": "9930:DE296396660"
-    }
-  </script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -122,10 +83,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/iqb-logo-grey.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">StarS</span>
     </a>
   </div>
@@ -151,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">StarS</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey-content/index.html">Survey Content</a></li><li class="breadcrumb-item"><a href="../survey-content/scales.html">Skalen</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -173,13 +134,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Überblick</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./survey-content/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../survey-content/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Survey Content</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -188,25 +149,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./survey-content/header.html" class="sidebar-item-text sidebar-link">
+  <a href="../survey-content/header.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Kopfdaten</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./survey-content/parts.html" class="sidebar-item-text sidebar-link">
+  <a href="../survey-content/parts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abschnitte</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./survey-content/instruments.html" class="sidebar-item-text sidebar-link">
+  <a href="../survey-content/instruments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrumente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./survey-content/scales.html" class="sidebar-item-text sidebar-link">
+  <a href="../survey-content/scales.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Skalen</span></a>
   </div>
 </li>
@@ -214,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./coding-service/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../coding-service/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coding-Service</span></a>
   </div>
 </li>
@@ -228,27 +189,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#willkommen" id="toc-willkommen" class="nav-link active" data-scroll-target="#willkommen">Willkommen</a></li>
-  <li><a href="#lizenz" id="toc-lizenz" class="nav-link" data-scroll-target="#lizenz">Lizenz</a></li>
-  <li><a href="#haftungsausschluss" id="toc-haftungsausschluss" class="nav-link" data-scroll-target="#haftungsausschluss">Haftungsausschluss</a></li>
-  <li><a href="#technische-realisierung" id="toc-technische-realisierung" class="nav-link" data-scroll-target="#technische-realisierung">Technische Realisierung</a></li>
-  <li><a href="#kontakt" id="toc-kontakt" class="nav-link" data-scroll-target="#kontakt">Kontakt</a></li>
+  <li><a href="#basescales" id="toc-basescales" class="nav-link active" data-scroll-target="#basescales"><code>baseScales</code></a></li>
+  <li><a href="#derivedscales" id="toc-derivedscales" class="nav-link" data-scroll-target="#derivedscales"><code>derivedScales</code></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey-content/index.html">Survey Content</a></li><li class="breadcrumb-item"><a href="../survey-content/scales.html">Skalen</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">StarS</h1>
+<h1 class="title">Skalen</h1>
 </div>
 
-<div>
-  <div class="description">
-    Architektur und technische Spezifikationen
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -263,45 +216,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="assets/banner.png" class="img-fluid"></p>
-<section id="willkommen" class="level1">
-<h1>Willkommen</h1>
-<p>Das Projekt <a href="https://www.iqb.hu-berlin.de/research/dm/StarS/">StarS - Stark in die Grundschule starten</a> beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des <a href="https://www.iqb.hu-berlin.de/">IQB</a> werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Work In Progress
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Die Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die <a href="https://semver.org/lang/de/">Versionierung</a>: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein <em>stable</em> Release gibt.</p>
-</div>
-</div>
+<section id="basescales" class="level1">
+<h1><code>baseScales</code></h1>
 </section>
-<section id="lizenz" class="level1">
-<h1>Lizenz</h1>
-<p>Alle Texte und Spezifikationen sind unter der <a href="https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/">Lizenz CC0</a> veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. <a href="https://www.dfg.de/resource/blob/173732/4166759430af8dc2256f0fa54e009f03/kodex-gwp-data.pdf">DFG-pdf</a>) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.</p>
-</section>
-<section id="haftungsausschluss" class="level1">
-<h1>Haftungsausschluss</h1>
-<p>Auf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
-</section>
-<section id="technische-realisierung" class="level1">
-<h1>Technische Realisierung</h1>
-<p>Dieser Webauftritt basiert auf Texten in einer einfachen Syntax <a href="https://markdown.de/">Markdown</a>, die anschließend in Html und CSS umgesetzt werden. Hierzu wird <a href="https://quarto.org/">Quarto</a> verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen <a href="https://github.com/iqb-berlin/rising-stars">Codeverwaltungssystem</a> gespeichert. Hier ist auch eine Anleitung für Änderungen an den Inhalten zu finden.</p>
-</section>
-<section id="kontakt" class="level1">
-<h1>Kontakt</h1>
-<p>Hinweise und Anmerkungen richten Sie bitte an <a href="mailto:mechtel@iqb.hu-berlin.de">Martin Mechtel</a>.</p>
-<p><strong>Postanschrift</strong></p>
-<p>Humboldt-Universität zu Berlin<br> Institut zur Qualitätsentwicklung im Bildungswesen<br> Unter den Linden 6<br> 10099 Berlin</p>
-<p><strong>Sitz</strong></p>
-<p>Luisenstr. 56<br> 10117 Berlin<br> Tel: +49 [30] 2093 - 46500 (Zentrale)<br> Fax: +49 [30] 2093 - 46599<br> E-Mail: <a href="mailto:iqboffice@iqb.hu-berlin.de">iqboffice@iqb.hu-berlin.de</a></p>
-<p><strong>Name und Anschrift der Datenschutzbeauftragten</strong></p>
-<p>Frau Gesine Hoffmann-Holland<br> Unter den Linden 6<br> 10099 Berlin<br> Tel: +49 (30) 2093-20020<br> E-Mail: <a href="mailto:datenschutz@uv.hu-berlin.de">datenschutz@uv.hu-berlin.de</a><br> <a href="www.hu-berlin.de/de/datenschutz">www.hu-berlin.de/de/datenschutz</a></p>
+<section id="derivedscales" class="level1">
+<h1><code>derivedScales</code></h1>
 
 
 </section>
@@ -713,13 +632,25 @@ Work In Progress
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../survey-content/instruments.html" class="pagination-link" aria-label="Instrumente">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Instrumente</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../coding-service/index.html" class="pagination-link" aria-label="Coding-Service">
+        <span class="nav-page-text">Coding-Service</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="../index.html">
 <p><i class="fa-solid fa-house" aria-label="house"></i></p>
 </a>
   </li>  
