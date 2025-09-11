@@ -8,7 +8,7 @@ Die folgenden drei Parameter sind Teil der Datenstruktur `surveyPart`. Sie bilde
 
 # Begriffe und Struktur
 
-![](../assets/booklet-structure.png){width="600" group="intro"}
+![](../assets/booklet-structure.png){width="400" group="intro"}
 
 ## Instrument, Testheft
 
@@ -18,7 +18,7 @@ Eine Aufgabenfolge, die die Testperson in einer Testsitzung abarbeiten soll, nen
 
 Die Aufgaben werden nicht frei im Testheft platziert, sondern vorher in Module gesetzt. Anschließend wird das Modul in verschiedene Testhefte eingefügt. Die Aufteilung eines Testheftes in Module folgt vor allem praktischen Erwägungen. Die Kommunikation ist einfacher, wenn man vom "Leseblock" und "Ergänzungsblock" redet.
 
-# Units, Items
+## Units, Items
 
 Dieselbe Unit kann in verschiedene Blöcke eingefügt werden -- man muss dann halt nur darauf achten, dass die Blöcke entsprechend eingesetzt werden ("Unverträglichkeit"). Es gibt aber auch Units, die bewusst mehrfach im selben Testheft eingesetzt werden, z. B. Fragen zur Motivation.
 
@@ -42,7 +42,7 @@ Es sind alle Units aufgeführt, die Teil des Moduls sind. Sie haben folgende Fel
 * `alias` bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der `alias` einer Unit wird dann verwendet, um die Antworten zu speichern -- NICHT die `id` der Unit!
 * `name`, `description` beschreiben die Unit für die UI
 * `order` kennzeichnet die Position innerhalb des Moduls.
-* `dependencies`: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein `type`. Die möglichen Ausprägungen `UNIT_XML`, `CODING_SCHEME`, `METADATA`, `UI_DEFINITION`, `PLAYER`, `PLAYER_DEPENDENCY`, `WIDGET` ermöglichen eine korrekte Zuordnung zu Funktionen
+* `dependencies`: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein `type` anzugeben. Die möglichen Ausprägungen `UNIT_XML`, `CODING_SCHEME`, `METADATA`, `UI_DEFINITION`, `PLAYER`, `PLAYER_DEPENDENCY`, `WIDGET` ermöglichen eine korrekte Zuordnung zu Funktionen.
 
 # `instruments`
 
