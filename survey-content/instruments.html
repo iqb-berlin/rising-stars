@@ -196,8 +196,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#instrument-testheft" id="toc-instrument-testheft" class="nav-link" data-scroll-target="#instrument-testheft">Instrument, Testheft</a></li>
   <li><a href="#modul" id="toc-modul" class="nav-link" data-scroll-target="#modul">Modul</a></li>
-  </ul></li>
   <li><a href="#units-items" id="toc-units-items" class="nav-link" data-scroll-target="#units-items">Units, Items</a></li>
+  </ul></li>
   <li><a href="#bookletmodules" id="toc-bookletmodules" class="nav-link" data-scroll-target="#bookletmodules"><code>bookletModules</code></a>
   <ul class="collapse">
   <li><a href="#id-name-description-lang" id="toc-id-name-description-lang" class="nav-link" data-scroll-target="#id-name-description-lang"><code>id</code>, <code>name</code>, <code>description</code>, <code>lang</code></a></li>
@@ -233,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Die folgenden drei Parameter sind Teil der Datenstruktur <code>surveyPart</code>. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen und die Antwortdaten den Fragen zuzuordnen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.</p>
 <section id="begriffe-und-struktur" class="level1">
 <h1>Begriffe und Struktur</h1>
-<p><a href="../assets/booklet-structure.png" class="lightbox" data-gallery="intro"><img src="../assets/booklet-structure.png" class="img-fluid" width="600"></a></p>
+<p><a href="../assets/booklet-structure.png" class="lightbox" data-gallery="intro"><img src="../assets/booklet-structure.png" class="img-fluid" width="400"></a></p>
 <section id="instrument-testheft" class="level2">
 <h2 class="anchored" data-anchor-id="instrument-testheft">Instrument, Testheft</h2>
 <p>Eine Aufgabenfolge, die die Testperson in einer Testsitzung abarbeiten soll, nennen wir “Testheft” oder “Instrument” (synonym). Der Zeitrahmen bei Lernstandserhebungen liegt zwischen 40 bis 120 Minuten. Sollte sich der Test auf verschiedene Tage verteilen, wird man nicht das angefangene Testheft fortsetzen, sondern die Aufgaben auf mehrere Testhefte verteilen.</p>
@@ -242,11 +242,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="modul">Modul</h2>
 <p>Die Aufgaben werden nicht frei im Testheft platziert, sondern vorher in Module gesetzt. Anschließend wird das Modul in verschiedene Testhefte eingefügt. Die Aufteilung eines Testheftes in Module folgt vor allem praktischen Erwägungen. Die Kommunikation ist einfacher, wenn man vom “Leseblock” und “Ergänzungsblock” redet.</p>
 </section>
-</section>
-<section id="units-items" class="level1">
-<h1>Units, Items</h1>
+<section id="units-items" class="level2">
+<h2 class="anchored" data-anchor-id="units-items">Units, Items</h2>
 <p>Dieselbe Unit kann in verschiedene Blöcke eingefügt werden – man muss dann halt nur darauf achten, dass die Blöcke entsprechend eingesetzt werden (“Unverträglichkeit”). Es gibt aber auch Units, die bewusst mehrfach im selben Testheft eingesetzt werden, z. B. Fragen zur Motivation.</p>
 <p>In einer Unit sind dann Variablen zu finden, die nach Interaktionen die Antwortdaten generieren. Die Antwortdaten werden zu einem späteren Zeitpunkt zu Itemwerten transformiert. Ein Item ist eine Teilaufgabe und auf dieser Ebene wird die Schätzung der Personenfähigkeiten vorgenommen.</p>
+</section>
 </section>
 <section id="bookletmodules" class="level1">
 <h1><code>bookletModules</code></h1>
@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 <li><code>alias</code> bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der <code>alias</code> einer Unit wird dann verwendet, um die Antworten zu speichern – NICHT die <code>id</code> der Unit!</li>
 <li><code>name</code>, <code>description</code> beschreiben die Unit für die UI</li>
 <li><code>order</code> kennzeichnet die Position innerhalb des Moduls.</li>
-<li><code>dependencies</code>: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein <code>type</code>. Die möglichen Ausprägungen <code>UNIT_XML</code>, <code>CODING_SCHEME</code>, <code>METADATA</code>, <code>UI_DEFINITION</code>, <code>PLAYER</code>, <code>PLAYER_DEPENDENCY</code>, <code>WIDGET</code> ermöglichen eine korrekte Zuordnung zu Funktionen</li>
+<li><code>dependencies</code>: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein <code>type</code> anzugeben. Die möglichen Ausprägungen <code>UNIT_XML</code>, <code>CODING_SCHEME</code>, <code>METADATA</code>, <code>UI_DEFINITION</code>, <code>PLAYER</code>, <code>PLAYER_DEPENDENCY</code>, <code>WIDGET</code> ermöglichen eine korrekte Zuordnung zu Funktionen.</li>
 </ul>
 </section>
 </section>

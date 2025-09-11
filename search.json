@@ -61,6 +61,17 @@
     ]
   },
   {
+    "objectID": "survey-content/instruments.html#units-items",
+    "href": "survey-content/instruments.html#units-items",
+    "title": "Instrumente",
+    "section": "Units, Items",
+    "text": "Units, Items\nDieselbe Unit kann in verschiedene Blöcke eingefügt werden – man muss dann halt nur darauf achten, dass die Blöcke entsprechend eingesetzt werden (“Unverträglichkeit”). Es gibt aber auch Units, die bewusst mehrfach im selben Testheft eingesetzt werden, z. B. Fragen zur Motivation.\nIn einer Unit sind dann Variablen zu finden, die nach Interaktionen die Antwortdaten generieren. Die Antwortdaten werden zu einem späteren Zeitpunkt zu Itemwerten transformiert. Ein Item ist eine Teilaufgabe und auf dieser Ebene wird die Schätzung der Personenfähigkeiten vorgenommen.",
+    "crumbs": [
+      "Survey Content",
+      "Instrumente"
+    ]
+  },
+  {
     "objectID": "survey-content/instruments.html#id-name-description-lang",
     "href": "survey-content/instruments.html#id-name-description-lang",
     "title": "Instrumente",
@@ -76,7 +87,7 @@
     "href": "survey-content/instruments.html#units",
     "title": "Instrumente",
     "section": "units",
-    "text": "units\nEs sind alle Units aufgeführt, die Teil des Moduls sind. Sie haben folgende Felder:\n\nid kennzeichnet die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde\nalias bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der alias einer Unit wird dann verwendet, um die Antworten zu speichern – NICHT die id der Unit!\nname, description beschreiben die Unit für die UI\norder kennzeichnet die Position innerhalb des Moduls.\ndependencies: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein type. Die möglichen Ausprägungen UNIT_XML, CODING_SCHEME, METADATA, UI_DEFINITION, PLAYER, PLAYER_DEPENDENCY, WIDGET ermöglichen eine korrekte Zuordnung zu Funktionen",
+    "text": "units\nEs sind alle Units aufgeführt, die Teil des Moduls sind. Sie haben folgende Felder:\n\nid kennzeichnet die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde\nalias bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der alias einer Unit wird dann verwendet, um die Antworten zu speichern – NICHT die id der Unit!\nname, description beschreiben die Unit für die UI\norder kennzeichnet die Position innerhalb des Moduls.\ndependencies: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein type anzugeben. Die möglichen Ausprägungen UNIT_XML, CODING_SCHEME, METADATA, UI_DEFINITION, PLAYER, PLAYER_DEPENDENCY, WIDGET ermöglichen eine korrekte Zuordnung zu Funktionen.",
     "crumbs": [
       "Survey Content",
       "Instrumente"
