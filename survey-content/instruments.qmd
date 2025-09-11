@@ -1,9 +1,48 @@
 ---
 lang: de
 title: Instrumente
+lightbox: true
 ---
 
+Die folgenden drei Parameter sind Teil der Datenstruktur `surveyPart`. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen und die Antwortdaten den Fragen zuzuordnen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.
+
+# Begriffe und Struktur
+
+![](../assets/booklet-structure.png){width="600" group="intro"}
+
+## Instrument, Testheft
+
+Eine Aufgabenfolge, die die Testperson in einer Testsitzung abarbeiten soll, nennen wir "Testheft" oder "Instrument" (synonym). Der Zeitrahmen bei Lernstandserhebungen liegt zwischen 40 bis 120 Minuten. Sollte sich der Test auf verschiedene Tage verteilen, wird man nicht das angefangene Testheft fortsetzen, sondern die Aufgaben auf mehrere Testhefte verteilen.
+
+## Modul
+
+Die Aufgaben werden nicht frei im Testheft platziert, sondern vorher in Module gesetzt. Anschließend wird das Modul in verschiedene Testhefte eingefügt. Die Aufteilung eines Testheftes in Module folgt vor allem praktischen Erwägungen. Die Kommunikation ist einfacher, wenn man vom "Leseblock" und "Ergänzungsblock" redet.
+
+# Units, Items
+
+Dieselbe Unit kann in verschiedene Blöcke eingefügt werden -- man muss dann halt nur darauf achten, dass die Blöcke entsprechend eingesetzt werden ("Unverträglichkeit"). Es gibt aber auch Units, die bewusst mehrfach im selben Testheft eingesetzt werden, z. B. Fragen zur Motivation.
+
+In einer Unit sind dann Variablen zu finden, die nach Interaktionen die Antwortdaten generieren. Die Antwortdaten werden zu einem späteren Zeitpunkt zu Itemwerten transformiert. Ein Item ist eine Teilaufgabe und auf dieser Ebene wird die Schätzung der Personenfähigkeiten vorgenommen.
+
 # `bookletModules`
+
+Der oben dargestellten Struktur folgend setzt man zuerst die Units in Module. Dieser Arbeitsschritt wird durch die Datenstruktur `bookletModules` nachgebildet:
+
+## `id`, `name`, `description`, `lang`
+
+Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt `id` sowie Erläuterungen über die Datenfelder `name` und `description` hinterlegt sein. In Auswahllisten oder Protokollen kann dann das Modul gut identifiziert werden.
+
+`name` und `description` haben keine separate Sprachmarkierung, denn das Modul wird zu genau einer Sprache entwickelt. Daher ist in einem Feld `lang` die Sprache anzugeben, die dann für alle Einträge des Moduls gilt.
+
+## `units`
+
+Es sind alle Units aufgeführt, die Teil des Moduls sind. Sie haben folgende Felder:
+
+* `id` kennzeichnet die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde
+* `alias` bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der `alias` einer Unit wird dann verwendet, um die Antworten zu speichern -- NICHT die `id` der Unit!
+* `name`, `description` beschreiben die Unit für die UI
+* `order` kennzeichnet die Position innerhalb des Moduls.
+* `dependencies`: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein `type`. Die möglichen Ausprägungen `UNIT_XML`, `CODING_SCHEME`, `METADATA`, `UI_DEFINITION`, `PLAYER`, `PLAYER_DEPENDENCY`, `WIDGET` ermöglichen eine korrekte Zuordnung zu Funktionen
 
 # `instruments`
 

@@ -5,7 +5,7 @@ title: Abschnitte
 
 Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `surveyPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
 
-Auf dieser Seite finden Sie die allgemeinen Parameter eines Abschnittes sowie Angaben für Zusatzdokumente. Die anderen Parameter sind auf separaten Seiten beschrieben:
+Auf dieser Seite finden Sie die allgemeinen Parameter eines Abschnittes sowie Angaben für Zusatzdokumente. Folgende Abschnittsparameter sind auf separaten Seiten beschrieben:
 
 * `bookletModules`, `instruments` und `items` auf der Seite [Instrumente](instruments.qmd),
 * `baseScales` und `derivedScales` auf der Seite [Skalen](scales.qmd)
@@ -14,7 +14,7 @@ Auf dieser Seite finden Sie die allgemeinen Parameter eines Abschnittes sowie An
 
 Aus welchem Grund das Inhaltspaket SCP in Abschnitte aufgeteilt wird, kann variieren. Üblicherweise folgt dies Testdomänen -- also Mathematik, Sprache usw. -- oder zeitlichen Phasen bei Testungen, die über mehrere Testzeitpunkte durchgeführt werden. Bei StarS trifft letzteres zu, d. h. für jeden Messzeitpunkt gibt es einen Abschnitt.
 
-Im Datenmanagement müssen dann natürlich ein verlässlicher Bezug zu einem Abschnitt `id` sowie Eräuterungen über die Datenfelder `name` und `description` hinterlegt sein. In Auswahllisten oder Protokollen kann dann der Abschnitt gut identifiziert werden.
+Im Datenmanagement müssen dann natürlich ein verlässlicher Bezug zu einem Abschnitt `id` sowie Erläuterungen über die Datenfelder `name` und `description` hinterlegt sein. In Auswahllisten oder Protokollen kann dann der Abschnitt gut identifiziert werden.
 
 `name` und `description` sind Felder mit expliziter Sprachmarkierung. Das bedeutet, dass man Informationen in mehreren Sprachen hinterlegen kann, je nach Zielgruppen.
 
