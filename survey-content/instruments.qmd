@@ -36,14 +36,25 @@ Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt `id` sowi
 
 ## `units`
 
-Es sind alle Units aufgeführt, die Teil des Moduls sind. Sie haben folgende Felder:
+Es sind alle Units aufgeführt, die Teil des Moduls sind. Jede Unit hat folgende Felder:
 
 * `id` kennzeichnet die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde
-* `alias` bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der `alias` einer Unit wird dann verwendet, um die Antworten zu speichern -- NICHT die `id` der Unit!
+* `alias` bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der `alias` einer Unit wird verwendet, um die Antworten zu speichern -- NICHT die `id` der Unit!
 * `name`, `description` beschreiben die Unit für die UI
 * `order` kennzeichnet die Position innerhalb des Moduls.
 * `dependencies`: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein `type` anzugeben. Die möglichen Ausprägungen `UNIT_XML`, `CODING_SCHEME`, `METADATA`, `UI_DEFINITION`, `PLAYER`, `PLAYER_DEPENDENCY`, `WIDGET` ermöglichen eine korrekte Zuordnung zu Funktionen.
 
 # `instruments`
+
+In der oben dargestellten Struktur werden Module in Testhefte platziert.
+
+## `id`, `name`, `metadata`
+
+Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt `id` sowie Erläuterungen über `name` hinterlegt sein. Das Instrument selbst ist nicht auf die Sprache festgelegt, d. h. der Name muss wieder mit einer Sprachmarkierung versehen sein.
+
+{{< include ../_metadata.qmd >}}
+
+## `testcenterBooklets`
+
 
 # `items`
