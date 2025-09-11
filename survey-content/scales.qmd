@@ -2,3 +2,8 @@
 lang: de
 title: Skalen
 ---
+
+# `baseScales`
+
+# `derivedScales`
+
