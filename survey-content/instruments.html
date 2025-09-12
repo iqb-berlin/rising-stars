@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -64,19 +64,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../survey-content/scales.html" rel="next">
+<link href="../survey-content/items.html" rel="next">
 <link href="../survey-content/parts.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7b96c52e75bcb7d16482a5ffdad9c2f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a791d87a517d8f09e8a053dac3470feb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -122,7 +123,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo">
+    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo light-content">
+    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">StarS</span>
@@ -163,6 +165,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Suchen"></div>
@@ -205,6 +211,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../survey-content/items.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Item-Liste</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../survey-content/scales.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Skalen</span></a>
   </div>
@@ -241,9 +253,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#instruments" id="toc-instruments" class="nav-link" data-scroll-target="#instruments"><code>instruments</code></a>
   <ul class="collapse">
   <li><a href="#id-name-metadata" id="toc-id-name-metadata" class="nav-link" data-scroll-target="#id-name-metadata"><code>id</code>, <code>name</code>, <code>metadata</code></a></li>
-  <li><a href="#testcenterbooklets" id="toc-testcenterbooklets" class="nav-link" data-scroll-target="#testcenterbooklets"><code>testcenterBooklets</code></a></li>
+  <li><a href="#testcenterbooklet" id="toc-testcenterbooklet" class="nav-link" data-scroll-target="#testcenterbooklet"><code>testcenterBooklet</code></a></li>
+  <li><a href="#administrationmode" id="toc-administrationmode" class="nav-link" data-scroll-target="#administrationmode"><code>administrationMode</code></a></li>
+  <li><a href="#handoutsfortesttaker" id="toc-handoutsfortesttaker" class="nav-link" data-scroll-target="#handoutsfortesttaker"><code>handOutsForTestTaker</code></a></li>
   </ul></li>
-  <li><a href="#items" id="toc-items" class="nav-link" data-scroll-target="#items"><code>items</code></a></li>
   </ul>
 </nav>
     </div>
@@ -269,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Die folgenden drei Parameter sind Teil der Datenstruktur <code>surveyPart</code>. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen und die Antwortdaten den Fragen zuzuordnen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.</p>
+<p>Die folgenden Parameter sind Teil der Datenstruktur <code>surveyPart</code>. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.</p>
 <section id="begriffe-und-struktur" class="level1">
 <h1>Begriffe und Struktur</h1>
 <p><a href="../assets/booklet-structure.png" class="lightbox" data-gallery="intro"><img src="../assets/booklet-structure.png" class="img-fluid" width="400"></a></p>
@@ -309,13 +322,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="instruments" class="level1">
 <h1><code>instruments</code></h1>
-<p>In der oben dargestellten Struktur werden Module in Testhefte platziert.</p>
+<p>Module werden in Testhefte platziert (s. obige Struktur).</p>
 <section id="id-name-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="id-name-metadata"><code>id</code>, <code>name</code>, <code>metadata</code></h2>
 <p>Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt <code>id</code> sowie Erläuterungen über <code>name</code> hinterlegt sein. Das Instrument selbst ist nicht auf die Sprache festgelegt, d.&nbsp;h. der Name muss wieder mit einer Sprachmarkierung versehen sein.</p>
 <p>Das IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.</p>
 <p>Weitere Informationen und Literatur finden Sie <a href="https://iqb-vocabs.github.io">hier</a>. Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie <a href="https://iqb-vocabs.github.io/p44/">hier</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"profileId"</span><span class="fu">:</span> <span class="st">"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json"</span><span class="fu">,</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"entries"</span><span class="fu">:</span> <span class="ot">[</span></span>
@@ -361,16 +374,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="testcenterbooklets" class="level2">
-<h2 class="anchored" data-anchor-id="testcenterbooklets"><code>testcenterBooklets</code></h2>
+<section id="testcenterbooklet" class="level2">
+<h2 class="anchored" data-anchor-id="testcenterbooklet"><code>testcenterBooklet</code></h2>
+<p>Diese Liste enthält alle Sprachvarianten für genau ein Booklet. Jeder Eintrag hat folgende Eigenschaften:</p>
+<ul>
+<li><code>lang</code>: Definition der Sprache dieser Variante</li>
+<li><code>definitionId</code>: ID/Pfad zur XML-Datei, die das Booklet beschreibt und genau so in das Testcenter hochgeladen werden muss.</li>
+<li><code>modules</code>: Aufzählung aller Module, die in diesem Booklet verwendet wurden. Die <code>moduleId</code> verweist in die Liste <code>bookletModules</code> des Abschnittes. Es gibt die Möglichkeit, eine Reihenfolge <code>order</code> der Module festzulegen.</li>
+</ul>
 </section>
+<section id="administrationmode" class="level2">
+<h2 class="anchored" data-anchor-id="administrationmode"><code>administrationMode</code></h2>
+<p>Es gibt – z. B. bei StarS – Abweichungen vom normalen Szenario “Schüler*in löst Aufgaben”. Das Booklet kann verschiedene Modi der Durchführung haben:</p>
+<ul>
+<li><code>TEST_BY_TEST_TAKER</code>: Der Test/die Befragung wird von derselben Person durchgeführt, deren Fähigkeiten ermittelt werden sollen (Standard),</li>
+<li><code>TEST_BY_PROCTOR</code>: Der Test wird durch die Lehrkraft/Aufsicht durchgeführt (Dialog/Beobachtung), um die Fähigkeiten einer anderen Person zu erheben,</li>
+<li><code>STIMULUS_FOR_TEST_TAKER</code>: Die Testperson geht durch das Booklet, ohne Anworten zu hinterlassen. Sie wird dabei von einer Lehrkraft/Aufsicht begleitet, die die eigentliche Erfassung vornimmt. Im Testcenter wird als Durchführungsmodus <code>RUN_DEMO</code> gewählt, d.&nbsp;h. das Booklet dient mehreren Testpersonen als Stimulus und hinterlässt keine Antwort-Daten.</li>
+</ul>
 </section>
-<section id="items" class="level1">
-<h1><code>items</code></h1>
+<section id="handoutsfortesttaker" class="level2">
+<h2 class="anchored" data-anchor-id="handoutsfortesttaker"><code>handOutsForTestTaker</code></h2>
+<p>Es kann sein, dass für dieses Booklet zusätzliches Material an die Testperson(en) gegeben wird. Entweder dient dieses Material als zusätzlicher Stimulus, oder die Testperson soll eine Handlung damit/darauf ausführen. Beispielsweise soll ein Wort aufgeschrieben oder eine Linie gezogen werden. Die Handlungen der Testperson werden aktuell nicht direkt in die Testergebnisse einbezogen (Scan), sondern es müsste parallel über ein Instrument eine Beobachtung stattfinden, die die Handlung kodiert. Daher kann ein Handout nicht getrennt von einem Instrument definiert werden.</p>
+<p>Die Liste enthält Einträge mit folgenden Eigenschaften:</p>
+<ul>
+<li><code>order</code> kann die Anzeigereihenfolge festlegen.</li>
+<li><code>mode</code> beschreibt die Art des Einsatzes:
+<ul>
+<li><code>PRINT_SHOW</code>: Ausdruck nur zum Zeigen. Bei Einzeltestungen reicht dann ein Ausdruck pro Testgruppe.</li>
+<li><code>PRINT_WRITE_DRAW</code>: Ausdruck, auf dem die Testperson schreibt oder zeichnet.</li>
+<li><code>ON_SCREEN</code>: Anzeige auf einem Bildschirm (Tablet, Laptop).</li>
+</ul></li>
+<li><code>file</code> setzt eine Referenz zu der Datei, die als Quelle für das Handout dient. Da es mehrere sprachspezifische Varianten geben kann, ist hier ein Array mit den Werten <code>id</code> (ID/Pfad), <code>lang</code> für die Sprachangabe und <code>label</code> für die UI anzugeben. Auch eine Beschreibung <code>description</code> kann hinzugefügt werden.</li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
@@ -425,13 +465,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -787,8 +828,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../survey-content/scales.html" class="pagination-link" aria-label="Skalen">
-        <span class="nav-page-text">Skalen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../survey-content/items.html" class="pagination-link" aria-label="Item-Liste">
+        <span class="nav-page-text">Item-Liste</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -798,7 +839,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link active" href="../index.html" aria-current="page">
 <p><i class="fa-solid fa-house" aria-label="house"></i></p>
 </a>
   </li>  
