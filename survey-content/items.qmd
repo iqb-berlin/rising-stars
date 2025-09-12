@@ -1,0 +1,5 @@
+---
+lang: de
+title: Item-Liste
+lightbox: true
+---

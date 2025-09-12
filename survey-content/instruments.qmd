@@ -4,7 +4,7 @@ title: Instrumente
 lightbox: true
 ---
 
-Die folgenden drei Parameter sind Teil der Datenstruktur `surveyPart`. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen und die Antwortdaten den Fragen zuzuordnen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.
+Die folgenden Parameter sind Teil der Datenstruktur `surveyPart`. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.
 
 # Begriffe und Struktur
 
@@ -46,7 +46,7 @@ Es sind alle Units aufgeführt, die Teil des Moduls sind. Jede Unit hat folgende
 
 # `instruments`
 
-In der oben dargestellten Struktur werden Module in Testhefte platziert.
+Module werden in Testhefte platziert (s. obige Struktur).
 
 ## `id`, `name`, `metadata`
 
@@ -54,7 +54,31 @@ Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt `id` sowi
 
 {{< include ../_metadata.qmd >}}
 
-## `testcenterBooklets`
+## `testcenterBooklet`
 
+Diese Liste enthält alle Sprachvarianten für genau ein Booklet. Jeder Eintrag hat folgende Eigenschaften:
 
-# `items`
+* `lang`: Definition der Sprache dieser Variante
+* `definitionId`: ID/Pfad zur XML-Datei, die das Booklet beschreibt und genau so in das Testcenter hochgeladen werden muss.
+* `modules`: Aufzählung aller Module, die in diesem Booklet verwendet wurden. Die `moduleId` verweist in die Liste `bookletModules` des Abschnittes. Es gibt die Möglichkeit, eine Reihenfolge `order` der Module festzulegen.
+
+## `administrationMode`
+
+Es gibt -- z. B. bei StarS -- Abweichungen vom normalen Szenario "Schüler\*in löst Aufgaben". Das Booklet kann verschiedene Modi der Durchführung haben:
+
+* `TEST_BY_TEST_TAKER`: Der Test/die Befragung wird von derselben Person durchgeführt, deren Fähigkeiten ermittelt werden sollen (Standard),
+* `TEST_BY_PROCTOR`: Der Test wird durch die Lehrkraft/Aufsicht durchgeführt (Dialog/Beobachtung), um die Fähigkeiten einer anderen Person zu erheben,
+* `STIMULUS_FOR_TEST_TAKER`: Die Testperson geht durch das Booklet, ohne Anworten zu hinterlassen. Sie wird dabei von einer Lehrkraft/Aufsicht begleitet, die die eigentliche Erfassung vornimmt. Im Testcenter wird als Durchführungsmodus `RUN_DEMO` gewählt, d. h. das Booklet dient mehreren Testpersonen als Stimulus und hinterlässt keine Antwort-Daten.
+
+## `handOutsForTestTaker`
+
+Es kann sein, dass für dieses Booklet zusätzliches Material an die Testperson(en) gegeben wird. Entweder dient dieses Material als zusätzlicher Stimulus, oder die Testperson soll eine Handlung damit/darauf ausführen. Beispielsweise soll ein Wort aufgeschrieben oder eine Linie gezogen werden. Die Handlungen der Testperson werden aktuell nicht direkt in die Testergebnisse einbezogen (Scan), sondern es müsste parallel über ein Instrument eine Beobachtung stattfinden, die die Handlung kodiert. Daher kann ein Handout nicht getrennt von einem Instrument definiert werden.
+
+Die Liste enthält Einträge mit folgenden Eigenschaften:
+
+* `order` kann die Anzeigereihenfolge festlegen.
+* `mode` beschreibt die Art des Einsatzes:
+  - `PRINT_SHOW`: Ausdruck nur zum Zeigen. Bei Einzeltestungen reicht dann ein Ausdruck pro Testgruppe.
+  - `PRINT_WRITE_DRAW`: Ausdruck, auf dem die Testperson schreibt oder zeichnet.
+  - `ON_SCREEN`: Anzeige auf einem Bildschirm (Tablet, Laptop).
+* `file` setzt eine Referenz zu der Datei, die als Quelle für das Handout dient. Da es mehrere sprachspezifische Varianten geben kann, ist hier ein Array mit den Werten `id` (ID/Pfad), `lang` für die Sprachangabe und `label` für die UI anzugeben. Auch eine Beschreibung `description` kann hinzugefügt werden.

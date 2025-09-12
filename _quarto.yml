@@ -34,14 +34,11 @@ website:
       - section: Survey Content
         href: survey-content/index.qmd
         contents:
-        - text: Kopfdaten
-          href: survey-content/header.qmd
-        - text: Abschnitte
-          href: survey-content/parts.qmd
-        - text: Instrumente
-          href: survey-content/instruments.qmd
-        - text: Skalen
-          href: survey-content/scales.qmd
+        - survey-content/header.qmd
+        - survey-content/parts.qmd
+        - survey-content/instruments.qmd
+        - survey-content/items.qmd
+        - survey-content/scales.qmd
 
       - text: Coding-Service
         href: coding-service/index.qmd
