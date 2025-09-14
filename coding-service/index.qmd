@@ -17,13 +17,13 @@ Nach der Installation werden Arbeitsbereiche "Workspaces" eingerichtet. Darunter
 
 Danach wird in je **einem Request** die Kodierung und Analyse für genau **eine Testperson** vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-CodingService:
 
-* Input: Alle Antworten der Testperson, egal aus welchen Testheften
+* Input: Alle Antworten der Testperson, egal aus welchen Testheften. Zusätzlich können Itemwerte aus anderen Quellen hinzugefügt werden, die nicht dem IQB-Standardformat der Antworten folgen (z. B. Befragungen).
 * Output (s. u. Funktionen):
   * Bewertung für jede Antwort (Kodierung, also Codes und Scores)
   * Alle ermittelten Items mit ihrem numerischen Itemwert
   * Werte für alle Skalen, die mindestens ein Item der Testperson enthalten oder von einer solchen Skale abgeleitet sind
 
-Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein "Soll", d. h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten gefunden wurden.
+Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein "Soll", d. h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten bzw. Zusatzitems gefunden wurden.
 
 Nach dem Request verbleiben keine Information über die Testperson auf dem Server.
 
