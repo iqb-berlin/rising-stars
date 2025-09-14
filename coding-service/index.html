@@ -242,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Nach der Installation werden Arbeitsbereiche “Workspaces” eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. “VERA 2027”. Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Survey Content Package in den Arbeitsbereich geladen (Json-Datei des SCP-Index und Inhaltsdateien). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.</p>
 <p>Danach wird in je <strong>einem Request</strong> die Kodierung und Analyse für genau <strong>eine Testperson</strong> vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-CodingService:</p>
 <ul>
-<li>Input: Alle Antworten der Testperson, egal aus welchen Testheften</li>
+<li>Input: Alle Antworten der Testperson, egal aus welchen Testheften. Zusätzlich können Itemwerte aus anderen Quellen hinzugefügt werden, die nicht dem IQB-Standardformat der Antworten folgen (z. B. Befragungen).</li>
 <li>Output (s. u. Funktionen):
 <ul>
 <li>Bewertung für jede Antwort (Kodierung, also Codes und Scores)</li>
@@ -250,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Werte für alle Skalen, die mindestens ein Item der Testperson enthalten oder von einer solchen Skale abgeleitet sind</li>
 </ul></li>
 </ul>
-<p>Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein “Soll”, d.&nbsp;h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten gefunden wurden.</p>
+<p>Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein “Soll”, d.&nbsp;h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten bzw. Zusatzitems gefunden wurden.</p>
 <p>Nach dem Request verbleiben keine Information über die Testperson auf dem Server.</p>
 </section>
 <section id="funktionen" class="level1">
