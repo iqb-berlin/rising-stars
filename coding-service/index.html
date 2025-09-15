@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../coding-service/stars.html" rel="next">
 <link href="../survey-content/scales.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -187,12 +188,29 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../coding-service/index.html" class="sidebar-item-text sidebar-link active">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../coding-service/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Coding-Service</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coding-service/stars.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Szenario StarS</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coding-service/vera.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Szenario VERA</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -237,6 +255,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d.&nbsp;h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Programmierungen am IQB-CodingService starten, sobald innerhalb des StarS-Projektes die Abstimmung der Spezifikation abgeschlossen ist.</p>
+</div>
+</div>
 <section id="arbeitsweise" class="level1">
 <h1>Arbeitsweise</h1>
 <p>Nach der Installation werden Arbeitsbereiche “Workspaces” eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. “VERA 2027”. Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Survey Content Package in den Arbeitsbereich geladen (Json-Datei des SCP-Index und Inhaltsdateien - hier insbes. die Kodieranweisungen der Units). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.</p>
@@ -703,6 +734,9 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../coding-service/stars.html" class="pagination-link" aria-label="Szenario StarS">
+        <span class="nav-page-text">Szenario StarS</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
