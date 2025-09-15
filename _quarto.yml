@@ -40,8 +40,13 @@ website:
         - survey-content/items.qmd
         - survey-content/scales.qmd
 
-      - text: Coding-Service
+      - section: Coding-Service
         href: coding-service/index.qmd
+        contents:
+        - href: coding-service/stars.qmd
+          text: Szenario StarS
+        - href: coding-service/vera.qmd
+          text: Szenario VERA
       
 format:
   html:

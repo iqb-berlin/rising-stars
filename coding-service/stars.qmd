@@ -1,0 +1,32 @@
+---
+lang: de
+title: Coding-Service StarS-Szenario
+---
+
+Im Projekt StarS wird ein Portalsystem entwickelt, das übergreifende Management-Funktionen übernimmt (s. [Schema hier](../intro.qmd#software-komponenten)). Sollte ein Land ein eigenes Portalsystem einsetzen, ist nachfolgend die Funktion des CodingService für StarS genauer beleuchtet.
+
+![](../assets/coding-service-stars.png){width="600"}
+
+# Survey Content laden
+
+Im **Survey Content Package** übermittelt das IQB sämtliche für die Vorbereitung, Durchführung und Auswertung von StarS relevante Daten. Dazu erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten für einen Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist: **Survey Content Pool**.
+
+Das Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.
+
+# Management der Personen
+
+Für die Durchführung von StarS müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen bzw. diese Daten aus einem Schulverwaltungssystem importieren. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten).
+
+# Testdurchführung
+
+Das IQB-Testcenter steht in der obigen Darstellung für die Software für die Testdurchführung. Es liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten werden zunächst gesammelt und geprüft. Für die Weiterverarbeitung durch den IQB-CodingService müssen die Antworten einer Person zusammengefasst werden.
+
+# Kodierung
+
+Die Variablen im StarS-Kontext sind komplett automatisch kodierbar. Dazu sind die Antworten dem CodingService zu übergeben.
+
+# Berechnung der Fähigkeitswerte
+
+Über das Survey Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Alle Skalen sind in StarS eindeutig definiert. Der ermittelte (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
+
+Der CodingService versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.
