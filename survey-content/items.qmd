@@ -3,3 +3,53 @@ lang: de
 title: Item-Liste
 lightbox: true
 ---
+
+# Begriff
+
+Ein Item ist eine Antwort einer Testperson, die nach einer Bewertung richtig/falsch in die Ermittlung von Personenfähigkeitswerten eingeht. Im üblichen Sprachgebrauch entspricht der Begriff der Teilaufgabe. Technisch und konzeptionell ist dieser Begriff jedoch komplexer:
+
+* "Antwort" bedeutet im computergestützten Testen eine Interaktion, die protokolliert wird. Ankreuzen, ein Bild auf eine Fläche Ziehen, Worte/Zeichen Eintippen - eine Interaktion kann vielfältig sein. Im TBA-System des IQB hat eine Antwort stets eine ID, einen Status und einen Wert (s. [hier](https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html)).
+* Mehrere Antworten/Interaktionen können zu einem Itemwert beitragen. Das Item "Kreuze an und begründe" besteht aus zwei Interaktionen, die im Rahmen der Kodierung zusammengeführt werden.
+* Aus einer Interaktion können mehrere Items abgeleitet werden. Bei der Eingabe eines Wortes können mehrere Stellen getrennt bewertet werden, z. B. Dehnungs-h, Groß-/Kleinschreibung und Doppelkonsonanten.
+
+Das bedeutet für eine Testung, dass es Informationen geben muss, wie genau aus welchen Antworten Items abgeleitet werden sollen. Dies ist für das Survey Content Package in der Datenstruktur `items` eines `surveyPart` umgesetzt.
+
+# Wertebereich
+
+Itemwerte werden nicht direkt durch die Testdurchführung erzeugt, sondern aus den Antworten abgeleitet. Die Datenstruktur einer Antwort ist differenziert, da Zustände wie "nicht erreicht", "ungültig" oder "Kodierfehler" wichtig für die Qualitätssicherung sind. Ein Itemwert ist jedoch nur ein Integer. Folgende Konventionen gelten (siehe auch [hier](header.qmd#codingparameters)):
+
+* Der Wert `0` steht für eine falsche Antwort
+* Der Wert `1` steht für eine richtige Antwort
+* Ein Wert unter null steht für eine fehlende Antwort (sog. missing, z. B. -9)
+
+Mit so einem dichotomen Modell kann man beispielsweise Lösungshäufigkeiten berechnen. 
+
+Ein anderes Itemmodell **Partial Credit** ermöglicht mehrere Werte neben der Falsch-Lösung. Der Gedanke hierbei ist, dass man Leistungen der Testperson, die "teilweise richtig" sind, nicht unbeachtet lassen will. Es gibt dann statt nur `1` auch die Werte `2`, `3` usw. Es handelt sich nicht um eine numerische Skale, sondern die Werte stellen Kategorien dar.
+
+# Zuordnung zu Skalen
+
+Eine Personenfähigkeit wird über einen Skalenwert ausgedrückt. Dieser wird berechnet, indem Itemwerte auf bestimmte Art verarbeitet werden. Welche Items zu welcher Skale beitragen, muss in normierten Lernstandstests eindeutig festgelegt sein.
+
+Hierzu könnte man die Metadaten eines Items verwenden. Für jedes Items wird festgelegt, welche Kompetenzen für die erfolgreiche Bearbeitung erforderlich sind. Für eine Skale wird dann auch diese Kompetenz festgelegt, und ein Auswertungssystem könnte alle Items heraussuchen, die ebenfalls dieser Kompetenz zugewiesen sind.
+
+Dieses Verfahren wird im Survey Content Package nicht genutzt. Das Vergeben und Herauslesen der Metadaten gilt als zu unsicher. Statt dessen muss jede Skale eine Liste aller Items enthalten, deren Wert genutzt werden soll.
+
+# `items`
+
+In jedem `surveyPart` muss eine Item-Liste definiert sein. Folgende Eigenschaften sind hier vorgesehen:
+
+## `id`, `label`
+
+Mit der ID wird das Item in den Skalen referenziert. Ein Label kann in UI-Komponenten helfen, das Item zu identifizieren (z. B. "Teilaufgabe C"). Das Label ist mehrsprachig angelegt.
+
+## `sources`
+
+Hier wird die Frage beantwortet, wo dieses Item zu finden ist.
+
+* `unitId`: Dies ist eine Referenz zur Unitdefinition und erforderlich, um z. B. die Kodieranweisungen zu finden.
+* `unitAlias`: Sollte die Unit mehrfach in einem Testheft auftauchen, werden die Antworten über den Alias identifiziert. Ohne Alias wird die ID der Unit verwendet, um die Unit in den Antworten zu finden.
+* `sourceVariable`: Für die Antwortvariable, deren Score als Itemwert verwendet wird, muss der Status `CODING_COMPLETE` gesetzt sein. Dies kann bereits durch den Player erfolgen (bei StarS sehr häufig) oder als Ergebnis einer Kodierung. Das Kodierschema einer Unit enthält auch die Vorschrift dafür, wenn aus Basisvariablen eine Itemvariable abgeleitet werden soll.
+
+## `fullCreditValue`, `noCreditValue`
+
+Sollte die Itemvariable einen von den Konventionen abweichenden Wert liefern, kann dies an dieser Stelle explizit definiert werden.

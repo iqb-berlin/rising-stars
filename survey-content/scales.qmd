@@ -1,9 +1,77 @@
 ---
 lang: de
 title: Skalen
+format:
+    html:
+        other-links:
+            - text: IQB-Kompetenzstufenmodelle
+              href: https://skohub.io/iqb-vocabs/v71/heads/master/
 ---
+
+# Modell
+
+Personenfähigkeiten werden über Skalen ausgedrückt. Beispiele:
+
+* Lösungshäufigkeit: 55%
+* Prozentrang: 65
+* Metrik der Bildungsstandards: 366
+
+Der Fähigkeitswertswert bezieht sich stets auf eine bestimmte Kompetenz, z. B. "Mathematik Leitidee 4" oder "Englisch Leseverstehen".
+
+## Datentyp
+
+Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skale, sondern um Kategorien. Es gibt die Werte "2" und "3", aber der Zwischenwert "2,4" ist nicht definiert. Gleichwohl gilt -- da es sich dann um Fähigkeitsstufen handelt -- dass "2" eine geringere Fähigkeit ausdrückt als "3".
+
+## Ableitung
+
+Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.
+
+## Kompetenzstufenmodelle
+
+Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat [hier](https://skohub.io/iqb-vocabs/v71/heads/master/) die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.
 
 # `baseScales`
 
+## `id`, `name`, `description`: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+
+## `method`, `methodParameters`
+
+Hier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen `SUM`, `RATIO`, `MEAN`, `MEDIAN` zur Verfügung.
+
+Sollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für `RATIO` wäre das `maxValue`, d. h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt.
+
+## `items`
+
+An dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft `items` des `surveyPart` deklariert worden sein.
+
 # `derivedScales`
 
+## `id`, `name`, `description`
+
+Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+
+## `source`
+
+Hier ist die Skale anzugeben mit ihrer ID, deren Wert in die neue Skale übersetzt werden soll.
+
+## `mappings`
+
+Der erste Eintrag in dieser Liste, für den ein `true` ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skale den `elseValue` (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:
+
+* `method`, `methodParameters`: Für die Vergleichsmethode stehen zur Verfügung `EQUALS`, `LESS_THAN`, `MORE_THAN`, `MAX` und `MIN`. Der Operand wird in der Eigenschaft `methodParameters` übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.
+* `newValue`: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet
+* `valueLabel`, `valueDescription` unterstützen die UI
+
+## `elseValue`, `elseLabel`, `elseDescription`
+
+Dieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft.
+
+## `relatedVocabularies`
+
+Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skale öffentlich zugänglichen Skalen entsprechen (s. o.).
+
+# StarS und VERA
+
+Im StarS-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.
+
+Für VERA werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package dazu nur die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.

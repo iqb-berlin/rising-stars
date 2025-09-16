@@ -17,7 +17,7 @@ Oben links in der Darstellung ist mit **Testcontent** das Material für den Test
 * Für die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.
 * Für das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.
 
-Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Package** bereit. Diese Datenstruktur ist [hier spezifiziert](../specs/index.qmd).
+Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Package** bereit. Diese Datenstruktur ist [hier erläutert](survey-content/index.qmd).
 
 # Software-Komponenten
 
