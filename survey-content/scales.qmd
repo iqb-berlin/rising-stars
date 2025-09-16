@@ -32,7 +32,9 @@ Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich
 
 # `baseScales`
 
-## `id`, `name`, `description`: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+## `id`, `name`, `description`
+
+Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
 
 ## `method`, `methodParameters`
 
@@ -72,6 +74,8 @@ Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skale öff
 
 # StarS und VERA
 
-Im StarS-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.
+Im **StarS**-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.
 
-Für VERA werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package dazu nur die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.
+Für **VERA** werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Außerdem wird es weiterhin Äquivalenzwerte geben, mit denen man von den Lösungshäufigkeiten auf Kompetenzskalen mappen kann (abgeleitete Skalen).
+
+Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package für VERA dazu die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus für KMK-Kompentenzstufen genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.
