@@ -22,10 +22,14 @@ Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Inst
 Folgende Informationen enthält der SCP-Index:
 
 * [Kopfdaten](header.qmd): Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.
-* Module und Testhefte, jeweils mit Metadaten und Zuordnungen zu Teilen der Testung
-* Testmaterial für das Testcenter: Verweise auf Dateien und Zuordnung zu bestimmten Teilen der Testung
-* Itemlisten und Skalenbuch: Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden
+* [Abschnitte](parts.qmd) des Index
+* [Module und Testhefte](instruments.qmd), z. B. Testmaterial für das Testcenter
+* [Itemlisten](items.qmd) und [Skalenbuch](scales.qmd): Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden
+
+Aktuell noch nicht spezifiziert:
+
 * Orientierungswerte aus Pilotierungen oder Normierungen für die Rückmeldung
+* Material zur Unterstützung der Rückmeldung
 
 **Spezifikationen**
 
