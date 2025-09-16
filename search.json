@@ -73,11 +73,11 @@
     ]
   },
   {
-    "objectID": "survey-content/scales.html#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert.",
-    "href": "survey-content/scales.html#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert.",
+    "objectID": "survey-content/scales.html#id-name-description",
+    "href": "survey-content/scales.html#id-name-description",
     "title": "Skalen",
-    "section": "id, name, description: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).",
-    "text": "id, name, description: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).",
+    "section": "id, name, description",
+    "text": "id, name, description\nDie ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).",
     "crumbs": [
       "Survey Content",
       "Skalen"
@@ -106,8 +106,8 @@
     ]
   },
   {
-    "objectID": "survey-content/scales.html#id-name-description",
-    "href": "survey-content/scales.html#id-name-description",
+    "objectID": "survey-content/scales.html#id-name-description-1",
+    "href": "survey-content/scales.html#id-name-description-1",
     "title": "Skalen",
     "section": "id, name, description",
     "text": "id, name, description\nDie ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).",

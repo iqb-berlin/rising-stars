@@ -226,13 +226,13 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#basescales" id="toc-basescales" class="nav-link" data-scroll-target="#basescales"><code>baseScales</code></a>
   <ul class="collapse">
-  <li><a href="#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert." id="toc-id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert." class="nav-link" data-scroll-target="#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert."><code>id</code>, <code>name</code>, <code>description</code>: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</a></li>
+  <li><a href="#id-name-description" id="toc-id-name-description" class="nav-link" data-scroll-target="#id-name-description"><code>id</code>, <code>name</code>, <code>description</code></a></li>
   <li><a href="#method-methodparameters" id="toc-method-methodparameters" class="nav-link" data-scroll-target="#method-methodparameters"><code>method</code>, <code>methodParameters</code></a></li>
   <li><a href="#items" id="toc-items" class="nav-link" data-scroll-target="#items"><code>items</code></a></li>
   </ul></li>
   <li><a href="#derivedscales" id="toc-derivedscales" class="nav-link" data-scroll-target="#derivedscales"><code>derivedScales</code></a>
   <ul class="collapse">
-  <li><a href="#id-name-description" id="toc-id-name-description" class="nav-link" data-scroll-target="#id-name-description"><code>id</code>, <code>name</code>, <code>description</code></a></li>
+  <li><a href="#id-name-description-1" id="toc-id-name-description-1" class="nav-link" data-scroll-target="#id-name-description-1"><code>id</code>, <code>name</code>, <code>description</code></a></li>
   <li><a href="#source" id="toc-source" class="nav-link" data-scroll-target="#source"><code>source</code></a></li>
   <li><a href="#mappings" id="toc-mappings" class="nav-link" data-scroll-target="#mappings"><code>mappings</code></a></li>
   <li><a href="#elsevalue-elselabel-elsedescription" id="toc-elsevalue-elselabel-elsedescription" class="nav-link" data-scroll-target="#elsevalue-elselabel-elsedescription"><code>elseValue</code>, <code>elseLabel</code>, <code>elseDescription</code></a></li>
@@ -288,8 +288,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="basescales" class="level1">
 <h1><code>baseScales</code></h1>
-<section id="id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert." class="level2">
-<h2 class="anchored" data-anchor-id="id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert."><code>id</code>, <code>name</code>, <code>description</code>: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</h2>
+<section id="id-name-description" class="level2">
+<h2 class="anchored" data-anchor-id="id-name-description"><code>id</code>, <code>name</code>, <code>description</code></h2>
+<p>Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</p>
 </section>
 <section id="method-methodparameters" class="level2">
 <h2 class="anchored" data-anchor-id="method-methodparameters"><code>method</code>, <code>methodParameters</code></h2>
@@ -303,8 +304,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="derivedscales" class="level1">
 <h1><code>derivedScales</code></h1>
-<section id="id-name-description" class="level2">
-<h2 class="anchored" data-anchor-id="id-name-description"><code>id</code>, <code>name</code>, <code>description</code></h2>
+<section id="id-name-description-1" class="level2">
+<h2 class="anchored" data-anchor-id="id-name-description-1"><code>id</code>, <code>name</code>, <code>description</code></h2>
 <p>Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</p>
 </section>
 <section id="source" class="level2">
@@ -331,8 +332,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="stars-und-vera" class="level1">
 <h1>StarS und VERA</h1>
-<p>Im StarS-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.</p>
-<p>Für VERA werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package dazu nur die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.</p>
+<p>Im <strong>StarS</strong>-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.</p>
+<p>Für <strong>VERA</strong> werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Außerdem wird es weiterhin Äquivalenzwerte geben, mit denen man von den Lösungshäufigkeiten auf Kompetenzskalen mappen kann (abgeleitete Skalen).</p>
+<p>Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package für VERA dazu die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus für KMK-Kompentenzstufen genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.</p>
 
 
 </section>
