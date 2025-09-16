@@ -213,8 +213,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#begriff" id="toc-begriff" class="nav-link active" data-scroll-target="#begriff">Begriff</a></li>
+  <li><a href="#wertebereich" id="toc-wertebereich" class="nav-link" data-scroll-target="#wertebereich">Wertebereich</a></li>
+  <li><a href="#zuordnung-zu-skalen" id="toc-zuordnung-zu-skalen" class="nav-link" data-scroll-target="#zuordnung-zu-skalen">Zuordnung zu Skalen</a></li>
+  <li><a href="#items" id="toc-items" class="nav-link" data-scroll-target="#items"><code>items</code></a>
+  <ul class="collapse">
+  <li><a href="#id-label" id="toc-id-label" class="nav-link" data-scroll-target="#id-label"><code>id</code>, <code>label</code></a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources"><code>sources</code></a></li>
+  <li><a href="#fullcreditvalue-nocreditvalue" id="toc-fullcreditvalue-nocreditvalue" class="nav-link" data-scroll-target="#fullcreditvalue-nocreditvalue"><code>fullCreditValue</code>, <code>noCreditValue</code></a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -238,8 +252,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="begriff" class="level1">
+<h1>Begriff</h1>
+<p>Ein Item ist eine Antwort einer Testperson, die nach einer Bewertung richtig/falsch in die Ermittlung von Personenfähigkeitswerten eingeht. Im üblichen Sprachgebrauch entspricht der Begriff der Teilaufgabe. Technisch und konzeptionell ist dieser Begriff jedoch komplexer:</p>
+<ul>
+<li>“Antwort” bedeutet im computergestützten Testen eine Interaktion, die protokolliert wird. Ankreuzen, ein Bild auf eine Fläche Ziehen, Worte/Zeichen Eintippen - eine Interaktion kann vielfältig sein. Im TBA-System des IQB hat eine Antwort stets eine ID, einen Status und einen Wert (s. <a href="https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html">hier</a>).</li>
+<li>Mehrere Antworten/Interaktionen können zu einem Itemwert beitragen. Das Item “Kreuze an und begründe” besteht aus zwei Interaktionen, die im Rahmen der Kodierung zusammengeführt werden.</li>
+<li>Aus einer Interaktion können mehrere Items abgeleitet werden. Bei der Eingabe eines Wortes können mehrere Stellen getrennt bewertet werden, z. B. Dehnungs-h, Groß-/Kleinschreibung und Doppelkonsonanten.</li>
+</ul>
+<p>Das bedeutet für eine Testung, dass es Informationen geben muss, wie genau aus welchen Antworten Items abgeleitet werden sollen. Dies ist für das Survey Content Package in der Datenstruktur <code>items</code> eines <code>surveyPart</code> umgesetzt.</p>
+</section>
+<section id="wertebereich" class="level1">
+<h1>Wertebereich</h1>
+<p>Itemwerte werden nicht direkt durch die Testdurchführung erzeugt, sondern aus den Antworten abgeleitet. Die Datenstruktur einer Antwort ist differenziert, da Zustände wie “nicht erreicht”, “ungültig” oder “Kodierfehler” wichtig für die Qualitätssicherung sind. Ein Itemwert ist jedoch nur ein Integer. Folgende Konventionen gelten (siehe auch <a href="../survey-content/header.html#codingparameters">hier</a>):</p>
+<ul>
+<li>Der Wert <code>0</code> steht für eine falsche Antwort</li>
+<li>Der Wert <code>1</code> steht für eine richtige Antwort</li>
+<li>Ein Wert unter null steht für eine fehlende Antwort (sog. missing, z. B. -9)</li>
+</ul>
+<p>Mit so einem dichotomen Modell kann man beispielsweise Lösungshäufigkeiten berechnen.</p>
+<p>Ein anderes Itemmodell <strong>Partial Credit</strong> ermöglicht mehrere Werte neben der Falsch-Lösung. Der Gedanke hierbei ist, dass man Leistungen der Testperson, die “teilweise richtig” sind, nicht unbeachtet lassen will. Es gibt dann statt nur <code>1</code> auch die Werte <code>2</code>, <code>3</code> usw. Es handelt sich nicht um eine numerische Skale, sondern die Werte stellen Kategorien dar.</p>
+</section>
+<section id="zuordnung-zu-skalen" class="level1">
+<h1>Zuordnung zu Skalen</h1>
+<p>Eine Personenfähigkeit wird über einen Skalenwert ausgedrückt. Dieser wird berechnet, indem Itemwerte auf bestimmte Art verarbeitet werden. Welche Items zu welcher Skale beitragen, muss in normierten Lernstandstests eindeutig festgelegt sein.</p>
+<p>Hierzu könnte man die Metadaten eines Items verwenden. Für jedes Items wird festgelegt, welche Kompetenzen für die erfolgreiche Bearbeitung erforderlich sind. Für eine Skale wird dann auch diese Kompetenz festgelegt, und ein Auswertungssystem könnte alle Items heraussuchen, die ebenfalls dieser Kompetenz zugewiesen sind.</p>
+<p>Dieses Verfahren wird im Survey Content Package nicht genutzt. Das Vergeben und Herauslesen der Metadaten gilt als zu unsicher. Statt dessen muss jede Skale eine Liste aller Items enthalten, deren Wert genutzt werden soll.</p>
+</section>
+<section id="items" class="level1">
+<h1><code>items</code></h1>
+<p>In jedem <code>surveyPart</code> muss eine Item-Liste definiert sein. Folgende Eigenschaften sind hier vorgesehen:</p>
+<section id="id-label" class="level2">
+<h2 class="anchored" data-anchor-id="id-label"><code>id</code>, <code>label</code></h2>
+<p>Mit der ID wird das Item in den Skalen referenziert. Ein Label kann in UI-Komponenten helfen, das Item zu identifizieren (z. B. “Teilaufgabe C”). Das Label ist mehrsprachig angelegt.</p>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources"><code>sources</code></h2>
+<p>Hier wird die Frage beantwortet, wo dieses Item zu finden ist.</p>
+<ul>
+<li><code>unitId</code>: Dies ist eine Referenz zur Unitdefinition und erforderlich, um z. B. die Kodieranweisungen zu finden.</li>
+<li><code>unitAlias</code>: Sollte die Unit mehrfach in einem Testheft auftauchen, werden die Antworten über den Alias identifiziert. Ohne Alias wird die ID der Unit verwendet, um die Unit in den Antworten zu finden.</li>
+<li><code>sourceVariable</code>: Für die Antwortvariable, deren Score als Itemwert verwendet wird, muss der Status <code>CODING_COMPLETE</code> gesetzt sein. Dies kann bereits durch den Player erfolgen (bei StarS sehr häufig) oder als Ergebnis einer Kodierung. Das Kodierschema einer Unit enthält auch die Vorschrift dafür, wenn aus Basisvariablen eine Itemvariable abgeleitet werden soll.</li>
+</ul>
+</section>
+<section id="fullcreditvalue-nocreditvalue" class="level2">
+<h2 class="anchored" data-anchor-id="fullcreditvalue-nocreditvalue"><code>fullCreditValue</code>, <code>noCreditValue</code></h2>
+<p>Sollte die Itemvariable einen von den Konventionen abweichenden Wert liefern, kann dies an dieser Stelle explizit definiert werden.</p>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

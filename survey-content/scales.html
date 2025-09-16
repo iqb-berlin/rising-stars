@@ -218,10 +218,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#basescales" id="toc-basescales" class="nav-link active" data-scroll-target="#basescales"><code>baseScales</code></a></li>
-  <li><a href="#derivedscales" id="toc-derivedscales" class="nav-link" data-scroll-target="#derivedscales"><code>derivedScales</code></a></li>
+  <li><a href="#modell" id="toc-modell" class="nav-link active" data-scroll-target="#modell">Modell</a>
+  <ul class="collapse">
+  <li><a href="#datentyp" id="toc-datentyp" class="nav-link" data-scroll-target="#datentyp">Datentyp</a></li>
+  <li><a href="#ableitung" id="toc-ableitung" class="nav-link" data-scroll-target="#ableitung">Ableitung</a></li>
+  <li><a href="#kompetenzstufenmodelle" id="toc-kompetenzstufenmodelle" class="nav-link" data-scroll-target="#kompetenzstufenmodelle">Kompetenzstufenmodelle</a></li>
+  </ul></li>
+  <li><a href="#basescales" id="toc-basescales" class="nav-link" data-scroll-target="#basescales"><code>baseScales</code></a>
+  <ul class="collapse">
+  <li><a href="#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert." id="toc-id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert." class="nav-link" data-scroll-target="#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert."><code>id</code>, <code>name</code>, <code>description</code>: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</a></li>
+  <li><a href="#method-methodparameters" id="toc-method-methodparameters" class="nav-link" data-scroll-target="#method-methodparameters"><code>method</code>, <code>methodParameters</code></a></li>
+  <li><a href="#items" id="toc-items" class="nav-link" data-scroll-target="#items"><code>items</code></a></li>
+  </ul></li>
+  <li><a href="#derivedscales" id="toc-derivedscales" class="nav-link" data-scroll-target="#derivedscales"><code>derivedScales</code></a>
+  <ul class="collapse">
+  <li><a href="#id-name-description" id="toc-id-name-description" class="nav-link" data-scroll-target="#id-name-description"><code>id</code>, <code>name</code>, <code>description</code></a></li>
+  <li><a href="#source" id="toc-source" class="nav-link" data-scroll-target="#source"><code>source</code></a></li>
+  <li><a href="#mappings" id="toc-mappings" class="nav-link" data-scroll-target="#mappings"><code>mappings</code></a></li>
+  <li><a href="#elsevalue-elselabel-elsedescription" id="toc-elsevalue-elselabel-elsedescription" class="nav-link" data-scroll-target="#elsevalue-elselabel-elsedescription"><code>elseValue</code>, <code>elseLabel</code>, <code>elseDescription</code></a></li>
+  <li><a href="#relatedvocabularies" id="toc-relatedvocabularies" class="nav-link" data-scroll-target="#relatedvocabularies"><code>relatedVocabularies</code></a></li>
+  </ul></li>
+  <li><a href="#stars-und-vera" id="toc-stars-und-vera" class="nav-link" data-scroll-target="#stars-und-vera">StarS und VERA</a></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://skohub.io/iqb-vocabs/v71/heads/master/"><i class="bi bi-link-45deg"></i>IQB-Kompetenzstufenmodelle</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -245,11 +264,75 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="modell" class="level1">
+<h1>Modell</h1>
+<p>Personenfähigkeiten werden über Skalen ausgedrückt. Beispiele:</p>
+<ul>
+<li>Lösungshäufigkeit: 55%</li>
+<li>Prozentrang: 65</li>
+<li>Metrik der Bildungsstandards: 366</li>
+</ul>
+<p>Der Fähigkeitswertswert bezieht sich stets auf eine bestimmte Kompetenz, z. B. “Mathematik Leitidee 4” oder “Englisch Leseverstehen”.</p>
+<section id="datentyp" class="level2">
+<h2 class="anchored" data-anchor-id="datentyp">Datentyp</h2>
+<p>Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skale, sondern um Kategorien. Es gibt die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.</p>
+</section>
+<section id="ableitung" class="level2">
+<h2 class="anchored" data-anchor-id="ableitung">Ableitung</h2>
+<p>Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.</p>
+</section>
+<section id="kompetenzstufenmodelle" class="level2">
+<h2 class="anchored" data-anchor-id="kompetenzstufenmodelle">Kompetenzstufenmodelle</h2>
+<p>Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat <a href="https://skohub.io/iqb-vocabs/v71/heads/master/">hier</a> die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.</p>
+</section>
+</section>
 <section id="basescales" class="level1">
 <h1><code>baseScales</code></h1>
+<section id="id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert." class="level2">
+<h2 class="anchored" data-anchor-id="id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert."><code>id</code>, <code>name</code>, <code>description</code>: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</h2>
+</section>
+<section id="method-methodparameters" class="level2">
+<h2 class="anchored" data-anchor-id="method-methodparameters"><code>method</code>, <code>methodParameters</code></h2>
+<p>Hier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen <code>SUM</code>, <code>RATIO</code>, <code>MEAN</code>, <code>MEDIAN</code> zur Verfügung.</p>
+<p>Sollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für <code>RATIO</code> wäre das <code>maxValue</code>, d.&nbsp;h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt.</p>
+</section>
+<section id="items" class="level2">
+<h2 class="anchored" data-anchor-id="items"><code>items</code></h2>
+<p>An dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft <code>items</code> des <code>surveyPart</code> deklariert worden sein.</p>
+</section>
 </section>
 <section id="derivedscales" class="level1">
 <h1><code>derivedScales</code></h1>
+<section id="id-name-description" class="level2">
+<h2 class="anchored" data-anchor-id="id-name-description"><code>id</code>, <code>name</code>, <code>description</code></h2>
+<p>Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</p>
+</section>
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source"><code>source</code></h2>
+<p>Hier ist die Skale anzugeben mit ihrer ID, deren Wert in die neue Skale übersetzt werden soll.</p>
+</section>
+<section id="mappings" class="level2">
+<h2 class="anchored" data-anchor-id="mappings"><code>mappings</code></h2>
+<p>Der erste Eintrag in dieser Liste, für den ein <code>true</code> ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skale den <code>elseValue</code> (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:</p>
+<ul>
+<li><code>method</code>, <code>methodParameters</code>: Für die Vergleichsmethode stehen zur Verfügung <code>EQUALS</code>, <code>LESS_THAN</code>, <code>MORE_THAN</code>, <code>MAX</code> und <code>MIN</code>. Der Operand wird in der Eigenschaft <code>methodParameters</code> übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.</li>
+<li><code>newValue</code>: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet</li>
+<li><code>valueLabel</code>, <code>valueDescription</code> unterstützen die UI</li>
+</ul>
+</section>
+<section id="elsevalue-elselabel-elsedescription" class="level2">
+<h2 class="anchored" data-anchor-id="elsevalue-elselabel-elsedescription"><code>elseValue</code>, <code>elseLabel</code>, <code>elseDescription</code></h2>
+<p>Dieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft.</p>
+</section>
+<section id="relatedvocabularies" class="level2">
+<h2 class="anchored" data-anchor-id="relatedvocabularies"><code>relatedVocabularies</code></h2>
+<p>Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skale öffentlich zugänglichen Skalen entsprechen (s. o.).</p>
+</section>
+</section>
+<section id="stars-und-vera" class="level1">
+<h1>StarS und VERA</h1>
+<p>Im StarS-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.</p>
+<p>Für VERA werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package dazu nur die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.</p>
 
 
 </section>

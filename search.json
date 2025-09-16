@@ -33,7 +33,128 @@
     "href": "survey-content/scales.html",
     "title": "Skalen",
     "section": "",
-    "text": "baseScales\n\n\nderivedScales\n\n\n\n\n Zurück nach oben",
+    "text": "Personenfähigkeiten werden über Skalen ausgedrückt. Beispiele:\n\nLösungshäufigkeit: 55%\nProzentrang: 65\nMetrik der Bildungsstandards: 366\n\nDer Fähigkeitswertswert bezieht sich stets auf eine bestimmte Kompetenz, z. B. “Mathematik Leitidee 4” oder “Englisch Leseverstehen”.\n\n\nDer Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skale, sondern um Kategorien. Es gibt die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.\n\n\n\nDie vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.\n\n\n\nDie Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat hier die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#datentyp",
+    "href": "survey-content/scales.html#datentyp",
+    "title": "Skalen",
+    "section": "",
+    "text": "Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skale, sondern um Kategorien. Es gibt die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#ableitung",
+    "href": "survey-content/scales.html#ableitung",
+    "title": "Skalen",
+    "section": "",
+    "text": "Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#kompetenzstufenmodelle",
+    "href": "survey-content/scales.html#kompetenzstufenmodelle",
+    "title": "Skalen",
+    "section": "",
+    "text": "Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat hier die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert.",
+    "href": "survey-content/scales.html#id-name-description-die-id-wird-in-allen-datenlisten-verwendet.-ein-name-und-optional-eine-beschreibung-unterstützen-die-ui-sprachdifferenziert.",
+    "title": "Skalen",
+    "section": "id, name, description: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).",
+    "text": "id, name, description: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#method-methodparameters",
+    "href": "survey-content/scales.html#method-methodparameters",
+    "title": "Skalen",
+    "section": "method, methodParameters",
+    "text": "method, methodParameters\nHier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen SUM, RATIO, MEAN, MEDIAN zur Verfügung.\nSollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für RATIO wäre das maxValue, d. h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#items",
+    "href": "survey-content/scales.html#items",
+    "title": "Skalen",
+    "section": "items",
+    "text": "items\nAn dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft items des surveyPart deklariert worden sein.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#id-name-description",
+    "href": "survey-content/scales.html#id-name-description",
+    "title": "Skalen",
+    "section": "id, name, description",
+    "text": "id, name, description\nDie ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#source",
+    "href": "survey-content/scales.html#source",
+    "title": "Skalen",
+    "section": "source",
+    "text": "source\nHier ist die Skale anzugeben mit ihrer ID, deren Wert in die neue Skale übersetzt werden soll.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#mappings",
+    "href": "survey-content/scales.html#mappings",
+    "title": "Skalen",
+    "section": "mappings",
+    "text": "mappings\nDer erste Eintrag in dieser Liste, für den ein true ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skale den elseValue (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:\n\nmethod, methodParameters: Für die Vergleichsmethode stehen zur Verfügung EQUALS, LESS_THAN, MORE_THAN, MAX und MIN. Der Operand wird in der Eigenschaft methodParameters übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.\nnewValue: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet\nvalueLabel, valueDescription unterstützen die UI",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#elsevalue-elselabel-elsedescription",
+    "href": "survey-content/scales.html#elsevalue-elselabel-elsedescription",
+    "title": "Skalen",
+    "section": "elseValue, elseLabel, elseDescription",
+    "text": "elseValue, elseLabel, elseDescription\nDieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft.",
+    "crumbs": [
+      "Survey Content",
+      "Skalen"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales.html#relatedvocabularies",
+    "href": "survey-content/scales.html#relatedvocabularies",
+    "title": "Skalen",
+    "section": "relatedVocabularies",
+    "text": "relatedVocabularies\nMit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skale öffentlich zugänglichen Skalen entsprechen (s. o.).",
     "crumbs": [
       "Survey Content",
       "Skalen"
@@ -175,7 +296,40 @@
     "href": "survey-content/items.html",
     "title": "Item-Liste",
     "section": "",
-    "text": "Zurück nach oben",
+    "text": "Ein Item ist eine Antwort einer Testperson, die nach einer Bewertung richtig/falsch in die Ermittlung von Personenfähigkeitswerten eingeht. Im üblichen Sprachgebrauch entspricht der Begriff der Teilaufgabe. Technisch und konzeptionell ist dieser Begriff jedoch komplexer:\n\n“Antwort” bedeutet im computergestützten Testen eine Interaktion, die protokolliert wird. Ankreuzen, ein Bild auf eine Fläche Ziehen, Worte/Zeichen Eintippen - eine Interaktion kann vielfältig sein. Im TBA-System des IQB hat eine Antwort stets eine ID, einen Status und einen Wert (s. hier).\nMehrere Antworten/Interaktionen können zu einem Itemwert beitragen. Das Item “Kreuze an und begründe” besteht aus zwei Interaktionen, die im Rahmen der Kodierung zusammengeführt werden.\nAus einer Interaktion können mehrere Items abgeleitet werden. Bei der Eingabe eines Wortes können mehrere Stellen getrennt bewertet werden, z. B. Dehnungs-h, Groß-/Kleinschreibung und Doppelkonsonanten.\n\nDas bedeutet für eine Testung, dass es Informationen geben muss, wie genau aus welchen Antworten Items abgeleitet werden sollen. Dies ist für das Survey Content Package in der Datenstruktur items eines surveyPart umgesetzt.",
+    "crumbs": [
+      "Survey Content",
+      "Item-Liste"
+    ]
+  },
+  {
+    "objectID": "survey-content/items.html#id-label",
+    "href": "survey-content/items.html#id-label",
+    "title": "Item-Liste",
+    "section": "id, label",
+    "text": "id, label\nMit der ID wird das Item in den Skalen referenziert. Ein Label kann in UI-Komponenten helfen, das Item zu identifizieren (z. B. “Teilaufgabe C”). Das Label ist mehrsprachig angelegt.",
+    "crumbs": [
+      "Survey Content",
+      "Item-Liste"
+    ]
+  },
+  {
+    "objectID": "survey-content/items.html#sources",
+    "href": "survey-content/items.html#sources",
+    "title": "Item-Liste",
+    "section": "sources",
+    "text": "sources\nHier wird die Frage beantwortet, wo dieses Item zu finden ist.\n\nunitId: Dies ist eine Referenz zur Unitdefinition und erforderlich, um z. B. die Kodieranweisungen zu finden.\nunitAlias: Sollte die Unit mehrfach in einem Testheft auftauchen, werden die Antworten über den Alias identifiziert. Ohne Alias wird die ID der Unit verwendet, um die Unit in den Antworten zu finden.\nsourceVariable: Für die Antwortvariable, deren Score als Itemwert verwendet wird, muss der Status CODING_COMPLETE gesetzt sein. Dies kann bereits durch den Player erfolgen (bei StarS sehr häufig) oder als Ergebnis einer Kodierung. Das Kodierschema einer Unit enthält auch die Vorschrift dafür, wenn aus Basisvariablen eine Itemvariable abgeleitet werden soll.",
+    "crumbs": [
+      "Survey Content",
+      "Item-Liste"
+    ]
+  },
+  {
+    "objectID": "survey-content/items.html#fullcreditvalue-nocreditvalue",
+    "href": "survey-content/items.html#fullcreditvalue-nocreditvalue",
+    "title": "Item-Liste",
+    "section": "fullCreditValue, noCreditValue",
+    "text": "fullCreditValue, noCreditValue\nSollte die Itemvariable einen von den Konventionen abweichenden Wert liefern, kann dies an dieser Stelle explizit definiert werden.",
     "crumbs": [
       "Survey Content",
       "Item-Liste"
@@ -237,7 +391,7 @@
     "href": "intro.html",
     "title": "Überblick",
     "section": "",
-    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet.\n\nDas obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.\nOben links in der Darstellung ist mit Testcontent das Material für den Test dargestellt:\n\nFür die Testdurchführung sind Testaufgaben (Units) und deren Anordnung im Test (Booklets) nötig.\nFür die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.\nFür die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.\nFür das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.\n\nSämtliche Daten stellt das IQB im StarS-Projekt über das Survey Content Package bereit. Diese Datenstruktur ist hier spezifiziert.\n\nSoftware-Komponenten\nDie StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:\n\n\nManagement-Portal: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.\nIQB-ContentPool: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.\nSchulverwaltungssystem: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.\nIQB-CodingService: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.\nDashboard: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das “Dashboard” in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.\n\n\n\nUmsetzung in StarS\nIm Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.\nAußerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.\nDie Betreiber einer StarS-Installation (Land, Dienstleister) entscheiden gezielt, welche der Komponenten eingesetzt werden. Das obige Schema ist daher als Integrationsschema zu verstehen: Die Komponenten haben dokumentierte Schnittstellen (API) und die Daten sind für den optimalen Austausch genau spezifiziert. Die Seiten dieses Auftrittes thematisieren diese Spezifikationen für die optimale Unterstützung eines flexiblen Testsystems.\n\n\n\n\n Zurück nach oben",
+    "text": "Im Englischen steht “Survey” für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet.\n\nDas obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.\nOben links in der Darstellung ist mit Testcontent das Material für den Test dargestellt:\n\nFür die Testdurchführung sind Testaufgaben (Units) und deren Anordnung im Test (Booklets) nötig.\nFür die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.\nFür die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern.\nFür das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.\n\nSämtliche Daten stellt das IQB im StarS-Projekt über das Survey Content Package bereit. Diese Datenstruktur ist hier erläutert.\n\nSoftware-Komponenten\nDie StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:\n\n\nManagement-Portal: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.\nIQB-ContentPool: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.\nSchulverwaltungssystem: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.\nIQB-CodingService: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.\nDashboard: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das “Dashboard” in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.\n\n\n\nUmsetzung in StarS\nIm Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.\nAußerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.\nDie Betreiber einer StarS-Installation (Land, Dienstleister) entscheiden gezielt, welche der Komponenten eingesetzt werden. Das obige Schema ist daher als Integrationsschema zu verstehen: Die Komponenten haben dokumentierte Schnittstellen (API) und die Daten sind für den optimalen Austausch genau spezifiziert. Die Seiten dieses Auftrittes thematisieren diese Spezifikationen für die optimale Unterstützung eines flexiblen Testsystems.\n\n\n\n\n Zurück nach oben",
     "crumbs": [
       "Überblick"
     ]
