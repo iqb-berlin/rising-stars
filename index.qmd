@@ -29,7 +29,7 @@ Auf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterial
 
 # Technische Realisierung
 
-Dieser Webauftritt basiert auf Texten in einer einfachen Syntax [Markdown](https://markdown.de/), die anschließend in Html und CSS umgesetzt werden. Hierzu wird [Quarto](https://quarto.org/) verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen [Codeverwaltungssystem](https://github.com/iqb-berlin/rising-stars) gespeichert. Hier ist auch eine Anleitung für Änderungen an den Inhalten zu finden.
+Dieser Webauftritt basiert auf Texten in einer einfachen Syntax [Markdown](https://markdown.de/), die anschließend in Html und CSS umgesetzt werden. Hierzu wird [Quarto](https://quarto.org/) verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen [Codeverwaltungssystem](https://github.com/iqb-berlin/rising-stars) gespeichert.
 
 # Kontakt
 
