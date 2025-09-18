@@ -30,6 +30,7 @@ Aktuell noch nicht spezifiziert:
 
 * Orientierungswerte aus Pilotierungen oder Normierungen für die Rückmeldung
 * Material zur Unterstützung der Rückmeldung
+* Skalen aus typischen Fehlern (*misconceptions*; Quelle wäre hier der Code einer Antwort, nicht der Score)
 
 **Spezifikationen**
 
