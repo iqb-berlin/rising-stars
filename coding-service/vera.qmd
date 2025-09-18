@@ -42,9 +42,7 @@ Für eine möglichst aussagekräftige Rückmeldung sollten die Testpersonen Meta
 
 # Testdurchführung
 
-Das IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.
-
-Das Testcenter bzw. der Player liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-CodingService müssen die Antworten einer Person zusammengefasst werden.
+{{< include _run_test.qmd >}}
 
 # Kodierung
 

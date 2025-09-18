@@ -19,7 +19,7 @@ Für die Durchführung von StarS müssen üblicherweise die Lehrkräfte die Sch�
 
 # Testdurchführung
 
-Das IQB-Testcenter steht in der obigen Darstellung für die Software für die Testdurchführung. Es liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten werden zunächst gesammelt und geprüft. Für die Weiterverarbeitung durch den IQB-CodingService müssen die Antworten einer Person zusammengefasst werden.
+{{< include _run_test.qmd >}}
 
 # Kodierung
 
