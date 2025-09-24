@@ -21,16 +21,30 @@ Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Pack
 
 # Software-Komponenten
 
-Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:
+Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt.
+
+## Durchführung einer normierten Testung
 
 ![](assets/intro2.png){width="600" group="intro"}
 
-* **Management-Portal**: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.
+* **Management-Portal**: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert. In einem Szenario wie VERA übernimmt das Management-Portal auch die manuelle Kodierung.
 * **IQB-ContentPool**: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.
 * **Schulverwaltungssystem**: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler\*innen liefert.
 * **IQB-Testcenter**: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.
 * **IQB-CodingService**: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.
 * **Dashboard**: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das "Dashboard" in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.
+
+## Pilotierung und Normierung zur Vorbereitung einer Testung
+
+![](assets/intro3.png){width="600" group="intro"}
+
+* **Manuelles Daten-Management**: Für die Entwicklung und Erprobung von Lernstandstest gibt es kaum Prozesse, die mit Routine jedes Mal gleich durchgeführt werden. Die Testpersonen variieren, und die Methodik der Kodierung und Auswertung wird ständig weiterentwickelt. Bei Pilotierungen und Normierungen stehen nicht die Testpersonen im Vordergrund, deren Fähigkeiten ermittelt werden, sondern die Items. Nach einer Pilotierung werden diese verworfen, überarbeitet oder neu zusammengestellt. Daher ist das Datenmanagement keine Kette fixer Punkte, sondern muss flexibel durch die Beteiligten aus Wissenschaft und Fachdidaktik manuell gehandhabt werden.
+* **IQB-Studio**: Mit dieser Webanwendung werden die Aufgaben in einem kollaborativen mehrstufigen Prozess entwickelt.
+* **Excel, XML**: Die Login-Daten der Testpersonen werden über Tabellen verwaltet und mit einfachen Scripten in XML-Dateien für das Testcenter überführt.
+* **IQB-Testcenter**: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test manuell (CSV) oder über das Windows-Programm [itc-ToolBox](https://iqb-berlin.github.io/tba-info/study-run/toolbox/) abgerufen.
+* **IQB-KodierBox**: Nach der Testung führt diese Webanwendung wichtige Datenprüfungen und automatische Kodierungen durch. Für die manuellen Kodierungen durch geschultes Pesonal (entfällt bei StarS) stehen komplexe Managementfunktionen zur Verfügung (Kodierdesign entwerfen, Aufträge zuweisen, auswerten, abrechnen). Das Ergebnis ist eine Matrix der Itemwerte, die dann in die manuelle Datenanalyse eingeht.
+* **Bericht**: Dieser Punkt steht symbolisch für die Nutzung der Ergebnisse in diversen Zusammenhängen. Es gibt bei Pilotierungen oder Normierungen keine Rückmeldungen an die Lehrkräfte.
+
 
 # Umsetzung in StarS
 
