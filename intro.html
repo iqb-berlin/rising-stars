@@ -220,7 +220,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#software-komponenten" id="toc-software-komponenten" class="nav-link active" data-scroll-target="#software-komponenten">Software-Komponenten</a></li>
+  <li><a href="#software-komponenten" id="toc-software-komponenten" class="nav-link active" data-scroll-target="#software-komponenten">Software-Komponenten</a>
+  <ul class="collapse">
+  <li><a href="#durchführung-einer-normierten-testung" id="toc-durchführung-einer-normierten-testung" class="nav-link" data-scroll-target="#durchführung-einer-normierten-testung">Durchführung einer normierten Testung</a></li>
+  <li><a href="#pilotierung-und-normierung-zur-vorbereitung-einer-testung" id="toc-pilotierung-und-normierung-zur-vorbereitung-einer-testung" class="nav-link" data-scroll-target="#pilotierung-und-normierung-zur-vorbereitung-einer-testung">Pilotierung und Normierung zur Vorbereitung einer Testung</a></li>
+  </ul></li>
   <li><a href="#umsetzung-in-stars" id="toc-umsetzung-in-stars" class="nav-link" data-scroll-target="#umsetzung-in-stars">Umsetzung in StarS</a></li>
   </ul>
 </nav>
@@ -260,16 +264,31 @@ ul.task-list li input[type="checkbox"] {
 <p>Sämtliche Daten stellt das IQB im StarS-Projekt über das <strong>Survey Content Package</strong> bereit. Diese Datenstruktur ist <a href="./survey-content/index.html">hier erläutert</a>.</p>
 <section id="software-komponenten" class="level1">
 <h1>Software-Komponenten</h1>
-<p>Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt:</p>
+<p>Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt.</p>
+<section id="durchführung-einer-normierten-testung" class="level2">
+<h2 class="anchored" data-anchor-id="durchführung-einer-normierten-testung">Durchführung einer normierten Testung</h2>
 <p><a href="assets/intro2.png" class="lightbox" data-gallery="intro"><img src="assets/intro2.png" class="img-fluid" width="600"></a></p>
 <ul>
-<li><strong>Management-Portal</strong>: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert.</li>
+<li><strong>Management-Portal</strong>: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert. In einem Szenario wie VERA übernimmt das Management-Portal auch die manuelle Kodierung.</li>
 <li><strong>IQB-ContentPool</strong>: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.</li>
 <li><strong>Schulverwaltungssystem</strong>: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.</li>
 <li><strong>IQB-Testcenter</strong>: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.</li>
 <li><strong>IQB-CodingService</strong>: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.</li>
 <li><strong>Dashboard</strong>: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das “Dashboard” in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.</li>
 </ul>
+</section>
+<section id="pilotierung-und-normierung-zur-vorbereitung-einer-testung" class="level2">
+<h2 class="anchored" data-anchor-id="pilotierung-und-normierung-zur-vorbereitung-einer-testung">Pilotierung und Normierung zur Vorbereitung einer Testung</h2>
+<p><a href="assets/intro3.png" class="lightbox" data-gallery="intro"><img src="assets/intro3.png" class="img-fluid" width="600"></a></p>
+<ul>
+<li><strong>Manuelles Daten-Management</strong>: Für die Entwicklung und Erprobung von Lernstandstest gibt es kaum Prozesse, die mit Routine jedes Mal gleich durchgeführt werden. Die Testpersonen variieren, und die Methodik der Kodierung und Auswertung wird ständig weiterentwickelt. Bei Pilotierungen und Normierungen stehen nicht die Testpersonen im Vordergrund, deren Fähigkeiten ermittelt werden, sondern die Items. Nach einer Pilotierung werden diese verworfen, überarbeitet oder neu zusammengestellt. Daher ist das Datenmanagement keine Kette fixer Punkte, sondern muss flexibel durch die Beteiligten aus Wissenschaft und Fachdidaktik manuell gehandhabt werden.</li>
+<li><strong>IQB-Studio</strong>: Mit dieser Webanwendung werden die Aufgaben in einem kollaborativen mehrstufigen Prozess entwickelt.</li>
+<li><strong>Excel, XML</strong>: Die Login-Daten der Testpersonen werden über Tabellen verwaltet und mit einfachen Scripten in XML-Dateien für das Testcenter überführt.</li>
+<li><strong>IQB-Testcenter</strong>: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test manuell (CSV) oder über das Windows-Programm <a href="https://iqb-berlin.github.io/tba-info/study-run/toolbox/">itc-ToolBox</a> abgerufen.</li>
+<li><strong>IQB-KodierBox</strong>: Nach der Testung führt diese Webanwendung wichtige Datenprüfungen und automatische Kodierungen durch. Für die manuellen Kodierungen durch geschultes Pesonal (entfällt bei StarS) stehen komplexe Managementfunktionen zur Verfügung (Kodierdesign entwerfen, Aufträge zuweisen, auswerten, abrechnen). Das Ergebnis ist eine Matrix der Itemwerte, die dann in die manuelle Datenanalyse eingeht.</li>
+<li><strong>Bericht</strong>: Dieser Punkt steht symbolisch für die Nutzung der Ergebnisse in diversen Zusammenhängen. Es gibt bei Pilotierungen oder Normierungen keine Rückmeldungen an die Lehrkräfte.</li>
+</ul>
+</section>
 </section>
 <section id="umsetzung-in-stars" class="level1">
 <h1>Umsetzung in StarS</h1>
