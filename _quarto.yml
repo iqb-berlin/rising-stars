@@ -47,7 +47,9 @@ website:
           text: Szenario StarS
         - href: coding-service/vera.qmd
           text: Szenario VERA
-      
+
+      - feedback.qmd
+
 format:
   html:
     theme: yeti
