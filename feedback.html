@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Survey Content Package – StarS</title>
+<title>Ausblick Rückmeldungen – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +20,53 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../survey-content/header.html" rel="next">
-<link href="../intro.html" rel="prev">
-<link href="../assets/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4938819144343eef1c227903853e4362.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./coding-service/vera.html" rel="prev">
+<link href="./assets/favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-4938819144343eef1c227903853e4362.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -84,11 +106,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo light-content">
-    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo dark-content">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/iqb-logo-grey.png" alt="" class="navbar-logo light-content">
+    <img src="./assets/iqb-logo-grey.png" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">StarS</span>
     </a>
   </div>
@@ -114,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey-content/index.html">Survey Content</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./feedback.html">Ausblick Rückmeldungen</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -128,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
+      <a href="./index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -140,13 +162,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Überblick</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../survey-content/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="./survey-content/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Survey Content</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -155,31 +177,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey-content/header.html" class="sidebar-item-text sidebar-link">
+  <a href="./survey-content/header.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Kopfdaten</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey-content/parts.html" class="sidebar-item-text sidebar-link">
+  <a href="./survey-content/parts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abschnitte</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey-content/instruments.html" class="sidebar-item-text sidebar-link">
+  <a href="./survey-content/instruments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrumente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey-content/items.html" class="sidebar-item-text sidebar-link">
+  <a href="./survey-content/items.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Item-Liste</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey-content/scales.html" class="sidebar-item-text sidebar-link">
+  <a href="./survey-content/scales.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Skalen</span></a>
   </div>
 </li>
@@ -187,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../coding-service/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./coding-service/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coding-Service</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -196,13 +218,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../coding-service/stars.html" class="sidebar-item-text sidebar-link">
+  <a href="./coding-service/stars.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Szenario StarS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../coding-service/vera.html" class="sidebar-item-text sidebar-link">
+  <a href="./coding-service/vera.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Szenario VERA</span></a>
   </div>
 </li>
@@ -210,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../feedback.html" class="sidebar-item-text sidebar-link">
+  <a href="./feedback.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Ausblick Rückmeldungen</span></a>
   </div>
 </li>
@@ -220,14 +242,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/scp-index"><i class="bi bi-link-45deg"></i>Spezifikation SCP-Index</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#kodierte-antworten" id="toc-kodierte-antworten" class="nav-link active" data-scroll-target="#kodierte-antworten">Kodierte Antworten</a></li>
+  <li><a href="#item-matrix" id="toc-item-matrix" class="nav-link" data-scroll-target="#item-matrix">Item-Matrix</a></li>
+  <li><a href="#skalen" id="toc-skalen" class="nav-link" data-scroll-target="#skalen">Skalen</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Survey Content Package</h1>
+<h1 class="title">Ausblick Rückmeldungen</h1>
 </div>
 
 
@@ -244,40 +274,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Unter einem Survey Content Package SCP verstehen wir alle Daten, die unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um</p>
-<ul>
-<li><strong>SCP-Index</strong>: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),</li>
-<li><strong>Content-Dateien</strong>: Dateien in verschiedenen Formaten, die für die Durchführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).</li>
-</ul>
-<p>Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:</p>
-<ul>
-<li>Listen der Testpersonen,</li>
-<li>ggf. Leistungsdaten der Testpersonen aus vorangegangenen Testungen zum Vergleich</li>
-<li>ggf. Leistungsdaten auf Landes- oder Regionalebene zum Vergleich</li>
-</ul>
-<p>Folgende Informationen enthält der SCP-Index:</p>
-<ul>
-<li><a href="../survey-content/header.html">Kopfdaten</a>: Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.</li>
-<li><a href="../survey-content/parts.html">Abschnitte</a> des Index</li>
-<li><a href="../survey-content/instruments.html">Module und Testhefte</a>, z. B. Testmaterial für das Testcenter</li>
-<li><a href="../survey-content/items.html">Itemlisten</a> und <a href="../survey-content/scales.html">Skalenbuch</a>: Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden</li>
-</ul>
-<p>Aktuell noch nicht spezifiziert:</p>
-<ul>
-<li>Orientierungswerte aus Pilotierungen oder Normierungen für die Rückmeldung</li>
-<li>Material zur Unterstützung der Rückmeldung</li>
-<li>Skalen aus typischen Fehlern (<em>misconceptions</em>; Quelle wäre hier der Code einer Antwort, nicht der Score)</li>
-</ul>
-<p><strong>Spezifikationen</strong></p>
-<ul>
-<li><a href="https://iqb-specifications.github.io/scp-index">Spezifikation für den Index</a></li>
-<li><a href="https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json">Beispiel für den Index</a></li>
-<li><a href="https://iqb-vocabs.github.io/p44/">Metadaten-Profile für SCP</a></li>
-</ul>
+<p>Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der CodingService bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.</p>
+<section id="kodierte-antworten" class="level1">
+<h1>Kodierte Antworten</h1>
+<p>In einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson geantwortet hat. Dies kann in einem Verona-kompatiblen System beispielsweise über Replay implementiert werden, d.&nbsp;h. die Aufgabe wird angezeigt und die Antwortdaten der Testperson werden dazu geladen. Außerdem kann mitgeteilt werden, wie die Antworten bewertet wurden (richtig, falsch).</p>
+</section>
+<section id="item-matrix" class="level1">
+<h1>Item-Matrix</h1>
+<p>Der CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich <code>0</code> und <code>1</code> für “richtig” und “falsch”, aber auch <code>-9</code> für “nicht beantwortet” oder “nicht auswertbar”. Im Survey Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skale gehören.</p>
+<p>Aus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- und Skalenebene kombinieren. Beispiel <span class="citation" data-cites="Pukrop.2019">(Quelle: <a href="#ref-Pukrop.2019" role="doc-biblioref">Pukrop, 2019, S. 233</a>)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/feedback2.png" class="lightbox" data-gallery="feedback" title="Beispiel Kombination Item-Werte und Kompetenzstufen"><img src="assets/feedback2.png" class="img-fluid figure-img" width="600" alt="Beispiel Kombination Item-Werte und Kompetenzstufen"></a></p>
+<figcaption>Beispiel Kombination Item-Werte und Kompetenzstufen</figcaption>
+</figure>
+</div>
+</section>
+<section id="skalen" class="level1">
+<h1>Skalen</h1>
+<p>Wenn die Skalen im Survey Content Package Verlinkungen auf öffentliche Vokabulare enthalten, dann kann man Empfehlungen für die Weiterarbeit im Unterricht automatisch geben. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentliche Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen <span class="citation" data-cites="LeseCheck.2020">(Quelle: <a href="#ref-LeseCheck.2020" role="doc-biblioref">Krelle, 2020, S. 3</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/feedback1.png" class="lightbox" data-gallery="feedback" title="Beispiel Zuordnung von Unterrichtsmaterial"><img src="assets/feedback1.png" class="img-fluid figure-img" width="600" alt="Beispiel Zuordnung von Unterrichtsmaterial"></a></p>
+<figcaption>Beispiel Zuordnung von Unterrichtsmaterial</figcaption>
+</figure>
+</div>
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Literatur</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-LeseCheck.2020" class="csl-entry" role="listitem">
+Krelle, M. (2020). <em>Zur Konzeption des Leseverstehens im Lesecheck: Was wird wie gemessen?</em> <span>ISQ Berlin</span>, <span>Universität Jena</span>. <a href="https://www.isq.berlin/wordpress/wp-content/uploads/2020/08/Leseverstehen-und-Lesecheck-Konzept.pdf">https://www.isq.berlin/wordpress/wp-content/uploads/2020/08/Leseverstehen-und-Lesecheck-Konzept.pdf</a>
+</div>
+<div id="ref-Pukrop.2019" class="csl-entry" role="listitem">
+Pukrop, J. (2019). <em>R<span>ü</span>ckmeldungen aus Schulleistungstests an Lehrkr<span>ä</span>fte durch interaktive Informationsvisualisierungen</em>. Universit<span>ä</span>t Bremen. <a href="https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12">https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -687,14 +721,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../intro.html" class="pagination-link" aria-label="Überblick">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Überblick</span>
+      <a href="./coding-service/vera.html" class="pagination-link" aria-label="Szenario VERA">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Szenario VERA</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../survey-content/header.html" class="pagination-link" aria-label="Kopfdaten">
-        <span class="nav-page-text">Kopfdaten</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -703,7 +734,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page">
+    <a class="nav-link active" href="./index.html" aria-current="page">
 <p><i class="fa-solid fa-house" aria-label="house"></i></p>
 </a>
   </li>  
@@ -723,6 +754,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
