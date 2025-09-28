@@ -12,7 +12,7 @@ Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die 
 
 In einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson geantwortet hat. Dies kann in einem Verona-kompatiblen System beispielsweise über Replay implementiert werden, d. h. die Aufgabe wird angezeigt und die Antwortdaten der Testperson werden dazu geladen. Außerdem kann mitgeteilt werden, wie die Antworten bewertet wurden (richtig, falsch).
 
-# Item-Matrix
+# Item- und Skalenwerte
 
 Der CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich `0` und `1` für "richtig" und "falsch", aber auch `-9` für "nicht beantwortet" oder "nicht auswertbar". Im Survey Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skale gehören.
 
@@ -20,8 +20,8 @@ Aus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- 
 
 ![Beispiel Kombination Item-Werte und Kompetenzstufen](assets/feedback2.png){width="600" group="feedback"}
 
-# Skalen
+# Verlinkung zu Unterrichtsmaterial
 
-Wenn die Skalen im Survey Content Package Verlinkungen auf öffentliche Vokabulare enthalten, dann kann man Empfehlungen für die Weiterarbeit im Unterricht automatisch geben. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentliche Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen [Quelle: @LeseCheck.2020, S. 3].
+Da die Skalen im Survey Content Package Verlinkungen auf öffentliche Vokabulare enthalten können (z. B. zu KMK-Kompetenzstufen), sind Empfehlungen für die Weiterarbeit im Unterricht automatisch möglich. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentlichen Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen [Quelle: @LeseCheck.2020, S. 3].
 
 ![Beispiel Zuordnung von Unterrichtsmaterial](assets/feedback1.png){width="600" group="feedback"}
