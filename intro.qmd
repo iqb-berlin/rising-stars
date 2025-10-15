@@ -4,7 +4,7 @@ title: Überblick
 lightbox: true
 ---
 
-Im Englischen steht "Survey" für Befragungen und Leistungstests gleichermaßen. Das passt für den hier besprochenen Zusammenhang sehr gut. Im Deutschen gibt es keinen Begriff, der beides abdeckt. Die hier beschriebenen Datenstrukturen beziehen sich auf **Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen**. Dafür wird der Begriff "Test" im allgemeineren Sinne verwendet. 
+Die hier beschriebenen Datenstrukturen beziehen sich auf **Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen**. Dafür wird der Begriff "Test" im allgemeineren Sinne verwendet. Im Englischen steht "Survey" für Befragungen.
 
 ![](assets/intro1.png){width="600" group="intro"}
 
@@ -17,7 +17,7 @@ Rechts in der Darstellung ist mit "Survey Content Package" der **Testcontent** f
 * Für die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern (Skalen).
 * Für das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.
 
-Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Package** bereit. Diese Datenstruktur ist [hier erläutert](survey-content/index.qmd).
+Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Package** bereit[^1]. Diese Datenstruktur ist [hier erläutert](survey-content/index.qmd).
 
 # Software-Komponenten
 
@@ -53,3 +53,5 @@ Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPo
 Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.
 
 Die Betreiber einer StarS-Installation (Land, Dienstleister) entscheiden gezielt, welche der Komponenten eingesetzt werden. Das obige Schema ist daher als Integrationsschema zu verstehen: Die Komponenten haben dokumentierte Schnittstellen (API) und die Daten sind für den optimalen Austausch genau spezifiziert. Die Seiten dieses Auftrittes thematisieren diese Spezifikationen für die optimale Unterstützung eines flexiblen Testsystems.
+
+[^1]: Der Begriff "Survey" wird in dieser Dokumentation übergreifend verwendet. Im aktuellen Review-Prozess zeichnet sich ab, dass der Begriff "Assessment" besser geeignet ist. Eine Umbenennung in "Assessment Content Package" ist wahrscheinlich.

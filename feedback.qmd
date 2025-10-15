@@ -8,6 +8,8 @@ lightbox: true
 
 Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der CodingService bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.
 
+Die Rückmeldungen sind **nicht Gegenstand der Spezifikationen** an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem CodingService eine hinreichende Grundlage für Rückmeldungen sein können.
+
 # Kodierte Antworten
 
 In einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson geantwortet hat. Dies kann in einem Verona-kompatiblen System beispielsweise über Replay implementiert werden, d. h. die Aufgabe wird angezeigt und die Antwortdaten der Testperson werden dazu geladen. Außerdem kann mitgeteilt werden, wie die Antworten bewertet wurden (richtig, falsch).
