@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Metriken und Skalen">
 
-<title>Instrumente – StarS</title>
+<title>Fähigkeitswerte – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../survey-content/items.html" rel="next">
-<link href="../survey-content/parts.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -80,9 +44,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-4938819144343eef1c227903853e4362.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -152,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey-content/index.html">Survey Content</a></li><li class="breadcrumb-item"><a href="../survey-content/instruments.html">Instrumente</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Fähigkeitswerte</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -205,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../survey-content/instruments.html" class="sidebar-item-text sidebar-link active">
+  <a href="../survey-content/instruments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrumente</span></a>
   </div>
 </li>
@@ -262,35 +223,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#begriffe-und-struktur" id="toc-begriffe-und-struktur" class="nav-link active" data-scroll-target="#begriffe-und-struktur">Begriffe und Struktur</a>
+  <li><a href="#modell" id="toc-modell" class="nav-link active" data-scroll-target="#modell">Modell</a>
   <ul class="collapse">
-  <li><a href="#instrument-testheft" id="toc-instrument-testheft" class="nav-link" data-scroll-target="#instrument-testheft">Instrument, Testheft</a></li>
-  <li><a href="#modul" id="toc-modul" class="nav-link" data-scroll-target="#modul">Modul</a></li>
-  <li><a href="#units-items" id="toc-units-items" class="nav-link" data-scroll-target="#units-items">Units, Items</a></li>
+  <li><a href="#datentyp" id="toc-datentyp" class="nav-link" data-scroll-target="#datentyp">Datentyp</a></li>
+  <li><a href="#ableitung" id="toc-ableitung" class="nav-link" data-scroll-target="#ableitung">Ableitung</a></li>
+  <li><a href="#kompetenzstufenmodelle" id="toc-kompetenzstufenmodelle" class="nav-link" data-scroll-target="#kompetenzstufenmodelle">Kompetenzstufenmodelle</a></li>
   </ul></li>
-  <li><a href="#bookletmodules" id="toc-bookletmodules" class="nav-link" data-scroll-target="#bookletmodules"><code>bookletModules</code></a>
+  <li><a href="#basescales" id="toc-basescales" class="nav-link" data-scroll-target="#basescales"><code>baseScales</code></a>
   <ul class="collapse">
-  <li><a href="#id-name-description-lang" id="toc-id-name-description-lang" class="nav-link" data-scroll-target="#id-name-description-lang"><code>id</code>, <code>name</code>, <code>description</code>, <code>lang</code></a></li>
-  <li><a href="#units" id="toc-units" class="nav-link" data-scroll-target="#units"><code>units</code></a></li>
+  <li><a href="#id-name-description" id="toc-id-name-description" class="nav-link" data-scroll-target="#id-name-description"><code>id</code>, <code>name</code>, <code>description</code></a></li>
+  <li><a href="#method-methodparameters" id="toc-method-methodparameters" class="nav-link" data-scroll-target="#method-methodparameters"><code>method</code>, <code>methodParameters</code></a></li>
+  <li><a href="#items" id="toc-items" class="nav-link" data-scroll-target="#items"><code>items</code></a></li>
   </ul></li>
-  <li><a href="#instruments" id="toc-instruments" class="nav-link" data-scroll-target="#instruments"><code>instruments</code></a>
+  <li><a href="#derivedscales" id="toc-derivedscales" class="nav-link" data-scroll-target="#derivedscales"><code>derivedScales</code></a>
   <ul class="collapse">
-  <li><a href="#id-name-metadata" id="toc-id-name-metadata" class="nav-link" data-scroll-target="#id-name-metadata"><code>id</code>, <code>name</code>, <code>metadata</code></a></li>
-  <li><a href="#testcenterbooklet" id="toc-testcenterbooklet" class="nav-link" data-scroll-target="#testcenterbooklet"><code>testcenterBooklet</code></a></li>
-  <li><a href="#administrationmode" id="toc-administrationmode" class="nav-link" data-scroll-target="#administrationmode"><code>administrationMode</code></a></li>
-  <li><a href="#handoutsfortesttaker" id="toc-handoutsfortesttaker" class="nav-link" data-scroll-target="#handoutsfortesttaker"><code>handOutsForTestTaker</code></a></li>
+  <li><a href="#id-name-description-1" id="toc-id-name-description-1" class="nav-link" data-scroll-target="#id-name-description-1"><code>id</code>, <code>name</code>, <code>description</code></a></li>
+  <li><a href="#source" id="toc-source" class="nav-link" data-scroll-target="#source"><code>source</code></a></li>
+  <li><a href="#mappings" id="toc-mappings" class="nav-link" data-scroll-target="#mappings"><code>mappings</code></a></li>
+  <li><a href="#elsevalue-elselabel-elsedescription" id="toc-elsevalue-elselabel-elsedescription" class="nav-link" data-scroll-target="#elsevalue-elselabel-elsedescription"><code>elseValue</code>, <code>elseLabel</code>, <code>elseDescription</code></a></li>
+  <li><a href="#relatedvocabularies" id="toc-relatedvocabularies" class="nav-link" data-scroll-target="#relatedvocabularies"><code>relatedVocabularies</code></a></li>
   </ul></li>
+  <li><a href="#stars-und-vera" id="toc-stars-und-vera" class="nav-link" data-scroll-target="#stars-und-vera">StarS und VERA</a></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://skohub.io/iqb-vocabs/v71/heads/master/"><i class="bi bi-link-45deg"></i>IQB-Kompetenzstufenmodelle</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../survey-content/index.html">Survey Content</a></li><li class="breadcrumb-item"><a href="../survey-content/instruments.html">Instrumente</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Instrumente</h1>
+<h1 class="title">Fähigkeitswerte</h1>
 </div>
 
+<div>
+  <div class="description">
+    Metriken und Skalen
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -305,135 +274,81 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Die folgenden Parameter sind Teil der Datenstruktur <code>surveyPart</code>. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.</p>
-<section id="begriffe-und-struktur" class="level1">
-<h1>Begriffe und Struktur</h1>
-<p><a href="../assets/booklet-structure.png" class="lightbox" data-gallery="intro"><img src="../assets/booklet-structure.png" class="img-fluid" width="400"></a></p>
-<section id="instrument-testheft" class="level2">
-<h2 class="anchored" data-anchor-id="instrument-testheft">Instrument, Testheft</h2>
-<p>Eine Aufgabenfolge, die die Testperson in einer Testsitzung abarbeiten soll, nennen wir “Testheft” oder “Instrument” (synonym). Der Zeitrahmen bei Lernstandserhebungen liegt zwischen 40 bis 120 Minuten. Sollte sich der Test auf verschiedene Tage verteilen, wird man nicht das angefangene Testheft fortsetzen, sondern die Aufgaben auf mehrere Testhefte verteilen.</p>
-</section>
-<section id="modul" class="level2">
-<h2 class="anchored" data-anchor-id="modul">Modul</h2>
-<p>Die Aufgaben werden nicht frei im Testheft platziert, sondern vorher in Module gesetzt. Anschließend wird das Modul in verschiedene Testhefte eingefügt. Die Aufteilung eines Testheftes in Module folgt vor allem praktischen Erwägungen. Die Kommunikation ist einfacher, wenn man vom “Leseblock” und “Ergänzungsblock” redet.</p>
-</section>
-<section id="units-items" class="level2">
-<h2 class="anchored" data-anchor-id="units-items">Units, Items</h2>
-<p>Dieselbe Unit kann in verschiedene Blöcke eingefügt werden – man muss dann halt nur darauf achten, dass die Blöcke entsprechend eingesetzt werden (“Unverträglichkeit”). Es gibt aber auch Units, die bewusst mehrfach im selben Testheft eingesetzt werden, z. B. Fragen zur Motivation.</p>
-<p>In einer Unit sind dann Variablen zu finden, die nach Interaktionen die Antwortdaten generieren. Die Antwortdaten werden zu einem späteren Zeitpunkt zu Itemwerten transformiert. Ein Item ist eine Teilaufgabe und auf dieser Ebene wird die Schätzung der Personenfähigkeiten vorgenommen.</p>
-</section>
-</section>
-<section id="bookletmodules" class="level1">
-<h1><code>bookletModules</code></h1>
-<p>Der oben dargestellten Struktur folgend setzt man zuerst die Units in Module. Dieser Arbeitsschritt wird durch die Datenstruktur <code>bookletModules</code> nachgebildet:</p>
-<section id="id-name-description-lang" class="level2">
-<h2 class="anchored" data-anchor-id="id-name-description-lang"><code>id</code>, <code>name</code>, <code>description</code>, <code>lang</code></h2>
-<p>Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt <code>id</code> sowie Erläuterungen über die Datenfelder <code>name</code> und <code>description</code> hinterlegt sein. In Auswahllisten oder Protokollen kann dann das Modul gut identifiziert werden.</p>
-<p><code>name</code> und <code>description</code> haben keine separate Sprachmarkierung, denn das Modul wird zu genau einer Sprache entwickelt. Daher ist in einem Feld <code>lang</code> die Sprache anzugeben, die dann für alle Einträge des Moduls gilt.</p>
-</section>
-<section id="units" class="level2">
-<h2 class="anchored" data-anchor-id="units"><code>units</code></h2>
-<p>Es sind alle Units aufgeführt, die Teil des Moduls sind. Jede Unit hat folgende Felder:</p>
+<section id="modell" class="level1">
+<h1>Modell</h1>
+<p>Wenn man die Fähigkeit einer Person ausdrücken möchte, benutzt man i. d.&nbsp;R. ein Stufenmodell. Man ordnet beispielsweise das Leistungsniveau einer Person in einer Kompetenz “Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss - Erkenntnisgewinnung” der Stufe IV “Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen” zu. Ein Stufenmodell ist meist aufwändig empirisch begründet und veröffentlicht.</p>
+<p>Eine Stufenzuordnung basiert auf einem numerischen Wert, der Ergebnis der Datenanalyse einer Lernstandserhebung ist. Damit kann man die Stufenzuordnung auch als Interpretation eines Leistungswertes sehen. Sowohl das Stufenmodell als auch die numerische Repräsentation kann man mathematisch als Skala (ordinal, pseudonumerisch, numerisch) formulieren. Im englischen Sprachgebrauch wird daher auch durchgängig vom Begriff “scale” Gebrauch gemacht. In der deutschen Literatur ist “Skala” jedoch erst dann üblich, wenn man einen numerischen Wert kriterial interpretiert. Vor diesem Schritt spricht man von “Metrik”.</p>
+<p>Ein Fähigkeitsniveau wird also zunächst numerisch auf wohldefinierten Metriken ausgedrückt und dann in eine kriteriale Skala transformiert. Dieser Prozess kann in mehreren Schritten erfolgen. Im Kontext dieser Spezifikationen “Content Package” handelt es sich durchgängig um Skalen im mathematischen Sinn. Die Unterscheidung zwischen Metrik und Skala erfolgt durch die Benennung bzw. die Beschreibung.</p>
+<p>Beispiele:</p>
 <ul>
-<li><code>id</code> kennzeichnet die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde</li>
-<li><code>alias</code> bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, ist eine solche Angabe nötig. Der <code>alias</code> einer Unit wird verwendet, um die Antworten zu speichern – NICHT die <code>id</code> der Unit!</li>
-<li><code>name</code>, <code>description</code> beschreiben die Unit für die UI</li>
-<li><code>order</code> kennzeichnet die Position innerhalb des Moduls.</li>
-<li><code>dependencies</code>: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein <code>type</code> anzugeben. Die möglichen Ausprägungen <code>UNIT_XML</code>, <code>CODING_SCHEME</code>, <code>METADATA</code>, <code>UI_DEFINITION</code>, <code>PLAYER</code>, <code>PLAYER_DEPENDENCY</code>, <code>WIDGET</code> ermöglichen eine korrekte Zuordnung zu Funktionen.</li>
+<li>Lösungshäufigkeit: 55%</li>
+<li>Prozentrang: 65</li>
+<li>Metrik der Bildungsstandards: 366</li>
+<li>Kompetenzstufe “Mindeststandard”</li>
+</ul>
+<section id="datentyp" class="level2">
+<h2 class="anchored" data-anchor-id="datentyp">Datentyp</h2>
+<p>Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skala, sondern um Kategorien. Es gibt die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.</p>
+</section>
+<section id="ableitung" class="level2">
+<h2 class="anchored" data-anchor-id="ableitung">Ableitung</h2>
+<p>Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.</p>
+</section>
+<section id="kompetenzstufenmodelle" class="level2">
+<h2 class="anchored" data-anchor-id="kompetenzstufenmodelle">Kompetenzstufenmodelle</h2>
+<p>Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat <a href="https://skohub.io/iqb-vocabs/v71/heads/master/">hier</a> die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.</p>
+</section>
+</section>
+<section id="basescales" class="level1">
+<h1><code>baseScales</code></h1>
+<section id="id-name-description" class="level2">
+<h2 class="anchored" data-anchor-id="id-name-description"><code>id</code>, <code>name</code>, <code>description</code></h2>
+<p>Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</p>
+</section>
+<section id="method-methodparameters" class="level2">
+<h2 class="anchored" data-anchor-id="method-methodparameters"><code>method</code>, <code>methodParameters</code></h2>
+<p>Hier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen <code>SUM</code>, <code>RATIO</code>, <code>MEAN</code>, <code>MEDIAN</code> zur Verfügung.</p>
+<p>Sollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für <code>RATIO</code> wäre das <code>maxValue</code>, d.&nbsp;h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt.</p>
+</section>
+<section id="items" class="level2">
+<h2 class="anchored" data-anchor-id="items"><code>items</code></h2>
+<p>An dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft <code>items</code> des <code>surveyPart</code> deklariert worden sein.</p>
+</section>
+</section>
+<section id="derivedscales" class="level1">
+<h1><code>derivedScales</code></h1>
+<section id="id-name-description-1" class="level2">
+<h2 class="anchored" data-anchor-id="id-name-description-1"><code>id</code>, <code>name</code>, <code>description</code></h2>
+<p>Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).</p>
+</section>
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source"><code>source</code></h2>
+<p>Hier ist die Skala anzugeben mit ihrer ID, deren Wert in die neue Skala übersetzt werden soll.</p>
+</section>
+<section id="mappings" class="level2">
+<h2 class="anchored" data-anchor-id="mappings"><code>mappings</code></h2>
+<p>Der erste Eintrag in dieser Liste, für den ein <code>true</code> ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skala den <code>elseValue</code> (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:</p>
+<ul>
+<li><code>method</code>, <code>methodParameters</code>: Für die Vergleichsmethode stehen zur Verfügung <code>EQUALS</code>, <code>LESS_THAN</code>, <code>MORE_THAN</code>, <code>MAX</code> und <code>MIN</code>. Der Operand wird in der Eigenschaft <code>methodParameters</code> übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.</li>
+<li><code>newValue</code>: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet</li>
+<li><code>valueLabel</code>, <code>valueDescription</code> unterstützen die UI</li>
 </ul>
 </section>
+<section id="elsevalue-elselabel-elsedescription" class="level2">
+<h2 class="anchored" data-anchor-id="elsevalue-elselabel-elsedescription"><code>elseValue</code>, <code>elseLabel</code>, <code>elseDescription</code></h2>
+<p>Dieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft.</p>
 </section>
-<section id="instruments" class="level1">
-<h1><code>instruments</code></h1>
-<p>Module werden in Testhefte platziert (s. obige Struktur).</p>
-<section id="id-name-metadata" class="level2">
-<h2 class="anchored" data-anchor-id="id-name-metadata"><code>id</code>, <code>name</code>, <code>metadata</code></h2>
-<p>Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt <code>id</code> sowie Erläuterungen über <code>name</code> hinterlegt sein. Das Instrument selbst ist nicht auf die Sprache festgelegt, d.&nbsp;h. der Name muss wieder mit einer Sprachmarkierung versehen sein.</p>
-<p>Das IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.</p>
-<p>Weitere Informationen und Literatur finden Sie <a href="https://iqb-vocabs.github.io">hier</a>. Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie <a href="https://iqb-vocabs.github.io/p44/">hier</a></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"profileId"</span><span class="fu">:</span> <span class="st">"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json"</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"entries"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"e1"</span><span class="fu">,</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"label"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"lang"</span><span class="fu">:</span> <span class="st">"de"</span><span class="fu">,</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"Art der Erhebung"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"value"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://w3id.org/iqb/v85/dt/1"</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"valueAsText"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"lang"</span><span class="fu">:</span> <span class="st">"de"</span><span class="fu">,</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"Kompetenz- und Leistungsdaten"</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"kim_type_school"</span><span class="fu">,</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"label"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"lang"</span><span class="fu">:</span> <span class="st">"de"</span><span class="fu">,</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"Schulform"</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"value"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://w3id.org/kim/schularten/s02"</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"valueAsText"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"lang"</span><span class="fu">:</span> <span class="st">"de"</span><span class="fu">,</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"Grundschule"</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="relatedvocabularies" class="level2">
+<h2 class="anchored" data-anchor-id="relatedvocabularies"><code>relatedVocabularies</code></h2>
+<p>Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skala öffentlich zugänglichen Skalen entsprechen (s. o.).</p>
 </section>
-<section id="testcenterbooklet" class="level2">
-<h2 class="anchored" data-anchor-id="testcenterbooklet"><code>testcenterBooklet</code></h2>
-<p>Diese Liste enthält alle Sprachvarianten für genau ein Booklet. Jeder Eintrag hat folgende Eigenschaften:</p>
-<ul>
-<li><code>lang</code>: Definition der Sprache dieser Variante</li>
-<li><code>definitionId</code>: ID/Pfad zur XML-Datei, die das Booklet beschreibt und genau so in das Testcenter hochgeladen werden muss.</li>
-<li><code>modules</code>: Aufzählung aller Module, die in diesem Booklet verwendet wurden. Die <code>moduleId</code> verweist in die Liste <code>bookletModules</code> des Abschnittes. Es gibt die Möglichkeit, eine Reihenfolge <code>order</code> der Module festzulegen.</li>
-</ul>
 </section>
-<section id="administrationmode" class="level2">
-<h2 class="anchored" data-anchor-id="administrationmode"><code>administrationMode</code></h2>
-<p>Es gibt – z. B. bei StarS – Abweichungen vom normalen Szenario “Schüler*in löst Aufgaben”. Das Booklet kann verschiedene Modi der Durchführung haben:</p>
-<ul>
-<li><code>TEST_BY_TEST_TAKER</code>: Der Test/die Befragung wird von derselben Person durchgeführt, deren Fähigkeiten ermittelt werden sollen (Standard),</li>
-<li><code>TEST_BY_PROCTOR</code>: Der Test wird durch die Lehrkraft/Aufsicht durchgeführt (Dialog/Beobachtung), um die Fähigkeiten einer anderen Person zu erheben,</li>
-<li><code>STIMULUS_FOR_TEST_TAKER</code>: Die Testperson geht durch das Booklet, ohne Anworten zu hinterlassen. Sie wird dabei von einer Lehrkraft/Aufsicht begleitet, die die eigentliche Erfassung vornimmt. Im Testcenter wird als Durchführungsmodus <code>RUN_DEMO</code> gewählt, d.&nbsp;h. das Booklet dient mehreren Testpersonen als Stimulus und hinterlässt keine Antwort-Daten.</li>
-</ul>
-</section>
-<section id="handoutsfortesttaker" class="level2">
-<h2 class="anchored" data-anchor-id="handoutsfortesttaker"><code>handOutsForTestTaker</code></h2>
-<p>Es kann sein, dass für dieses Booklet zusätzliches Material an die Testperson(en) gegeben wird. Entweder dient dieses Material als zusätzlicher Stimulus, oder die Testperson soll eine Handlung damit/darauf ausführen. Beispielsweise soll ein Wort aufgeschrieben oder eine Linie gezogen werden. Die Handlungen der Testperson werden aktuell nicht direkt in die Testergebnisse einbezogen (Scan), sondern es müsste parallel über ein Instrument eine Beobachtung stattfinden, die die Handlung kodiert. Daher kann ein Handout nicht getrennt von einem Instrument definiert werden.</p>
-<p>Die Liste enthält Einträge mit folgenden Eigenschaften:</p>
-<ul>
-<li><code>order</code> kann die Anzeigereihenfolge festlegen.</li>
-<li><code>mode</code> beschreibt die Art des Einsatzes:
-<ul>
-<li><code>PRINT_SHOW</code>: Ausdruck nur zum Zeigen. Bei Einzeltestungen reicht dann ein Ausdruck pro Testgruppe.</li>
-<li><code>PRINT_WRITE_DRAW</code>: Ausdruck, auf dem die Testperson schreibt oder zeichnet.</li>
-<li><code>ON_SCREEN</code>: Anzeige auf einem Bildschirm (Tablet, Laptop).</li>
-</ul></li>
-<li><code>file</code> setzt eine Referenz zu der Datei, die als Quelle für das Handout dient. Da es mehrere sprachspezifische Varianten geben kann, ist hier ein Array mit den Werten <code>id</code> (ID/Pfad), <code>lang</code> für die Sprachangabe und <code>label</code> für die UI anzugeben. Auch eine Beschreibung <code>description</code> kann hinzugefügt werden.</li>
-</ul>
+<section id="stars-und-vera" class="level1">
+<h1>StarS und VERA</h1>
+<p>Im <strong>StarS</strong>-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskala). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skala besteht aus 2 oder 3 Risikostufen.</p>
+<p>Für <strong>VERA</strong> sind die Itemschwierigkeiten bekannt. Pro Skala und Item wird dann ein Parameter “LOGIT” bereitgestellt, mit dessen Hilfe die Personenfähigkeit geschätzt werden kann (WLE, Transformation auf die Metrik der Bildungsstandards). Diese Berechnung kann automatisch erfolgen. Hierzu ist dann der Parameter <code>items</code> einer Basiskala entsprechend zu erweitern. Zusätzlich werden Skalen für Lösungshäufigkeiten geliefert, die dann über die Äquivalenztabellen in Kompetenzstufen transformiert werden können.</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
@@ -844,18 +759,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../survey-content/parts.html" class="pagination-link" aria-label="Abschnitte">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Abschnitte</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../survey-content/items.html" class="pagination-link" aria-label="Item-Liste">
-        <span class="nav-page-text">Item-Liste</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -882,38 +785,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
