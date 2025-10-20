@@ -9,32 +9,49 @@ format:
               href: https://skohub.io/iqb-vocabs/v71/heads/master/
 ---
 
-# Modell
+# Modellierung der Datenstrukturen
 
-Wenn man die Fähigkeit einer Person ausdrücken möchte, benutzt man i. d. R. ein Stufenmodell. Man ordnet beispielsweise das Leistungsniveau einer Person in einer Kompetenz "Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss - Erkenntnisgewinnung" der Stufe IV "Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen" zu. Ein Stufenmodell ist meist aufwändig empirisch begründet und veröffentlicht.
+## Kompetenzmessungen
 
-Eine Stufenzuordnung basiert auf einem numerischen Wert, der Ergebnis der Datenanalyse einer Lernstandserhebung ist. Damit kann man die Stufenzuordnung auch als Interpretation eines Leistungswertes sehen. Sowohl das Stufenmodell als auch die numerische Repräsentation kann man mathematisch als Skala (ordinal, pseudonumerisch, numerisch) formulieren. Im englischen Sprachgebrauch wird daher auch durchgängig vom Begriff "scale" Gebrauch gemacht. In der deutschen Literatur ist "Skala" jedoch erst dann üblich, wenn man einen numerischen Wert kriterial interpretiert. Vor diesem Schritt spricht man von "Metrik".
+Um die von Testteilnehmenden erreichten Kompetenzen über verschiedene Studien hinweg vergleichbar zu machen, müssen alle ermittelten Kompetenzwerte auf einer gemeinsamen Metrik abgebildet werden. Beispielsweise wurde im Fach Deutsch die Berichtsmetrik im IQB-Bildungstrend für die einzelnen Kompetenzbereiche so normiert, dass sie im Jahr 2015 in der Population der Neuntklässler:innen in Deutschland einen Mittelwert von M = 500 Punkten und eine Standardabweichung von SD = 100 Punkten aufweist.
 
-Ein Fähigkeitsniveau wird also zunächst numerisch auf wohldefinierten Metriken ausgedrückt und dann in eine kriteriale Skala transformiert. Dieser Prozess kann in mehreren Schritten erfolgen. Im Kontext dieser Spezifikationen "Content Package" handelt es sich durchgängig um Skalen im mathematischen Sinn. Die Unterscheidung zwischen Metrik und Skala erfolgt durch die Benennung bzw. die Beschreibung.
+Zur inhaltlichen Einordnung der Messergebnisse aus bildungsstandardbasierten Schulleistungstests wurden darüber hinaus Kompetenzstufenmodelle entwickelt. Diese Modelle unterteilen das kontinuierliche Kompetenzspektrum in eine begrenzte Anzahl inhaltlich interpretierbarer Niveaustufen. Auf Basis dieser Modelle werden die individuellen Testwerte der Teilnehmenden entsprechenden Kompetenzstufen zugeordnet.
 
-Beispiele:
+Beispielsweise kann eine Person im Kompetenzbereich Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.
 
-* Lösungshäufigkeit: 55%
+Kompetenzstufenmodelle sind theoretisch fundiert, empirisch validiert und in der Regel öffentlich dokumentiert.
+
+## Bericht der Kompetenzmessungen auf verschiedenen Metriken
+
+Somit ergeben sich verschiedene Metriken, auf denen Testergebnisse bzw. Kompetenzmessungen berichtet werden können. Beispiele:
+
+* Lösungshäufigkeit: 55 %
 * Prozentrang: 65
-* Metrik der Bildungsstandards: 366
-* Kompetenzstufe "Mindeststandard"
+* Punktwert (Bildungsstandard-Metrik): 366
+* Kompetenzstufe: Ib
+* Standard: „Mindeststandard“
+
+Jeder dieser Werte repräsentiert eine unterschiedliche Perspektive auf dieselbe zugrunde liegende Kompetenzschätzung – von der rohen Aufgabenlösung bis hin zur normierten Standardmetrik oder kategorialen Einstufung.
+
+Diese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Content Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert.
 
 ## Datentyp
 
-Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skala, sondern um Kategorien. Es gibt die Werte "2" und "3", aber der Zwischenwert "2,4" ist nicht definiert. Gleichwohl gilt -- da es sich dann um Fähigkeitsstufen handelt -- dass "2" eine geringere Fähigkeit ausdrückt als "3".
+Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine rein kontinuierliche Skala, sondern um Kategorien. Es gibt dann die Werte "2" und "3", aber der Zwischenwert "2,4" ist nicht definiert. Gleichwohl gilt -- da es sich dann um Fähigkeitsstufen handelt -- dass "2" eine geringere Fähigkeit ausdrückt als "3".
+
+Obwohl also der Datentyp numerisch ist, kann mitunter der Wert nicht als numerisch interpretiert werden. Eine Skala kann numerisch, aber nicht metrisch sein. Dann ist ein Wert 4 nicht doppelt so 'gut' wie ein Wert 2.
+
+Diese Überlegungen sind sehr wichtig für die Interpretation der Skalenwerte. Eine Präsentation von Ergebnissen im Rahmen von Rückmeldungen oder einem Dashboard muss stets die Aussagekraft der Skalenwerte beachten und verkürzte (z. B. grafische) Darstellungen sehr sorgfältig wählen.
 
 ## Ableitung
 
 Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.
 
-## Kompetenzstufenmodelle
+## Referenz zu Kompetenzstufenmodell
 
 Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat [hier](https://skohub.io/iqb-vocabs/v71/heads/master/) die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.
+
+Das Prinzip der Referenz beschränkt sich natürlich nicht auf Kompetenzstufenmodelle. Sobald eine kategoriale Skala öffentlich verfügbar ist, kann diese als Referenz genutzt werden.
 
 # `baseScales`
 
@@ -82,4 +99,6 @@ Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skala öff
 
 Im **StarS**-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskala). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skala besteht aus 2 oder 3 Risikostufen.
 
-Für **VERA** sind die Itemschwierigkeiten bekannt. Pro Skala und Item wird dann ein Parameter "LOGIT" bereitgestellt, mit dessen Hilfe die Personenfähigkeit geschätzt werden kann (WLE, Transformation auf die Metrik der Bildungsstandards). Diese Berechnung kann automatisch erfolgen. Hierzu ist dann der Parameter `items` einer Basiskala entsprechend zu erweitern. Zusätzlich werden Skalen für Lösungshäufigkeiten geliefert, die dann über die Äquivalenztabellen in Kompetenzstufen transformiert werden können.
+Für **VERA** sind die Itemschwierigkeiten bekannt. Pro Skala und Item wird dann ein Parameter "LOGIT" bereitgestellt, mit dessen Hilfe die Personenfähigkeit geschätzt werden kann[^1]. Diese Berechnung kann automatisch erfolgen. Hierzu ist dann der Parameter `items` einer Basiskala entsprechend zu erweitern. Zusätzlich werden Skalen für Lösungshäufigkeiten geliefert, die dann über die Äquivalenztabellen in Kompetenzstufen transformiert werden können.
+
+[^1]: auf die Metrik der Bildungsstandards transformierter WLE inklusive Vertrauensintervall

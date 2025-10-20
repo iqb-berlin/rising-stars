@@ -28,9 +28,10 @@ Folgende Informationen enthält der SCP-Index:
 
 Aktuell noch nicht spezifiziert:
 
-* Orientierungswerte aus Pilotierungen oder Normierungen für die Rückmeldung
-* Material zur Unterstützung der Rückmeldung
+* Orientierungswerte für die Rückmeldung aus Pilotierungen oder Normierungen
+* Material zur Unterstützung der Rückmeldung (didaktische Handreichungen)
 * Skalen aus typischen Fehlern (*misconceptions*; Quelle wäre hier der Code einer Antwort, nicht der Score)
+* Übergabe von Vertrauensintervallen bei WLE-Schätzungen (für VERA wichtig)
 
 **Spezifikationen**
 
