@@ -1,14 +1,10 @@
 [
   {
-    "objectID": "coding-service/vera.html",
-    "href": "coding-service/vera.html",
-    "title": "Coding-Service VERA-Szenario",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "StarS",
     "section": "",
-    "text": "Die Units, die das IQB im Rahmen von VERA ausliefert, enthalten viele Daten, die für die länderseitigen Prozesse wichtig sind:\n\nUI-Definition für die Durchführung über einen Verona-Player (z. B. im Testcenter)\nKodieranweisungen für die automatische und manuelle Kodierung\nMetadaten für die Interpretation der Ergebnisse\n\nAußerdem enthält das Survey Content Package Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.\n\nAus diesem Grund kann es sinnvoll sein, den CodingService in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:\n\nSurvey Content laden\nDas IQB plant, alle für die Online-Durchführung von VERA relevanten Daten über eine zentrale Stelle auszuliefern. Es handelt sich um zahlreiche\n\nDaten, die über Spezifikationen in ihrem Format festgelegt sind (XML, JSON usw.) sowie um\nDateien mit spezifischer Funktion (z. B. Testcenter-Booklet).\n\nDas IQB nennt diese Daten Survey Content Package - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Der Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als Survey Content Pool bezeichnet.\nDas Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.\n\n\n\n\n\n\nTippLänderseitige Änderungen\n\n\n\nWenn ein Land Änderungen an den Testinhalten wünscht, müssen die entsprechenden Teile des Inhaltspaketes ausgetauscht bzw. angepasst werden. Für Units wäre es sinnvoll, die Webanwendung IQB-Studio zu installieren und damit die Änderungen vorzunehmen.\n\n\n\n\nManagement der Personen\nFür die Durchführung von VERA müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten) und als XML in das Testcenter hochzuladen.\nFür eine möglichst aussagekräftige Rückmeldung sollten die Testpersonen Metadaten erhalten. Dies betrifft administrative Zuordnungen (Kreis, Stadt, Schule) oder Personenmerkmale wie “Klassenwiederholer” oder sozioökonomischer Index.\n\n\nTestdurchführung\nDas IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.\nDas Testcenter bzw. der Player liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-CodingService müssen die Antworten einer Person zusammengefasst werden.\n\n\nKodierung\nDie Variablen im VERA-Kontext sind teilweise automatisch, teilweise manuell zu kodieren. Einige Länder kodieren zentral, andere dezentral über die Lehrkräfte. Einige Länder möchten auch die automatisch kodierbaren Antworten durch die Lehrkräfte kodieren lassen, einige möchten die Arbeitslast der Lehrkräfte möglichst minimieren und geben während der Kodierung Empfehlungen auch über KI.\nDas bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit geben muss, manuell zu kodieren. Die automatisch kodierbaren Antworten können an den CodingService gegeben werden. Das kann zu Anfang erfolgen und/oder zwischendurch, denn nach dem Hinzufügen der manuell kodierten Daten kann es nötig sein, abgeleitete Variablen über einen zweiten Autocoderlauf zu ermitteln.\n\n\nBerechnung der Fähigkeitswerte\nÜber das Survey Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skale Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skale zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.\nDer CodingService versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.\nAnschließend kann man die gelieferten Skalenwerte weiter nach Bedarf transformieren.\n\n\n\n\n Zurück nach oben",
-    "crumbs": [
-      "Coding-Service",
-      "Szenario VERA"
-    ]
+    "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\n\n\n\n\nVorsichtWork In Progress\n\n\n\nDie Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die Versionierung: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein stable Release gibt.\n\n\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
   },
   {
     "objectID": "coding-service/stars.html",
@@ -22,98 +18,53 @@
     ]
   },
   {
-    "objectID": "survey-content/scales-rev.html",
-    "href": "survey-content/scales-rev.html",
-    "title": "Fähigkeitswerte",
+    "objectID": "feedback.html",
+    "href": "feedback.html",
+    "title": "Ausblick Rückmeldungen",
     "section": "",
-    "text": "Wenn man die Fähigkeit einer Person ausdrücken möchte, benutzt man i. d. R. ein Stufenmodell. Man ordnet beispielsweise das Leistungsniveau einer Person in einer Kompetenz “Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss - Erkenntnisgewinnung” der Stufe IV “Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen” zu. Ein Stufenmodell ist meist aufwändig empirisch begründet und veröffentlicht.\nEine Stufenzuordnung basiert auf einem numerischen Wert, der Ergebnis der Datenanalyse einer Lernstandserhebung ist. Damit kann man die Stufenzuordnung auch als Interpretation eines Leistungswertes sehen. Sowohl das Stufenmodell als auch die numerische Repräsentation kann man mathematisch als Skala (ordinal, pseudonumerisch, numerisch) formulieren. Im englischen Sprachgebrauch wird daher auch durchgängig vom Begriff “scale” Gebrauch gemacht. In der deutschen Literatur ist “Skala” jedoch erst dann üblich, wenn man einen numerischen Wert kriterial interpretiert. Vor diesem Schritt spricht man von “Metrik”.\nEin Fähigkeitsniveau wird also zunächst numerisch auf wohldefinierten Metriken ausgedrückt und dann in eine kriteriale Skala transformiert. Dieser Prozess kann in mehreren Schritten erfolgen. Im Kontext dieser Spezifikationen “Content Package” handelt es sich durchgängig um Skalen im mathematischen Sinn. Die Unterscheidung zwischen Metrik und Skala erfolgt durch die Benennung bzw. die Beschreibung.\nBeispiele:\n\nLösungshäufigkeit: 55%\nProzentrang: 65\nMetrik der Bildungsstandards: 366\nKompetenzstufe “Mindeststandard”\n\n\n\nDer Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skala, sondern um Kategorien. Es gibt die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.\n\n\n\nDie vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.\n\n\n\nDie Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat hier die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#datentyp",
-    "href": "survey-content/scales-rev.html#datentyp",
-    "title": "Fähigkeitswerte",
-    "section": "",
-    "text": "Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skala, sondern um Kategorien. Es gibt die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#ableitung",
-    "href": "survey-content/scales-rev.html#ableitung",
-    "title": "Fähigkeitswerte",
-    "section": "",
-    "text": "Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#kompetenzstufenmodelle",
-    "href": "survey-content/scales-rev.html#kompetenzstufenmodelle",
-    "title": "Fähigkeitswerte",
-    "section": "",
-    "text": "Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat hier die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#id-name-description",
-    "href": "survey-content/scales-rev.html#id-name-description",
-    "title": "Fähigkeitswerte",
-    "section": "id, name, description",
-    "text": "id, name, description\nDie ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert)."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#method-methodparameters",
-    "href": "survey-content/scales-rev.html#method-methodparameters",
-    "title": "Fähigkeitswerte",
-    "section": "method, methodParameters",
-    "text": "method, methodParameters\nHier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen SUM, RATIO, MEAN, MEDIAN zur Verfügung.\nSollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für RATIO wäre das maxValue, d. h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#items",
-    "href": "survey-content/scales-rev.html#items",
-    "title": "Fähigkeitswerte",
-    "section": "items",
-    "text": "items\nAn dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft items des surveyPart deklariert worden sein."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#id-name-description-1",
-    "href": "survey-content/scales-rev.html#id-name-description-1",
-    "title": "Fähigkeitswerte",
-    "section": "id, name, description",
-    "text": "id, name, description\nDie ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert)."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#source",
-    "href": "survey-content/scales-rev.html#source",
-    "title": "Fähigkeitswerte",
-    "section": "source",
-    "text": "source\nHier ist die Skala anzugeben mit ihrer ID, deren Wert in die neue Skala übersetzt werden soll."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#mappings",
-    "href": "survey-content/scales-rev.html#mappings",
-    "title": "Fähigkeitswerte",
-    "section": "mappings",
-    "text": "mappings\nDer erste Eintrag in dieser Liste, für den ein true ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skala den elseValue (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:\n\nmethod, methodParameters: Für die Vergleichsmethode stehen zur Verfügung EQUALS, LESS_THAN, MORE_THAN, MAX und MIN. Der Operand wird in der Eigenschaft methodParameters übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.\nnewValue: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet\nvalueLabel, valueDescription unterstützen die UI"
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#elsevalue-elselabel-elsedescription",
-    "href": "survey-content/scales-rev.html#elsevalue-elselabel-elsedescription",
-    "title": "Fähigkeitswerte",
-    "section": "elseValue, elseLabel, elseDescription",
-    "text": "elseValue, elseLabel, elseDescription\nDieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft."
-  },
-  {
-    "objectID": "survey-content/scales-rev.html#relatedvocabularies",
-    "href": "survey-content/scales-rev.html#relatedvocabularies",
-    "title": "Fähigkeitswerte",
-    "section": "relatedVocabularies",
-    "text": "relatedVocabularies\nMit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skala öffentlich zugänglichen Skalen entsprechen (s. o.)."
-  },
-  {
-    "objectID": "survey-content/parts.html",
-    "href": "survey-content/parts.html",
-    "title": "Abschnitte",
-    "section": "",
-    "text": "Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur surveyPart. Die großen Studien des IQB “Bidungstrend” und “VERA” sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.\nAuf dieser Seite finden Sie die allgemeinen Parameter eines Abschnittes sowie Angaben für Zusatzdokumente. Folgende Abschnittsparameter sind auf separaten Seiten beschrieben:\n\nbookletModules, instruments und items auf der Seite Instrumente,\nbaseScales und derivedScales auf der Seite Skalen\n\n\nid, name, description\nAus welchem Grund das Inhaltspaket SCP in Abschnitte aufgeteilt wird, kann variieren. Üblicherweise folgt dies Testdomänen – also Mathematik, Sprache usw. – oder zeitlichen Phasen bei Testungen, die über mehrere Testzeitpunkte durchgeführt werden. Bei StarS trifft letzteres zu, d. h. für jeden Messzeitpunkt gibt es einen Abschnitt.\nIm Datenmanagement müssen dann natürlich ein verlässlicher Bezug zu einem Abschnitt id sowie Erläuterungen über die Datenfelder name und description hinterlegt sein. In Auswahllisten oder Protokollen kann dann der Abschnitt gut identifiziert werden.\nname und description sind Felder mit expliziter Sprachmarkierung. Das bedeutet, dass man Informationen in mehreren Sprachen hinterlegen kann, je nach Zielgruppen.\n{\n \"id\": \"fr\",\n \"name\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Französisch Sek I\"\n    }\n  ],\n  \"description\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Testaufgaben für Hörverstehen und Leseverstehen in zwei Testheften (Basisniveau, erweitertes Niveau) zu jeweils 60 min\"\n    }\n  ]\n}\n\n\nmetadata\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie hier\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\nsupportingDocuments\nAn dieser Stelle werden Dokumente gelistet, die Teil des Inhaltspaketes für diesen Abschnitt sind, aber keinen direkten Bezug zur Testdurchführung haben. Eine Erhebung benötigt üblicherweise zahlreiche Handreichungen für die Beteiligten, um die Prozesse zu erläutern, zu schulen oder Möglichkeiten aufzuzeigen, mit den Ergebnissen den Unterricht zu verbessern. Die Metadaten helfen Fachanwendungen, das Material an der richtigen Stelle anzubieten bzw. in die Prozesse einzubeziehen.\nDie Datenstruktur ist ein Array, und jeder Eintrag hat folgende Eigenschaften:\n\ncontentType: Art des Materials. Im Laufe der Weiterentwicklung dieser Spezifikation werden weitere Typen hinzukommen.\n\nCODING_INSTRUCTIONS sind Anweisungen in Textform, wie Antworten zu kodieren sind (sog. Codebook). Diese können ausgedruckt werden und unterstützen den manuellen Kodierprozess.\nSTUDY_BACKGROUND markiert Texte, die man zur allgemeinen Einführung an Interessierte geben kann, um für Verständnis zu werben.\n\ntargeting: In dieser Eigenschaft sind die Zielgruppen aufgezählt (Array), für die das Material gedacht ist.\n\nPROCTOR: Testaufsicht während der Durchführung vor Ort\nTEST_TAKER: Testpersonen\nTEACHER: Lehrkraft als Zielgruppe für die Umsetzung von Erkenntnissen im Unterricht\nTEST_ADMINISTRATION: Verantwortliche für das Management bzw. Koordinierung der Erhebung(en)\nGOVERNANCE: Zielgruppe für Ergebnisrückmeldungen auf den verschiedenen Ebenen der Bildungsadministration (Schulleitung, Schulamt usw.)\nCODER: Personenkreis, der mit der manuellen Kodierung beauftragt ist\n\nfile: Pro Material gibt es genau eine Material-Datei, aber diese kann in verschiedenen Sprachvarianten auftreten. Daher ist diese Eigenschaft wieder ein sprachspezifisches Array, jeweils mit id (Pfad zum Material), lang für die Sprachangabe, label und description für die UI\n\n\n\n\n\n Zurück nach oben",
+    "text": "Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der CodingService bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.\nDie Rückmeldungen sind nicht Gegenstand der Spezifikationen an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem CodingService eine hinreichende Grundlage für Rückmeldungen sein können.\n\nKodierte Antworten\nIn einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson geantwortet hat. Dies kann in einem Verona-kompatiblen System beispielsweise über Replay implementiert werden, d. h. die Aufgabe wird angezeigt und die Antwortdaten der Testperson werden dazu geladen. Außerdem kann mitgeteilt werden, wie die Antworten bewertet wurden (richtig, falsch).\n\n\nItem- und Skalenwerte\nDer CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich 0 und 1 für “richtig” und “falsch”, aber auch -9 für “nicht beantwortet” oder “nicht auswertbar”. Im Survey Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skale gehören.\nAus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- und Skalenebene kombinieren. Beispiel (Quelle: Pukrop, 2019, S. 233):\n\n\n\nBeispiel Kombination Item-Werte und Kompetenzstufen\n\n\n\n\nVerlinkung zu Unterrichtsmaterial\nDa die Skalen im Survey Content Package Verlinkungen auf öffentliche Vokabulare enthalten können (z. B. zu KMK-Kompetenzstufen), sind Empfehlungen für die Weiterarbeit im Unterricht automatisch möglich. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentlichen Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen (Quelle: Krelle, 2020, S. 3).\n\n\n\nBeispiel Zuordnung von Unterrichtsmaterial\n\n\n\n\n\n\n\n Zurück nach obenLiteratur\n\nKrelle, M. (2020). Zur Konzeption des Leseverstehens im Lesecheck: Was wird wie gemessen? ISQ Berlin, Universität Jena. https://www.isq.berlin/wordpress/wp-content/uploads/2020/08/Leseverstehen-und-Lesecheck-Konzept.pdf\n\n\nPukrop, J. (2019). Rückmeldungen aus Schulleistungstests an Lehrkräfte durch interaktive Informationsvisualisierungen. Universität Bremen. https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12",
     "crumbs": [
-      "Survey Content",
-      "Abschnitte"
+      "Ausblick Rückmeldungen"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Überblick",
+    "section": "",
+    "text": "Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet. Im Englischen steht “Survey” für Befragungen.\nDas obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.\nRechts in der Darstellung ist mit “Survey Content Package” der Testcontent für den Test dargestellt:\nSämtliche Daten stellt das IQB im StarS-Projekt über das Survey Content Package bereit1. Diese Datenstruktur ist hier erläutert.",
+    "crumbs": [
+      "Überblick"
+    ]
+  },
+  {
+    "objectID": "intro.html#durchführung-einer-normierten-testung",
+    "href": "intro.html#durchführung-einer-normierten-testung",
+    "title": "Überblick",
+    "section": "Durchführung einer normierten Testung",
+    "text": "Durchführung einer normierten Testung\n\n\nManagement-Portal: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert. In einem Szenario wie VERA übernimmt das Management-Portal auch die manuelle Kodierung.\nIQB-ContentPool: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.\nSchulverwaltungssystem: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.\nIQB-CodingService: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.\nDashboard: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das “Dashboard” in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.",
+    "crumbs": [
+      "Überblick"
+    ]
+  },
+  {
+    "objectID": "intro.html#pilotierung-und-normierung-zur-vorbereitung-einer-testung",
+    "href": "intro.html#pilotierung-und-normierung-zur-vorbereitung-einer-testung",
+    "title": "Überblick",
+    "section": "Pilotierung und Normierung zur Vorbereitung einer Testung",
+    "text": "Pilotierung und Normierung zur Vorbereitung einer Testung\n\n\nManuelles Daten-Management: Für die Entwicklung und Erprobung von Lernstandstest gibt es kaum Prozesse, die mit Routine jedes Mal gleich durchgeführt werden. Die Testpersonen variieren, und die Methodik der Kodierung und Auswertung wird ständig weiterentwickelt. Bei Pilotierungen und Normierungen stehen nicht die Testpersonen im Vordergrund, deren Fähigkeiten ermittelt werden, sondern die Items. Nach einer Pilotierung mit vielen Testheftvarianten werden Items verworfen, überarbeitet oder neu zusammengestellt. Daher ist das Datenmanagement keine Kette fixer Punkte, sondern die Beteiligten aus Wissenschaft und Fachdidaktik gehen flexibel viele Wege.\nIQB-Studio: Mit dieser Webanwendung werden die Aufgaben in einem kollaborativen mehrstufigen Prozess entwickelt.\nExcel, XML: Die Login-Daten der Testpersonen werden über Tabellen verwaltet und mit einfachen Scripten in XML-Dateien für das Testcenter überführt.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test manuell (CSV) oder über das Windows-Programm itc-ToolBox abgerufen.\nIQB-KodierBox: Nach der Testung führt diese Webanwendung wichtige Datenprüfungen und automatische Kodierungen durch. Für die manuellen Kodierungen durch geschultes Pesonal (entfällt bei StarS) stehen komplexe Managementfunktionen zur Verfügung (Kodierdesign entwerfen, Aufträge zuweisen, auswerten, abrechnen). Das Ergebnis ist eine Matrix der Itemwerte, die dann in die manuelle Datenanalyse eingeht.\nBericht: Dieser Punkt steht symbolisch für die Nutzung der Ergebnisse in diversen Zusammenhängen. Es gibt bei Pilotierungen oder Normierungen keine Rückmeldungen an die Lehrkräfte.",
+    "crumbs": [
+      "Überblick"
+    ]
+  },
+  {
+    "objectID": "intro.html#footnotes",
+    "href": "intro.html#footnotes",
+    "title": "Überblick",
+    "section": "Fußnoten",
+    "text": "Fußnoten\n\n\nDer Begriff “Survey” wird in dieser Dokumentation übergreifend verwendet. Im aktuellen Review-Prozess zeichnet sich ab, dass der Begriff “Assessment” besser geeignet ist. Eine Umbenennung in “Assessment Content Package” ist wahrscheinlich.↩︎",
+    "crumbs": [
+      "Überblick"
     ]
   },
   {
@@ -249,125 +200,13 @@
     ]
   },
   {
-    "objectID": "feedback.html",
-    "href": "feedback.html",
-    "title": "Ausblick Rückmeldungen",
-    "section": "",
-    "text": "Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der CodingService bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.\nDie Rückmeldungen sind nicht Gegenstand der Spezifikationen an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem CodingService eine hinreichende Grundlage für Rückmeldungen sein können.\n\nKodierte Antworten\nIn einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson geantwortet hat. Dies kann in einem Verona-kompatiblen System beispielsweise über Replay implementiert werden, d. h. die Aufgabe wird angezeigt und die Antwortdaten der Testperson werden dazu geladen. Außerdem kann mitgeteilt werden, wie die Antworten bewertet wurden (richtig, falsch).\n\n\nItem- und Skalenwerte\nDer CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich 0 und 1 für “richtig” und “falsch”, aber auch -9 für “nicht beantwortet” oder “nicht auswertbar”. Im Survey Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skale gehören.\nAus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- und Skalenebene kombinieren. Beispiel (Quelle: Pukrop, 2019, S. 233):\n\n\n\nBeispiel Kombination Item-Werte und Kompetenzstufen\n\n\n\n\nVerlinkung zu Unterrichtsmaterial\nDa die Skalen im Survey Content Package Verlinkungen auf öffentliche Vokabulare enthalten können (z. B. zu KMK-Kompetenzstufen), sind Empfehlungen für die Weiterarbeit im Unterricht automatisch möglich. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentlichen Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen (Quelle: Krelle, 2020, S. 3).\n\n\n\nBeispiel Zuordnung von Unterrichtsmaterial\n\n\n\n\n\n\n\n Zurück nach obenLiteratur\n\nKrelle, M. (2020). Zur Konzeption des Leseverstehens im Lesecheck: Was wird wie gemessen? ISQ Berlin, Universität Jena. https://www.isq.berlin/wordpress/wp-content/uploads/2020/08/Leseverstehen-und-Lesecheck-Konzept.pdf\n\n\nPukrop, J. (2019). Rückmeldungen aus Schulleistungstests an Lehrkräfte durch interaktive Informationsvisualisierungen. Universität Bremen. https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12",
-    "crumbs": [
-      "Ausblick Rückmeldungen"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "StarS",
-    "section": "",
-    "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\n\n\n\n\nVorsichtWork In Progress\n\n\n\nDie Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die Versionierung: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein stable Release gibt.\n\n\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "Überblick",
-    "section": "",
-    "text": "Die hier beschriebenen Datenstrukturen beziehen sich auf Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet. Im Englischen steht “Survey” für Befragungen.\nDas obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.\nRechts in der Darstellung ist mit “Survey Content Package” der Testcontent für den Test dargestellt:\nSämtliche Daten stellt das IQB im StarS-Projekt über das Survey Content Package bereit1. Diese Datenstruktur ist hier erläutert.",
-    "crumbs": [
-      "Überblick"
-    ]
-  },
-  {
-    "objectID": "intro.html#durchführung-einer-normierten-testung",
-    "href": "intro.html#durchführung-einer-normierten-testung",
-    "title": "Überblick",
-    "section": "Durchführung einer normierten Testung",
-    "text": "Durchführung einer normierten Testung\n\n\nManagement-Portal: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert. In einem Szenario wie VERA übernimmt das Management-Portal auch die manuelle Kodierung.\nIQB-ContentPool: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.\nSchulverwaltungssystem: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler*innen liefert.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.\nIQB-CodingService: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.\nDashboard: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das “Dashboard” in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.",
-    "crumbs": [
-      "Überblick"
-    ]
-  },
-  {
-    "objectID": "intro.html#pilotierung-und-normierung-zur-vorbereitung-einer-testung",
-    "href": "intro.html#pilotierung-und-normierung-zur-vorbereitung-einer-testung",
-    "title": "Überblick",
-    "section": "Pilotierung und Normierung zur Vorbereitung einer Testung",
-    "text": "Pilotierung und Normierung zur Vorbereitung einer Testung\n\n\nManuelles Daten-Management: Für die Entwicklung und Erprobung von Lernstandstest gibt es kaum Prozesse, die mit Routine jedes Mal gleich durchgeführt werden. Die Testpersonen variieren, und die Methodik der Kodierung und Auswertung wird ständig weiterentwickelt. Bei Pilotierungen und Normierungen stehen nicht die Testpersonen im Vordergrund, deren Fähigkeiten ermittelt werden, sondern die Items. Nach einer Pilotierung mit vielen Testheftvarianten werden Items verworfen, überarbeitet oder neu zusammengestellt. Daher ist das Datenmanagement keine Kette fixer Punkte, sondern die Beteiligten aus Wissenschaft und Fachdidaktik gehen flexibel viele Wege.\nIQB-Studio: Mit dieser Webanwendung werden die Aufgaben in einem kollaborativen mehrstufigen Prozess entwickelt.\nExcel, XML: Die Login-Daten der Testpersonen werden über Tabellen verwaltet und mit einfachen Scripten in XML-Dateien für das Testcenter überführt.\nIQB-Testcenter: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test manuell (CSV) oder über das Windows-Programm itc-ToolBox abgerufen.\nIQB-KodierBox: Nach der Testung führt diese Webanwendung wichtige Datenprüfungen und automatische Kodierungen durch. Für die manuellen Kodierungen durch geschultes Pesonal (entfällt bei StarS) stehen komplexe Managementfunktionen zur Verfügung (Kodierdesign entwerfen, Aufträge zuweisen, auswerten, abrechnen). Das Ergebnis ist eine Matrix der Itemwerte, die dann in die manuelle Datenanalyse eingeht.\nBericht: Dieser Punkt steht symbolisch für die Nutzung der Ergebnisse in diversen Zusammenhängen. Es gibt bei Pilotierungen oder Normierungen keine Rückmeldungen an die Lehrkräfte.",
-    "crumbs": [
-      "Überblick"
-    ]
-  },
-  {
-    "objectID": "intro.html#footnotes",
-    "href": "intro.html#footnotes",
-    "title": "Überblick",
-    "section": "Fußnoten",
-    "text": "Fußnoten\n\n\nDer Begriff “Survey” wird in dieser Dokumentation übergreifend verwendet. Im aktuellen Review-Prozess zeichnet sich ab, dass der Begriff “Assessment” besser geeignet ist. Eine Umbenennung in “Assessment Content Package” ist wahrscheinlich.↩︎",
-    "crumbs": [
-      "Überblick"
-    ]
-  },
-  {
     "objectID": "survey-content/index.html",
     "href": "survey-content/index.html",
     "title": "Survey Content Package",
     "section": "",
-    "text": "Unter einem Survey Content Package SCP verstehen wir alle Daten, die unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um\n\nSCP-Index: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),\nContent-Dateien: Dateien in verschiedenen Formaten, die für die Durchführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).\n\nFür die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:\n\nListen der Testpersonen,\nggf. Leistungsdaten der Testpersonen aus vorangegangenen Testungen zum Vergleich\nggf. Leistungsdaten auf Landes- oder Regionalebene zum Vergleich\n\nFolgende Informationen enthält der SCP-Index:\n\nKopfdaten: Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.\nAbschnitte des Index\nModule und Testhefte, z. B. Testmaterial für das Testcenter\nItemlisten und Skalenbuch: Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden\n\nAktuell noch nicht spezifiziert:\n\nOrientierungswerte aus Pilotierungen oder Normierungen für die Rückmeldung\nMaterial zur Unterstützung der Rückmeldung\nSkalen aus typischen Fehlern (misconceptions; Quelle wäre hier der Code einer Antwort, nicht der Score)\n\nSpezifikationen\n\nSpezifikation für den Index\nBeispiel für den Index\nMetadaten-Profile für SCP\n\n\n\n\n Zurück nach oben",
+    "text": "Unter einem Survey Content Package SCP verstehen wir alle Daten, die unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um\n\nSCP-Index: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),\nContent-Dateien: Dateien in verschiedenen Formaten, die für die Durchführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).\n\nFür die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:\n\nListen der Testpersonen,\nggf. Leistungsdaten der Testpersonen aus vorangegangenen Testungen zum Vergleich\nggf. Leistungsdaten auf Landes- oder Regionalebene zum Vergleich\n\nFolgende Informationen enthält der SCP-Index:\n\nKopfdaten: Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.\nAbschnitte des Index\nModule und Testhefte, z. B. Testmaterial für das Testcenter\nItemlisten und Skalenbuch: Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden\n\nAktuell noch nicht spezifiziert:\n\nOrientierungswerte für die Rückmeldung aus Pilotierungen oder Normierungen\nMaterial zur Unterstützung der Rückmeldung (didaktische Handreichungen)\nSkalen aus typischen Fehlern (misconceptions; Quelle wäre hier der Code einer Antwort, nicht der Score)\nÜbergabe von Vertrauensintervallen bei WLE-Schätzungen (für VERA wichtig)\n\nSpezifikationen\n\nSpezifikation für den Index\nBeispiel für den Index\nMetadaten-Profile für SCP\n\n\n\n\n Zurück nach oben",
     "crumbs": [
       "Survey Content"
-    ]
-  },
-  {
-    "objectID": "survey-content/items.html",
-    "href": "survey-content/items.html",
-    "title": "Item-Liste",
-    "section": "",
-    "text": "Ein Item ist eine Antwort einer Testperson, die nach einer Bewertung richtig/falsch in die Ermittlung von Personenfähigkeitswerten eingeht. Im üblichen Sprachgebrauch entspricht der Begriff der Teilaufgabe. Technisch und konzeptionell ist dieser Begriff jedoch komplexer:\n\n“Antwort” bedeutet im computergestützten Testen eine Interaktion, die protokolliert wird. Ankreuzen, ein Bild auf eine Fläche Ziehen, Worte/Zeichen Eintippen - eine Interaktion kann vielfältig sein. Im TBA-System des IQB hat eine Antwort stets eine ID, einen Status und einen Wert (s. hier).\nMehrere Antworten/Interaktionen können zu einem Itemwert beitragen. Das Item “Kreuze an und begründe” besteht aus zwei Interaktionen, die im Rahmen der Kodierung zusammengeführt werden.\nAus einer Interaktion können mehrere Items abgeleitet werden. Bei der Eingabe eines Wortes können mehrere Stellen getrennt bewertet werden, z. B. Dehnungs-h, Groß-/Kleinschreibung und Doppelkonsonanten.\n\nDas bedeutet für eine Testung, dass es Informationen geben muss, wie genau aus welchen Antworten Items abgeleitet werden sollen. Dies ist für das Survey Content Package in der Datenstruktur items eines surveyPart umgesetzt.",
-    "crumbs": [
-      "Survey Content",
-      "Item-Liste"
-    ]
-  },
-  {
-    "objectID": "survey-content/items.html#id-label",
-    "href": "survey-content/items.html#id-label",
-    "title": "Item-Liste",
-    "section": "id, label",
-    "text": "id, label\nMit der ID wird das Item in den Skalen referenziert. Ein Label kann in UI-Komponenten helfen, das Item zu identifizieren (z. B. “Teilaufgabe C”). Das Label ist mehrsprachig angelegt.",
-    "crumbs": [
-      "Survey Content",
-      "Item-Liste"
-    ]
-  },
-  {
-    "objectID": "survey-content/items.html#sources",
-    "href": "survey-content/items.html#sources",
-    "title": "Item-Liste",
-    "section": "sources",
-    "text": "sources\nHier wird die Frage beantwortet, wo dieses Item zu finden ist.\n\nunitId: Dies ist eine Referenz zur Unitdefinition und erforderlich, um z. B. die Kodieranweisungen zu finden.\nunitAlias: Sollte die Unit mehrfach in einem Testheft auftauchen, werden die Antworten über den Alias identifiziert. Ohne Alias wird die ID der Unit verwendet, um die Unit in den Antworten zu finden.\nsourceVariable: Für die Antwortvariable, deren Score als Itemwert verwendet wird, muss der Status CODING_COMPLETE gesetzt sein. Dies kann bereits durch den Player erfolgen (bei StarS sehr häufig) oder als Ergebnis einer Kodierung. Das Kodierschema einer Unit enthält auch die Vorschrift dafür, wenn aus Basisvariablen eine Itemvariable abgeleitet werden soll.",
-    "crumbs": [
-      "Survey Content",
-      "Item-Liste"
-    ]
-  },
-  {
-    "objectID": "survey-content/items.html#fullcreditvalue-nocreditvalue",
-    "href": "survey-content/items.html#fullcreditvalue-nocreditvalue",
-    "title": "Item-Liste",
-    "section": "fullCreditValue, noCreditValue",
-    "text": "fullCreditValue, noCreditValue\nSollte die Itemvariable einen von den Konventionen abweichenden Wert liefern, kann dies an dieser Stelle explizit definiert werden.",
-    "crumbs": [
-      "Survey Content",
-      "Item-Liste"
-    ]
-  },
-  {
-    "objectID": "survey-content/header.html",
-    "href": "survey-content/header.html",
-    "title": "Kopfdaten",
-    "section": "",
-    "text": "packageId\nDas Inhaltspaket für eine Erhebung muss eine ID haben. Inhalte, die an Länder gegeben wurden oder mit denen umfangreiche Daten erhoben wurden, müssen eindeutig identifizierbar sein. Zusammen mit den Beschreibungen der Testpersonen, den Durchführungsprotokollen und den Ergebnisdaten erhält man ein Archiv, das spätere Analysen ermöglicht. Nur mit einer eindeutigen ID können die richtigen Inhalte wiedergefunden werden.\nEs ist zu empfehlen, Inhaltspakete mit einer gewissen Bedeutung mit einer permanenten ID zu versehen. Beispielsweise bieten w3id oder DOI ausgereifte und einfach zu bedienende Registrierungen langfristig persistenter Datenobjekte. Das IQB nutzt beide Systeme seit langer Zeit für verschiedene Anwendungen und wird voraussichtlich w3id für Inhaltspakete verwenden.\n\n\nversion\nEine Version wird über drei Zahlen und optional einen Suffix beschrieben. Da in der Entwicklungsphase (erste Versionszahl 0), aber auch nach dem ersten Release Überarbeitungen zu erwarten sind, muss es eine verlässliche Information über den letzten oder demnächst zu erwartende Arbeitsstände geben. Das IQB nutzt für Software und für Spezifikation die semantische Versionierung.\nVerglichen mit Software und Spezifikation ist es bei Inhalten recht schwierig zu entscheiden, unter welchen Umständen die erste oder zweite Zahl hochgezählt wird. Daher muss dann in den sog. Release notes ausführlich beschrieben werden, was geändert wurde. Die Release notes sind Teil der Veröffentlichung und nicht Teil der Daten.\n\n\nname, description\nDas Inhaltspaket benötigt einen kurzen Namen und eine Beschreibung, damit man in Listen schnell erkennen kann, ob es relevant für die eigene Arbeit ist oder nicht. Die Einträge hier sind mehrsprachig angelegt.\n{\n \"name\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"IQB VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ],\n  \"description\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Sämtliche Daten und Dokumente für die Online-Durchführung und Auswertung des Durchganges 2027 für VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ]\n}\nAuch wenn es nur eine Sprache geben sollte, müssen ein Array und die Properties lang und value formuliert werden.\n\n\nmaintainerName, maintainerUrl\nBei Testinhalten muss es eine Angabe geben, wer dafür verantwortlich ist. Hierfür gibt es zahlreiche Konzepte und Varianten. Für die vorliegende Datenspezifikation soll ersteinmal “Maintainer” ausreichen - ein Name und eine Url. Hierüber kann man Kontakt aufnehmen.\nWenn Erfahrungen mit Veröffentlichungen vorliegen, wird dies sicher noch erweitert. Dann kann man die Unterscheidung zu Publisher oder Creator schärfen, auch mit Blick auf den Support für Nachfragen.\n\n\nstatus\nAuch dieses Merkmal vereint einige Informationen, die später eventuell separat und detaillierter geführt werden müssen.\n\nIN_DEVELOPMENT ist der erste und default-Wert und zeigt an, dass keine Veröffentlichung erfolgte\nRELEASED_PUBLIC ist eine Veröffentlichung mit einer OER-Lizenz und keiner Zugriffsbeschränkung, z. B. Demo-Pakete.\nRELEASED_CONFIDENTIAL ist eine Veröffentlichung für einen begrenzten Personenkreis. Beispielsweise erfordern die Inhaltspakete für VERA eine Vertraulichkeit, um die Testergebnisse nicht zu verfälschen.\nDISCONTINUED zeigt an, dass das Inhaltspaket nicht mehr unterstützt wird, nicht mehr zu empfehlen ist oder durch ein anderes Inhaltspaket ersetzt wurde.\n\nEs sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich getrennt geführt werden: Reifegrad/Qualität, Vertraulichkeit und Nutzungsrechte.\n\n\nmetadata\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie hier\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\ncodingParameters\nÜber diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.\n\nitemValues: Die Itemmatrix, die im Anschluss an die Kodierung aus den Antwortdaten erstellt wird, enthält eigentlich keine numerischen Werte. Statt dessen stehen die Zahlen für Kategorien. Es gibt Konventionen dazu, aber eventuell möchte man davon abweichen. In diesem Fall dient die Eigenschaft itemValues dazu, diese Abweichungen zu deklarieren:\n\nFULL_CREDIT steht für die vollständig richtige Antwort. Standardwert ist 1\nNO_CREDIT steht für eine völlig falsche Antwort. Standardwert ist 0\nMISSING weist auf eine fehlende Antwort hin. Der Grund ist an dieser Stelle nicht wichtig, aber es wäre eine Verfälschung der Daten, wenn man hier mit “falsch” oder “richtig” in die Datenanalyse gehen würde. Standardwert ist -99\n\nstatusMapping: Wenn der Status der Quellvariablen CODING_COMPLETE erreicht wurde, wird deren Score in die Itemmatrix übernommen. Für alle anderen Status-Werte muss definiert werden, welcher Itemwert gewählt wird: NO_CREDIT oder MISSING. Dies erfolgt über diesen Parameter.\nminItemsPercent: Mindestzahl der Items, die für eine Skale beantwortet sein müssen, damit die Skale für die Testperson berechnet wird (Prozent)\n\n{\n \"codingParameters\": {\n    \"itemValues\": [\n      {\n        \"type\": \"MISSING\",\n        \"value\": -9\n      }\n    ],\n    \"statusMapping\": [\n      {\n        \"itemValue\": -99,\n        \"status\": [\n          \"UNSET\",\n          \"NOT_REACHED\",\n          \"DISPLAYED\",\n          \"VALUE_CHANGED\",\n          \"DERIVE_ERROR\"\n        ]\n      },\n      {\n        \"itemValue\": 0,\n        \"status\": [\n          \"NO_CODING\",\n          \"INVALID\",\n          \"CODING_INCOMPLETE\",\n          \"CODING_ERROR\",\n          \"PARTLY_DISPLAYED\",\n          \"DERIVE_PENDING\",\n          \"INTENDED_INCOMPLETE\",\n          \"CODE_SELECTION_PENDING\"\n        ]\n      }\n    ],\n    \"minItemsPercent\": 60\n  }\n}\n\n\nAbschnitte: surveyParts\nDie wesentlichen inhaltlichen Daten finden sich in der Datenstruktur surveyPart. Die großen Studien des IQB “Bidungstrend” und “VERA” sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.\nAuf den folgenden Seiten finden Sie die Eigenschaften des surveyPart-Objektes.\n\n\n\n\n Zurück nach oben",
-    "crumbs": [
-      "Survey Content",
-      "Kopfdaten"
     ]
   },
   {
@@ -481,6 +320,177 @@
     ]
   },
   {
+    "objectID": "survey-content/parts.html",
+    "href": "survey-content/parts.html",
+    "title": "Abschnitte",
+    "section": "",
+    "text": "Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur surveyPart. Die großen Studien des IQB “Bidungstrend” und “VERA” sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.\nAuf dieser Seite finden Sie die allgemeinen Parameter eines Abschnittes sowie Angaben für Zusatzdokumente. Folgende Abschnittsparameter sind auf separaten Seiten beschrieben:\n\nbookletModules, instruments und items auf der Seite Instrumente,\nbaseScales und derivedScales auf der Seite Skalen\n\n\nid, name, description\nAus welchem Grund das Inhaltspaket SCP in Abschnitte aufgeteilt wird, kann variieren. Üblicherweise folgt dies Testdomänen – also Mathematik, Sprache usw. – oder zeitlichen Phasen bei Testungen, die über mehrere Testzeitpunkte durchgeführt werden. Bei StarS trifft letzteres zu, d. h. für jeden Messzeitpunkt gibt es einen Abschnitt.\nIm Datenmanagement müssen dann natürlich ein verlässlicher Bezug zu einem Abschnitt id sowie Erläuterungen über die Datenfelder name und description hinterlegt sein. In Auswahllisten oder Protokollen kann dann der Abschnitt gut identifiziert werden.\nname und description sind Felder mit expliziter Sprachmarkierung. Das bedeutet, dass man Informationen in mehreren Sprachen hinterlegen kann, je nach Zielgruppen.\n{\n \"id\": \"fr\",\n \"name\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Französisch Sek I\"\n    }\n  ],\n  \"description\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Testaufgaben für Hörverstehen und Leseverstehen in zwei Testheften (Basisniveau, erweitertes Niveau) zu jeweils 60 min\"\n    }\n  ]\n}\n\n\nmetadata\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie hier\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\nsupportingDocuments\nAn dieser Stelle werden Dokumente gelistet, die Teil des Inhaltspaketes für diesen Abschnitt sind, aber keinen direkten Bezug zur Testdurchführung haben. Eine Erhebung benötigt üblicherweise zahlreiche Handreichungen für die Beteiligten, um die Prozesse zu erläutern, zu schulen oder Möglichkeiten aufzuzeigen, mit den Ergebnissen den Unterricht zu verbessern. Die Metadaten helfen Fachanwendungen, das Material an der richtigen Stelle anzubieten bzw. in die Prozesse einzubeziehen.\nDie Datenstruktur ist ein Array, und jeder Eintrag hat folgende Eigenschaften:\n\ncontentType: Art des Materials. Im Laufe der Weiterentwicklung dieser Spezifikation werden weitere Typen hinzukommen.\n\nCODING_INSTRUCTIONS sind Anweisungen in Textform, wie Antworten zu kodieren sind (sog. Codebook). Diese können ausgedruckt werden und unterstützen den manuellen Kodierprozess.\nSTUDY_BACKGROUND markiert Texte, die man zur allgemeinen Einführung an Interessierte geben kann, um für Verständnis zu werben.\n\ntargeting: In dieser Eigenschaft sind die Zielgruppen aufgezählt (Array), für die das Material gedacht ist.\n\nPROCTOR: Testaufsicht während der Durchführung vor Ort\nTEST_TAKER: Testpersonen\nTEACHER: Lehrkraft als Zielgruppe für die Umsetzung von Erkenntnissen im Unterricht\nTEST_ADMINISTRATION: Verantwortliche für das Management bzw. Koordinierung der Erhebung(en)\nGOVERNANCE: Zielgruppe für Ergebnisrückmeldungen auf den verschiedenen Ebenen der Bildungsadministration (Schulleitung, Schulamt usw.)\nCODER: Personenkreis, der mit der manuellen Kodierung beauftragt ist\n\nfile: Pro Material gibt es genau eine Material-Datei, aber diese kann in verschiedenen Sprachvarianten auftreten. Daher ist diese Eigenschaft wieder ein sprachspezifisches Array, jeweils mit id (Pfad zum Material), lang für die Sprachangabe, label und description für die UI\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Survey Content",
+      "Abschnitte"
+    ]
+  },
+  {
+    "objectID": "survey-content/header.html",
+    "href": "survey-content/header.html",
+    "title": "Kopfdaten",
+    "section": "",
+    "text": "packageId\nDas Inhaltspaket für eine Erhebung muss eine ID haben. Inhalte, die an Länder gegeben wurden oder mit denen umfangreiche Daten erhoben wurden, müssen eindeutig identifizierbar sein. Zusammen mit den Beschreibungen der Testpersonen, den Durchführungsprotokollen und den Ergebnisdaten erhält man ein Archiv, das spätere Analysen ermöglicht. Nur mit einer eindeutigen ID können die richtigen Inhalte wiedergefunden werden.\nEs ist zu empfehlen, Inhaltspakete mit einer gewissen Bedeutung mit einer permanenten ID zu versehen. Beispielsweise bieten w3id oder DOI ausgereifte und einfach zu bedienende Registrierungen langfristig persistenter Datenobjekte. Das IQB nutzt beide Systeme seit langer Zeit für verschiedene Anwendungen und wird voraussichtlich w3id für Inhaltspakete verwenden.\n\n\nversion\nEine Version wird über drei Zahlen und optional einen Suffix beschrieben. Da in der Entwicklungsphase (erste Versionszahl 0), aber auch nach dem ersten Release Überarbeitungen zu erwarten sind, muss es eine verlässliche Information über den letzten oder demnächst zu erwartende Arbeitsstände geben. Das IQB nutzt für Software und für Spezifikation die semantische Versionierung.\nVerglichen mit Software und Spezifikation ist es bei Inhalten recht schwierig zu entscheiden, unter welchen Umständen die erste oder zweite Zahl hochgezählt wird. Daher muss dann in den sog. Release notes ausführlich beschrieben werden, was geändert wurde. Die Release notes sind Teil der Veröffentlichung und nicht Teil der Daten.\n\n\nname, description\nDas Inhaltspaket benötigt einen kurzen Namen und eine Beschreibung, damit man in Listen schnell erkennen kann, ob es relevant für die eigene Arbeit ist oder nicht. Die Einträge hier sind mehrsprachig angelegt.\n{\n \"name\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"IQB VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ],\n  \"description\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Sämtliche Daten und Dokumente für die Online-Durchführung und Auswertung des Durchganges 2027 für VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ]\n}\nAuch wenn es nur eine Sprache geben sollte, müssen ein Array und die Properties lang und value formuliert werden.\n\n\nmaintainerName, maintainerUrl\nBei Testinhalten muss es eine Angabe geben, wer dafür verantwortlich ist. Hierfür gibt es zahlreiche Konzepte und Varianten. Für die vorliegende Datenspezifikation soll ersteinmal “Maintainer” ausreichen - ein Name und eine Url. Hierüber kann man Kontakt aufnehmen.\nWenn Erfahrungen mit Veröffentlichungen vorliegen, wird dies sicher noch erweitert. Dann kann man die Unterscheidung zu Publisher oder Creator schärfen, auch mit Blick auf den Support für Nachfragen.\n\n\nstatus\nAuch dieses Merkmal vereint einige Informationen, die später eventuell separat und detaillierter geführt werden müssen.\n\nIN_DEVELOPMENT ist der erste und default-Wert und zeigt an, dass keine Veröffentlichung erfolgte\nRELEASED_PUBLIC ist eine Veröffentlichung mit einer OER-Lizenz und keiner Zugriffsbeschränkung, z. B. Demo-Pakete.\nRELEASED_CONFIDENTIAL ist eine Veröffentlichung für einen begrenzten Personenkreis. Beispielsweise erfordern die Inhaltspakete für VERA eine Vertraulichkeit, um die Testergebnisse nicht zu verfälschen.\nDISCONTINUED zeigt an, dass das Inhaltspaket nicht mehr unterstützt wird, nicht mehr zu empfehlen ist oder durch ein anderes Inhaltspaket ersetzt wurde.\n\nEs sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich getrennt geführt werden: Reifegrad/Qualität, Vertraulichkeit und Nutzungsrechte.\n\n\nmetadata\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im SCP-Index verwendet werden, finden Sie hier\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\ncodingParameters\nÜber diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.\n\nitemValues: Die Itemmatrix, die im Anschluss an die Kodierung aus den Antwortdaten erstellt wird, enthält eigentlich keine numerischen Werte. Statt dessen stehen die Zahlen für Kategorien. Es gibt Konventionen dazu, aber eventuell möchte man davon abweichen. In diesem Fall dient die Eigenschaft itemValues dazu, diese Abweichungen zu deklarieren:\n\nFULL_CREDIT steht für die vollständig richtige Antwort. Standardwert ist 1\nNO_CREDIT steht für eine völlig falsche Antwort. Standardwert ist 0\nMISSING weist auf eine fehlende Antwort hin. Der Grund ist an dieser Stelle nicht wichtig, aber es wäre eine Verfälschung der Daten, wenn man hier mit “falsch” oder “richtig” in die Datenanalyse gehen würde. Standardwert ist -99\n\nstatusMapping: Wenn der Status der Quellvariablen CODING_COMPLETE erreicht wurde, wird deren Score in die Itemmatrix übernommen. Für alle anderen Status-Werte muss definiert werden, welcher Itemwert gewählt wird: NO_CREDIT oder MISSING. Dies erfolgt über diesen Parameter.\nminItemsPercent: Mindestzahl der Items, die für eine Skale beantwortet sein müssen, damit die Skale für die Testperson berechnet wird (Prozent)\n\n{\n \"codingParameters\": {\n    \"itemValues\": [\n      {\n        \"type\": \"MISSING\",\n        \"value\": -9\n      }\n    ],\n    \"statusMapping\": [\n      {\n        \"itemValue\": -99,\n        \"status\": [\n          \"UNSET\",\n          \"NOT_REACHED\",\n          \"DISPLAYED\",\n          \"VALUE_CHANGED\",\n          \"DERIVE_ERROR\"\n        ]\n      },\n      {\n        \"itemValue\": 0,\n        \"status\": [\n          \"NO_CODING\",\n          \"INVALID\",\n          \"CODING_INCOMPLETE\",\n          \"CODING_ERROR\",\n          \"PARTLY_DISPLAYED\",\n          \"DERIVE_PENDING\",\n          \"INTENDED_INCOMPLETE\",\n          \"CODE_SELECTION_PENDING\"\n        ]\n      }\n    ],\n    \"minItemsPercent\": 60\n  }\n}\n\n\nAbschnitte: surveyParts\nDie wesentlichen inhaltlichen Daten finden sich in der Datenstruktur surveyPart. Die großen Studien des IQB “Bidungstrend” und “VERA” sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.\nAuf den folgenden Seiten finden Sie die Eigenschaften des surveyPart-Objektes.\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Survey Content",
+      "Kopfdaten"
+    ]
+  },
+  {
+    "objectID": "survey-content/scales-rev.html",
+    "href": "survey-content/scales-rev.html",
+    "title": "Fähigkeitswerte",
+    "section": "",
+    "text": "Um die von Testteilnehmenden erreichten Kompetenzen über verschiedene Studien hinweg vergleichbar zu machen, müssen alle ermittelten Kompetenzwerte auf einer gemeinsamen Metrik abgebildet werden. Beispielsweise wurde im Fach Deutsch die Berichtsmetrik im IQB-Bildungstrend für die einzelnen Kompetenzbereiche so normiert, dass sie im Jahr 2015 in der Population der Neuntklässler:innen in Deutschland einen Mittelwert von M = 500 Punkten und eine Standardabweichung von SD = 100 Punkten aufweist.\nZur inhaltlichen Einordnung der Messergebnisse aus bildungsstandardbasierten Schulleistungstests wurden darüber hinaus Kompetenzstufenmodelle entwickelt. Diese Modelle unterteilen das kontinuierliche Kompetenzspektrum in eine begrenzte Anzahl inhaltlich interpretierbarer Niveaustufen. Auf Basis dieser Modelle werden die individuellen Testwerte der Teilnehmenden entsprechenden Kompetenzstufen zugeordnet.\nBeispielsweise kann eine Person im Kompetenzbereich Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.\nKompetenzstufenmodelle sind theoretisch fundiert, empirisch validiert und in der Regel öffentlich dokumentiert.\n\n\n\nSomit ergeben sich verschiedene Metriken, auf denen Testergebnisse bzw. Kompetenzmessungen berichtet werden können. Beispiele:\n\nLösungshäufigkeit: 55 %\nProzentrang: 65\nPunktwert (Bildungsstandard-Metrik): 366\nKompetenzstufe: Ib\nStandard: „Mindeststandard“\n\nJeder dieser Werte repräsentiert eine unterschiedliche Perspektive auf dieselbe zugrunde liegende Kompetenzschätzung – von der rohen Aufgabenlösung bis hin zur normierten Standardmetrik oder kategorialen Einstufung.\nDiese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Content Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert.\n\n\n\nDer Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine rein kontinuierliche Skala, sondern um Kategorien. Es gibt dann die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.\nObwohl also der Datentyp numerisch ist, kann mitunter der Wert nicht als numerisch interpretiert werden. Eine Skala kann numerisch, aber nicht metrisch sein. Dann ist ein Wert 4 nicht doppelt so ‘gut’ wie ein Wert 2.\nDiese Überlegungen sind sehr wichtig für die Interpretation der Skalenwerte. Eine Präsentation von Ergebnissen im Rahmen von Rückmeldungen oder einem Dashboard muss stets die Aussagekraft der Skalenwerte beachten und verkürzte (z. B. grafische) Darstellungen sehr sorgfältig wählen.\n\n\n\nDie vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.\n\n\n\nDie Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat hier die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.\nDas Prinzip der Referenz beschränkt sich natürlich nicht auf Kompetenzstufenmodelle. Sobald eine kategoriale Skala öffentlich verfügbar ist, kann diese als Referenz genutzt werden."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#kompetenzmessungen",
+    "href": "survey-content/scales-rev.html#kompetenzmessungen",
+    "title": "Fähigkeitswerte",
+    "section": "",
+    "text": "Um die von Testteilnehmenden erreichten Kompetenzen über verschiedene Studien hinweg vergleichbar zu machen, müssen alle ermittelten Kompetenzwerte auf einer gemeinsamen Metrik abgebildet werden. Beispielsweise wurde im Fach Deutsch die Berichtsmetrik im IQB-Bildungstrend für die einzelnen Kompetenzbereiche so normiert, dass sie im Jahr 2015 in der Population der Neuntklässler:innen in Deutschland einen Mittelwert von M = 500 Punkten und eine Standardabweichung von SD = 100 Punkten aufweist.\nZur inhaltlichen Einordnung der Messergebnisse aus bildungsstandardbasierten Schulleistungstests wurden darüber hinaus Kompetenzstufenmodelle entwickelt. Diese Modelle unterteilen das kontinuierliche Kompetenzspektrum in eine begrenzte Anzahl inhaltlich interpretierbarer Niveaustufen. Auf Basis dieser Modelle werden die individuellen Testwerte der Teilnehmenden entsprechenden Kompetenzstufen zugeordnet.\nBeispielsweise kann eine Person im Kompetenzbereich Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.\nKompetenzstufenmodelle sind theoretisch fundiert, empirisch validiert und in der Regel öffentlich dokumentiert."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#bericht-der-kompetenzmessungen-auf-verschiedenen-metriken",
+    "href": "survey-content/scales-rev.html#bericht-der-kompetenzmessungen-auf-verschiedenen-metriken",
+    "title": "Fähigkeitswerte",
+    "section": "",
+    "text": "Somit ergeben sich verschiedene Metriken, auf denen Testergebnisse bzw. Kompetenzmessungen berichtet werden können. Beispiele:\n\nLösungshäufigkeit: 55 %\nProzentrang: 65\nPunktwert (Bildungsstandard-Metrik): 366\nKompetenzstufe: Ib\nStandard: „Mindeststandard“\n\nJeder dieser Werte repräsentiert eine unterschiedliche Perspektive auf dieselbe zugrunde liegende Kompetenzschätzung – von der rohen Aufgabenlösung bis hin zur normierten Standardmetrik oder kategorialen Einstufung.\nDiese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Content Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#datentyp",
+    "href": "survey-content/scales-rev.html#datentyp",
+    "title": "Fähigkeitswerte",
+    "section": "",
+    "text": "Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine rein kontinuierliche Skala, sondern um Kategorien. Es gibt dann die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.\nObwohl also der Datentyp numerisch ist, kann mitunter der Wert nicht als numerisch interpretiert werden. Eine Skala kann numerisch, aber nicht metrisch sein. Dann ist ein Wert 4 nicht doppelt so ‘gut’ wie ein Wert 2.\nDiese Überlegungen sind sehr wichtig für die Interpretation der Skalenwerte. Eine Präsentation von Ergebnissen im Rahmen von Rückmeldungen oder einem Dashboard muss stets die Aussagekraft der Skalenwerte beachten und verkürzte (z. B. grafische) Darstellungen sehr sorgfältig wählen."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#ableitung",
+    "href": "survey-content/scales-rev.html#ableitung",
+    "title": "Fähigkeitswerte",
+    "section": "",
+    "text": "Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#referenz-zu-kompetenzstufenmodell",
+    "href": "survey-content/scales-rev.html#referenz-zu-kompetenzstufenmodell",
+    "title": "Fähigkeitswerte",
+    "section": "",
+    "text": "Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat hier die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.\nDas Prinzip der Referenz beschränkt sich natürlich nicht auf Kompetenzstufenmodelle. Sobald eine kategoriale Skala öffentlich verfügbar ist, kann diese als Referenz genutzt werden."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#id-name-description",
+    "href": "survey-content/scales-rev.html#id-name-description",
+    "title": "Fähigkeitswerte",
+    "section": "id, name, description",
+    "text": "id, name, description\nDie ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert)."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#method-methodparameters",
+    "href": "survey-content/scales-rev.html#method-methodparameters",
+    "title": "Fähigkeitswerte",
+    "section": "method, methodParameters",
+    "text": "method, methodParameters\nHier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen SUM, RATIO, MEAN, MEDIAN zur Verfügung.\nSollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für RATIO wäre das maxValue, d. h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#items",
+    "href": "survey-content/scales-rev.html#items",
+    "title": "Fähigkeitswerte",
+    "section": "items",
+    "text": "items\nAn dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft items des surveyPart deklariert worden sein."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#id-name-description-1",
+    "href": "survey-content/scales-rev.html#id-name-description-1",
+    "title": "Fähigkeitswerte",
+    "section": "id, name, description",
+    "text": "id, name, description\nDie ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert)."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#source",
+    "href": "survey-content/scales-rev.html#source",
+    "title": "Fähigkeitswerte",
+    "section": "source",
+    "text": "source\nHier ist die Skala anzugeben mit ihrer ID, deren Wert in die neue Skala übersetzt werden soll."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#mappings",
+    "href": "survey-content/scales-rev.html#mappings",
+    "title": "Fähigkeitswerte",
+    "section": "mappings",
+    "text": "mappings\nDer erste Eintrag in dieser Liste, für den ein true ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skala den elseValue (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:\n\nmethod, methodParameters: Für die Vergleichsmethode stehen zur Verfügung EQUALS, LESS_THAN, MORE_THAN, MAX und MIN. Der Operand wird in der Eigenschaft methodParameters übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.\nnewValue: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet\nvalueLabel, valueDescription unterstützen die UI"
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#elsevalue-elselabel-elsedescription",
+    "href": "survey-content/scales-rev.html#elsevalue-elselabel-elsedescription",
+    "title": "Fähigkeitswerte",
+    "section": "elseValue, elseLabel, elseDescription",
+    "text": "elseValue, elseLabel, elseDescription\nDieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#relatedvocabularies",
+    "href": "survey-content/scales-rev.html#relatedvocabularies",
+    "title": "Fähigkeitswerte",
+    "section": "relatedVocabularies",
+    "text": "relatedVocabularies\nMit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skala öffentlich zugänglichen Skalen entsprechen (s. o.)."
+  },
+  {
+    "objectID": "survey-content/scales-rev.html#footnotes",
+    "href": "survey-content/scales-rev.html#footnotes",
+    "title": "Fähigkeitswerte",
+    "section": "Fußnoten",
+    "text": "Fußnoten\n\n\nauf die Metrik der Bildungsstandards transformierter WLE inklusive Vertrauensintervall↩︎"
+  },
+  {
+    "objectID": "survey-content/items.html",
+    "href": "survey-content/items.html",
+    "title": "Item-Liste",
+    "section": "",
+    "text": "Ein Item ist eine Antwort einer Testperson, die nach einer Bewertung richtig/falsch in die Ermittlung von Personenfähigkeitswerten eingeht. Im üblichen Sprachgebrauch entspricht der Begriff der Teilaufgabe. Technisch und konzeptionell ist dieser Begriff jedoch komplexer:\n\n“Antwort” bedeutet im computergestützten Testen eine Interaktion, die protokolliert wird. Ankreuzen, ein Bild auf eine Fläche Ziehen, Worte/Zeichen Eintippen - eine Interaktion kann vielfältig sein. Im TBA-System des IQB hat eine Antwort stets eine ID, einen Status und einen Wert (s. hier).\nMehrere Antworten/Interaktionen können zu einem Itemwert beitragen. Das Item “Kreuze an und begründe” besteht aus zwei Interaktionen, die im Rahmen der Kodierung zusammengeführt werden.\nAus einer Interaktion können mehrere Items abgeleitet werden. Bei der Eingabe eines Wortes können mehrere Stellen getrennt bewertet werden, z. B. Dehnungs-h, Groß-/Kleinschreibung und Doppelkonsonanten.\n\nDas bedeutet für eine Testung, dass es Informationen geben muss, wie genau aus welchen Antworten Items abgeleitet werden sollen. Dies ist für das Survey Content Package in der Datenstruktur items eines surveyPart umgesetzt.",
+    "crumbs": [
+      "Survey Content",
+      "Item-Liste"
+    ]
+  },
+  {
+    "objectID": "survey-content/items.html#id-label",
+    "href": "survey-content/items.html#id-label",
+    "title": "Item-Liste",
+    "section": "id, label",
+    "text": "id, label\nMit der ID wird das Item in den Skalen referenziert. Ein Label kann in UI-Komponenten helfen, das Item zu identifizieren (z. B. “Teilaufgabe C”). Das Label ist mehrsprachig angelegt.",
+    "crumbs": [
+      "Survey Content",
+      "Item-Liste"
+    ]
+  },
+  {
+    "objectID": "survey-content/items.html#sources",
+    "href": "survey-content/items.html#sources",
+    "title": "Item-Liste",
+    "section": "sources",
+    "text": "sources\nHier wird die Frage beantwortet, wo dieses Item zu finden ist.\n\nunitId: Dies ist eine Referenz zur Unitdefinition und erforderlich, um z. B. die Kodieranweisungen zu finden.\nunitAlias: Sollte die Unit mehrfach in einem Testheft auftauchen, werden die Antworten über den Alias identifiziert. Ohne Alias wird die ID der Unit verwendet, um die Unit in den Antworten zu finden.\nsourceVariable: Für die Antwortvariable, deren Score als Itemwert verwendet wird, muss der Status CODING_COMPLETE gesetzt sein. Dies kann bereits durch den Player erfolgen (bei StarS sehr häufig) oder als Ergebnis einer Kodierung. Das Kodierschema einer Unit enthält auch die Vorschrift dafür, wenn aus Basisvariablen eine Itemvariable abgeleitet werden soll.",
+    "crumbs": [
+      "Survey Content",
+      "Item-Liste"
+    ]
+  },
+  {
+    "objectID": "survey-content/items.html#fullcreditvalue-nocreditvalue",
+    "href": "survey-content/items.html#fullcreditvalue-nocreditvalue",
+    "title": "Item-Liste",
+    "section": "fullCreditValue, noCreditValue",
+    "text": "fullCreditValue, noCreditValue\nSollte die Itemvariable einen von den Konventionen abweichenden Wert liefern, kann dies an dieser Stelle explizit definiert werden.",
+    "crumbs": [
+      "Survey Content",
+      "Item-Liste"
+    ]
+  },
+  {
     "objectID": "coding-service/index.html",
     "href": "coding-service/index.html",
     "title": "Coding-Service",
@@ -518,6 +528,17 @@
     "text": "Skalenwerte ermitteln\nIm Survey Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:\n\nListe der Items, die zu dieser Skale beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)\nMethode der Ermittlung und dafür nötige Parameter",
     "crumbs": [
       "Coding-Service"
+    ]
+  },
+  {
+    "objectID": "coding-service/vera.html",
+    "href": "coding-service/vera.html",
+    "title": "Coding-Service VERA-Szenario",
+    "section": "",
+    "text": "Die Units, die das IQB im Rahmen von VERA ausliefert, enthalten viele Daten, die für die länderseitigen Prozesse wichtig sind:\n\nUI-Definition für die Durchführung über einen Verona-Player (z. B. im Testcenter)\nKodieranweisungen für die automatische und manuelle Kodierung\nMetadaten für die Interpretation der Ergebnisse\n\nAußerdem enthält das Survey Content Package Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.\n\nAus diesem Grund kann es sinnvoll sein, den CodingService in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:\n\nSurvey Content laden\nDas IQB plant, alle für die Online-Durchführung von VERA relevanten Daten über eine zentrale Stelle auszuliefern. Es handelt sich um zahlreiche\n\nDaten, die über Spezifikationen in ihrem Format festgelegt sind (XML, JSON usw.) sowie um\nDateien mit spezifischer Funktion (z. B. Testcenter-Booklet).\n\nDas IQB nennt diese Daten Survey Content Package - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Der Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als Survey Content Pool bezeichnet.\nDas Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.\n\n\n\n\n\n\nTippLänderseitige Änderungen\n\n\n\nWenn ein Land Änderungen an den Testinhalten wünscht, müssen die entsprechenden Teile des Inhaltspaketes ausgetauscht bzw. angepasst werden. Für Units wäre es sinnvoll, die Webanwendung IQB-Studio zu installieren und damit die Änderungen vorzunehmen.\n\n\n\n\nManagement der Personen\nFür die Durchführung von VERA müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten) und als XML in das Testcenter hochzuladen.\nFür eine möglichst aussagekräftige Rückmeldung sollten die Testpersonen Metadaten erhalten. Dies betrifft administrative Zuordnungen (Kreis, Stadt, Schule) oder Personenmerkmale wie “Klassenwiederholer” oder sozioökonomischer Index.\n\n\nTestdurchführung\nDas IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.\nDas Testcenter bzw. der Player liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-CodingService müssen die Antworten einer Person zusammengefasst werden.\n\n\nKodierung\nDie Variablen im VERA-Kontext sind teilweise automatisch, teilweise manuell zu kodieren. Einige Länder kodieren zentral, andere dezentral über die Lehrkräfte. Einige Länder möchten auch die automatisch kodierbaren Antworten durch die Lehrkräfte kodieren lassen, einige möchten die Arbeitslast der Lehrkräfte möglichst minimieren und geben während der Kodierung Empfehlungen auch über KI.\nDas bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit geben muss, manuell zu kodieren. Die automatisch kodierbaren Antworten können an den CodingService gegeben werden. Das kann zu Anfang erfolgen und/oder zwischendurch, denn nach dem Hinzufügen der manuell kodierten Daten kann es nötig sein, abgeleitete Variablen über einen zweiten Autocoderlauf zu ermitteln.\n\n\nBerechnung der Fähigkeitswerte\nÜber das Survey Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skale Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skale zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.\nDer CodingService versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.\nAnschließend kann man die gelieferten Skalenwerte weiter nach Bedarf transformieren.\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Coding-Service",
+      "Szenario VERA"
     ]
   }
 ]
