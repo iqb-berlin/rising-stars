@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Metriken und Skalen">
 
-<title>Fähigkeitswerte – StarS</title>
+<title>Skalen – StarS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1570fdc7988d0accc2b8d902676ed51c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4938819144343eef1c227903853e4362.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -113,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Fähigkeitswerte</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Skalen</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -179,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../survey-content/scales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Skalen</span></a>
+ <span class="menu-text">Fähigkeitswerte</span></a>
   </div>
 </li>
       </ul>
@@ -223,13 +222,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#modellierung-der-datenstrukturen" id="toc-modellierung-der-datenstrukturen" class="nav-link active" data-scroll-target="#modellierung-der-datenstrukturen">Modellierung der Datenstrukturen</a>
+  <li><a href="#modell" id="toc-modell" class="nav-link active" data-scroll-target="#modell">Modell</a>
   <ul class="collapse">
-  <li><a href="#kompetenzmessungen" id="toc-kompetenzmessungen" class="nav-link" data-scroll-target="#kompetenzmessungen">Kompetenzmessungen</a></li>
-  <li><a href="#bericht-der-kompetenzmessungen-auf-verschiedenen-metriken" id="toc-bericht-der-kompetenzmessungen-auf-verschiedenen-metriken" class="nav-link" data-scroll-target="#bericht-der-kompetenzmessungen-auf-verschiedenen-metriken">Bericht der Kompetenzmessungen auf verschiedenen Metriken</a></li>
   <li><a href="#datentyp" id="toc-datentyp" class="nav-link" data-scroll-target="#datentyp">Datentyp</a></li>
   <li><a href="#ableitung" id="toc-ableitung" class="nav-link" data-scroll-target="#ableitung">Ableitung</a></li>
-  <li><a href="#referenz-zu-kompetenzstufenmodell" id="toc-referenz-zu-kompetenzstufenmodell" class="nav-link" data-scroll-target="#referenz-zu-kompetenzstufenmodell">Referenz zu Kompetenzstufenmodell</a></li>
+  <li><a href="#kompetenzstufenmodelle" id="toc-kompetenzstufenmodelle" class="nav-link" data-scroll-target="#kompetenzstufenmodelle">Kompetenzstufenmodelle</a></li>
   </ul></li>
   <li><a href="#basescales" id="toc-basescales" class="nav-link" data-scroll-target="#basescales"><code>baseScales</code></a>
   <ul class="collapse">
@@ -254,14 +251,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fähigkeitswerte</h1>
+<h1 class="title">Skalen</h1>
 </div>
 
-<div>
-  <div class="description">
-    Metriken und Skalen
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -276,42 +268,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="modellierung-der-datenstrukturen" class="level1">
-<h1>Modellierung der Datenstrukturen</h1>
-<section id="kompetenzmessungen" class="level2">
-<h2 class="anchored" data-anchor-id="kompetenzmessungen">Kompetenzmessungen</h2>
-<p>Um die von Testteilnehmenden erreichten Kompetenzen über verschiedene Studien hinweg vergleichbar zu machen, müssen alle ermittelten Kompetenzwerte auf einer gemeinsamen Metrik abgebildet werden. Beispielsweise wurde im Fach Deutsch die Berichtsmetrik im IQB-Bildungstrend für die einzelnen Kompetenzbereiche so normiert, dass sie im Jahr 2015 in der Population der Neuntklässler:innen in Deutschland einen Mittelwert von M = 500 Punkten und eine Standardabweichung von SD = 100 Punkten aufweist.</p>
-<p>Zur inhaltlichen Einordnung der Messergebnisse aus bildungsstandardbasierten Schulleistungstests wurden darüber hinaus Kompetenzstufenmodelle entwickelt. Diese Modelle unterteilen das kontinuierliche Kompetenzspektrum in eine begrenzte Anzahl inhaltlich interpretierbarer Niveaustufen. Auf Basis dieser Modelle werden die individuellen Testwerte der Teilnehmenden entsprechenden Kompetenzstufen zugeordnet.</p>
-<p>Beispielsweise kann eine Person im Kompetenzbereich Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.</p>
-<p>Kompetenzstufenmodelle sind theoretisch fundiert, empirisch validiert und in der Regel öffentlich dokumentiert.</p>
-</section>
-<section id="bericht-der-kompetenzmessungen-auf-verschiedenen-metriken" class="level2">
-<h2 class="anchored" data-anchor-id="bericht-der-kompetenzmessungen-auf-verschiedenen-metriken">Bericht der Kompetenzmessungen auf verschiedenen Metriken</h2>
-<p>Somit ergeben sich verschiedene Metriken, auf denen Testergebnisse bzw. Kompetenzmessungen berichtet werden können. Beispiele:</p>
+<section id="modell" class="level1">
+<h1>Modell</h1>
+<p>Personenfähigkeiten werden über Skalen ausgedrückt. Beispiele:</p>
 <ul>
-<li>Lösungshäufigkeit: 55 %</li>
+<li>Lösungshäufigkeit: 55%</li>
 <li>Prozentrang: 65</li>
-<li>Punktwert (Bildungsstandard-Metrik): 366</li>
-<li>Kompetenzstufe: Ib</li>
-<li>Standard: „Mindeststandard“</li>
+<li>Metrik der Bildungsstandards: 366</li>
 </ul>
-<p>Jeder dieser Werte repräsentiert eine unterschiedliche Perspektive auf dieselbe zugrunde liegende Kompetenzschätzung – von der rohen Aufgabenlösung bis hin zur normierten Standardmetrik oder kategorialen Einstufung.</p>
-<p>Diese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Content Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert.</p>
-</section>
+<p>Der Fähigkeitswertswert bezieht sich stets auf eine bestimmte Kompetenz, z. B. “Mathematik Leitidee 4” oder “Englisch Leseverstehen”.</p>
 <section id="datentyp" class="level2">
 <h2 class="anchored" data-anchor-id="datentyp">Datentyp</h2>
-<p>Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine rein kontinuierliche Skala, sondern um Kategorien. Es gibt dann die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.</p>
-<p>Obwohl also der Datentyp numerisch ist, kann mitunter der Wert nicht als numerisch interpretiert werden. Eine Skala kann numerisch, aber nicht metrisch sein. Dann ist ein Wert 4 nicht doppelt so ‘gut’ wie ein Wert 2.</p>
-<p>Diese Überlegungen sind sehr wichtig für die Interpretation der Skalenwerte. Eine Präsentation von Ergebnissen im Rahmen von Rückmeldungen oder einem Dashboard muss stets die Aussagekraft der Skalenwerte beachten und verkürzte (z. B. grafische) Darstellungen sehr sorgfältig wählen.</p>
+<p>Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skale, sondern um Kategorien. Es gibt die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.</p>
 </section>
 <section id="ableitung" class="level2">
 <h2 class="anchored" data-anchor-id="ableitung">Ableitung</h2>
 <p>Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.</p>
 </section>
-<section id="referenz-zu-kompetenzstufenmodell" class="level2">
-<h2 class="anchored" data-anchor-id="referenz-zu-kompetenzstufenmodell">Referenz zu Kompetenzstufenmodell</h2>
+<section id="kompetenzstufenmodelle" class="level2">
+<h2 class="anchored" data-anchor-id="kompetenzstufenmodelle">Kompetenzstufenmodelle</h2>
 <p>Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat <a href="https://skohub.io/iqb-vocabs/v71/heads/master/">hier</a> die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.</p>
-<p>Das Prinzip der Referenz beschränkt sich natürlich nicht auf Kompetenzstufenmodelle. Sobald eine kategoriale Skala öffentlich verfügbar ist, kann diese als Referenz genutzt werden.</p>
 </section>
 </section>
 <section id="basescales" class="level1">
@@ -338,11 +314,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="source" class="level2">
 <h2 class="anchored" data-anchor-id="source"><code>source</code></h2>
-<p>Hier ist die Skala anzugeben mit ihrer ID, deren Wert in die neue Skala übersetzt werden soll.</p>
+<p>Hier ist die Skale anzugeben mit ihrer ID, deren Wert in die neue Skale übersetzt werden soll.</p>
 </section>
 <section id="mappings" class="level2">
 <h2 class="anchored" data-anchor-id="mappings"><code>mappings</code></h2>
-<p>Der erste Eintrag in dieser Liste, für den ein <code>true</code> ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skala den <code>elseValue</code> (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:</p>
+<p>Der erste Eintrag in dieser Liste, für den ein <code>true</code> ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skale den <code>elseValue</code> (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:</p>
 <ul>
 <li><code>method</code>, <code>methodParameters</code>: Für die Vergleichsmethode stehen zur Verfügung <code>EQUALS</code>, <code>LESS_THAN</code>, <code>MORE_THAN</code>, <code>MAX</code> und <code>MIN</code>. Der Operand wird in der Eigenschaft <code>methodParameters</code> übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.</li>
 <li><code>newValue</code>: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet</li>
@@ -355,24 +331,19 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="relatedvocabularies" class="level2">
 <h2 class="anchored" data-anchor-id="relatedvocabularies"><code>relatedVocabularies</code></h2>
-<p>Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skala öffentlich zugänglichen Skalen entsprechen (s. o.).</p>
+<p>Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skale öffentlich zugänglichen Skalen entsprechen (s. o.).</p>
 </section>
 </section>
 <section id="stars-und-vera" class="level1">
 <h1>StarS und VERA</h1>
-<p>Im <strong>StarS</strong>-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskala). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skala besteht aus 2 oder 3 Risikostufen.</p>
-<p>Für <strong>VERA</strong> sind die Itemschwierigkeiten bekannt. Pro Skala und Item wird dann ein Parameter “LOGIT” bereitgestellt, mit dessen Hilfe die Personenfähigkeit geschätzt werden kann<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Diese Berechnung kann automatisch erfolgen. Hierzu ist dann der Parameter <code>items</code> einer Basiskala entsprechend zu erweitern. Zusätzlich werden Skalen für Lösungshäufigkeiten geliefert, die dann über die Äquivalenztabellen in Kompetenzstufen transformiert werden können.</p>
+<p>Im <strong>StarS</strong>-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.</p>
+<p>Für <strong>VERA</strong> werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Außerdem wird es weiterhin Äquivalenzwerte geben, mit denen man von den Lösungshäufigkeiten auf Kompetenzskalen mappen kann (abgeleitete Skalen).</p>
+<p>Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package für VERA dazu die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus für KMK-Kompentenzstufen genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.</p>
 
 
 </section>
 
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Fußnoten</h2>
-
-<ol>
-<li id="fn1"><p>auf die Metrik der Bildungsstandards transformierter WLE inklusive Vertrauensintervall<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
