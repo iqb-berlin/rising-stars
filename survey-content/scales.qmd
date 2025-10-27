@@ -1,6 +1,7 @@
 ---
 lang: de
-title: Skalen
+title: Fähigkeitswerte
+description: Metriken und Skalen
 format:
     html:
         other-links:
@@ -8,74 +9,73 @@ format:
               href: https://skohub.io/iqb-vocabs/v71/heads/master/
 ---
 
-# Modell
+# Modellierung der Datenstrukturen
 
-Personenfähigkeiten werden über Skalen ausgedrückt. Beispiele:
+## Kompetenzmessungen
 
-* Lösungshäufigkeit: 55%
+Um die von Testteilnehmenden erreichten Kompetenzen über verschiedene Studien hinweg vergleichbar zu machen, müssen alle ermittelten Kompetenzwerte auf einer gemeinsamen Metrik abgebildet werden. Beispielsweise wurde im Fach Deutsch die Berichtsmetrik im IQB-Bildungstrend für die einzelnen Kompetenzbereiche so normiert, dass sie im Jahr 2015 in der Population der Neuntklässler:innen in Deutschland einen Mittelwert von M = 500 Punkten und eine Standardabweichung von SD = 100 Punkten aufweist.
+
+Zur inhaltlichen Einordnung der Messergebnisse aus bildungsstandardbasierten Schulleistungstests wurden darüber hinaus Kompetenzstufenmodelle entwickelt. Diese Modelle unterteilen das kontinuierliche Kompetenzspektrum in eine begrenzte Anzahl inhaltlich interpretierbarer Niveaustufen. Auf Basis dieser Modelle werden die individuellen Testwerte der Teilnehmenden entsprechenden Kompetenzstufen zugeordnet.
+
+Beispielsweise kann eine Person im Kompetenzbereich **Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung** der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.
+
+Kompetenzstufenmodelle sind theoretisch fundiert, empirisch validiert und in der Regel öffentlich dokumentiert.
+
+## Bericht der Kompetenzmessungen auf verschiedenen Metriken
+
+Somit ergeben sich verschiedene Metriken, auf denen Testergebnisse bzw. Kompetenzmessungen berichtet werden können. Beispiele:
+
+* Lösungshäufigkeit: 55 %
 * Prozentrang: 65
-* Metrik der Bildungsstandards: 366
+* Punktwert (Bildungsstandard-Metrik): 366
+* Kompetenzstufe: Ib
+* Standard: „Mindeststandard“
 
-Der Fähigkeitswertswert bezieht sich stets auf eine bestimmte Kompetenz, z. B. "Mathematik Leitidee 4" oder "Englisch Leseverstehen".
+Jeder dieser Werte repräsentiert eine unterschiedliche Perspektive auf dieselbe zugrunde liegende Kompetenzschätzung – von der rohen Aufgabenlösung bis hin zur normierten Standardmetrik oder kategorialen Einstufung.
+
+Diese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Content Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert.
 
 ## Datentyp
 
-Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine numerische Skale, sondern um Kategorien. Es gibt die Werte "2" und "3", aber der Zwischenwert "2,4" ist nicht definiert. Gleichwohl gilt -- da es sich dann um Fähigkeitsstufen handelt -- dass "2" eine geringere Fähigkeit ausdrückt als "3".
+Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine rein kontinuierliche Skala, sondern um Kategorien. Es gibt dann die Werte "2" und "3", aber der Zwischenwert "2,4" ist nicht definiert. Gleichwohl gilt -- da es sich dann um Fähigkeitsstufen handelt -- dass "2" eine geringere Fähigkeit ausdrückt als "3".
+
+Obwohl also der Datentyp numerisch ist, kann mitunter der Wert nicht als numerisch interpretiert werden. Eine Skala kann numerisch, aber nicht metrisch sein. Dann ist ein Wert 4 nicht doppelt so 'gut' wie ein Wert 2.
+
+Diese Überlegungen sind sehr wichtig für die Interpretation der Skalenwerte. Eine Präsentation von Ergebnissen im Rahmen von Rückmeldungen oder einem Dashboard muss stets die Aussagekraft der Skalenwerte beachten und verkürzte (z. B. grafische) Darstellungen sehr sorgfältig wählen.
 
 ## Ableitung
 
 Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.
 
-## Kompetenzstufenmodelle
+## Referenz zu einem Kompetenzstufenmodell
 
 Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat [hier](https://skohub.io/iqb-vocabs/v71/heads/master/) die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.
 
-# `baseScales`
+Das Prinzip der Referenz beschränkt sich natürlich nicht auf Kompetenzstufenmodelle. Sobald eine kategoriale Skala öffentlich verfügbar ist, kann diese als Referenz genutzt werden.
 
-## `id`, `name`, `description`
+# Umsetzung als Datenspezifikation
 
-Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+## `baseScales`
 
-## `method`, `methodParameters`
+* `id`, `name`, `description`: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+* `method`, `methodParameters`: Hier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen `SUM`, `RATIO`, `MEAN`, `MEDIAN` zur Verfügung. Sollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für `RATIO` wäre das `maxValue`, d. h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt.
+* `items`: An dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft `items` des `surveyPart` deklariert worden sein.
 
-Hier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen `SUM`, `RATIO`, `MEAN`, `MEDIAN` zur Verfügung.
+## `derivedScales`
 
-Sollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für `RATIO` wäre das `maxValue`, d. h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt.
-
-## `items`
-
-An dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen. Es handelt sich um eine einfache Liste von IDs. Jedes Item mit seiner ID muss zuvor in der Eigenschaft `items` des `surveyPart` deklariert worden sein.
-
-# `derivedScales`
-
-## `id`, `name`, `description`
-
-Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
-
-## `source`
-
-Hier ist die Skale anzugeben mit ihrer ID, deren Wert in die neue Skale übersetzt werden soll.
-
-## `mappings`
-
-Der erste Eintrag in dieser Liste, für den ein `true` ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skale den `elseValue` (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:
-
-* `method`, `methodParameters`: Für die Vergleichsmethode stehen zur Verfügung `EQUALS`, `LESS_THAN`, `MORE_THAN`, `MAX` und `MIN`. Der Operand wird in der Eigenschaft `methodParameters` übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.
-* `newValue`: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet
-* `valueLabel`, `valueDescription` unterstützen die UI
-
-## `elseValue`, `elseLabel`, `elseDescription`
-
-Dieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft.
-
-## `relatedVocabularies`
-
-Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skale öffentlich zugänglichen Skalen entsprechen (s. o.).
+* `id`, `name`, `description`: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+* `source`: Hier ist die Skala anzugeben mit ihrer ID, deren Wert in die neue Skala übersetzt werden soll.
+* `mappings`:  Der erste Eintrag in dieser Liste, für den ein `true` ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skala den `elseValue` (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:
+  * `method`, `methodParameters`: Für die Vergleichsmethode stehen zur Verfügung `EQUALS`, `LESS_THAN`, `MORE_THAN`, `MAX` und `MIN`. Der Operand wird in der Eigenschaft `methodParameters` übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.
+  * `newValue`: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet
+  * `valueLabel`, `valueDescription` unterstützen die UI
+* `elseValue`, `elseLabel`, `elseDescription`: Dieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft.
+* `relatedVocabularies`: Mit dieser Eigenschaft kann man genau festlegen, wie die Werte dieser Skala öffentlich zugänglichen Skalen entsprechen (s. o.).
 
 # StarS und VERA
 
-Im **StarS**-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskale). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skale besteht aus 2 oder 3 Risikostufen.
+Im **StarS**-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskala). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skala besteht aus 2 oder 3 Risikostufen.
 
-Für **VERA** werden voraussichtlich die Lösungshäufigkeiten als Basisskalen geliefert. Außerdem wird es weiterhin Äquivalenzwerte geben, mit denen man von den Lösungshäufigkeiten auf Kompetenzskalen mappen kann (abgeleitete Skalen).
+Für **VERA** sind die Itemschwierigkeiten bekannt. Pro Skala und Item wird dann ein Parameter "LOGIT" bereitgestellt, mit dessen Hilfe die Personenfähigkeit geschätzt werden kann[^1]. Diese Berechnung kann automatisch erfolgen. Hierzu ist dann der Parameter `items` einer Basiskala entsprechend zu erweitern. Zusätzlich werden Skalen für Lösungshäufigkeiten geliefert.
 
-Da eine IRT-basierte Skalierung stets manuell durchgeführt wird, gibt es im Survey Content Package für VERA dazu die erforderlichen Itemparameter. Nach der Basisskalierung kann dann wieder der Ableitungsmechanismus für KMK-Kompentenzstufen genutzt werden. Diese Punkte sind jedoch noch offen und werden ausformuliert, sobald Erfahrungen mit StarS vorliegen.
+[^1]: auf die Metrik der Bildungsstandards transformierter WLE inklusive Vertrauensintervall
