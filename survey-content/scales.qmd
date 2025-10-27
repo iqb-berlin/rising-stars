@@ -17,7 +17,7 @@ Um die von Testteilnehmenden erreichten Kompetenzen über verschiedene Studien h
 
 Zur inhaltlichen Einordnung der Messergebnisse aus bildungsstandardbasierten Schulleistungstests wurden darüber hinaus Kompetenzstufenmodelle entwickelt. Diese Modelle unterteilen das kontinuierliche Kompetenzspektrum in eine begrenzte Anzahl inhaltlich interpretierbarer Niveaustufen. Auf Basis dieser Modelle werden die individuellen Testwerte der Teilnehmenden entsprechenden Kompetenzstufen zugeordnet.
 
-Beispielsweise kann eine Person im Kompetenzbereich **Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung** der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.
+Beispielsweise kann eine Person im Kompetenzbereich *Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung* der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.
 
 Kompetenzstufenmodelle sind theoretisch fundiert, empirisch validiert und in der Regel öffentlich dokumentiert.
 
