@@ -1,0 +1,78 @@
+---
+lang: de
+title: StarS-Player
+---
+
+Die Testdurchführung basiert technisch vollständig auf den TBA-Programmierungen des IQB. Das bedeutet, dass
+
+* jede Testanwendung, die die [Verona-Schnittstelle](https://verona-interfaces.github.io/player-docs/) implementiert, die StarS-Units nutzen kann, und
+* als Referenz-Implementation das [IQB-Testcenter](https://iqb-berlin.github.io/tba-info/intro/#iqb-testcenter) dient.
+
+Die aktuell am IQB für VERA, BKT und Bildungstrend eingesetzten Player erfüllen nicht die Anforderungen aus dem StarS-Projekt. Dies betrifft vor allem die Altersklasse: frühe Primarstufe. Sowohl für die Dastellung (UI) als auch für die Interaktion (UX) müssen neue Wege gegangen werden. Daher wurde ein neuer Player entwickelt, der sich dann aufgrund des modularen Aufbaus der TBA-Technologien problemlos in die vorhandenen Webanwendungen einfügt.
+
+# Programmierung
+
+Den aktuellen Stand der Programmierung kann man [hier](https://github.com/iqb-berlin/verona-modules-nemo) einsehen.
+
+Für das Herunterladen der jeweils letzten Version des Players bitte zum [Release-Bereich](https://github.com/iqb-berlin/verona-modules-nemo/releases) gehen. Hier ist stets neben den Quelldateien auch die Html-Datei des Players abrufbar.
+
+::: {.callout-note}
+
+Aktuell gibt es keine stabile Version, da sich der Player noch in der ersten Entwicklungsphase befindet. Daher ist die erste Zahl der Versionsangabe noch "0".
+
+:::
+
+# UI-Definition der Unit
+
+Der Player folgt einem semantischen Ansatz. Das bedeutet, dass die Elemente der Unit-Definition mit ihrer Funktion beschrieben sind und der Player daraus die Positionierung und die Gestaltung ableitet. Daher wird die Unit-Definition nicht als Black-Box behandelt (so wie z. B. beim IQB-Aspect-Player), sondern die Syntax ist [spezifiziert](https://iqb-specifications.github.io/stars-unit-definition/) und ausführlich [beschrieben](https://iqb-berlin.github.io/tba-info/tasks/design/stars/). Da eine Unit-Definition recht kurz ist, wurde bisher kein passender Editor programmiert.
+
+# Beispiele
+
+Zur Demonstration des Entwicklungsstandes hat das IQB eine Reihe von Aufgaben umgesetzt. Bitte beachten Sie folgende Punkte:
+
+* Es geht hier nur um die technischen Aspekte. Daher sind die inhaltlichen Elemente nur Platzhalter. Sowohl die Audio-Sequenzen als auch die Bilder werden so nicht eingesetzt.
+* Es gibt eine Reihe von Übungsaufgaben. Sie sind an einem gestreiften Band zu erkennen und führen nach der Auswahl bzw. dem Klick auf den Weiter-Button zu einer Audio-Rückmeldung an die Testperson.
+
+## Ausprobieren
+
+Bitte gehen Sie auf folgenden Link, um die vorbereiteten Testhefte anzuschauen:
+
+* [Link zu Demo-Testheften](https://iqb-testcenter.de/#/fg65trd#hz)
+
+Achtung: Das IQB-Logo in der linken oberen Ecke wird in der tatsächlichen Durchführung ausgeblendet. Dies ist in der Demo-Version nicht möglich.
+
+## Herunterladen
+
+1. {{< downloadthis assets/StarS_Demo_Player.zip label="Herunterladen Player" dname="StarS Demo Player" icon=filetype-zip >}}
+2. {{< downloadthis assets/StarS_Demo_Aufgaben.zip label="Herunterladen Aufgaben" dname="StarS Demo Aufgaben" icon=filetype-zip >}}
+3. {{< downloadthis assets/StarS_Demo_Testhefte.zip label="Herunterladen Testhefte" dname="StarS Demo Testhefte" icon=filetype-zip >}}
+
+### IQB-Testcenter
+
+Sollten Sie ein IQB-Testcenter installiert haben, laden Sie bitte die Dateien in der obigen Reihenfolge in einen Arbeitsbereich des Testcenters.
+
+Legen Sie dann eine Testtaker-Datei dazu, z. B.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Testtakers>
+  <Metadata></Metadata>
+  <Group id="Bsp_Group_StarS" label="Beispiel Gruppe StarS">
+    <Login mode="run-demo" name="fg65trd#hz" pw="">
+      <Booklet>Demoheft_Technikrunde_GT</Booklet>
+      <Booklet>Demoheft_Technikrunde_ET</Booklet>
+    </Login>
+  </Group>
+</Testtakers>
+```
+
+### Player-Testbed
+
+Sie können die Units auch über eine lokale Webanwendung ausprobieren, die das IQB zu Testzwecken programmiert hat.
+
+1. Gehen Sie dazu zum letzten [Testbed-Release](https://github.com/iqb-berlin/verona-modules-nemo/releases/latest) und laden die Html-Datei herunter.
+2. Öffnen Sie diese Datei lokal im Browser.
+3. Laden Sie einen Player.
+4. Laden Sie Units (nur die voud-Dateien).
+
+Jede Unit benötigt einen spezifischen Player. Schauen Sie dazu in die XML-Datei der Unit.
