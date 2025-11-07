@@ -226,13 +226,6 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "StarS",
-    "section": "",
-    "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\n\n\n\n\nVorsichtWork In Progress\n\n\n\nDie Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die Versionierung: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein stable Release gibt.\n\n\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
-  },
-  {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "Überblick",
@@ -270,6 +263,43 @@
     "text": "Fußnoten\n\n\nDer Begriff “Survey” wird in dieser Dokumentation übergreifend verwendet. Im aktuellen Review-Prozess zeichnet sich ab, dass der Begriff “Assessment” besser geeignet ist. Eine Umbenennung in “Assessment Content Package” ist wahrscheinlich.↩︎",
     "crumbs": [
       "Überblick"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "StarS",
+    "section": "",
+    "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\n\n\n\n\nVorsichtWork In Progress\n\n\n\nDie Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die Versionierung: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein stable Release gibt.\n\n\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
+  },
+  {
+    "objectID": "player/index.html",
+    "href": "player/index.html",
+    "title": "StarS-Player",
+    "section": "",
+    "text": "Die Testdurchführung basiert technisch vollständig auf den TBA-Programmierungen des IQB. Das bedeutet, dass\nDie aktuell am IQB für VERA, BKT und Bildungstrend eingesetzten Player erfüllen nicht die Anforderungen aus dem StarS-Projekt. Dies betrifft vor allem die Altersklasse: frühe Primarstufe. Sowohl für die Dastellung (UI) als auch für die Interaktion (UX) müssen neue Wege gegangen werden. Daher wurde ein neuer Player entwickelt, der sich dann aufgrund des modularen Aufbaus der TBA-Technologien problemlos in die vorhandenen Webanwendungen einfügt.",
+    "crumbs": [
+      "StarS-Player"
+    ]
+  },
+  {
+    "objectID": "player/index.html#ausprobieren",
+    "href": "player/index.html#ausprobieren",
+    "title": "StarS-Player",
+    "section": "Ausprobieren",
+    "text": "Ausprobieren\nBitte gehen Sie auf folgenden Link, um die vorbereiteten Testhefte anzuschauen:\n\nLink zu Demo-Testheften\n\nAchtung: Das IQB-Logo in der linken oberen Ecke wird in der tatsächlichen Durchführung ausgeblendet. Dies ist in der Demo-Version nicht möglich.",
+    "crumbs": [
+      "StarS-Player"
+    ]
+  },
+  {
+    "objectID": "player/index.html#herunterladen",
+    "href": "player/index.html#herunterladen",
+    "title": "StarS-Player",
+    "section": "Herunterladen",
+    "text": "Herunterladen\n\n Herunterladen Player \n Herunterladen Aufgaben \n Herunterladen Testhefte \n\n\nIQB-Testcenter\nSollten Sie ein IQB-Testcenter installiert haben, laden Sie bitte die Dateien in der obigen Reihenfolge in einen Arbeitsbereich des Testcenters.\nLegen Sie dann eine Testtaker-Datei dazu, z. B.\n&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n&lt;Testtakers&gt;\n  &lt;Metadata&gt;&lt;/Metadata&gt;\n  &lt;Group id=\"Bsp_Group_StarS\" label=\"Beispiel Gruppe StarS\"&gt;\n    &lt;Login mode=\"run-demo\" name=\"fg65trd#hz\" pw=\"\"&gt;\n      &lt;Booklet&gt;Demoheft_Technikrunde_GT&lt;/Booklet&gt;\n      &lt;Booklet&gt;Demoheft_Technikrunde_ET&lt;/Booklet&gt;\n    &lt;/Login&gt;\n  &lt;/Group&gt;\n&lt;/Testtakers&gt;\n\n\nPlayer-Testbed\nSie können die Units auch über eine lokale Webanwendung ausprobieren, die das IQB zu Testzwecken programmiert hat.\n\nGehen Sie dazu zum letzten Testbed-Release und laden die Html-Datei herunter.\nÖffnen Sie diese Datei lokal im Browser.\nLaden Sie einen Player.\nLaden Sie Units (nur die voud-Dateien).\n\nJede Unit benötigt einen spezifischen Player. Schauen Sie dazu in die XML-Datei der Unit.",
+    "crumbs": [
+      "StarS-Player"
     ]
   },
   {
