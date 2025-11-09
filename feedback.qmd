@@ -22,8 +22,18 @@ Aus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- 
 
 ![Beispiel Kombination Item-Werte und Kompetenzstufen](assets/feedback2.png){width="600" group="feedback"}
 
+# Bausteine für Interpretationen
+
+Die Transformation eines numerischen Fähigkeitswertes in eine Stufenskala ist bereits eine Interpretation. Darüber hinaus könnten im Content Package weitere Testbausteine definiert sein, die -- mit Regeln versehen -- eine Rückmeldung anreichern.
+
 # Verlinkung zu Unterrichtsmaterial
 
 Da die Skalen im Survey Content Package Verlinkungen auf öffentliche Vokabulare enthalten können (z. B. zu KMK-Kompetenzstufen), sind Empfehlungen für die Weiterarbeit im Unterricht automatisch möglich. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentlichen Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen [Quelle: @LeseCheck.2020, S. 3].
 
 ![Beispiel Zuordnung von Unterrichtsmaterial](assets/feedback1.png){width="600" group="feedback"}
+
+# Abgrenzung Rückmeldungen
+
+Es ist nicht einfach, die Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-CodingService zu klären (zum Vergrößern auf das Bild klicken):
+
+![Strukturschema Rückmeldung](assets/feedback3.png){width="600" group="feedback"}
