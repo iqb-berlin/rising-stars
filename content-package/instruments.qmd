@@ -28,7 +28,7 @@ Es sind alle Units aufgeführt, die in diesem Abschnitt verwendet werden. Jede U
   - wenn `useUnitAliasAsPrefix` 'true' ist (Standardwert), dann ist die Item-Id nur innerhalb der Unit eindeutig und benötigt zur externen Referenzierbarkeit die Unit-Id als Präfix.
   - `name` kann als Beschriftung in Listen verwendet werden
   - `sourceVariable` bezeichnet die Variable, die nach der Kodierung den Score oder den Code für das Item liefert.
-* `dependencies`: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein `type` anzugeben. Die möglichen Ausprägungen `UNIT_XML`, `CODING_SCHEME`, `METADATA`, `UI_DEFINITION`, `PLAYER`, `PLAYER_DEPENDENCY`, `WIDGET` ermöglichen eine korrekte Zuordnung zu Funktionen.
+* `dependencies`: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein `type` anzugeben. Die möglichen Ausprägungen `UNIT_INDEX`, `UNIT_CODING_SCHEME`, `UNIT_METADATA`, `UNIT_UI_DEFINITION`, `PLAYER`, `PLAYER_DEPENDENCY`, `WIDGET` ermöglichen eine korrekte Zuordnung zu Funktionen.
 
 # `bookletModules`
 
