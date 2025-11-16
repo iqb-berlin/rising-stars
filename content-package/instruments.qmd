@@ -2,6 +2,8 @@
 lang: de
 title: "ACP-Index: Instrumente"
 lightbox: true
+aliases: 
+  - "/survey-content/instruments.html"
 ---
 
 Die folgenden Parameter sind Teil der Datenstruktur `assessmentPart`. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.

@@ -7,6 +7,8 @@ format:
         other-links:
             - text: Spezifikation ACP-Index
               href: https://iqb-specifications.github.io/acp-index
+aliases: 
+  - "/survey-content/index.html"
 ---
 
 Unter einem Assessment Content Package ACP verstehen wir alle Daten, die für eine Lernstandserhebung unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um

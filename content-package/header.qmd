@@ -1,6 +1,8 @@
 ---
 lang: de
 title: "ACP-Index: Allgemeine Daten"
+aliases: 
+  - "/survey-content/header.html"
 ---
 
 # `packageId`

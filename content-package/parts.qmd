@@ -1,6 +1,8 @@
 ---
 lang: de
 title: "ACP-Index: Abschnitte"
+aliases: 
+  - "/survey-content/parts.html"
 ---
 
 Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `assessmentPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
