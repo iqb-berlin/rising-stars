@@ -1,17 +1,18 @@
 ---
 lang: de
-title: Survey Content Package
+title: Assessment Content Package
+description: Inhaltspaket für die Durchführung von Lernstandserhebungen
 format:
     html:
         other-links:
-            - text: Spezifikation SCP-Index
-              href: https://iqb-specifications.github.io/scp-index
+            - text: Spezifikation ACP-Index
+              href: https://iqb-specifications.github.io/acp-index
 ---
 
-Unter einem Survey Content Package SCP verstehen wir alle Daten, die unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um
+Unter einem Assessment Content Package ACP verstehen wir alle Daten, die für eine Lernstandserhebung unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um
 
-* **SCP-Index**: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),
-* **Content-Dateien**: Dateien in verschiedenen Formaten, die für die Durchführung über das Testcenter gedacht sind sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.).
+* **ACP-Index**: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),
+* **Content-Dateien**: Dateien in verschiedenen Formaten für die Durchführung sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.). Als technische Basis werden Verona-Module vorausgesetzt. Es sind außerdem viele spezifische Dateien und Datenstrukturen enhalten, die die Durchführung über das IQB-Testcenter unterstützen.
 
 Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:
 
@@ -19,22 +20,20 @@ Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Inst
 * ggf. Leistungsdaten der Testpersonen aus vorangegangenen Testungen zum Vergleich
 * ggf. Leistungsdaten auf Landes- oder Regionalebene zum Vergleich
 
-Folgende Informationen enthält der SCP-Index:
+Auf den folgenden Seiten finden Sie die Erläuterungen für die Spezifikation des ACP-Index. Folgende Informationen enthält der ACP-Index:
 
-* [Kopfdaten](header.qmd): Allgemeine Angaben wie ID, Name und Version für das SCP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die SCP-Verwaltung benötigen.
+* [Allgemeine Daten](header.qmd): Allgemeine Angaben wie ID, Name und Version für das ACP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die ACP-Verwaltung benötigen.
 * [Abschnitte](parts.qmd) des Index
 * [Module und Testhefte](instruments.qmd), z. B. Testmaterial für das Testcenter
 * [Itemlisten](items.qmd) und [Skalenbuch](scales.qmd): Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden
 
 Aktuell noch nicht spezifiziert:
 
-* Orientierungswerte für die Rückmeldung aus Pilotierungen oder Normierungen
 * Material zur Unterstützung der Rückmeldung (didaktische Handreichungen)
-* Skalen aus typischen Fehlern (*misconceptions*; Quelle wäre hier der Code einer Antwort, nicht der Score)
-* Übergabe von Vertrauensintervallen bei WLE-Schätzungen (für VERA wichtig)
+* Textbausteine für die Rückmeldung
+* Copyright-Informationen für die Aufgaben
 
 **Spezifikationen**
 
-* [Spezifikation für den Index](https://iqb-specifications.github.io/scp-index)
-* [Beispiel für den Index](https://github.com/iqb-specifications/scp-index/blob/main/test/index_1.json)
-* [Metadaten-Profile für SCP](https://iqb-vocabs.github.io/p44/)
+* [Spezifikation für den Index](https://iqb-specifications.github.io/acp-index)
+* [Metadaten-Profile für ACP](https://iqb-vocabs.github.io/p44/)

@@ -38,11 +38,14 @@ website:
       - section: Content Package
         href: content-package/index.qmd
         contents:
-          - content-package/header.qmd
-          - content-package/parts.qmd
-          - content-package/instruments.qmd
-          - content-package/items.qmd
-          - content-package/scales.qmd
+          - text: Allgemeine Angaben
+            href: content-package/header.qmd
+          - text: Abschnitte
+            href: content-package/parts.qmd
+          - text: Instrumente
+            href: content-package/instruments.qmd
+          - text: Fähigkeitswerte
+            href: content-package/scales.qmd
 
       - section: Coding-Service
         href: coding-service/index.qmd

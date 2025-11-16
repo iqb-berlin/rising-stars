@@ -1,18 +1,18 @@
 ---
 lang: de
-title: Abschnitte
+title: "ACP-Index: Abschnitte"
 ---
 
-Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `surveyPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
+Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `assessmentPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
 
 Auf dieser Seite finden Sie die allgemeinen Parameter eines Abschnittes sowie Angaben für Zusatzdokumente. Folgende Abschnittsparameter sind auf separaten Seiten beschrieben:
 
-* `bookletModules`, `instruments` und `items` auf der Seite [Instrumente](instruments.qmd),
-* `baseScales` und `derivedScales` auf der Seite [Skalen](scales.qmd)
+* `bookletModules`, `instruments` und `units` auf der Seite [Instrumente](instruments.qmd),
+* `baseScales`, `derivedScales` und `aggregatedScales` auf der Seite [Skalen](scales.qmd)
 
 # `id`, `name`, `description`
 
-Aus welchem Grund das Inhaltspaket SCP in Abschnitte aufgeteilt wird, kann variieren. Üblicherweise folgt dies Testdomänen -- also Mathematik, Sprache usw. -- oder zeitlichen Phasen bei Testungen, die über mehrere Testzeitpunkte durchgeführt werden. Bei StarS trifft letzteres zu, d. h. für jeden Messzeitpunkt gibt es einen Abschnitt.
+Aus welchem Grund das Inhaltspaket ACP in Abschnitte aufgeteilt wird, kann variieren. Üblicherweise folgt dies Testdomänen -- also Mathematik, Sprache usw. -- oder zeitlichen Phasen bei Testungen, die über mehrere Testzeitpunkte durchgeführt werden. Bei StarS trifft letzteres zu, d. h. für jeden Messzeitpunkt gibt es einen Abschnitt.
 
 Im Datenmanagement müssen dann natürlich ein verlässlicher Bezug zu einem Abschnitt `id` sowie Erläuterungen über die Datenfelder `name` und `description` hinterlegt sein. In Auswahllisten oder Protokollen kann dann der Abschnitt gut identifiziert werden.
 
@@ -40,7 +40,9 @@ Im Datenmanagement müssen dann natürlich ein verlässlicher Bezug zu einem Abs
 
 {{< include ../_metadata.qmd >}}
 
-# `supportingDocuments`
+Beispiele: Klassenstufe, Für SPF geeignet, Erhebungseinheit
+
+# `additionalDocuments`
 
 An dieser Stelle werden Dokumente gelistet, die Teil des Inhaltspaketes für diesen Abschnitt sind, aber keinen direkten Bezug zur Testdurchführung haben. Eine Erhebung benötigt üblicherweise zahlreiche Handreichungen für die Beteiligten, um die Prozesse zu erläutern, zu schulen oder Möglichkeiten aufzuzeigen, mit den Ergebnissen den Unterricht zu verbessern. Die Metadaten helfen Fachanwendungen, das Material an der richtigen Stelle anzubieten bzw. in die Prozesse einzubeziehen.
 

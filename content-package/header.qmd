@@ -1,6 +1,6 @@
 ---
 lang: de
-title: Kopfdaten
+title: "ACP-Index: Allgemeine Daten"
 ---
 
 # `packageId`
@@ -59,6 +59,8 @@ Es sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich
 
 {{< include ../_metadata.qmd >}}
 
+Beispiele: Schulform, Untersuchungsdesign, Erhebungsverfahren
+
 # `codingParameters`
 
 Über diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.
@@ -68,7 +70,6 @@ Es sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich
   - `NO_CREDIT` steht für eine völlig falsche Antwort. Standardwert ist `0`
   - `MISSING` weist auf eine fehlende Antwort hin. Der Grund ist an dieser Stelle nicht wichtig, aber es wäre eine Verfälschung der Daten, wenn man hier mit "falsch" oder "richtig" in die Datenanalyse gehen würde. Standardwert ist `-99`
 * `statusMapping`: Wenn der Status der Quellvariablen `CODING_COMPLETE` erreicht wurde, wird deren Score in die Itemmatrix übernommen. Für alle anderen Status-Werte muss definiert werden, welcher Itemwert gewählt wird: `NO_CREDIT` oder `MISSING`. Dies erfolgt über diesen Parameter.
-* `minItemsPercent`: Mindestzahl der Items, die für eine Skale beantwortet sein müssen, damit die Skale für die Testperson berechnet wird (Prozent)
 
 ```json
 {
@@ -85,32 +86,23 @@ Es sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich
         "status": [
           "UNSET",
           "NOT_REACHED",
-          "DISPLAYED",
-          "VALUE_CHANGED",
-          "DERIVE_ERROR"
+          "DISPLAYED"
         ]
       },
       {
         "itemValue": 0,
         "status": [
-          "NO_CODING",
           "INVALID",
-          "CODING_INCOMPLETE",
-          "CODING_ERROR",
-          "PARTLY_DISPLAYED",
-          "DERIVE_PENDING",
-          "INTENDED_INCOMPLETE",
-          "CODE_SELECTION_PENDING"
+          "CODING_ERROR"
         ]
       }
-    ],
-    "minItemsPercent": 60
+    ]
   }
 }
 ```
 
-# Abschnitte: `surveyParts`
+# Abschnitte: `assessmentParts`
 
-Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `surveyPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
+Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `assessmentPart`. Die großen Studien des IQB "Bidungstrend" und "VERA" sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
 
-Auf den folgenden Seiten finden Sie die Eigenschaften des `surveyPart`-Objektes.
+Auf den folgenden Seiten finden Sie die Eigenschaften des `assessmentPart`-Objektes.
