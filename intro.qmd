@@ -4,20 +4,20 @@ title: Überblick
 lightbox: true
 ---
 
-Die hier beschriebenen Datenstrukturen beziehen sich auf **Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen**. Dafür wird der Begriff "Test" im allgemeineren Sinne verwendet. Im Englischen steht "Survey" für Befragungen.
+Die hier beschriebenen Datenstrukturen beziehen sich auf **Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen**. Dafür wird der Begriff "Test" im allgemeineren Sinne verwendet. Im Englischen steht "Assessment" für Leistungstests.
 
 ![](assets/intro1.png){width="600" group="intro"}
 
 Das obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.
 
-Rechts in der Darstellung ist mit "Survey Content Package" der **Testcontent** für den Test dargestellt:
+Rechts in der Darstellung ist mit "Assessment Content Package" der **Testcontent** für den Test dargestellt:
 
 * Für die Testdurchführung sind Testaufgaben (Aufgaben/Units) und deren Anordnung im Test (Booklets) nötig.
 * Für die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.
 * Für die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern (Skalen).
-* Für das Berichten (sog. Rückmeldung) werden Vergleichsdaten bereitgestellt.
+* Für das Berichten (sog. Rückmeldung) werden Textbausteine und Material zur Förderung bzw. zur Unterrichtsentwicklung bereitgestellt.
 
-Sämtliche Daten stellt das IQB im StarS-Projekt über das **Survey Content Package** bereit[^1]. Diese Datenstruktur ist [hier erläutert](survey-content/index.qmd).
+Sämtliche Daten stellt das IQB im StarS-Projekt über das **Assessment Content Package** bereit. Diese Datenstruktur ist [hier erläutert](content-package/index.qmd).
 
 # Software-Komponenten
 
@@ -48,10 +48,8 @@ Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die n�
 
 # Umsetzung in StarS
 
-Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Survey Content Package sind in diesen Webanwendungen bzw. -services implementiert.
+Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Assessment Content Package sind in diesen Webanwendungen bzw. -services implementiert.
 
 Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.
 
 Die Betreiber einer StarS-Installation (Land, Dienstleister) entscheiden gezielt, welche der Komponenten eingesetzt werden. Das obige Schema ist daher als Integrationsschema zu verstehen: Die Komponenten haben dokumentierte Schnittstellen (API) und die Daten sind für den optimalen Austausch genau spezifiziert. Die Seiten dieses Auftrittes thematisieren diese Spezifikationen für die optimale Unterstützung eines flexiblen Testsystems.
-
-[^1]: Der Begriff "Survey" wird in dieser Dokumentation übergreifend verwendet. Im aktuellen Review-Prozess zeichnet sich ab, dass der Begriff "Assessment" besser geeignet ist. Eine Umbenennung in "Assessment Content Package" ist wahrscheinlich.
