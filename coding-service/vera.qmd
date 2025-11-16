@@ -9,20 +9,20 @@ Die Units, die das IQB im Rahmen von [VERA](https://www.iqb.hu-berlin.de/vera/) 
 * Kodieranweisungen für die automatische und manuelle Kodierung
 * Metadaten für die Interpretation der Ergebnisse
 
-Außerdem enthält das [Survey Content Package](../survey-content/index.qmd) Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.
+Außerdem enthält das [Assessment Content Package](../content-package/index.qmd) Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.
 
 ![](../assets/coding-service-vera.png){width="600"}
 
 Aus diesem Grund kann es sinnvoll sein, den CodingService in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:
 
-# Survey Content laden
+# Inhaltspaket laden
 
 Das IQB plant, alle für die Online-Durchführung von VERA relevanten Daten über eine zentrale Stelle auszuliefern. Es handelt sich um zahlreiche
 
 * Daten, die über Spezifikationen in ihrem Format festgelegt sind (XML, JSON usw.) sowie um 
 * Dateien mit spezifischer Funktion (z. B. Testcenter-Booklet).
 
-Das IQB nennt diese Daten **Survey Content Package** - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Der Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als **Survey Content Pool** bezeichnet.
+Das IQB nennt diese Daten **Assessment Content Package** - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Der Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als **Assessment Content Pool** bezeichnet.
 
 Das Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.
 
@@ -52,7 +52,7 @@ Das bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit ge
 
 # Berechnung der Fähigkeitswerte
 
-Über das Survey Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skale Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skale zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
+Über das Inhaltspaket gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skala Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skala zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
 
 Der CodingService versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.
 

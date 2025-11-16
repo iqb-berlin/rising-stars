@@ -16,7 +16,7 @@ In einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson 
 
 # Item- und Skalenwerte
 
-Der CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich `0` und `1` für "richtig" und "falsch", aber auch `-9` für "nicht beantwortet" oder "nicht auswertbar". Im Survey Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skale gehören.
+Der CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich `0` und `1` für "richtig" und "falsch", aber auch `-9` für "nicht beantwortet" oder "nicht auswertbar". Im Assessment Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skala gehören.
 
 Aus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- und Skalenebene kombinieren. Beispiel [Quelle: @Pukrop.2019, S. 233]:
 
@@ -28,12 +28,12 @@ Die Transformation eines numerischen Fähigkeitswertes in eine Stufenskala ist b
 
 # Verlinkung zu Unterrichtsmaterial
 
-Da die Skalen im Survey Content Package Verlinkungen auf öffentliche Vokabulare enthalten können (z. B. zu KMK-Kompetenzstufen), sind Empfehlungen für die Weiterarbeit im Unterricht automatisch möglich. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentlichen Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen [Quelle: @LeseCheck.2020, S. 3].
+Da die Skalen im Assessment Content Package Verlinkungen auf öffentliche Vokabulare enthalten können (z. B. zu KMK-Kompetenzstufen), sind Empfehlungen für die Weiterarbeit im Unterricht automatisch möglich. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentlichen Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen [Quelle: @LeseCheck.2020, S. 3].
 
 ![Beispiel Zuordnung von Unterrichtsmaterial](assets/feedback1.png){width="600" group="feedback"}
 
 # Abgrenzung Rückmeldungen
 
-Es ist nicht einfach, die Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-CodingService zu klären (zum Vergrößern auf das Bild klicken):
+Es ist nicht einfach, die komplexen Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-CodingService zu klären (zum Vergrößern auf das Bild klicken):
 
 ![Strukturschema Rückmeldung](assets/feedback3.png){width="600" group="feedback"}

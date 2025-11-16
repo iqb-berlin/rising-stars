@@ -7,9 +7,9 @@ Im Projekt StarS wird ein Portalsystem entwickelt, das übergreifende Management
 
 ![](../assets/coding-service-stars.png){width="600"}
 
-# Survey Content laden
+# Inhaltspaket laden
 
-Im **Survey Content Package** übermittelt das IQB sämtliche für die Vorbereitung, Durchführung und Auswertung von StarS relevante Daten. Dazu erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten für einen Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist: **Survey Content Pool**.
+Im **Assessment Content Package** übermittelt das IQB sämtliche für die Vorbereitung, Durchführung und Auswertung von StarS relevante Daten. Dazu erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten für einen Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist: **Assessment Content Pool**.
 
 Das Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.
 
@@ -27,6 +27,6 @@ Die Variablen im StarS-Kontext sind komplett automatisch kodierbar. Dazu sind di
 
 # Berechnung der Fähigkeitswerte
 
-Über das Survey Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Alle Skalen sind in StarS eindeutig definiert. Der ermittelte (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
+Über das Assessment Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Alle Skalen sind in StarS eindeutig definiert. Der ermittelte (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
 
 Der CodingService versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.

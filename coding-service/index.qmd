@@ -19,7 +19,7 @@ Die Programmierungen am IQB-CodingService starten, sobald innerhalb des StarS-Pr
 
 # Arbeitsweise
 
-Nach der Installation werden Arbeitsbereiche "Workspaces" eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. "VERA 2027". Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Survey Content Package in den Arbeitsbereich geladen (Json-Datei des SCP-Index und Inhaltsdateien - hier insbes. die Kodieranweisungen der Units). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.
+Nach der Installation werden Arbeitsbereiche "Workspaces" eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. "VERA 2027". Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Assessment Content Package in den Arbeitsbereich geladen (Json-Datei des ACP-Index und Inhaltsdateien - hier insbes. die Kodieranweisungen der Units). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.
 
 Danach wird in je **einem Request** die Kodierung und Analyse für genau **eine Testperson** vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-CodingService:
 
@@ -29,7 +29,7 @@ Danach wird in je **einem Request** die Kodierung und Analyse für genau **eine 
 * Output (s. u. Funktionen):
   * Bewertung für jede Antwort (Kodierung, also Codes und Scores)
   * Alle ermittelten Items mit ihrem numerischen Itemwert
-  * Werte für alle Skalen, die mindestens ein Item der Testperson enthalten oder von einer solchen Skale abgeleitet sind
+  * Werte für alle Skalen, die mindestens ein Item der Testperson enthalten oder von einer solchen Skala abgeleitet sind
 
 Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein "Soll", d. h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten bzw. Zusatzitems gefunden wurden.
 
@@ -55,9 +55,9 @@ Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man 
 
 ## Skalenwerte ermitteln
 
-Im Survey Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:
+Im Assessment Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:
 
-* Liste der Items, die zu dieser Skale beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)
+* Liste der Items, die zu dieser Skala beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)
 * Methode der Ermittlung und dafür nötige Parameter
 
 # API-Dokumentation
