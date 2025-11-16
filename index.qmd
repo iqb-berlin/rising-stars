@@ -1,6 +1,6 @@
 ---
 lang: de
-title: StarS
+title: StarS -- Werkstatt
 description: Architektur und technische Spezifikationen
 format:
     html:

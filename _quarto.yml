@@ -8,7 +8,7 @@ website:
   site-url: https://iqb-berlin.github.io/rising-stars
   favicon: assets/favicon.ico
   repo-url: https://github.com/iqb-berlin/rising-stars
-  title: StarS
+  title: StarS Werkstatt
   page-navigation: true
   navbar:
     pinned: true
@@ -35,14 +35,14 @@ website:
         href: intro.qmd
       - text: StarS-Player
         href: player/index.qmd
-      - section: Survey Content
-        href: survey-content/index.qmd
+      - section: Content Package
+        href: content-package/index.qmd
         contents:
-        - survey-content/header.qmd
-        - survey-content/parts.qmd
-        - survey-content/instruments.qmd
-        - survey-content/items.qmd
-        - survey-content/scales.qmd
+          - content-package/header.qmd
+          - content-package/parts.qmd
+          - content-package/instruments.qmd
+          - content-package/items.qmd
+          - content-package/scales.qmd
 
       - section: Coding-Service
         href: coding-service/index.qmd
