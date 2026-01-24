@@ -39,7 +39,7 @@ Nach dem Request verbleiben keine Information über die Testperson auf dem Serve
 
 # Funktionen
 
-![](../assets/coding-service.png){width="600"}
+![](../assets/response-analyser.png){width="600"}
 
 Die Funktionen bauen aufeinander auf. Sie werden also genau in der Reihenfolge abgearbeitet.
 
