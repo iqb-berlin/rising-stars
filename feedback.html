@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./coding-service/vera.html" rel="prev">
+<link href="./response-analyser/vera.html" rel="prev">
 <link href="./assets/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -58,7 +58,7 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-4938819144343eef1c227903853e4362.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -205,8 +205,8 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./coding-service/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Coding-Service</span></a>
+            <a href="./response-analyser/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ResponseAnalyser</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -214,13 +214,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./coding-service/stars.html" class="sidebar-item-text sidebar-link">
+  <a href="./response-analyser/stars.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Szenario StarS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./coding-service/vera.html" class="sidebar-item-text sidebar-link">
+  <a href="./response-analyser/vera.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Szenario VERA</span></a>
   </div>
 </li>
@@ -272,15 +272,15 @@ div.csl-indent {
 </header>
 
 
-<p>Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der CodingService bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.</p>
-<p>Die Rückmeldungen sind <strong>nicht Gegenstand der Spezifikationen</strong> an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem CodingService eine hinreichende Grundlage für Rückmeldungen sein können.</p>
+<p>Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der ResponseAnalyser bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.</p>
+<p>Die Rückmeldungen sind <strong>nicht Gegenstand der Spezifikationen</strong> an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem ResponseAnalyser eine hinreichende Grundlage für Rückmeldungen sein können.</p>
 <section id="kodierte-antworten" class="level1">
 <h1>Kodierte Antworten</h1>
 <p>In einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson geantwortet hat. Dies kann in einem Verona-kompatiblen System beispielsweise über Replay implementiert werden, d.&nbsp;h. die Aufgabe wird angezeigt und die Antwortdaten der Testperson werden dazu geladen. Außerdem kann mitgeteilt werden, wie die Antworten bewertet wurden (richtig, falsch).</p>
 </section>
 <section id="item--und-skalenwerte" class="level1">
 <h1>Item- und Skalenwerte</h1>
-<p>Der CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich <code>0</code> und <code>1</code> für “richtig” und “falsch”, aber auch <code>-9</code> für “nicht beantwortet” oder “nicht auswertbar”. Im Assessment Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skala gehören.</p>
+<p>Der ResponseAnalyser gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich <code>0</code> und <code>1</code> für “richtig” und “falsch”, aber auch <code>-9</code> für “nicht beantwortet” oder “nicht auswertbar”. Im Assessment Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skala gehören.</p>
 <p>Aus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- und Skalenebene kombinieren. Beispiel <span class="citation" data-cites="Pukrop.2019">(Quelle: <a href="#ref-Pukrop.2019" role="doc-biblioref">Pukrop, 2019, S. 233</a>)</span>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -305,7 +305,7 @@ div.csl-indent {
 </section>
 <section id="abgrenzung-rückmeldungen" class="level1">
 <h1>Abgrenzung Rückmeldungen</h1>
-<p>Es ist nicht einfach, die komplexen Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-CodingService zu klären (zum Vergrößern auf das Bild klicken):</p>
+<p>Es ist nicht einfach, die komplexen Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-ResponseAnalyser zu klären (zum Vergrößern auf das Bild klicken):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="assets/feedback3.png" class="lightbox" data-gallery="feedback" title="Strukturschema Rückmeldung"><img src="assets/feedback3.png" class="img-fluid figure-img" width="600" alt="Strukturschema Rückmeldung"></a></p>
@@ -734,7 +734,7 @@ Pukrop, J. (2019). <em>R<span>ü</span>ckmeldungen aus Schulleistungstests an Le
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./coding-service/vera.html" class="pagination-link" aria-label="Szenario VERA">
+      <a href="./response-analyser/vera.html" class="pagination-link" aria-label="Szenario VERA">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Szenario VERA</span>
       </a>          
   </div>
