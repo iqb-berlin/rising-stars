@@ -31,7 +31,7 @@ Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die n�
 * **IQB-ContentPool**: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.
 * **Schulverwaltungssystem**: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler\*innen liefert.
 * **IQB-Testcenter**: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.
-* **IQB-CodingService**: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.
+* **IQB-ResponseAnalyser**: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.
 * **Dashboard**: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das "Dashboard" in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.
 
 ## Pilotierung und Normierung zur Vorbereitung einer Testung
@@ -48,7 +48,7 @@ Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die n�
 
 # Umsetzung in StarS
 
-Im Projekt StarS stellt das IQB die Komponenten IQB-CodingService, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Assessment Content Package sind in diesen Webanwendungen bzw. -services implementiert.
+Im Projekt StarS stellt das IQB die Komponenten IQB-ResponseAnalyser, IQB-ContentPool und IQB-Testcenter bereit. Alle Datenformate des Assessment Content Package sind in diesen Webanwendungen bzw. -services implementiert.
 
 Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.
 

@@ -1,19 +1,21 @@
 ---
 lang: de
-title: Coding-Service
+title: ResponseAnalyser
 lightbox: true
 format:
     html:
         other-links:
             - text: API-Spezifikation
-              href: https://iqb-specifications.github.io/coding-service-api
+              href: https://iqb-specifications.github.io/response-analyser-api
+aliases: 
+  - "/coding-service/index.html"
 ---
 
-Der IQB-CodingService ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der CodingService mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.
+Der IQB-ResponseAnalyser ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der ResponseAnalyser mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.
 
 ::: {.callout-note}
 
-Die Programmierungen am IQB-CodingService starten, sobald innerhalb des StarS-Projektes die Abstimmung der Spezifikation abgeschlossen ist.
+Die Veröffentlichung eines Prototyps für den IQB-ResponseAnalyser ist Mitte 2026 vorgesehen.
 
 :::
 
@@ -21,7 +23,7 @@ Die Programmierungen am IQB-CodingService starten, sobald innerhalb des StarS-Pr
 
 Nach der Installation werden Arbeitsbereiche "Workspaces" eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. "VERA 2027". Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Assessment Content Package in den Arbeitsbereich geladen (Json-Datei des ACP-Index und Inhaltsdateien - hier insbes. die Kodieranweisungen der Units). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.
 
-Danach wird in je **einem Request** die Kodierung und Analyse für genau **eine Testperson** vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-CodingService:
+Danach wird in je **einem Request** die Kodierung und Analyse für genau **eine Testperson** vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-ResponseAnalyser:
 
 * Input:
   * Alle Antworten der Testperson, egal aus welchen Testheften.
@@ -43,7 +45,7 @@ Die Funktionen bauen aufeinander auf. Sie werden also genau in der Reihenfolge a
 
 ## Kodieren
 
-Die erste Aufgabe des CodingService besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der **Ebene der Variablen** passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.
+Die erste Aufgabe des ResponseAnalyser besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der **Ebene der Variablen** passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.
 
 Im Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d. h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.
 
@@ -62,6 +64,6 @@ Im Assessment Content Package sind Skalen definiert. Darunter sind nominale oder
 
 # API-Dokumentation
 
-Um mit dem IQB-CodingService zu kommunizieren bzw. dessen Funktionen zu nutzen, wurde ein API spezifiziert. Dies an folgender Stelle zu finden:
+Um mit dem IQB-ResponseAnalyser zu kommunizieren bzw. dessen Funktionen zu nutzen, wurde ein API spezifiziert. Dies an folgender Stelle zu finden:
 
 [API-Spezifikation](https://iqb-specifications.github.io/coding-service-api)

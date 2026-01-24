@@ -27,7 +27,7 @@ Auf den folgenden Seiten finden Sie die Erläuterungen für die Spezifikation de
 * [Allgemeine Daten](header.qmd): Allgemeine Angaben wie ID, Name und Version für das ACP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentPool wird diese Daten für die ACP-Verwaltung benötigen.
 * [Abschnitte](parts.qmd) des Index
 * [Module und Testhefte](instruments.qmd), z. B. Testmaterial für das Testcenter
-* [Itemlisten](items.qmd) und [Skalenbuch](scales.qmd): Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden
+* [Skalenbuch](scales.qmd): Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden
 
 Aktuell noch nicht spezifiziert:
 

@@ -1,6 +1,8 @@
 ---
 lang: de
-title: Coding-Service VERA-Szenario
+title: ResponseAnalyser VERA-Szenario
+aliases: 
+  - "/coding-service/vera.html"
 ---
 
 Die Units, die das IQB im Rahmen von [VERA](https://www.iqb.hu-berlin.de/vera/) ausliefert, enthalten viele Daten, die für die länderseitigen Prozesse wichtig sind:
@@ -11,9 +13,9 @@ Die Units, die das IQB im Rahmen von [VERA](https://www.iqb.hu-berlin.de/vera/) 
 
 Außerdem enthält das [Assessment Content Package](../content-package/index.qmd) Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.
 
-![](../assets/coding-service-vera.png){width="600"}
+![](../assets/response-analyser-vera.png){width="600"}
 
-Aus diesem Grund kann es sinnvoll sein, den CodingService in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:
+Aus diesem Grund kann es sinnvoll sein, den ResponseAnalyser in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:
 
 # Inhaltspaket laden
 
@@ -48,12 +50,12 @@ Für eine möglichst aussagekräftige Rückmeldung sollten die Testpersonen Meta
 
 Die Variablen im VERA-Kontext sind teilweise automatisch, teilweise manuell zu kodieren. Einige Länder kodieren zentral, andere dezentral über die Lehrkräfte. Einige Länder möchten auch die automatisch kodierbaren Antworten durch die Lehrkräfte kodieren lassen, einige möchten die Arbeitslast der Lehrkräfte möglichst minimieren und geben während der Kodierung Empfehlungen auch über KI.
 
-Das bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit geben muss, manuell zu kodieren. Die automatisch kodierbaren Antworten können an den CodingService gegeben werden. Das kann zu Anfang erfolgen und/oder zwischendurch, denn nach dem Hinzufügen der manuell kodierten Daten kann es nötig sein, abgeleitete Variablen über einen zweiten Autocoderlauf zu ermitteln.
+Das bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit geben muss, manuell zu kodieren. Die automatisch kodierbaren Antworten können an den ResponseAnalyser gegeben werden. Das kann zu Anfang erfolgen und/oder zwischendurch, denn nach dem Hinzufügen der manuell kodierten Daten kann es nötig sein, abgeleitete Variablen über einen zweiten Autocoderlauf zu ermitteln.
 
 # Berechnung der Fähigkeitswerte
 
 Über das Inhaltspaket gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skala Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skala zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
 
-Der CodingService versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.
+Der ResponseAnalyser versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.
 
 Anschließend kann man die gelieferten Skalenwerte weiter nach Bedarf transformieren.

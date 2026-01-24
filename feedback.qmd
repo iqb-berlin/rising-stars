@@ -6,9 +6,9 @@ csl: assets/apa.csl
 lightbox: true
 ---
 
-Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der CodingService bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.
+Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der ResponseAnalyser bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.
 
-Die Rückmeldungen sind **nicht Gegenstand der Spezifikationen** an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem CodingService eine hinreichende Grundlage für Rückmeldungen sein können.
+Die Rückmeldungen sind **nicht Gegenstand der Spezifikationen** an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem ResponseAnalyser eine hinreichende Grundlage für Rückmeldungen sein können.
 
 # Kodierte Antworten
 
@@ -16,7 +16,7 @@ In einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson 
 
 # Item- und Skalenwerte
 
-Der CodingService gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich `0` und `1` für "richtig" und "falsch", aber auch `-9` für "nicht beantwortet" oder "nicht auswertbar". Im Assessment Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skala gehören.
+Der ResponseAnalyser gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich `0` und `1` für "richtig" und "falsch", aber auch `-9` für "nicht beantwortet" oder "nicht auswertbar". Im Assessment Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skala gehören.
 
 Aus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- und Skalenebene kombinieren. Beispiel [Quelle: @Pukrop.2019, S. 233]:
 
@@ -34,6 +34,6 @@ Da die Skalen im Assessment Content Package Verlinkungen auf öffentliche Vokabu
 
 # Abgrenzung Rückmeldungen
 
-Es ist nicht einfach, die komplexen Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-CodingService zu klären (zum Vergrößern auf das Bild klicken):
+Es ist nicht einfach, die komplexen Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-ResponseAnalyser zu klären (zum Vergrößern auf das Bild klicken):
 
 ![Strukturschema Rückmeldung](assets/feedback3.png){width="600" group="feedback"}

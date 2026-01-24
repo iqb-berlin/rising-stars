@@ -47,12 +47,12 @@ website:
           - text: Fähigkeitswerte
             href: content-package/scales.qmd
 
-      - section: Coding-Service
-        href: coding-service/index.qmd
+      - section: ResponseAnalyser
+        href: response-analyser/index.qmd
         contents:
-        - href: coding-service/stars.qmd
+        - href: response-analyser/stars.qmd
           text: Szenario StarS
-        - href: coding-service/vera.qmd
+        - href: response-analyser/vera.qmd
           text: Szenario VERA
 
       - feedback.qmd
