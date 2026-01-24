@@ -66,4 +66,4 @@ Im Assessment Content Package sind Skalen definiert. Darunter sind nominale oder
 
 Um mit dem IQB-ResponseAnalyser zu kommunizieren bzw. dessen Funktionen zu nutzen, wurde ein API spezifiziert. Dies an folgender Stelle zu finden:
 
-[API-Spezifikation](https://iqb-specifications.github.io/coding-service-api)
+[API-Spezifikation](https://iqb-specifications.github.io/response-analyser-api)

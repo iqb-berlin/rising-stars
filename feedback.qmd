@@ -36,4 +36,4 @@ Da die Skalen im Assessment Content Package Verlinkungen auf öffentliche Vokabu
 
 Es ist nicht einfach, die komplexen Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-ResponseAnalyser zu klären (zum Vergrößern auf das Bild klicken):
 
-![Strukturschema Rückmeldung](assets/feedback3.png){width="600" group="feedback"}
+![Strukturschema Rückmeldung](assets/feedback3.png){width="800" group="feedback"}
