@@ -1,0 +1,78 @@
+---
+lang: de
+title: ContentPool
+---
+
+Der IQB-ContentPool ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern.
+
+::: {.callout-note}
+
+Die Veröffentlichung eines Prototyps für den IQB-ContentPool ist Mitte 2026 vorgesehen.
+
+:::
+
+# Funktionsbereiche
+
+Der ContentPool speichert Daten, die für die Durchführung und Auswertung einer spezifischen Erhebung (Lernstandserhebung oder Befragung) erforderlich sind. Diese inhaltlich zusammengehörenden Daten werden nachfolgend als "Assessment Content Package - ACP" bezeichnet. Dazu gehören:
+
+* Dateien, die im IQB-Testcenter für die Durchführung gebraucht werden. Das betrifft Dateien für die Test-Units (Index-Xml, Metadaten, Kodierschema, UI-Definition), Verona-Player und Testhefte (Aufgabenfolgen),
+* Dateien, die für eine Testung ausgedruckt werden sollen, um die Durchführung zu unterstützen,
+* Regeln, die eine standardisierte Auswertung ermöglichen (Skalendefinitionen)
+
+Ein Assessment Content Package soll langfristig für die folgenden Szenarien bereitgestellt werden:
+
+## Bereitstellung für die Öffentlichkeit
+
+Um bestimmte Technologien oder Erhebungsverfahren besser bekannt zu machen, sind auf vorhandenen öffentlichen Dokumentationen Links platziert. Diese führen in einen ContentPool und ermöglichen jeder unbekannten, nicht autorisierten Person, die für die Nutzung erforderlichen Dateien anzuschauen und herunterzuladen. Es sind einzelne Aufgaben oder Aufgabenfolgen verfügbar.
+
+## Download durch autorisierte Personen
+
+Der ContentPool kann der Übergabepunkt für Leistungen sein: Eine Firma oder Einrichtung erstellt im Auftrag Testinhalte und übergibt an den Auftraggeber die Leistung über einen ContentPool. Der Auftraggeber kann dann nach Autorisierung die für die Nutzung erforderlichen Dateien anschauen und herunterladen.
+
+Dieses Szenario wird beispielsweise genutzt, wenn das IQB die Testinhalte für VERA an die Länder ausliefert.
+
+## Zwischenspeicher/Backup
+
+Es ist auch möglich, dass die Testinhalte (insbes. die Aufgaben) im ContentPool einen vorläufigen Bearbeitungsstand haben. Dann dient der ContentPool als Backup-Lösung oder Zwischenspeicher. Zu einem späteren Zeitpunkt kann eine autorisierte Person die Aufgaben in ein IQB-Studio importieren und bearbeiten.
+
+## Ansicht und Kommentierung von Aufgaben
+
+In diesem Szenario schauen sich autorisierte Personen eine durch den Betreiber des ContentPools vorbereitete Folge von Aufgaben an. Für jede Aufgabe können auch Metadaten und Kodierschema angeschaut werden. Es ist möglich, diese Aufgaben und die darin enthaltenen Items zu kommentieren. Die Kommentare können dann von diesen Personen heruntergeladen werden (z. B. Xlsx). Außerdem kann der Betreiber die Kommentare aller Personen zusammen herunterladen.
+
+Dieses Szenario wird genutzt, wenn Länder die VERA-Aufgaben in einer Vorversion beurteilen sollen, bevor diese Aufgaben in einer Pilotierung eingesetzt werden (sog. Länderreview).
+
+## Ansicht von Items
+
+Items sind innerhalb von Aufgaben definiert. In diesem Szenario schauen sich autorisierte Personen eine durch den Betreiber des ContentPools vorbereitete Folge von Items an. Dazu wird eine Liste aller Items mit allen Metadaten erzeugt. Diese Liste kann sortiert und gefiltert werden. Von dieser Liste kann man direkt in eine Aufgabenansicht wechseln. Außerdem werden Metadaten und Kodierschema der Aufgabe angezeigt.
+
+Dieses Szenario wird genutzt, um die Identifikation von Items zu unterstützen, die einen Wechsel von einer Kompetenzstufe zu einer anderen markieren. Diese Item-Identifikation erfolgt im Rahmen von Expertentreffen für die Erarbeitung eines Kompetenzstufenmodells (sog. Ordered-Item-Booklet für Standard Setting).
+
+# Erste Schritte
+
+## Anlegen eines Assessment Content Packages
+
+Nach der Installation des ContentPools ist mindestens ein Account mit der Rolle "**Application-Admin**" angelegt. Diese Rolle hat folgende Rechte:
+
+* Grundeinstellungen für den ContentPool festlegen: Farbgebung/Theme; Sprache; Logo; Texte für Startseite, Impressum, Datenschutz und Erklärung für Barrierefreiheit; Standard-Einstellungen für ACP-Index
+* Nutzer anlegen und löschen
+* Assessment Content Package anlegen, löschen, umbenennen sowie Zugriffsrechte vergeben (Zuweisen der Rolle "ACP-Manager" für dieses ACP für Nutzer)
+* Anderen Nutzern die Rolle "Application-Admin" geben
+
+Ein Assessment Content Package (ACP) muss also zunächst über einen Nutzer-Account mit der Rolle "Application-Admin" angelegt werden. Alle Personen, die für dieses ACP mit der Rolle "**ACP-Manager**" zugreifen können, haben folgende Rechte für dieses ACP:
+
+* Upload von ACP-Dateien
+* Ändern von ACP-Daten
+* Lese-Zugriff auf ACP erteilen über drei Modelle: Alle (Public), vorhandene Nutzer im ContentPool Rolle **ACP-Reader**, Vergabe von Benutzername und Kennwort für einen zeitbeschränkten Zugriff
+* Freigabe der Funktionen "Download", "Aufgaben kommentieren" und "Itemliste" für den Lese-Zugriff
+* Download von gegebenen Kommentaren
+
+# Upload
+
+## ACP-Index
+
+Für jedes ACP muss genau eine Datei verfügbar sein, die die zentralen Informationen über das ACP enthält. Viele Daten sind in anderen Dateien gespeichert, aber erst über die Referenzierung durch den ACP-Index sind sie nutzbar.
+
+Beim Anlegen des ACP wird ein Standard-ACP-Index automatisch angelegt. Er kann nicht gelöscht werden. Erst durch das Löschen eines ACP im ContentPool wird auch der zugehörige ACP-Index gelöscht.
+
+Ein Upload eines ACP-Index überschreibt einen vorhandenen ACP-Index. Sollte der neue ACP-Index erforderliche Daten (required) nicht enthalten, werden sie automatisch durch Standard-Einstellungen des ContentPools ergänzt.
+

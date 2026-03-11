@@ -57,6 +57,9 @@ website:
 
       - feedback.qmd
 
+      - section: ContentPool
+        href: content-pool/index.qmd
+
 format:
   html:
     theme: yeti
