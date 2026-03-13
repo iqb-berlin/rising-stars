@@ -11,15 +11,31 @@ Die Veröffentlichung eines Prototyps für den IQB-ContentPool ist Mitte 2026 vo
 
 :::
 
-# Funktionsbereiche
+Der ContentPool speichert Daten, die für die Durchführung und Auswertung einer spezifischen Erhebung (Lernstandserhebung oder Befragung) erforderlich sind. Diese inhaltlich zusammengehörenden Daten werden nachfolgend als "Assessment Content Package - ACP" bezeichnet.
 
-Der ContentPool speichert Daten, die für die Durchführung und Auswertung einer spezifischen Erhebung (Lernstandserhebung oder Befragung) erforderlich sind. Diese inhaltlich zusammengehörenden Daten werden nachfolgend als "Assessment Content Package - ACP" bezeichnet. Dazu gehören:
+# Daten des ACP
 
-* Dateien, die im IQB-Testcenter für die Durchführung gebraucht werden. Das betrifft Dateien für die Test-Units (Index-Xml, Metadaten, Kodierschema, UI-Definition), Verona-Player und Testhefte (Aufgabenfolgen),
-* Dateien, die für eine Testung ausgedruckt werden sollen, um die Durchführung zu unterstützen,
-* Regeln, die eine standardisierte Auswertung ermöglichen (Skalendefinitionen)
+## ACP-Index
 
-Ein Assessment Content Package soll langfristig für die folgenden Szenarien bereitgestellt werden:
+Für jedes ACP muss genau je eine Datenstruktur "ACP-Index" verfügbar sein, die die zentralen Informationen über das ACP enthält. Viele Daten sind in anderen Dateien gespeichert, aber erst über die Referenzierung durch den ACP-Index sind sie nutzbar. Beim Anlegen des ACP wird ein ACP-Index automatisch mit Hilfe der Standard-Einstellungen des ContentPools angelegt.
+
+Der ACP-Index kann als eine JSON-Datei exportiert (download) und importiert (upload) werden. Die Datenstruktur ist [hier](https://iqb-specifications.github.io/acp-index/) spezifiziert. Ein Upload eines ACP-Index überschreibt einen vorhandenen ACP-Index. Sollte der neue ACP-Index erforderliche Daten (required) nicht enthalten, werden sie automatisch durch Standard-Einstellungen des ContentPools ergänzt.
+
+Der ContentPool unterstützt das Ändern von Daten des ACP-Index durch verschiedene Formulare, automatische Analysen und Validierungen.
+
+## Dateien
+
+Ein großer Teil der in einem ACP gespeicherten Daten besteht aus Dateien. Diese sind dazu bestimmt, außerhalb des ContentPools in Erhebungen eingesetzt zu werden, beispielsweise durch die Webanwendung IQB-Testcenter. Jede Datei muss im ACP-Index aufgeführt sein und es muss im ACP-Index deklariert werden, welche spezifische Funktion die Datei hat.
+
+Da die Dateien komplexe Erhebungen steuern, müssen sie Daten-Spezifikationen folgen (syntaktische Validität) und innerhalb des ACP konsistent sein  (semantische Validität). Wenn beispielsweise ein Booklet eine Unit über ihre ID referenziert, muss diese Unit im ACP auch vorhanden sein. Eine wichtige Aufgabe des ContentPool ist es, die Dateien zu validieren. Beide Anforderungen - syntaktische und semantische Validierung - führen dazu, dass der ContentPool beim Hochladen von Dateien eine Analyse durchführen und auf mögliche Probleme hinweisen muss.
+
+Die Dateien werden durch den ContentPool nicht verändert. Wenn bei der Validierung Probleme festgestellt werden, müssen die Dateien außerhalb des ContentPool verändert und erneut in den ContentPool hochgeladen werden.
+
+## Versionierung
+
+Zu einem beliebigen Zeitpunkt kann der Bearbeitungsstand eines ACP (ACP-Index plus Dateien) mit einem Zeitstempel markiert werden und wird dann als Snapshot gespeichert. Alle folgenden Änderungen können dann über eine Rückkehr zu diesem Snapshot rückgängig gemacht werden. Ein Snapshot ist mit einem Commit in einem Versionsverwaltungssystem vergleichbar. Zu jedem Snapshot kann es einen Text geben, der die Änderungen zum vorherigen Snapshot aufführt und erläutert. Der ContentPool unterstützt die Auflistung der Änderungen zum vorherigen Snapshot durch Vergleiche von Dateien.
+
+# Nutzungsszenarien eines ACP
 
 ## Bereitstellung für die Öffentlichkeit
 
@@ -47,32 +63,63 @@ Items sind innerhalb von Aufgaben definiert. In diesem Szenario schauen sich aut
 
 Dieses Szenario wird genutzt, um die Identifikation von Items zu unterstützen, die einen Wechsel von einer Kompetenzstufe zu einer anderen markieren. Diese Item-Identifikation erfolgt im Rahmen von Expertentreffen für die Erarbeitung eines Kompetenzstufenmodells (sog. Ordered-Item-Booklet für Standard Setting).
 
-# Erste Schritte
+# Funktionen der allgemeinen Anwendungsverwaltung
 
-## Anlegen eines Assessment Content Packages
+Nach der Installation des ContentPools ist mindestens ein Account mit der Rolle "**Application-Admin**" angelegt. Diese Rolle hat das Recht, folgende Funktionen auszuführen:
 
-Nach der Installation des ContentPools ist mindestens ein Account mit der Rolle "**Application-Admin**" angelegt. Diese Rolle hat folgende Rechte:
-
-* Grundeinstellungen für den ContentPool festlegen: Farbgebung/Theme; Sprache; Logo; Texte für Startseite, Impressum, Datenschutz und Erklärung für Barrierefreiheit; Standard-Einstellungen für ACP-Index
+* Grundeinstellungen für den ContentPool festlegen
+  - Farbgebung/Theme, Sprache, Logo
+  - Texte für Startseite, Impressum, Datenschutz und Erklärung für Barrierefreiheit
+  - Standard-Einstellungen für ACP-Index
 * Nutzer anlegen und löschen
-* Assessment Content Package anlegen, löschen, umbenennen sowie Zugriffsrechte vergeben (Zuweisen der Rolle "ACP-Manager" für dieses ACP für Nutzer)
-* Anderen Nutzern die Rolle "Application-Admin" geben
+* Assessment Content Package anlegen, löschen, umbenennen
+* Nutzern die Rolle "ACP-Manager" zuweisen für ACP
+* Nutzern die Rolle "Application-Admin" zuweisen
 
-Ein Assessment Content Package (ACP) muss also zunächst über einen Nutzer-Account mit der Rolle "Application-Admin" angelegt werden. Alle Personen, die für dieses ACP mit der Rolle "**ACP-Manager**" zugreifen können, haben folgende Rechte für dieses ACP:
+# Funktionen der ACP-Verwaltung
 
-* Upload von ACP-Dateien
-* Ändern von ACP-Daten
-* Lese-Zugriff auf ACP erteilen über drei Modelle: Alle (Public), vorhandene Nutzer im ContentPool Rolle **ACP-Reader**, Vergabe von Benutzername und Kennwort für einen zeitbeschränkten Zugriff
-* Freigabe der Funktionen "Download", "Aufgaben kommentieren" und "Itemliste" für den Lese-Zugriff
-* Download von gegebenen Kommentaren
+Ein Assessment Content Package (ACP) muss vorher über einen Nutzer mit der Rolle "Application-Admin" angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle "**ACP-Manager**" zugewiesen sein. Nach dem Login erhält ein ACP-Manager eine Liste aller ACP, auf die er Zugriff hat, und kann in ein ACP wechseln. Die Rolle ACP-Manager hat das Recht, für das ACP folgende Funktionen auszuführen:
 
-# Upload
+## Allgemeines Datenmanagement
 
-## ACP-Index
+* Ansicht, Upload, Download und Ändern von Daten des ACP-Index
+* Upload und Download von ACP-Dateien
+* Snapshot erzeugen
+* Snapshot wiederherstellen
+* Download und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare
 
-Für jedes ACP muss genau eine Datei verfügbar sein, die die zentralen Informationen über das ACP enthält. Viele Daten sind in anderen Dateien gespeichert, aber erst über die Referenzierung durch den ACP-Index sind sie nutzbar.
+## Nur-Lese-Zugriff auf das ACP erteilen
 
-Beim Anlegen des ACP wird ein Standard-ACP-Index automatisch angelegt. Er kann nicht gelöscht werden. Erst durch das Löschen eines ACP im ContentPool wird auch der zugehörige ACP-Index gelöscht.
+Der ACP-Manager kann einen Nur-Lese-Zugriff auf das ACP erteilen. Hierfür gibt es drei Modelle:
 
-Ein Upload eines ACP-Index überschreibt einen vorhandenen ACP-Index. Sollte der neue ACP-Index erforderliche Daten (required) nicht enthalten, werden sie automatisch durch Standard-Einstellungen des ContentPools ergänzt.
+1. **Keine Beschränkung (Public)**: Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der ACP wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des ACP finden.
+2. **Nutzer des ContentPool**: Ein ACP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das ACP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller ACP, auf die er Zugriff hat, und kann in diese ACP wechseln.
+3. **Benutzername und Kennwort**: Ein ACP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das ACP. Der ACP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein ACP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum ACP.
+
+Die Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.
+
+## Funktionen freigeben und konfigurieren
+
+Folgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung:
+
+* Interaktive Ansicht aller Daten eines ACP-Index
+* Liste aller Units des ACP
+
+Der ACP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:
+
+* Download des ACP-Index
+* Download von Units (Zip-Datei)
+* Download anderer ACP-Dateien
+* Ansicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,
+  - ob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist
+  - ob die Units aus der obigen Liste aller Units des ACP aufgerufen werden können
+  - ob aus Testcenter-Booklets des ACP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht
+  - ob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können
+* Erzeugen und Anzeige einer Liste aus allen Items des ACP; hier kann festgelegt werden,
+  - welche Unit- und Item-Metadaten in die Liste kopiert werden sollen,
+  - ob ein Item bei Klick auf den Listeneintrag angezeigt werden soll
+  - ob bei der Anzeige eines Items zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist
+  - ob die Itemliste gefiltert und sortiert werden kann
+  - ob für Items in der Liste Markierungen vergeben werden können (Tags); welche Tags sind möglich?
+  - ob die gewählte Sortierung, der gewählte Filter und die vergebenen Markierungen nutzerspezifisch gespeichert werden sollen (nur möglich bei Zugriffsbeschränkung)
 
