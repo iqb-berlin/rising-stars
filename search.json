@@ -1,27 +1,5 @@
 [
   {
-    "objectID": "response-analyser/vera.html",
-    "href": "response-analyser/vera.html",
-    "title": "ResponseAnalyser VERA-Szenario",
-    "section": "",
-    "text": "Die Units, die das IQB im Rahmen von VERA ausliefert, enthalten viele Daten, die für die länderseitigen Prozesse wichtig sind:\n\nUI-Definition für die Durchführung über einen Verona-Player (z. B. im Testcenter)\nKodieranweisungen für die automatische und manuelle Kodierung\nMetadaten für die Interpretation der Ergebnisse\n\nAußerdem enthält das Assessment Content Package Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.\n\nAus diesem Grund kann es sinnvoll sein, den ResponseAnalyser in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:\n\nInhaltspaket laden\nDas IQB plant, alle für die Online-Durchführung von VERA relevanten Daten über eine zentrale Stelle auszuliefern. Es handelt sich um zahlreiche\n\nDaten, die über Spezifikationen in ihrem Format festgelegt sind (XML, JSON usw.) sowie um\nDateien mit spezifischer Funktion (z. B. Testcenter-Booklet).\n\nDas IQB nennt diese Daten Assessment Content Package - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Der Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als Assessment Content Pool bezeichnet.\nDas Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.\n\n\n\n\n\n\nTippLänderseitige Änderungen\n\n\n\nWenn ein Land Änderungen an den Testinhalten wünscht, müssen die entsprechenden Teile des Inhaltspaketes ausgetauscht bzw. angepasst werden. Für Units wäre es sinnvoll, die Webanwendung IQB-Studio zu installieren und damit die Änderungen vorzunehmen.\n\n\n\n\nManagement der Personen\nFür die Durchführung von VERA müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten) und als XML in das Testcenter hochzuladen.\nFür eine möglichst aussagekräftige Rückmeldung sollten die Testpersonen Metadaten erhalten. Dies betrifft administrative Zuordnungen (Kreis, Stadt, Schule) oder Personenmerkmale wie “Klassenwiederholer” oder sozioökonomischer Index.\n\n\nTestdurchführung\nDas IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.\nDas Testcenter bzw. der Player liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-ResponseAnalyser müssen die Antworten einer Person zusammengefasst werden.\n\n\nKodierung\nDie Variablen im VERA-Kontext sind teilweise automatisch, teilweise manuell zu kodieren. Einige Länder kodieren zentral, andere dezentral über die Lehrkräfte. Einige Länder möchten auch die automatisch kodierbaren Antworten durch die Lehrkräfte kodieren lassen, einige möchten die Arbeitslast der Lehrkräfte möglichst minimieren und geben während der Kodierung Empfehlungen auch über KI.\nDas bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit geben muss, manuell zu kodieren. Die automatisch kodierbaren Antworten können an den ResponseAnalyser gegeben werden. Das kann zu Anfang erfolgen und/oder zwischendurch, denn nach dem Hinzufügen der manuell kodierten Daten kann es nötig sein, abgeleitete Variablen über einen zweiten Autocoderlauf zu ermitteln.\n\n\nBerechnung der Fähigkeitswerte\nÜber das Inhaltspaket gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skala Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skala zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.\nDer ResponseAnalyser versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.\nAnschließend kann man die gelieferten Skalenwerte weiter nach Bedarf transformieren.\n\n\n\n\n Zurück nach oben",
-    "crumbs": [
-      "ResponseAnalyser",
-      "Szenario VERA"
-    ]
-  },
-  {
-    "objectID": "response-analyser/stars.html",
-    "href": "response-analyser/stars.html",
-    "title": "ResponseAnalyser StarS-Szenario",
-    "section": "",
-    "text": "Im Projekt StarS wird ein Portalsystem entwickelt, das übergreifende Management-Funktionen übernimmt (s. Schema hier). Sollte ein Land ein eigenes Portalsystem einsetzen, ist nachfolgend die Funktion des ResponseAnalyser für StarS genauer beleuchtet.\n\n\nInhaltspaket laden\nIm Assessment Content Package übermittelt das IQB sämtliche für die Vorbereitung, Durchführung und Auswertung von StarS relevante Daten. Dazu erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten für einen Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist: Assessment Content Pool.\nDas Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.\n\n\nManagement der Personen\nFür die Durchführung von StarS müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen bzw. diese Daten aus einem Schulverwaltungssystem importieren. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten).\n\n\nTestdurchführung\nDas IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.\nDas Testcenter bzw. der Player liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-ResponseAnalyser müssen die Antworten einer Person zusammengefasst werden.\n\n\nKodierung\nDie Variablen im StarS-Kontext sind komplett automatisch kodierbar. Dazu sind die Antworten dem ResponseAnalyser zu übergeben.\n\n\nBerechnung der Fähigkeitswerte\nÜber das Assessment Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Alle Skalen sind in StarS eindeutig definiert. Der ermittelte (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.\nDer ResponseAnalyser versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.\n\n\n\n\n Zurück nach oben",
-    "crumbs": [
-      "ResponseAnalyser",
-      "Szenario StarS"
-    ]
-  },
-  {
     "objectID": "player/index.html",
     "href": "player/index.html",
     "title": "StarS-Player",
@@ -52,14 +30,109 @@
     ]
   },
   {
-    "objectID": "content-package/header.html",
-    "href": "content-package/header.html",
-    "title": "ACP-Index: Allgemeine Daten",
+    "objectID": "response-analyser/stars.html",
+    "href": "response-analyser/stars.html",
+    "title": "ResponseAnalyser StarS-Szenario",
     "section": "",
-    "text": "packageId\nDas Inhaltspaket für eine Erhebung muss eine ID haben. Inhalte, die an Länder gegeben wurden oder mit denen umfangreiche Daten erhoben wurden, müssen eindeutig identifizierbar sein. Zusammen mit den Beschreibungen der Testpersonen, den Durchführungsprotokollen und den Ergebnisdaten erhält man ein Archiv, das spätere Analysen ermöglicht. Nur mit einer eindeutigen ID können die richtigen Inhalte wiedergefunden werden.\nEs ist zu empfehlen, Inhaltspakete mit einer gewissen Bedeutung mit einer permanenten ID zu versehen. Beispielsweise bieten w3id oder DOI ausgereifte und einfach zu bedienende Registrierungen langfristig persistenter Datenobjekte. Das IQB nutzt beide Systeme seit langer Zeit für verschiedene Anwendungen und wird voraussichtlich w3id für Inhaltspakete verwenden.\n\n\nversion\nEine Version wird über drei Zahlen und optional einen Suffix beschrieben. Da in der Entwicklungsphase (erste Versionszahl 0), aber auch nach dem ersten Release Überarbeitungen zu erwarten sind, muss es eine verlässliche Information über den letzten oder demnächst zu erwartende Arbeitsstände geben. Das IQB nutzt für Software und für Spezifikation die semantische Versionierung.\nVerglichen mit Software und Spezifikation ist es bei Inhalten recht schwierig zu entscheiden, unter welchen Umständen die erste oder zweite Zahl hochgezählt wird. Daher muss dann in den sog. Release notes ausführlich beschrieben werden, was geändert wurde. Die Release notes sind Teil der Veröffentlichung und nicht Teil der Daten.\n\n\nname, description\nDas Inhaltspaket benötigt einen kurzen Namen und eine Beschreibung, damit man in Listen schnell erkennen kann, ob es relevant für die eigene Arbeit ist oder nicht. Die Einträge hier sind mehrsprachig angelegt.\n{\n \"name\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"IQB VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ],\n  \"description\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Sämtliche Daten und Dokumente für die Online-Durchführung und Auswertung des Durchganges 2027 für VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ]\n}\nAuch wenn es nur eine Sprache geben sollte, müssen ein Array und die Properties lang und value formuliert werden.\n\n\nmaintainerName, maintainerUrl\nBei Testinhalten muss es eine Angabe geben, wer dafür verantwortlich ist. Hierfür gibt es zahlreiche Konzepte und Varianten. Für die vorliegende Datenspezifikation soll ersteinmal “Maintainer” ausreichen - ein Name und eine Url. Hierüber kann man Kontakt aufnehmen.\nWenn Erfahrungen mit Veröffentlichungen vorliegen, wird dies sicher noch erweitert. Dann kann man die Unterscheidung zu Publisher oder Creator schärfen, auch mit Blick auf den Support für Nachfragen.\n\n\nstatus\nAuch dieses Merkmal vereint einige Informationen, die später eventuell separat und detaillierter geführt werden müssen.\n\nIN_DEVELOPMENT ist der erste und default-Wert und zeigt an, dass keine Veröffentlichung erfolgte\nRELEASED_PUBLIC ist eine Veröffentlichung mit einer OER-Lizenz und keiner Zugriffsbeschränkung, z. B. Demo-Pakete.\nRELEASED_CONFIDENTIAL ist eine Veröffentlichung für einen begrenzten Personenkreis. Beispielsweise erfordern die Inhaltspakete für VERA eine Vertraulichkeit, um die Testergebnisse nicht zu verfälschen.\nDISCONTINUED zeigt an, dass das Inhaltspaket nicht mehr unterstützt wird, nicht mehr zu empfehlen ist oder durch ein anderes Inhaltspaket ersetzt wurde.\n\nEs sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich getrennt geführt werden: Reifegrad/Qualität, Vertraulichkeit und Nutzungsrechte.\n\n\nmetadata\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im ACP-Index verwendet werden, finden Sie hier\n\n\nBeispiel Objekt-Metadaten JSON\n\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\nBeispiele: Schulform, Untersuchungsdesign, Erhebungsverfahren\n\n\ncodingParameters\nÜber diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.\n\nitemValues: Die Itemmatrix, die im Anschluss an die Kodierung aus den Antwortdaten erstellt wird, enthält eigentlich keine numerischen Werte. Statt dessen stehen die Zahlen für Kategorien. Es gibt Konventionen dazu, aber eventuell möchte man davon abweichen. In diesem Fall dient die Eigenschaft itemValues dazu, diese Abweichungen zu deklarieren:\n\nFULL_CREDIT steht für die vollständig richtige Antwort. Standardwert ist 1\nNO_CREDIT steht für eine völlig falsche Antwort. Standardwert ist 0\nMISSING weist auf eine fehlende Antwort hin. Der Grund ist an dieser Stelle nicht wichtig, aber es wäre eine Verfälschung der Daten, wenn man hier mit “falsch” oder “richtig” in die Datenanalyse gehen würde. Standardwert ist -99\n\nstatusMapping: Wenn der Status der Quellvariablen CODING_COMPLETE erreicht wurde, wird deren Score in die Itemmatrix übernommen. Für alle anderen Status-Werte muss definiert werden, welcher Itemwert gewählt wird: NO_CREDIT oder MISSING. Dies erfolgt über diesen Parameter.\n\n{\n \"codingParameters\": {\n    \"itemValues\": [\n      {\n        \"type\": \"MISSING\",\n        \"value\": -9\n      }\n    ],\n    \"statusMapping\": [\n      {\n        \"itemValue\": -99,\n        \"status\": [\n          \"UNSET\",\n          \"NOT_REACHED\",\n          \"DISPLAYED\"\n        ]\n      },\n      {\n        \"itemValue\": 0,\n        \"status\": [\n          \"INVALID\",\n          \"CODING_ERROR\"\n        ]\n      }\n    ]\n  }\n}\n\n\nAbschnitte: assessmentParts\nDie wesentlichen inhaltlichen Daten finden sich in der Datenstruktur assessmentPart. Die großen Studien des IQB “Bidungstrend” und “VERA” sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.\nAuf den folgenden Seiten finden Sie die Eigenschaften des assessmentPart-Objektes.\n\n\n\n\n Zurück nach oben",
+    "text": "Im Projekt StarS wird ein Portalsystem entwickelt, das übergreifende Management-Funktionen übernimmt (s. Schema hier). Sollte ein Land ein eigenes Portalsystem einsetzen, ist nachfolgend die Funktion des ResponseAnalyser für StarS genauer beleuchtet.\n\n\nInhaltspaket laden\nIm Assessment Content Package übermittelt das IQB sämtliche für die Vorbereitung, Durchführung und Auswertung von StarS relevante Daten. Dazu erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten für einen Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist: Assessment Content Pool.\nDas Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.\n\n\nManagement der Personen\nFür die Durchführung von StarS müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen bzw. diese Daten aus einem Schulverwaltungssystem importieren. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten).\n\n\nTestdurchführung\nDas IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.\nDas Testcenter bzw. der Player liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-ResponseAnalyser müssen die Antworten einer Person zusammengefasst werden.\n\n\nKodierung\nDie Variablen im StarS-Kontext sind komplett automatisch kodierbar. Dazu sind die Antworten dem ResponseAnalyser zu übergeben.\n\n\nBerechnung der Fähigkeitswerte\nÜber das Assessment Content Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Alle Skalen sind in StarS eindeutig definiert. Der ermittelte (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.\nDer ResponseAnalyser versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "ResponseAnalyser",
+      "Szenario StarS"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html",
+    "href": "response-analyser/index.html",
+    "title": "ResponseAnalyser",
+    "section": "",
+    "text": "Der IQB-ResponseAnalyser ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der ResponseAnalyser mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#kodieren",
+    "href": "response-analyser/index.html#kodieren",
+    "title": "ResponseAnalyser",
+    "section": "Kodieren",
+    "text": "Kodieren\nDie erste Aufgabe des ResponseAnalyser besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der Ebene der Variablen passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.\nIm Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d. h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#item-matrix-erstellen",
+    "href": "response-analyser/index.html#item-matrix-erstellen",
+    "title": "ResponseAnalyser",
+    "section": "Item-Matrix erstellen",
+    "text": "Item-Matrix erstellen\nIm häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d. h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist im Kodierschema der Aufgabe beschrieben: Es wird für das Item eine neue Variable abgeleitet. So oder so liefert als eine Variable aus dem Kodierschema den Wert für das Item. Es ist stets der Score der Variablen, der für den Itemwert verwendet wird.\nDie Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur zwei Dimensionen: Pro Testperson und Item gibt es einen numerischen Wert. Sollte es einen Fehler gegeben haben, wird üblicherweise die Konvention “negativer Wert” (z. B. -99) umgesetzt.",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#skalenwerte-ermitteln",
+    "href": "response-analyser/index.html#skalenwerte-ermitteln",
+    "title": "ResponseAnalyser",
+    "section": "Skalenwerte ermitteln",
+    "text": "Skalenwerte ermitteln\nIm Assessment Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:\n\nListe der Items, die zu dieser Skala beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)\nMethode der Ermittlung und dafür nötige Parameter",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "content-package/instruments.html",
+    "href": "content-package/instruments.html",
+    "title": "ACP-Index: Instrumente",
+    "section": "",
+    "text": "Die folgenden Parameter sind Teil der Datenstruktur assessmentPart. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.\nDie folgende Abbildung zeigt die übliche Struktur eines Erhebungsinstrumentes. Diese wird in den nachfolgenden Parametern abgebildet.",
     "crumbs": [
       "Content Package",
-      "Allgemeine Angaben"
+      "Instrumente"
+    ]
+  },
+  {
+    "objectID": "content-package/instruments.html#id-name-metadata",
+    "href": "content-package/instruments.html#id-name-metadata",
+    "title": "ACP-Index: Instrumente",
+    "section": "id, name, metadata",
+    "text": "id, name, metadata\nIm Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt id sowie Erläuterungen über name hinterlegt sein. Das Instrument selbst ist nicht auf die Sprache festgelegt, d. h. der Name muss wieder mit einer Sprachmarkierung versehen sein.\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im ACP-Index verwendet werden, finden Sie hier\n\n\nBeispiel Objekt-Metadaten JSON\n\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\nBeispiele: Zeit für Durchführung Minuten gesamt, Art der Erhebung, Kopfhörereinsatz",
+    "crumbs": [
+      "Content Package",
+      "Instrumente"
+    ]
+  },
+  {
+    "objectID": "content-package/instruments.html#testcenterbooklet",
+    "href": "content-package/instruments.html#testcenterbooklet",
+    "title": "ACP-Index: Instrumente",
+    "section": "testcenterBooklet",
+    "text": "testcenterBooklet\nDiese Liste enthält alle Sprachvarianten für genau ein Booklet. Jeder Eintrag hat folgende Eigenschaften:\n\nlang: Definition der Sprache dieser Variante\ndefinitionId: ID/Pfad zur XML-Datei, die das Booklet beschreibt und genau so in das Testcenter hochgeladen werden muss.\nmodules: Aufzählung aller Module, die in diesem Booklet verwendet wurden. Die moduleId verweist in die Liste bookletModules des Abschnittes. Es gibt die Möglichkeit, eine Reihenfolge order der Module festzulegen.",
+    "crumbs": [
+      "Content Package",
+      "Instrumente"
+    ]
+  },
+  {
+    "objectID": "content-package/instruments.html#administrationmode",
+    "href": "content-package/instruments.html#administrationmode",
+    "title": "ACP-Index: Instrumente",
+    "section": "administrationMode",
+    "text": "administrationMode\nEs gibt – z. B. bei StarS – Abweichungen vom normalen Szenario “Schüler*in löst Aufgaben”. Das Booklet kann verschiedene Modi der Durchführung haben:\n\nTEST_BY_TEST_TAKER: Der Test/die Befragung wird von derselben Person durchgeführt, deren Fähigkeiten ermittelt werden sollen (Standard),\nTEST_BY_PROCTOR: Der Test wird durch die Lehrkraft/Aufsicht durchgeführt (Dialog/Beobachtung), um die Fähigkeiten einer anderen Person zu erheben,\nSTIMULUS_FOR_TEST_TAKER: Die Testperson geht durch das Booklet, ohne Anworten zu hinterlassen. Sie wird dabei von einer Lehrkraft/Aufsicht begleitet, die die eigentliche Erfassung vornimmt. Im Testcenter wird als Durchführungsmodus RUN_DEMO gewählt, d. h. das Booklet dient mehreren Testpersonen als Stimulus und hinterlässt keine Antwort-Daten.",
+    "crumbs": [
+      "Content Package",
+      "Instrumente"
+    ]
+  },
+  {
+    "objectID": "content-package/instruments.html#handoutsfortesttaker",
+    "href": "content-package/instruments.html#handoutsfortesttaker",
+    "title": "ACP-Index: Instrumente",
+    "section": "handOutsForTestTaker",
+    "text": "handOutsForTestTaker\nEs kann sein, dass für dieses Booklet zusätzliches Material an die Testperson(en) gegeben wird. Entweder dient dieses Material als zusätzlicher Stimulus, oder die Testperson soll eine Handlung damit/darauf ausführen. Beispielsweise soll ein Wort aufgeschrieben oder eine Linie gezogen werden. Die Handlungen der Testperson werden aktuell nicht direkt in die Testergebnisse einbezogen (Scan), sondern es müsste parallel über ein Instrument eine Beobachtung stattfinden, die die Handlung kodiert. Daher kann ein Handout nicht getrennt von einem Instrument definiert werden.\nDie Liste enthält Einträge mit folgenden Eigenschaften:\n\norder kann die Anzeigereihenfolge festlegen.\nmode beschreibt die Art des Einsatzes:\n\nPRINT_SHOW: Ausdruck nur zum Zeigen. Bei Einzeltestungen reicht dann ein Ausdruck pro Testgruppe.\nPRINT_WRITE_DRAW: Ausdruck, auf dem die Testperson schreibt oder zeichnet.\nON_SCREEN: Anzeige auf einem Bildschirm (Tablet, Laptop).\n\nfile setzt eine Referenz zu der Datei, die als Quelle für das Handout dient. Da es mehrere sprachspezifische Varianten geben kann, ist hier ein Array mit den Werten id (ID/Pfad), lang für die Sprachangabe und label für die UI anzugeben. Auch eine Beschreibung description kann hinzugefügt werden.",
+    "crumbs": [
+      "Content Package",
+      "Instrumente"
     ]
   },
   {
@@ -210,6 +283,126 @@
     "text": "Willkommen\nDas Projekt StarS - Stark in die Grundschule starten beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des IQB werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.\n\n\n\n\n\n\nVorsichtWork In Progress\n\n\n\nDie Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die Versionierung: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein stable Release gibt.\n\n\n\n\nLizenz\nAlle Texte und Spezifikationen sind unter der Lizenz CC0 veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. DFG-pdf) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.\n\n\nHaftungsausschluss\nAuf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\n\nTechnische Realisierung\nDieser Webauftritt basiert auf Texten in einer einfachen Syntax Markdown, die anschließend in Html und CSS umgesetzt werden. Hierzu wird Quarto verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen Codeverwaltungssystem gespeichert.\n\n\nKontakt\nHinweise und Anmerkungen richten Sie bitte an Martin Mechtel.\nPostanschrift\nHumboldt-Universität zu Berlin Institut zur Qualitätsentwicklung im Bildungswesen Unter den Linden 6 10099 Berlin\nSitz\nLuisenstr. 56 10117 Berlin Tel: +49 [30] 2093 - 46500 (Zentrale) Fax: +49 [30] 2093 - 46599 E-Mail: iqboffice@iqb.hu-berlin.de\nName und Anschrift der Datenschutzbeauftragten\nFrau Gesine Hoffmann-Holland Unter den Linden 6 10099 Berlin Tel: +49 (30) 2093-20020 E-Mail: datenschutz@uv.hu-berlin.de www.hu-berlin.de/de/datenschutz\n\n\n\n\n Zurück nach oben"
   },
   {
+    "objectID": "content-pool/index.html",
+    "href": "content-pool/index.html",
+    "title": "ContentPool",
+    "section": "",
+    "text": "Der IQB-ContentPool ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern.\nDer ContentPool speichert Daten, die für die Durchführung und Auswertung einer spezifischen Erhebung (Lernstandserhebung oder Befragung) erforderlich sind. Diese inhaltlich zusammengehörenden Daten werden nachfolgend als “Assessment Content Package - ACP” bezeichnet.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#acp-index",
+    "href": "content-pool/index.html#acp-index",
+    "title": "ContentPool",
+    "section": "ACP-Index",
+    "text": "ACP-Index\nFür jedes ACP muss genau je eine Datenstruktur “ACP-Index” verfügbar sein, die die zentralen Informationen über das ACP enthält. Viele Daten sind in anderen Dateien gespeichert, aber erst über die Referenzierung durch den ACP-Index sind sie nutzbar. Beim Anlegen des ACP wird ein ACP-Index automatisch mit Hilfe der Standard-Einstellungen des ContentPools angelegt.\nDer ACP-Index kann als eine JSON-Datei exportiert (download) und importiert (upload) werden. Die Datenstruktur ist hier spezifiziert. Ein Upload eines ACP-Index überschreibt einen vorhandenen ACP-Index. Sollte der neue ACP-Index erforderliche Daten (required) nicht enthalten, werden sie automatisch durch Standard-Einstellungen des ContentPools ergänzt.\nDer ContentPool unterstützt das Ändern von Daten des ACP-Index durch verschiedene Formulare, automatische Analysen und Validierungen.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#dateien",
+    "href": "content-pool/index.html#dateien",
+    "title": "ContentPool",
+    "section": "Dateien",
+    "text": "Dateien\nEin großer Teil der in einem ACP gespeicherten Daten besteht aus Dateien. Diese sind dazu bestimmt, außerhalb des ContentPools in Erhebungen eingesetzt zu werden, beispielsweise durch die Webanwendung IQB-Testcenter. Jede Datei muss im ACP-Index aufgeführt sein und es muss im ACP-Index deklariert werden, welche spezifische Funktion die Datei hat.\nDa die Dateien komplexe Erhebungen steuern, müssen sie Daten-Spezifikationen folgen (syntaktische Validität) und innerhalb des ACP konsistent sein (semantische Validität). Wenn beispielsweise ein Booklet eine Unit über ihre ID referenziert, muss diese Unit im ACP auch vorhanden sein. Eine wichtige Aufgabe des ContentPool ist es, die Dateien zu validieren. Beide Anforderungen - syntaktische und semantische Validierung - führen dazu, dass der ContentPool beim Hochladen von Dateien eine Analyse durchführen und auf mögliche Probleme hinweisen muss.\nDie Dateien werden durch den ContentPool nicht verändert. Wenn bei der Validierung Probleme festgestellt werden, müssen die Dateien außerhalb des ContentPool verändert und erneut in den ContentPool hochgeladen werden.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#versionierung",
+    "href": "content-pool/index.html#versionierung",
+    "title": "ContentPool",
+    "section": "Versionierung",
+    "text": "Versionierung\nZu einem beliebigen Zeitpunkt kann der Bearbeitungsstand eines ACP (ACP-Index plus Dateien) mit einem Zeitstempel markiert werden und wird dann als Snapshot gespeichert. Alle folgenden Änderungen können dann über eine Rückkehr zu diesem Snapshot rückgängig gemacht werden. Ein Snapshot ist mit einem Commit in einem Versionsverwaltungssystem vergleichbar. Zu jedem Snapshot kann es einen Text geben, der die Änderungen zum vorherigen Snapshot aufführt und erläutert. Der ContentPool unterstützt die Auflistung der Änderungen zum vorherigen Snapshot durch Vergleiche von Dateien.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#bereitstellung-für-die-öffentlichkeit",
+    "href": "content-pool/index.html#bereitstellung-für-die-öffentlichkeit",
+    "title": "ContentPool",
+    "section": "Bereitstellung für die Öffentlichkeit",
+    "text": "Bereitstellung für die Öffentlichkeit\nUm bestimmte Technologien oder Erhebungsverfahren besser bekannt zu machen, sind auf vorhandenen öffentlichen Dokumentationen Links platziert. Diese führen in einen ContentPool und ermöglichen jeder unbekannten, nicht autorisierten Person, die für die Nutzung erforderlichen Dateien anzuschauen und herunterzuladen. Es sind einzelne Aufgaben oder Aufgabenfolgen verfügbar.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#download-durch-autorisierte-personen",
+    "href": "content-pool/index.html#download-durch-autorisierte-personen",
+    "title": "ContentPool",
+    "section": "Download durch autorisierte Personen",
+    "text": "Download durch autorisierte Personen\nDer ContentPool kann der Übergabepunkt für Leistungen sein: Eine Firma oder Einrichtung erstellt im Auftrag Testinhalte und übergibt an den Auftraggeber die Leistung über einen ContentPool. Der Auftraggeber kann dann nach Autorisierung die für die Nutzung erforderlichen Dateien anschauen und herunterladen.\nDieses Szenario wird beispielsweise genutzt, wenn das IQB die Testinhalte für VERA an die Länder ausliefert.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#zwischenspeicherbackup",
+    "href": "content-pool/index.html#zwischenspeicherbackup",
+    "title": "ContentPool",
+    "section": "Zwischenspeicher/Backup",
+    "text": "Zwischenspeicher/Backup\nEs ist auch möglich, dass die Testinhalte (insbes. die Aufgaben) im ContentPool einen vorläufigen Bearbeitungsstand haben. Dann dient der ContentPool als Backup-Lösung oder Zwischenspeicher. Zu einem späteren Zeitpunkt kann eine autorisierte Person die Aufgaben in ein IQB-Studio importieren und bearbeiten.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#ansicht-und-kommentierung-von-aufgaben",
+    "href": "content-pool/index.html#ansicht-und-kommentierung-von-aufgaben",
+    "title": "ContentPool",
+    "section": "Ansicht und Kommentierung von Aufgaben",
+    "text": "Ansicht und Kommentierung von Aufgaben\nIn diesem Szenario schauen sich autorisierte Personen eine durch den Betreiber des ContentPools vorbereitete Folge von Aufgaben an. Für jede Aufgabe können auch Metadaten und Kodierschema angeschaut werden. Es ist möglich, diese Aufgaben und die darin enthaltenen Items zu kommentieren. Die Kommentare können dann von diesen Personen heruntergeladen werden (z. B. Xlsx). Außerdem kann der Betreiber die Kommentare aller Personen zusammen herunterladen.\nDieses Szenario wird genutzt, wenn Länder die VERA-Aufgaben in einer Vorversion beurteilen sollen, bevor diese Aufgaben in einer Pilotierung eingesetzt werden (sog. Länderreview).",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#ansicht-von-items",
+    "href": "content-pool/index.html#ansicht-von-items",
+    "title": "ContentPool",
+    "section": "Ansicht von Items",
+    "text": "Ansicht von Items\nItems sind innerhalb von Aufgaben definiert. In diesem Szenario schauen sich autorisierte Personen eine durch den Betreiber des ContentPools vorbereitete Folge von Items an. Dazu wird eine Liste aller Items mit allen Metadaten erzeugt. Diese Liste kann sortiert und gefiltert werden. Von dieser Liste kann man direkt in eine Aufgabenansicht wechseln. Außerdem werden Metadaten und Kodierschema der Aufgabe angezeigt.\nDieses Szenario wird genutzt, um die Identifikation von Items zu unterstützen, die einen Wechsel von einer Kompetenzstufe zu einer anderen markieren. Diese Item-Identifikation erfolgt im Rahmen von Expertentreffen für die Erarbeitung eines Kompetenzstufenmodells (sog. Ordered-Item-Booklet für Standard Setting).",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#allgemeines-datenmanagement",
+    "href": "content-pool/index.html#allgemeines-datenmanagement",
+    "title": "ContentPool",
+    "section": "Allgemeines Datenmanagement",
+    "text": "Allgemeines Datenmanagement\n\nAnsicht, Upload, Download und Ändern von Daten des ACP-Index\nUpload und Download von ACP-Dateien\nSnapshot erzeugen\nSnapshot wiederherstellen\nDownload und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#nur-lese-zugriff-auf-das-acp-erteilen",
+    "href": "content-pool/index.html#nur-lese-zugriff-auf-das-acp-erteilen",
+    "title": "ContentPool",
+    "section": "Nur-Lese-Zugriff auf das ACP erteilen",
+    "text": "Nur-Lese-Zugriff auf das ACP erteilen\nDer ACP-Manager kann einen Nur-Lese-Zugriff auf das ACP erteilen. Hierfür gibt es drei Modelle:\n\nKeine Beschränkung (Public): Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der ACP wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des ACP finden.\nNutzer des ContentPool: Ein ACP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das ACP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller ACP, auf die er Zugriff hat, und kann in diese ACP wechseln.\nBenutzername und Kennwort: Ein ACP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das ACP. Der ACP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein ACP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum ACP.\n\nDie Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
+    "objectID": "content-pool/index.html#funktionen-freigeben-und-konfigurieren",
+    "href": "content-pool/index.html#funktionen-freigeben-und-konfigurieren",
+    "title": "ContentPool",
+    "section": "Funktionen freigeben und konfigurieren",
+    "text": "Funktionen freigeben und konfigurieren\nFolgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung:\n\nInteraktive Ansicht aller Daten eines ACP-Index\nListe aller Units des ACP\n\nDer ACP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:\n\nDownload des ACP-Index\nDownload von Units (Zip-Datei)\nDownload anderer ACP-Dateien\nAnsicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,\n\nob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist\nob die Units aus der obigen Liste aller Units des ACP aufgerufen werden können\nob aus Testcenter-Booklets des ACP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht\nob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können\n\nErzeugen und Anzeige einer Liste aus allen Items des ACP; hier kann festgelegt werden,\n\nwelche Unit- und Item-Metadaten in die Liste kopiert werden sollen,\nob ein Item bei Klick auf den Listeneintrag angezeigt werden soll\nob bei der Anzeige eines Items zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist\nob die Itemliste gefiltert und sortiert werden kann\nob für Items in der Liste Markierungen vergeben werden können (Tags); welche Tags sind möglich?\nob die gewählte Sortierung, der gewählte Filter und die vergebenen Markierungen nutzerspezifisch gespeichert werden sollen (nur möglich bei Zugriffsbeschränkung)",
+    "crumbs": [
+      "ContentPool"
+    ]
+  },
+  {
     "objectID": "content-package/index.html",
     "href": "content-package/index.html",
     "title": "Assessment Content Package",
@@ -231,58 +424,25 @@
     ]
   },
   {
-    "objectID": "content-package/instruments.html",
-    "href": "content-package/instruments.html",
-    "title": "ACP-Index: Instrumente",
+    "objectID": "content-package/header.html",
+    "href": "content-package/header.html",
+    "title": "ACP-Index: Allgemeine Daten",
     "section": "",
-    "text": "Die folgenden Parameter sind Teil der Datenstruktur assessmentPart. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.\nDie folgende Abbildung zeigt die übliche Struktur eines Erhebungsinstrumentes. Diese wird in den nachfolgenden Parametern abgebildet.",
+    "text": "packageId\nDas Inhaltspaket für eine Erhebung muss eine ID haben. Inhalte, die an Länder gegeben wurden oder mit denen umfangreiche Daten erhoben wurden, müssen eindeutig identifizierbar sein. Zusammen mit den Beschreibungen der Testpersonen, den Durchführungsprotokollen und den Ergebnisdaten erhält man ein Archiv, das spätere Analysen ermöglicht. Nur mit einer eindeutigen ID können die richtigen Inhalte wiedergefunden werden.\nEs ist zu empfehlen, Inhaltspakete mit einer gewissen Bedeutung mit einer permanenten ID zu versehen. Beispielsweise bieten w3id oder DOI ausgereifte und einfach zu bedienende Registrierungen langfristig persistenter Datenobjekte. Das IQB nutzt beide Systeme seit langer Zeit für verschiedene Anwendungen und wird voraussichtlich w3id für Inhaltspakete verwenden.\n\n\nversion\nEine Version wird über drei Zahlen und optional einen Suffix beschrieben. Da in der Entwicklungsphase (erste Versionszahl 0), aber auch nach dem ersten Release Überarbeitungen zu erwarten sind, muss es eine verlässliche Information über den letzten oder demnächst zu erwartende Arbeitsstände geben. Das IQB nutzt für Software und für Spezifikation die semantische Versionierung.\nVerglichen mit Software und Spezifikation ist es bei Inhalten recht schwierig zu entscheiden, unter welchen Umständen die erste oder zweite Zahl hochgezählt wird. Daher muss dann in den sog. Release notes ausführlich beschrieben werden, was geändert wurde. Die Release notes sind Teil der Veröffentlichung und nicht Teil der Daten.\n\n\nname, description\nDas Inhaltspaket benötigt einen kurzen Namen und eine Beschreibung, damit man in Listen schnell erkennen kann, ob es relevant für die eigene Arbeit ist oder nicht. Die Einträge hier sind mehrsprachig angelegt.\n{\n \"name\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"IQB VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ],\n  \"description\": [\n    {\n      \"lang\": \"de\",\n      \"value\": \"Sämtliche Daten und Dokumente für die Online-Durchführung und Auswertung des Durchganges 2027 für VERA Vergleichsarbeiten Durchgang 2027\"\n    }\n  ]\n}\nAuch wenn es nur eine Sprache geben sollte, müssen ein Array und die Properties lang und value formuliert werden.\n\n\nmaintainerName, maintainerUrl\nBei Testinhalten muss es eine Angabe geben, wer dafür verantwortlich ist. Hierfür gibt es zahlreiche Konzepte und Varianten. Für die vorliegende Datenspezifikation soll ersteinmal “Maintainer” ausreichen - ein Name und eine Url. Hierüber kann man Kontakt aufnehmen.\nWenn Erfahrungen mit Veröffentlichungen vorliegen, wird dies sicher noch erweitert. Dann kann man die Unterscheidung zu Publisher oder Creator schärfen, auch mit Blick auf den Support für Nachfragen.\n\n\nstatus\nAuch dieses Merkmal vereint einige Informationen, die später eventuell separat und detaillierter geführt werden müssen.\n\nIN_DEVELOPMENT ist der erste und default-Wert und zeigt an, dass keine Veröffentlichung erfolgte\nRELEASED_PUBLIC ist eine Veröffentlichung mit einer OER-Lizenz und keiner Zugriffsbeschränkung, z. B. Demo-Pakete.\nRELEASED_CONFIDENTIAL ist eine Veröffentlichung für einen begrenzten Personenkreis. Beispielsweise erfordern die Inhaltspakete für VERA eine Vertraulichkeit, um die Testergebnisse nicht zu verfälschen.\nDISCONTINUED zeigt an, dass das Inhaltspaket nicht mehr unterstützt wird, nicht mehr zu empfehlen ist oder durch ein anderes Inhaltspaket ersetzt wurde.\n\nEs sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich getrennt geführt werden: Reifegrad/Qualität, Vertraulichkeit und Nutzungsrechte.\n\n\nmetadata\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im ACP-Index verwendet werden, finden Sie hier\n\n\nBeispiel Objekt-Metadaten JSON\n\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\nBeispiele: Schulform, Untersuchungsdesign, Erhebungsverfahren\n\n\ncodingParameters\nÜber diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.\n\nitemValues: Die Itemmatrix, die im Anschluss an die Kodierung aus den Antwortdaten erstellt wird, enthält eigentlich keine numerischen Werte. Statt dessen stehen die Zahlen für Kategorien. Es gibt Konventionen dazu, aber eventuell möchte man davon abweichen. In diesem Fall dient die Eigenschaft itemValues dazu, diese Abweichungen zu deklarieren:\n\nFULL_CREDIT steht für die vollständig richtige Antwort. Standardwert ist 1\nNO_CREDIT steht für eine völlig falsche Antwort. Standardwert ist 0\nMISSING weist auf eine fehlende Antwort hin. Der Grund ist an dieser Stelle nicht wichtig, aber es wäre eine Verfälschung der Daten, wenn man hier mit “falsch” oder “richtig” in die Datenanalyse gehen würde. Standardwert ist -99\n\nstatusMapping: Wenn der Status der Quellvariablen CODING_COMPLETE erreicht wurde, wird deren Score in die Itemmatrix übernommen. Für alle anderen Status-Werte muss definiert werden, welcher Itemwert gewählt wird: NO_CREDIT oder MISSING. Dies erfolgt über diesen Parameter.\n\n{\n \"codingParameters\": {\n    \"itemValues\": [\n      {\n        \"type\": \"MISSING\",\n        \"value\": -9\n      }\n    ],\n    \"statusMapping\": [\n      {\n        \"itemValue\": -99,\n        \"status\": [\n          \"UNSET\",\n          \"NOT_REACHED\",\n          \"DISPLAYED\"\n        ]\n      },\n      {\n        \"itemValue\": 0,\n        \"status\": [\n          \"INVALID\",\n          \"CODING_ERROR\"\n        ]\n      }\n    ]\n  }\n}\n\n\nAbschnitte: assessmentParts\nDie wesentlichen inhaltlichen Daten finden sich in der Datenstruktur assessmentPart. Die großen Studien des IQB “Bidungstrend” und “VERA” sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.\nAuf den folgenden Seiten finden Sie die Eigenschaften des assessmentPart-Objektes.\n\n\n\n\n Zurück nach oben",
     "crumbs": [
       "Content Package",
-      "Instrumente"
+      "Allgemeine Angaben"
     ]
   },
   {
-    "objectID": "content-package/instruments.html#id-name-metadata",
-    "href": "content-package/instruments.html#id-name-metadata",
-    "title": "ACP-Index: Instrumente",
-    "section": "id, name, metadata",
-    "text": "id, name, metadata\nIm Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt id sowie Erläuterungen über name hinterlegt sein. Das Instrument selbst ist nicht auf die Sprache festgelegt, d. h. der Name muss wieder mit einer Sprachmarkierung versehen sein.\nDas IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.\nWeitere Informationen und Literatur finden Sie hier. Die Metadatenprofile, die im ACP-Index verwendet werden, finden Sie hier\n\n\nBeispiel Objekt-Metadaten JSON\n\n{\n  \"metadata\": {\n    \"profileId\": \"https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json\",\n    \"entries\": [\n      {\n        \"id\": \"e1\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Art der Erhebung\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/iqb/v85/dt/1\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Kompetenz- und Leistungsdaten\"\n          }\n        ]\n      },\n      {\n        \"id\": \"kim_type_school\",\n        \"label\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Schulform\"\n          }\n        ],\n        \"value\": [\n          {\n            \"id\": \"https://w3id.org/kim/schularten/s02\"\n          }\n        ],\n        \"valueAsText\": [\n          {\n            \"lang\": \"de\",\n            \"value\": \"Grundschule\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\nBeispiele: Zeit für Durchführung Minuten gesamt, Art der Erhebung, Kopfhörereinsatz",
+    "objectID": "response-analyser/vera.html",
+    "href": "response-analyser/vera.html",
+    "title": "ResponseAnalyser VERA-Szenario",
+    "section": "",
+    "text": "Die Units, die das IQB im Rahmen von VERA ausliefert, enthalten viele Daten, die für die länderseitigen Prozesse wichtig sind:\n\nUI-Definition für die Durchführung über einen Verona-Player (z. B. im Testcenter)\nKodieranweisungen für die automatische und manuelle Kodierung\nMetadaten für die Interpretation der Ergebnisse\n\nAußerdem enthält das Assessment Content Package Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.\n\nAus diesem Grund kann es sinnvoll sein, den ResponseAnalyser in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:\n\nInhaltspaket laden\nDas IQB plant, alle für die Online-Durchführung von VERA relevanten Daten über eine zentrale Stelle auszuliefern. Es handelt sich um zahlreiche\n\nDaten, die über Spezifikationen in ihrem Format festgelegt sind (XML, JSON usw.) sowie um\nDateien mit spezifischer Funktion (z. B. Testcenter-Booklet).\n\nDas IQB nennt diese Daten Assessment Content Package - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Der Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als Assessment Content Pool bezeichnet.\nDas Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.\n\n\n\n\n\n\nTippLänderseitige Änderungen\n\n\n\nWenn ein Land Änderungen an den Testinhalten wünscht, müssen die entsprechenden Teile des Inhaltspaketes ausgetauscht bzw. angepasst werden. Für Units wäre es sinnvoll, die Webanwendung IQB-Studio zu installieren und damit die Änderungen vorzunehmen.\n\n\n\n\nManagement der Personen\nFür die Durchführung von VERA müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten) und als XML in das Testcenter hochzuladen.\nFür eine möglichst aussagekräftige Rückmeldung sollten die Testpersonen Metadaten erhalten. Dies betrifft administrative Zuordnungen (Kreis, Stadt, Schule) oder Personenmerkmale wie “Klassenwiederholer” oder sozioökonomischer Index.\n\n\nTestdurchführung\nDas IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.\nDas Testcenter bzw. der Player liefert die Antworten der Testperson in einem standardisierten Format. Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-ResponseAnalyser müssen die Antworten einer Person zusammengefasst werden.\n\n\nKodierung\nDie Variablen im VERA-Kontext sind teilweise automatisch, teilweise manuell zu kodieren. Einige Länder kodieren zentral, andere dezentral über die Lehrkräfte. Einige Länder möchten auch die automatisch kodierbaren Antworten durch die Lehrkräfte kodieren lassen, einige möchten die Arbeitslast der Lehrkräfte möglichst minimieren und geben während der Kodierung Empfehlungen auch über KI.\nDas bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit geben muss, manuell zu kodieren. Die automatisch kodierbaren Antworten können an den ResponseAnalyser gegeben werden. Das kann zu Anfang erfolgen und/oder zwischendurch, denn nach dem Hinzufügen der manuell kodierten Daten kann es nötig sein, abgeleitete Variablen über einen zweiten Autocoderlauf zu ermitteln.\n\n\nBerechnung der Fähigkeitswerte\nÜber das Inhaltspaket gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skala Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skala zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.\nDer ResponseAnalyser versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.\nAnschließend kann man die gelieferten Skalenwerte weiter nach Bedarf transformieren.\n\n\n\n\n Zurück nach oben",
     "crumbs": [
-      "Content Package",
-      "Instrumente"
-    ]
-  },
-  {
-    "objectID": "content-package/instruments.html#testcenterbooklet",
-    "href": "content-package/instruments.html#testcenterbooklet",
-    "title": "ACP-Index: Instrumente",
-    "section": "testcenterBooklet",
-    "text": "testcenterBooklet\nDiese Liste enthält alle Sprachvarianten für genau ein Booklet. Jeder Eintrag hat folgende Eigenschaften:\n\nlang: Definition der Sprache dieser Variante\ndefinitionId: ID/Pfad zur XML-Datei, die das Booklet beschreibt und genau so in das Testcenter hochgeladen werden muss.\nmodules: Aufzählung aller Module, die in diesem Booklet verwendet wurden. Die moduleId verweist in die Liste bookletModules des Abschnittes. Es gibt die Möglichkeit, eine Reihenfolge order der Module festzulegen.",
-    "crumbs": [
-      "Content Package",
-      "Instrumente"
-    ]
-  },
-  {
-    "objectID": "content-package/instruments.html#administrationmode",
-    "href": "content-package/instruments.html#administrationmode",
-    "title": "ACP-Index: Instrumente",
-    "section": "administrationMode",
-    "text": "administrationMode\nEs gibt – z. B. bei StarS – Abweichungen vom normalen Szenario “Schüler*in löst Aufgaben”. Das Booklet kann verschiedene Modi der Durchführung haben:\n\nTEST_BY_TEST_TAKER: Der Test/die Befragung wird von derselben Person durchgeführt, deren Fähigkeiten ermittelt werden sollen (Standard),\nTEST_BY_PROCTOR: Der Test wird durch die Lehrkraft/Aufsicht durchgeführt (Dialog/Beobachtung), um die Fähigkeiten einer anderen Person zu erheben,\nSTIMULUS_FOR_TEST_TAKER: Die Testperson geht durch das Booklet, ohne Anworten zu hinterlassen. Sie wird dabei von einer Lehrkraft/Aufsicht begleitet, die die eigentliche Erfassung vornimmt. Im Testcenter wird als Durchführungsmodus RUN_DEMO gewählt, d. h. das Booklet dient mehreren Testpersonen als Stimulus und hinterlässt keine Antwort-Daten.",
-    "crumbs": [
-      "Content Package",
-      "Instrumente"
-    ]
-  },
-  {
-    "objectID": "content-package/instruments.html#handoutsfortesttaker",
-    "href": "content-package/instruments.html#handoutsfortesttaker",
-    "title": "ACP-Index: Instrumente",
-    "section": "handOutsForTestTaker",
-    "text": "handOutsForTestTaker\nEs kann sein, dass für dieses Booklet zusätzliches Material an die Testperson(en) gegeben wird. Entweder dient dieses Material als zusätzlicher Stimulus, oder die Testperson soll eine Handlung damit/darauf ausführen. Beispielsweise soll ein Wort aufgeschrieben oder eine Linie gezogen werden. Die Handlungen der Testperson werden aktuell nicht direkt in die Testergebnisse einbezogen (Scan), sondern es müsste parallel über ein Instrument eine Beobachtung stattfinden, die die Handlung kodiert. Daher kann ein Handout nicht getrennt von einem Instrument definiert werden.\nDie Liste enthält Einträge mit folgenden Eigenschaften:\n\norder kann die Anzeigereihenfolge festlegen.\nmode beschreibt die Art des Einsatzes:\n\nPRINT_SHOW: Ausdruck nur zum Zeigen. Bei Einzeltestungen reicht dann ein Ausdruck pro Testgruppe.\nPRINT_WRITE_DRAW: Ausdruck, auf dem die Testperson schreibt oder zeichnet.\nON_SCREEN: Anzeige auf einem Bildschirm (Tablet, Laptop).\n\nfile setzt eine Referenz zu der Datei, die als Quelle für das Handout dient. Da es mehrere sprachspezifische Varianten geben kann, ist hier ein Array mit den Werten id (ID/Pfad), lang für die Sprachangabe und label für die UI anzugeben. Auch eine Beschreibung description kann hinzugefügt werden.",
-    "crumbs": [
-      "Content Package",
-      "Instrumente"
+      "ResponseAnalyser",
+      "Szenario VERA"
     ]
   },
   {
@@ -293,46 +453,6 @@
     "text": "Die Kompetenzdaten werden bei Lernstandserhebungen in den Rückmeldungen an die Lehrkräfte verwendet. Der ResponseAnalyser bzw. andere Analysemethoden liefern diese Werte pro Person, und das Rückmeldesystem verbindet dann verschiedene Personen mit ihren Merkmalen. Es finden diverse Aggregationen statt, die sich auf die Gruppen von Personen (Klasse, Schule, Land) beziehen.\nDie Rückmeldungen sind nicht Gegenstand der Spezifikationen an dieser Stelle. Insbesondere die Aggregationen der Personenwerte bleiben hier offen. Die folgenden Ausführungen sollen dazu anregen zu prüfen, ob die personenbezogenen Daten aus dem ResponseAnalyser eine hinreichende Grundlage für Rückmeldungen sein können.\n\nKodierte Antworten\nIn einer Rückmeldung kann für jede Antwort gezeigt werden, was die Testperson geantwortet hat. Dies kann in einem Verona-kompatiblen System beispielsweise über Replay implementiert werden, d. h. die Aufgabe wird angezeigt und die Antwortdaten der Testperson werden dazu geladen. Außerdem kann mitgeteilt werden, wie die Antworten bewertet wurden (richtig, falsch).\n\n\nItem- und Skalenwerte\nDer ResponseAnalyser gibt die Matrix der Itemwerte aus. Darin sind alle Items mit ihren Werten enthalten, die die Testperson beantwortet hat. Hier finden sich 0 und 1 für “richtig” und “falsch”, aber auch -9 für “nicht beantwortet” oder “nicht auswertbar”. Im Assessment Content Package sind außerdem Skalen definiert, die auch genau angeben, welche Items zu welcher Skala gehören.\nAus diesen Informationen lassen sich Übersichten erzeugen, die Werte auf Item- und Skalenebene kombinieren. Beispiel (Quelle: Pukrop, 2019, S. 233):\n\n\n\nBeispiel Kombination Item-Werte und Kompetenzstufen\n\n\n\n\nBausteine für Interpretationen\nDie Transformation eines numerischen Fähigkeitswertes in eine Stufenskala ist bereits eine Interpretation. Darüber hinaus könnten im Content Package weitere Testbausteine definiert sein, die – mit Regeln versehen – eine Rückmeldung anreichern.\n\n\nVerlinkung zu Unterrichtsmaterial\nDa die Skalen im Assessment Content Package Verlinkungen auf öffentliche Vokabulare enthalten können (z. B. zu KMK-Kompetenzstufen), sind Empfehlungen für die Weiterarbeit im Unterricht automatisch möglich. Vorausetzung dafür ist eine Datenbank mit Material, das dieselben öffentlichen Vokabulare für Metadaten nutzt. Das folgende Beispiel enthält im unteren Bereich Materialempfehlungen (Quelle: Krelle, 2020, S. 3).\n\n\n\nBeispiel Zuordnung von Unterrichtsmaterial\n\n\n\n\nAbgrenzung Rückmeldungen\nEs ist nicht einfach, die komplexen Funktionen einer Rückmeldung einheitlich zu beschreiben. Ein Rückmeldeportal wird stets vielfältige Darstellungen und Unterstützungsangebote enthalten, um den Nutzen aus der Datenerhebung zu maximieren. Die folgende Darstellung versucht nocheimal, den Beitrag von IQB-Inhaltspaket und IQB-ResponseAnalyser zu klären (zum Vergrößern auf das Bild klicken):\n\n\n\nStrukturschema Rückmeldung\n\n\n\n\n\n\n\n Zurück nach obenLiteratur\n\nKrelle, M. (2020). Zur Konzeption des Leseverstehens im Lesecheck: Was wird wie gemessen? ISQ Berlin, Universität Jena. https://www.isq.berlin/wordpress/wp-content/uploads/2020/08/Leseverstehen-und-Lesecheck-Konzept.pdf\n\n\nPukrop, J. (2019). Rückmeldungen aus Schulleistungstests an Lehrkräfte durch interaktive Informationsvisualisierungen. Universität Bremen. https://nbn-resolving.de/urn:nbn:de:gbv:46-00107782-12",
     "crumbs": [
       "Ausblick Rückmeldungen"
-    ]
-  },
-  {
-    "objectID": "response-analyser/index.html",
-    "href": "response-analyser/index.html",
-    "title": "ResponseAnalyser",
-    "section": "",
-    "text": "Der IQB-ResponseAnalyser ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der ResponseAnalyser mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.",
-    "crumbs": [
-      "ResponseAnalyser"
-    ]
-  },
-  {
-    "objectID": "response-analyser/index.html#kodieren",
-    "href": "response-analyser/index.html#kodieren",
-    "title": "ResponseAnalyser",
-    "section": "Kodieren",
-    "text": "Kodieren\nDie erste Aufgabe des ResponseAnalyser besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der Ebene der Variablen passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.\nIm Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d. h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.",
-    "crumbs": [
-      "ResponseAnalyser"
-    ]
-  },
-  {
-    "objectID": "response-analyser/index.html#item-matrix-erstellen",
-    "href": "response-analyser/index.html#item-matrix-erstellen",
-    "title": "ResponseAnalyser",
-    "section": "Item-Matrix erstellen",
-    "text": "Item-Matrix erstellen\nIm häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d. h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist im Kodierschema der Aufgabe beschrieben: Es wird für das Item eine neue Variable abgeleitet. So oder so liefert als eine Variable aus dem Kodierschema den Wert für das Item. Es ist stets der Score der Variablen, der für den Itemwert verwendet wird.\nDie Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur zwei Dimensionen: Pro Testperson und Item gibt es einen numerischen Wert. Sollte es einen Fehler gegeben haben, wird üblicherweise die Konvention “negativer Wert” (z. B. -99) umgesetzt.",
-    "crumbs": [
-      "ResponseAnalyser"
-    ]
-  },
-  {
-    "objectID": "response-analyser/index.html#skalenwerte-ermitteln",
-    "href": "response-analyser/index.html#skalenwerte-ermitteln",
-    "title": "ResponseAnalyser",
-    "section": "Skalenwerte ermitteln",
-    "text": "Skalenwerte ermitteln\nIm Assessment Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:\n\nListe der Items, die zu dieser Skala beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)\nMethode der Ermittlung und dafür nötige Parameter",
-    "crumbs": [
-      "ResponseAnalyser"
     ]
   }
 ]
