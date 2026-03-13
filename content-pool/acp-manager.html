@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Architektur und technische Spezifikationen">
 
-<title>StarS – Werkstatt – StarS Werkstatt</title>
+<title>ContentPool: ACP-Manager – StarS Werkstatt</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,26 +23,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-75db2ca39c76e9e3cc9b6f2f7ce80c85.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../content-pool/acp-views.html" rel="next">
+<link href="../content-pool/index.html" rel="prev">
+<link href="../assets/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-75db2ca39c76e9e3cc9b6f2f7ce80c85.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,49 +72,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Suchen"
   }
 }</script>
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "image": "https://www.iqb.hu-berlin.de/system/img/logo_IQB.png",
-      "url": "https://www.iqb.hu-berlin.de",
-      "sameAs": "https://www.kmk.org/themen/qualitaetssicherung-in-schulen/iqb.html",
-      "logo": "https://www.iqb.hu-berlin.de/system/img/logo_IQB.png",
-      "name": "Institut zur Qualitätsentwicklung im Bildungswesen",
-      "alternateName": "IQB",
-      "description": "Das Institut zur Qualitätsentwicklung im Bildungswesen (IQB) ist eine wissenschaftliche Einrichtung aller 16 Länder der Bundesrepublik Deutschland an der Humboldt-Universität zu Berlin und steht für die gemeinsamen Aktivitäten der Länder im Bereich der Qualitätssicherung und -entwicklung im allgemeinbildenden Schulsystem.",
-      "email": "iqboffice@iqb.hu-berlin.de",
-      "telephone": "+49-30-2093-46500",
-      "address": [{
-        "@type": "PostalAddress",
-        "streetAddress": "Luisenstr. 56",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10117"
-      },{
-        "streetAddress": "Hannoversche Straße 19",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10115"
-      },{
-        "streetAddress": "Schönhauser Allee 10",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10119"
-      }],
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "minValue": 150,
-        "maxValue": 180
-      },
-      "keywords": "technology based assessment, tba, digital assessment, computer based assessment, Testing Assisté par Ordinateur",
-      "vatID": "DE296396660",
-      "iso6523Code": "9930:DE296396660"
-    }
-  </script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -123,11 +84,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/iqb-logo-grey.png" alt="" class="navbar-logo light-content">
-    <img src="./assets/iqb-logo-grey.png" alt="" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo light-content">
+    <img src="../assets/iqb-logo-grey.png" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">StarS Werkstatt</span>
     </a>
   </div>
@@ -153,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">StarS – Werkstatt</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content-pool/index.html">ContentPool</a></li><li class="breadcrumb-item"><a href="../content-pool/acp-manager.html">ACP-Manager</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -175,19 +136,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Überblick</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./player/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../player/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">StarS-Player</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./content-package/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../content-package/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Content Package</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -196,25 +157,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content-package/header.html" class="sidebar-item-text sidebar-link">
+  <a href="../content-package/header.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Allgemeine Angaben</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content-package/parts.html" class="sidebar-item-text sidebar-link">
+  <a href="../content-package/parts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abschnitte</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content-package/instruments.html" class="sidebar-item-text sidebar-link">
+  <a href="../content-package/instruments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instrumente</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content-package/scales.html" class="sidebar-item-text sidebar-link">
+  <a href="../content-package/scales.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fähigkeitswerte</span></a>
   </div>
 </li>
@@ -222,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./response-analyser/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../response-analyser/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ResponseAnalyser</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -231,13 +192,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./response-analyser/stars.html" class="sidebar-item-text sidebar-link">
+  <a href="../response-analyser/stars.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Szenario StarS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./response-analyser/vera.html" class="sidebar-item-text sidebar-link">
+  <a href="../response-analyser/vera.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Szenario VERA</span></a>
   </div>
 </li>
@@ -245,13 +206,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./feedback.html" class="sidebar-item-text sidebar-link">
+  <a href="../feedback.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ausblick Rückmeldungen</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./content-pool/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../content-pool/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ContentPool</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -260,13 +221,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content-pool/acp-manager.html" class="sidebar-item-text sidebar-link">
+  <a href="../content-pool/acp-manager.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ACP-Manager</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content-pool/acp-views.html" class="sidebar-item-text sidebar-link">
+  <a href="../content-pool/acp-views.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ansichten</span></a>
   </div>
 </li>
@@ -282,27 +243,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#willkommen" id="toc-willkommen" class="nav-link active" data-scroll-target="#willkommen">Willkommen</a></li>
-  <li><a href="#lizenz" id="toc-lizenz" class="nav-link" data-scroll-target="#lizenz">Lizenz</a></li>
-  <li><a href="#haftungsausschluss" id="toc-haftungsausschluss" class="nav-link" data-scroll-target="#haftungsausschluss">Haftungsausschluss</a></li>
-  <li><a href="#technische-realisierung" id="toc-technische-realisierung" class="nav-link" data-scroll-target="#technische-realisierung">Technische Realisierung</a></li>
-  <li><a href="#kontakt" id="toc-kontakt" class="nav-link" data-scroll-target="#kontakt">Kontakt</a></li>
+  <li><a href="#allgemeines-datenmanagement" id="toc-allgemeines-datenmanagement" class="nav-link active" data-scroll-target="#allgemeines-datenmanagement">Allgemeines Datenmanagement</a></li>
+  <li><a href="#nur-lese-zugriff-auf-das-acp-erteilen" id="toc-nur-lese-zugriff-auf-das-acp-erteilen" class="nav-link" data-scroll-target="#nur-lese-zugriff-auf-das-acp-erteilen">Nur-Lese-Zugriff auf das ACP erteilen</a></li>
+  <li><a href="#funktionen-freigeben-und-konfigurieren" id="toc-funktionen-freigeben-und-konfigurieren" class="nav-link" data-scroll-target="#funktionen-freigeben-und-konfigurieren">Funktionen freigeben und konfigurieren</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content-pool/index.html">ContentPool</a></li><li class="breadcrumb-item"><a href="../content-pool/acp-manager.html">ACP-Manager</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">StarS – Werkstatt</h1>
+<h1 class="title">ContentPool: ACP-Manager</h1>
 </div>
 
-<div>
-  <div class="description">
-    Architektur und technische Spezifikationen
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -317,45 +271,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="assets/banner.png" class="img-fluid"></p>
-<section id="willkommen" class="level1">
-<h1>Willkommen</h1>
-<p>Das Projekt <a href="https://www.iqb.hu-berlin.de/research/dm/StarS/">StarS - Stark in die Grundschule starten</a> beinhaltet die Entwicklung eines Portalsystems für die Organisation und Durchführung der Lernausgangslagenuntersuchung und Lernentwicklungsdiagnostik durch die Länder sowie die Ausgabe der Ergebnisrückmeldungen für die drei Hauptnutzungsgruppen Bildungsadministration, Schulleitung und Lehrkraft. Unter der Leitung des <a href="https://www.iqb.hu-berlin.de/">IQB</a> werden die Architektur und zahlreiche technische Spezifikationen entwickelt. Um frühzeitig den Dialog über die Integration in die technische Infrastruktur der Länder zu fördern, wird der Entwicklungsprozess an dieser Stelle dokumentiert.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Vorsicht</span>Work In Progress
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Die Spezifikationen befinden sich überwiegend in einer frühen Entwicklungsphase. Achten Sie bitte auf die <a href="https://semver.org/lang/de/">Versionierung</a>: Eine “0” zu Beginn zeigt an, dass noch erhebliche Änderungen eintreten können und es noch kein <em>stable</em> Release gibt.</p>
-</div>
-</div>
+<p>Ein Assessment Content Package (ACP) muss vorher über einen Nutzer mit der Rolle “Application-Admin” angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle “<strong>ACP-Manager</strong>” zugewiesen sein. Nach dem Login erhält ein ACP-Manager eine Liste aller ACP, auf die er Zugriff hat, und kann in ein ACP wechseln. Die Rolle ACP-Manager hat das Recht, für das ACP folgende Funktionen auszuführen:</p>
+<section id="allgemeines-datenmanagement" class="level1">
+<h1>Allgemeines Datenmanagement</h1>
+<ul>
+<li>Ansicht, Upload, Download und Ändern von Daten des ACP-Index</li>
+<li>Upload und Download von ACP-Dateien</li>
+<li>Snapshot erzeugen</li>
+<li>Snapshot wiederherstellen</li>
+<li>Download und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare</li>
+</ul>
 </section>
-<section id="lizenz" class="level1">
-<h1>Lizenz</h1>
-<p>Alle Texte und Spezifikationen sind unter der <a href="https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/">Lizenz CC0</a> veröffentlicht. Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis (s. z. B. <a href="https://www.dfg.de/resource/blob/173732/4166759430af8dc2256f0fa54e009f03/kodex-gwp-data.pdf">DFG-pdf</a>) gebieten gleichwohl, dass die Quellen von Informationen genannt werden sollten.</p>
+<section id="nur-lese-zugriff-auf-das-acp-erteilen" class="level1">
+<h1>Nur-Lese-Zugriff auf das ACP erteilen</h1>
+<p>Der ACP-Manager kann einen Nur-Lese-Zugriff auf das ACP erteilen. Hierfür gibt es drei Modelle:</p>
+<ol type="1">
+<li><strong>Keine Beschränkung (Public)</strong>: Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der ACP wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des ACP finden.</li>
+<li><strong>Nutzer des ContentPool</strong>: Ein ACP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das ACP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller ACP, auf die er Zugriff hat, und kann in diese ACP wechseln.</li>
+<li><strong>Benutzername und Kennwort</strong>: Ein ACP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das ACP. Der ACP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein ACP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum ACP.</li>
+</ol>
+<p>Die Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.</p>
 </section>
-<section id="haftungsausschluss" class="level1">
-<h1>Haftungsausschluss</h1>
-<p>Auf vielen der in diesem Dokument verlinkten Webseiten finden Sie Zusatzmaterialien. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Richtigkeit, Vollständigkeit und Aktualität der Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
-</section>
-<section id="technische-realisierung" class="level1">
-<h1>Technische Realisierung</h1>
-<p>Dieser Webauftritt basiert auf Texten in einer einfachen Syntax <a href="https://markdown.de/">Markdown</a>, die anschließend in Html und CSS umgesetzt werden. Hierzu wird <a href="https://quarto.org/">Quarto</a> verwendet. Sämtliche Dateien für den Inhalt und die Steuerung sind in einem öffentlich zugänglichen <a href="https://github.com/iqb-berlin/rising-stars">Codeverwaltungssystem</a> gespeichert.</p>
-</section>
-<section id="kontakt" class="level1">
-<h1>Kontakt</h1>
-<p>Hinweise und Anmerkungen richten Sie bitte an <a href="mailto:mechtel@iqb.hu-berlin.de">Martin Mechtel</a>.</p>
-<p><strong>Postanschrift</strong></p>
-<p>Humboldt-Universität zu Berlin<br> Institut zur Qualitätsentwicklung im Bildungswesen<br> Unter den Linden 6<br> 10099 Berlin</p>
-<p><strong>Sitz</strong></p>
-<p>Luisenstr. 56<br> 10117 Berlin<br> Tel: +49 [30] 2093 - 46500 (Zentrale)<br> Fax: +49 [30] 2093 - 46599<br> E-Mail: <a href="mailto:iqboffice@iqb.hu-berlin.de">iqboffice@iqb.hu-berlin.de</a></p>
-<p><strong>Name und Anschrift der Datenschutzbeauftragten</strong></p>
-<p>Frau Gesine Hoffmann-Holland<br> Unter den Linden 6<br> 10099 Berlin<br> Tel: +49 (30) 2093-20020<br> E-Mail: <a href="mailto:datenschutz@uv.hu-berlin.de">datenschutz@uv.hu-berlin.de</a><br> <a href="www.hu-berlin.de/de/datenschutz">www.hu-berlin.de/de/datenschutz</a></p>
+<section id="funktionen-freigeben-und-konfigurieren" class="level1">
+<h1>Funktionen freigeben und konfigurieren</h1>
+<p>Folgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung:</p>
+<ul>
+<li>Interaktive Ansicht aller Daten eines ACP-Index</li>
+<li>Liste aller Units des ACP</li>
+</ul>
+<p>Der ACP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:</p>
+<ul>
+<li>Download des ACP-Index</li>
+<li>Download von Units (Zip-Datei)</li>
+<li>Download anderer ACP-Dateien</li>
+<li>Ansicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,
+<ul>
+<li>ob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist</li>
+<li>ob die Units aus der obigen Liste aller Units des ACP aufgerufen werden können</li>
+<li>ob aus Testcenter-Booklets des ACP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht</li>
+<li>ob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können</li>
+</ul></li>
+<li>Erzeugen und Anzeige einer Liste aus allen Items des ACP; hier kann festgelegt werden,
+<ul>
+<li>welche Unit- und Item-Metadaten in die Liste kopiert werden sollen,</li>
+<li>ob ein Item bei Klick auf den Listeneintrag angezeigt werden soll</li>
+<li>ob bei der Anzeige eines Items zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist</li>
+<li>ob die Itemliste gefiltert und sortiert werden kann</li>
+<li>ob für Items in der Liste Markierungen vergeben werden können (Tags); welche Tags sind möglich?</li>
+<li>ob die gewählte Sortierung, der gewählte Filter und die vergebenen Markierungen nutzerspezifisch gespeichert werden sollen (nur möglich bei Zugriffsbeschränkung)</li>
+</ul></li>
+</ul>
 
 
 </section>
@@ -768,13 +733,25 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../content-pool/index.html" class="pagination-link" aria-label="ContentPool">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ContentPool</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../content-pool/acp-views.html" class="pagination-link" aria-label="Ansichten">
+        <span class="nav-page-text">Ansichten</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="../index.html">
 <p><i class="fa-solid fa-house" aria-label="house"></i></p>
 </a>
   </li>  

@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../content-pool/acp-manager.html" rel="next">
 <link href="../feedback.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -210,8 +211,27 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">ContentPool</span></span>
+      <div class="sidebar-item-container"> 
+            <a href="../content-pool/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">ContentPool</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content-pool/acp-manager.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ACP-Manager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content-pool/acp-views.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ansichten</span></a>
+  </div>
+</li>
+      </ul>
   </li>
     </ul>
     </div>
@@ -238,12 +258,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ansicht-von-items" id="toc-ansicht-von-items" class="nav-link" data-scroll-target="#ansicht-von-items">Ansicht von Items</a></li>
   </ul></li>
   <li><a href="#funktionen-der-allgemeinen-anwendungsverwaltung" id="toc-funktionen-der-allgemeinen-anwendungsverwaltung" class="nav-link" data-scroll-target="#funktionen-der-allgemeinen-anwendungsverwaltung">Funktionen der allgemeinen Anwendungsverwaltung</a></li>
-  <li><a href="#funktionen-der-acp-verwaltung" id="toc-funktionen-der-acp-verwaltung" class="nav-link" data-scroll-target="#funktionen-der-acp-verwaltung">Funktionen der ACP-Verwaltung</a>
-  <ul class="collapse">
-  <li><a href="#allgemeines-datenmanagement" id="toc-allgemeines-datenmanagement" class="nav-link" data-scroll-target="#allgemeines-datenmanagement">Allgemeines Datenmanagement</a></li>
-  <li><a href="#nur-lese-zugriff-auf-das-acp-erteilen" id="toc-nur-lese-zugriff-auf-das-acp-erteilen" class="nav-link" data-scroll-target="#nur-lese-zugriff-auf-das-acp-erteilen">Nur-Lese-Zugriff auf das ACP erteilen</a></li>
-  <li><a href="#funktionen-freigeben-und-konfigurieren" id="toc-funktionen-freigeben-und-konfigurieren" class="nav-link" data-scroll-target="#funktionen-freigeben-und-konfigurieren">Funktionen freigeben und konfigurieren</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -344,62 +358,8 @@ Hinweis
 <li>Nutzern die Rolle “ACP-Manager” zuweisen für ACP</li>
 <li>Nutzern die Rolle “Application-Admin” zuweisen</li>
 </ul>
-</section>
-<section id="funktionen-der-acp-verwaltung" class="level1">
-<h1>Funktionen der ACP-Verwaltung</h1>
-<p>Ein Assessment Content Package (ACP) muss vorher über einen Nutzer mit der Rolle “Application-Admin” angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle “<strong>ACP-Manager</strong>” zugewiesen sein. Nach dem Login erhält ein ACP-Manager eine Liste aller ACP, auf die er Zugriff hat, und kann in ein ACP wechseln. Die Rolle ACP-Manager hat das Recht, für das ACP folgende Funktionen auszuführen:</p>
-<section id="allgemeines-datenmanagement" class="level2">
-<h2 class="anchored" data-anchor-id="allgemeines-datenmanagement">Allgemeines Datenmanagement</h2>
-<ul>
-<li>Ansicht, Upload, Download und Ändern von Daten des ACP-Index</li>
-<li>Upload und Download von ACP-Dateien</li>
-<li>Snapshot erzeugen</li>
-<li>Snapshot wiederherstellen</li>
-<li>Download und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare</li>
-</ul>
-</section>
-<section id="nur-lese-zugriff-auf-das-acp-erteilen" class="level2">
-<h2 class="anchored" data-anchor-id="nur-lese-zugriff-auf-das-acp-erteilen">Nur-Lese-Zugriff auf das ACP erteilen</h2>
-<p>Der ACP-Manager kann einen Nur-Lese-Zugriff auf das ACP erteilen. Hierfür gibt es drei Modelle:</p>
-<ol type="1">
-<li><strong>Keine Beschränkung (Public)</strong>: Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der ACP wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des ACP finden.</li>
-<li><strong>Nutzer des ContentPool</strong>: Ein ACP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das ACP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller ACP, auf die er Zugriff hat, und kann in diese ACP wechseln.</li>
-<li><strong>Benutzername und Kennwort</strong>: Ein ACP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das ACP. Der ACP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein ACP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum ACP.</li>
-</ol>
-<p>Die Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.</p>
-</section>
-<section id="funktionen-freigeben-und-konfigurieren" class="level2">
-<h2 class="anchored" data-anchor-id="funktionen-freigeben-und-konfigurieren">Funktionen freigeben und konfigurieren</h2>
-<p>Folgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung:</p>
-<ul>
-<li>Interaktive Ansicht aller Daten eines ACP-Index</li>
-<li>Liste aller Units des ACP</li>
-</ul>
-<p>Der ACP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:</p>
-<ul>
-<li>Download des ACP-Index</li>
-<li>Download von Units (Zip-Datei)</li>
-<li>Download anderer ACP-Dateien</li>
-<li>Ansicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,
-<ul>
-<li>ob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist</li>
-<li>ob die Units aus der obigen Liste aller Units des ACP aufgerufen werden können</li>
-<li>ob aus Testcenter-Booklets des ACP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht</li>
-<li>ob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können</li>
-</ul></li>
-<li>Erzeugen und Anzeige einer Liste aus allen Items des ACP; hier kann festgelegt werden,
-<ul>
-<li>welche Unit- und Item-Metadaten in die Liste kopiert werden sollen,</li>
-<li>ob ein Item bei Klick auf den Listeneintrag angezeigt werden soll</li>
-<li>ob bei der Anzeige eines Items zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist</li>
-<li>ob die Itemliste gefiltert und sortiert werden kann</li>
-<li>ob für Items in der Liste Markierungen vergeben werden können (Tags); welche Tags sind möglich?</li>
-<li>ob die gewählte Sortierung, der gewählte Filter und die vergebenen Markierungen nutzerspezifisch gespeichert werden sollen (nur möglich bei Zugriffsbeschränkung)</li>
-</ul></li>
-</ul>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
@@ -817,6 +777,9 @@ Hinweis
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../content-pool/acp-manager.html" class="pagination-link" aria-label="ACP-Manager">
+        <span class="nav-page-text">ACP-Manager</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

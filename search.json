@@ -246,6 +246,17 @@
     ]
   },
   {
+    "objectID": "content-pool/acp-manager.html",
+    "href": "content-pool/acp-manager.html",
+    "title": "ContentPool: ACP-Manager",
+    "section": "",
+    "text": "Ein Assessment Content Package (ACP) muss vorher über einen Nutzer mit der Rolle “Application-Admin” angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle “ACP-Manager” zugewiesen sein. Nach dem Login erhält ein ACP-Manager eine Liste aller ACP, auf die er Zugriff hat, und kann in ein ACP wechseln. Die Rolle ACP-Manager hat das Recht, für das ACP folgende Funktionen auszuführen:\n\nAllgemeines Datenmanagement\n\nAnsicht, Upload, Download und Ändern von Daten des ACP-Index\nUpload und Download von ACP-Dateien\nSnapshot erzeugen\nSnapshot wiederherstellen\nDownload und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare\n\n\n\nNur-Lese-Zugriff auf das ACP erteilen\nDer ACP-Manager kann einen Nur-Lese-Zugriff auf das ACP erteilen. Hierfür gibt es drei Modelle:\n\nKeine Beschränkung (Public): Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der ACP wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des ACP finden.\nNutzer des ContentPool: Ein ACP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das ACP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller ACP, auf die er Zugriff hat, und kann in diese ACP wechseln.\nBenutzername und Kennwort: Ein ACP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das ACP. Der ACP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein ACP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum ACP.\n\nDie Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.\n\n\nFunktionen freigeben und konfigurieren\nFolgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung:\n\nInteraktive Ansicht aller Daten eines ACP-Index\nListe aller Units des ACP\n\nDer ACP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:\n\nDownload des ACP-Index\nDownload von Units (Zip-Datei)\nDownload anderer ACP-Dateien\nAnsicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,\n\nob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist\nob die Units aus der obigen Liste aller Units des ACP aufgerufen werden können\nob aus Testcenter-Booklets des ACP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht\nob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können\n\nErzeugen und Anzeige einer Liste aus allen Items des ACP; hier kann festgelegt werden,\n\nwelche Unit- und Item-Metadaten in die Liste kopiert werden sollen,\nob ein Item bei Klick auf den Listeneintrag angezeigt werden soll\nob bei der Anzeige eines Items zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist\nob die Itemliste gefiltert und sortiert werden kann\nob für Items in der Liste Markierungen vergeben werden können (Tags); welche Tags sind möglich?\nob die gewählte Sortierung, der gewählte Filter und die vergebenen Markierungen nutzerspezifisch gespeichert werden sollen (nur möglich bei Zugriffsbeschränkung)\n\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "ContentPool",
+      "ACP-Manager"
+    ]
+  },
+  {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "Überblick",
@@ -373,33 +384,58 @@
     ]
   },
   {
-    "objectID": "content-pool/index.html#allgemeines-datenmanagement",
-    "href": "content-pool/index.html#allgemeines-datenmanagement",
-    "title": "ContentPool",
-    "section": "Allgemeines Datenmanagement",
-    "text": "Allgemeines Datenmanagement\n\nAnsicht, Upload, Download und Ändern von Daten des ACP-Index\nUpload und Download von ACP-Dateien\nSnapshot erzeugen\nSnapshot wiederherstellen\nDownload und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare",
+    "objectID": "content-pool/acp-views.html",
+    "href": "content-pool/acp-views.html",
+    "title": "ContentPool: ACP-Ansichten",
+    "section": "",
+    "text": "Im folgenden werden die Nutzungsszenarien eines ACP (Assessment Content Packages) beschrieben. Dies erfolgt in Form sog. User Journeys. Ob diese Nutzungsszenarien für ein ACP zur Verfügung stehen und welche Funktionen jeweils freigegeben sind, wird über die Rolle ACP-Manager definiert.",
     "crumbs": [
-      "ContentPool"
+      "ContentPool",
+      "Ansichten"
     ]
   },
   {
-    "objectID": "content-pool/index.html#nur-lese-zugriff-auf-das-acp-erteilen",
-    "href": "content-pool/index.html#nur-lese-zugriff-auf-das-acp-erteilen",
-    "title": "ContentPool",
-    "section": "Nur-Lese-Zugriff auf das ACP erteilen",
-    "text": "Nur-Lese-Zugriff auf das ACP erteilen\nDer ACP-Manager kann einen Nur-Lese-Zugriff auf das ACP erteilen. Hierfür gibt es drei Modelle:\n\nKeine Beschränkung (Public): Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der ACP wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des ACP finden.\nNutzer des ContentPool: Ein ACP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das ACP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller ACP, auf die er Zugriff hat, und kann in diese ACP wechseln.\nBenutzername und Kennwort: Ein ACP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das ACP. Der ACP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein ACP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum ACP.\n\nDie Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.",
+    "objectID": "content-pool/acp-views.html#ansicht-aufgabenfolge",
+    "href": "content-pool/acp-views.html#ansicht-aufgabenfolge",
+    "title": "ContentPool: ACP-Ansichten",
+    "section": "Ansicht Aufgabenfolge",
+    "text": "Ansicht Aufgabenfolge\nDie Ansicht einer Aufgabenfolge startet mit der Ansicht der ersten in der Aufgabenfolge aufgeführten Unit. Zusätzlich sind ständig zwei Navigationspfeile “Weiter” (gehe zur nächsten Unit) und “Zurück” (gehe zur vorherigen Unit) verfügbar. Diese Navigationspfeile sind ggf. nicht klickbar, wenn die erste oder die letzte Unit angezeigt wird.\nEs ist außerdem ein Button verfügbar, über den man die Liste aller Units (nur Name) aufruft und direkt zu einer Unit der Aufgabenfolge springen kann.\nJe nach Konfiguration steht zusätzlich ein Button zur Verfügung, über den man eine Dialogbox aufrufen kann. Hier kann man einen Kommentar für die Aufgabenfolge insgessamt vergeben.\nJe nach Konfiguration steht zusätzlich ein Button zur Verfügung, über den man alle Units der Aufgabenfolge als Zip-Datei herungerladen kann.",
     "crumbs": [
-      "ContentPool"
+      "ContentPool",
+      "Ansichten"
     ]
   },
   {
-    "objectID": "content-pool/index.html#funktionen-freigeben-und-konfigurieren",
-    "href": "content-pool/index.html#funktionen-freigeben-und-konfigurieren",
-    "title": "ContentPool",
-    "section": "Funktionen freigeben und konfigurieren",
-    "text": "Funktionen freigeben und konfigurieren\nFolgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung:\n\nInteraktive Ansicht aller Daten eines ACP-Index\nListe aller Units des ACP\n\nDer ACP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:\n\nDownload des ACP-Index\nDownload von Units (Zip-Datei)\nDownload anderer ACP-Dateien\nAnsicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,\n\nob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist\nob die Units aus der obigen Liste aller Units des ACP aufgerufen werden können\nob aus Testcenter-Booklets des ACP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht\nob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können\n\nErzeugen und Anzeige einer Liste aus allen Items des ACP; hier kann festgelegt werden,\n\nwelche Unit- und Item-Metadaten in die Liste kopiert werden sollen,\nob ein Item bei Klick auf den Listeneintrag angezeigt werden soll\nob bei der Anzeige eines Items zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist\nob die Itemliste gefiltert und sortiert werden kann\nob für Items in der Liste Markierungen vergeben werden können (Tags); welche Tags sind möglich?\nob die gewählte Sortierung, der gewählte Filter und die vergebenen Markierungen nutzerspezifisch gespeichert werden sollen (nur möglich bei Zugriffsbeschränkung)",
+    "objectID": "content-pool/acp-views.html#ansicht-einer-unit",
+    "href": "content-pool/acp-views.html#ansicht-einer-unit",
+    "title": "ContentPool: ACP-Ansichten",
+    "section": "Ansicht einer Unit",
+    "text": "Ansicht einer Unit\nEine Unit wird so angezeigt, wie sie im IQB-Testcenter im Modus run-review angezeigt wird. Es handelt sich also um einen Verona-Player, der für die Anzeige geladen werden muss. Über Pfeil-Buttons kann man spezifische Seiten anspringen, sofern die Unit mehrere Seiten enthält.\nJe nach Konfiguration können weitere Daten einer Unit angezeigt werden: Metadaten, Kodierschema und RichText (wie z. B. didaktische Handreichungen). Diese Daten verdecken entweder die Unit oder führen zu einer vertikalen Teilung des Bildschirmes: Unit in der linken Hälfte, Zusatzdaten auf der rechten Hälfte.\nJe nach Konfiguration steht ein Button zur Verfügung, über den man eine Dialogbox aufrufen kann. Hier kann man einen Kommentar für die Unit vergeben.\nJe nach Konfiguration steht zusätzlich ein Button zur Verfügung, über den man die Unit als Zip-Datei herungerladen kann.",
     "crumbs": [
-      "ContentPool"
+      "ContentPool",
+      "Ansichten"
+    ]
+  },
+  {
+    "objectID": "content-pool/acp-views.html#ansicht-eines-items",
+    "href": "content-pool/acp-views.html#ansicht-eines-items",
+    "title": "ContentPool: ACP-Ansichten",
+    "section": "Ansicht eines Items",
+    "text": "Ansicht eines Items\nDiese Ansicht deckt sich mit der Unit-Ansicht. Zusätzlich wird zu einer bestimmten Seite gesprungen und zu einer bestimmten Stelle auf der Seite geblättert, so dass das Item sichtbar wird. Außerdem wird das Item optisch hervorgehoben (z. B. farbiger Rahmen).",
+    "crumbs": [
+      "ContentPool",
+      "Ansichten"
+    ]
+  },
+  {
+    "objectID": "content-pool/acp-views.html#ansicht-acp-index",
+    "href": "content-pool/acp-views.html#ansicht-acp-index",
+    "title": "ContentPool: ACP-Ansichten",
+    "section": "Ansicht ACP-Index",
+    "text": "Ansicht ACP-Index\nMan kann durch alle Daten des ACP-Index klicken und verlinkte Dateien anzeigen. Je nach Dateityp wird ein Download angestoßen (z. B. bei PDF, um die lokal zugewiesene Anwendung zu starten) oder man kommt zu einer Ansicht einer Aufgabenfolge (bei Testheft), einer Unit oder einem Item.",
+    "crumbs": [
+      "ContentPool",
+      "Ansichten"
     ]
   },
   {
