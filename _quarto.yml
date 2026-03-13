@@ -59,6 +59,11 @@ website:
 
       - section: ContentPool
         href: content-pool/index.qmd
+        contents:
+        - href: content-pool/acp-manager.qmd
+          text: ACP-Manager
+        - href: content-pool/acp-views.qmd
+          text: Ansichten
 
 format:
   html:
