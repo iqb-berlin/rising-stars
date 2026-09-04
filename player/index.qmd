@@ -12,9 +12,9 @@ Die aktuell am IQB für VERA, BKT und Bildungstrend eingesetzten Player erfülle
 
 # Programmierung
 
-Den aktuellen Stand der Programmierung kann man [hier](https://github.com/iqb-berlin/verona-modules-nemo) einsehen.
+Den aktuellen Stand der Programmierung kann man [hier](https://github.com/iqb-berlin/verona-modules-stars) einsehen.
 
-Für das Herunterladen der jeweils letzten Version des Players bitte zum [Release-Bereich](https://github.com/iqb-berlin/verona-modules-nemo/releases) gehen. Hier ist stets neben den Quelldateien auch die Html-Datei des Players abrufbar.
+Für das Herunterladen der jeweils letzten Version des Players bitte zum [Release-Bereich](https://github.com/iqb-berlin/verona-modules-stars/releases) gehen. Hier ist stets neben den Quelldateien auch die Html-Datei des Players abrufbar.
 
 ::: {.callout-note}
 
