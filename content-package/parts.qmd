@@ -1,6 +1,6 @@
 ---
 lang: de
-title: "ACP-Index: Abschnitte"
+title: "AP-Index: Abschnitte"
 aliases: 
   - "/survey-content/parts.html"
 ---

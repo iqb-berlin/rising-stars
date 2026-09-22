@@ -1,6 +1,6 @@
 ---
 lang: de
-title: "ACP-Index: Instrumente"
+title: "AP-Index: Instrumente"
 lightbox: true
 aliases: 
   - "/survey-content/instruments.html"

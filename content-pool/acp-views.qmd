@@ -1,9 +1,9 @@
 ---
 lang: de
-title: "ContentPool: ACP-Ansichten"
+title: "ContentHub: AP-Ansichten"
 ---
 
-Im folgenden werden die Nutzungsszenarien eines ACP (Assessment Content Packages) beschrieben. Dies erfolgt in Form sog. User Journeys. Ob diese Nutzungsszenarien für ein ACP zur Verfügung stehen und welche Funktionen jeweils freigegeben sind, wird über die Rolle [ACP-Manager](acp-manager.qmd) definiert.
+Im folgenden werden die Nutzungsszenarien eines AP (Assessment Content Packages) beschrieben. Dies erfolgt in Form sog. User Journeys. Ob diese Nutzungsszenarien für ein AP zur Verfügung stehen und welche Funktionen jeweils freigegeben sind, wird über die Rolle [AP-Manager](acp-manager.qmd) definiert.
 
 # Allgemeine Ansichten
 
@@ -31,37 +31,37 @@ Je nach Konfiguration steht zusätzlich ein Button zur Verfügung, über den man
 
 Diese Ansicht deckt sich mit der Unit-Ansicht. Zusätzlich wird zu einer bestimmten Seite gesprungen und zu einer bestimmten Stelle auf der Seite geblättert, so dass das Item sichtbar wird. Außerdem wird das Item optisch hervorgehoben (z. B. farbiger Rahmen).
 
-## Ansicht ACP-Index
+## Ansicht AP-Index
 
-Man kann durch alle Daten des ACP-Index klicken und verlinkte Dateien anzeigen. Je nach Dateityp wird ein Download angestoßen (z. B. bei PDF, um die lokal zugewiesene Anwendung zu starten) oder man kommt zu einer Ansicht einer Aufgabenfolge (bei Testheft), einer Unit oder einem Item.
+Man kann durch alle Daten des AP-Index klicken und verlinkte Dateien anzeigen. Je nach Dateityp wird ein Download angestoßen (z. B. bei PDF, um die lokal zugewiesene Anwendung zu starten) oder man kommt zu einer Ansicht einer Aufgabenfolge (bei Testheft), einer Unit oder einem Item.
 
 # Ansichten für die Öffentlichkeit
 
-Über eine Url kann man zu folgenden Orten eines ContentPools gelangen:
+Über eine Url kann man zu folgenden Orten eines ContentHub gelangen:
 
-* Hauptseite des ContentPools. Dann ist auf dieser Seite eine Liste zu finden von allen für die Öffentlichkeit freigegebenen ACP. Man wählt einen aus und gelangt zur ACP-Startseite.
-* ACP-Startseite
-* eine bestimmte Aufgabenfolge eines bestimmten ACP
-* eine bestimmte Unit des ACP
-* ein bestimmtes Item des ACP
+* Hauptseite des ContentHub. Dann ist auf dieser Seite eine Liste zu finden von allen für die Öffentlichkeit freigegebenen AP. Man wählt einen aus und gelangt zur AP-Startseite.
+* AP-Startseite
+* eine bestimmte Aufgabenfolge eines bestimmten AP
+* eine bestimmte Unit des AP
+* ein bestimmtes Item des AP
 
-Über die ACP-Startseite gelangt man
+Über die AP-Startseite gelangt man
 
 * zu allen freigegebenen Aufgabenfolgen
 * zu allen Units (Liste)
 * zu allen Items (Liste)
 
-Man gelangt von jeder Aufgabenfolge, jeder Unit und jedem Item zur ACP-Startseite.
+Man gelangt von jeder Aufgabenfolge, jeder Unit und jedem Item zur AP-Startseite.
 
 # Download durch autorisierte Personen
 
-Dieses Szenario unterscheidet sich vom vorherigen Szenario "für die Öffentlichkeit" nur durch den erforderlichen Login: Wenn noch keine Autorisierung erfolgt ist, wird man auf die Startseite des ContentPools umgeleitet. Hier muss man sich entscheiden, ob man sich über die Login-Funktion des ContentPools autorisiert (Nur-Lese-Zugriff ist über Nutzerkonto zugewiesen) oder über einen Klick auf das ACP. Ein Login ist dann über eine Benutzername-Kennwort-Liste definiert und man kommt zu einem Login-Formular.
+Dieses Szenario unterscheidet sich vom vorherigen Szenario "für die Öffentlichkeit" nur durch den erforderlichen Login: Wenn noch keine Autorisierung erfolgt ist, wird man auf die Startseite des ContentHub umgeleitet. Hier muss man sich entscheiden, ob man sich über die Login-Funktion des ContentHub autorisiert (Nur-Lese-Zugriff ist über Nutzerkonto zugewiesen) oder über einen Klick auf das AP. Ein Login ist dann über eine Benutzername-Kennwort-Liste definiert und man kommt zu einem Login-Formular.
 
 # Zwischenspeicher/Backup
 
-Dieses Szenario unterscheidet sich vom vorherigen Szenario "durch autorisierte Personen" dadurch, dass der ACP-Index angeschaut und heruntergeladen werden kann.
+Dieses Szenario unterscheidet sich vom vorherigen Szenario "durch autorisierte Personen" dadurch, dass der AP-Index angeschaut und heruntergeladen werden kann.
 
-Außerdem ist in diesem Szenario eine Kommunikation zwischen Servern vorgesehen. Man soll in anderen Webanwendungen (IQB-Studio, IQB-Kodierbox, IQB-Testcenter, Portallösungen der Betreiber, andere Installation des IQB-ContentPools) die Möglichkeit haben, auf einen ContentPool zuzugreifen: Login, verfügbare ACP auflisten, ACP oder Teile davon in beide Richtungen transferieren.
+Außerdem ist in diesem Szenario eine Kommunikation zwischen Servern vorgesehen. Man soll in anderen Webanwendungen (IQB-Studio, IQB-Kodierbox, IQB-Testcenter, Portallösungen der Betreiber, andere Installation des IQB-ContentHub) die Möglichkeit haben, auf einen ContentHub zuzugreifen: Login, verfügbare AP auflisten, AP oder Teile davon in beide Richtungen transferieren.
 
 # Ansicht und Kommentierung von Aufgaben
 

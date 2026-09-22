@@ -1,6 +1,6 @@
 ---
 lang: de
-title: "ACP-Index: Fähigkeitswerte"
+title: "AP-Index: Fähigkeitswerte"
 description: Metriken und Skalen
 format:
     html:
@@ -59,7 +59,7 @@ Das Prinzip der Referenz beschränkt sich natürlich nicht auf Kompetenzstufenmo
 
 # Umsetzung als Datenspezifikation
 
-Die Spezifikation einer Skala ist nicht Teil des ACP-Index, sondern ist [separat geführt](https://iqb-specifications.github.io/acp-scale/).
+Die Spezifikation einer Skala ist nicht Teil des AP-Index, sondern ist [separat geführt](https://iqb-specifications.github.io/acp-scale/).
 
 ## Allgemeine Angaben
 

@@ -1,6 +1,6 @@
 ---
 lang: de
-title: "ACP-Index: Allgemeine Daten"
+title: "AP-Index: Allgemeine Daten"
 aliases: 
   - "/survey-content/header.html"
 ---
