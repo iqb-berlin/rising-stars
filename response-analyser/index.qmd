@@ -21,7 +21,7 @@ Die Veröffentlichung eines Prototyps für den IQB-ResponseAnalyser ist Mitte 20
 
 # Arbeitsweise
 
-Nach der Installation werden Arbeitsbereiche "Workspaces" eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. "VERA 2027". Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Assessment Content Package in den Arbeitsbereich geladen (Json-Datei des AP-Index und Inhaltsdateien - hier insbes. die Kodieranweisungen der Units). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.
+Nach der Installation werden Arbeitsbereiche "Workspaces" eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. "VERA 2027". Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Assessment Package in den Arbeitsbereich geladen (Json-Datei des AP-Index und Inhaltsdateien - hier insbes. die Kodieranweisungen der Units). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.
 
 Danach wird in je **einem Request** die Kodierung und Analyse für genau **eine Testperson** vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-ResponseAnalyser:
 
@@ -57,7 +57,7 @@ Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man 
 
 ## Skalenwerte ermitteln
 
-Im Assessment Content Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:
+Im Assessment Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:
 
 * Liste der Items, die zu dieser Skala beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)
 * Methode der Ermittlung und dafür nötige Parameter

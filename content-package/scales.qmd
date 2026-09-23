@@ -37,7 +37,7 @@ Somit ergeben sich verschiedene Metriken, auf denen Testergebnisse bzw. Kompeten
 
 Jeder dieser Werte repräsentiert eine unterschiedliche Perspektive auf dieselbe zugrunde liegende Kompetenzschätzung – von der rohen Aufgabenlösung bis hin zur normierten Standardmetrik oder kategorialen Einstufung.
 
-Diese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Content Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert.
+Diese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Assessment Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert.
 
 ## Datentyp
 

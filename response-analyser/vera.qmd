@@ -11,7 +11,7 @@ Die Units, die das IQB im Rahmen von [VERA](https://www.iqb.hu-berlin.de/vera/) 
 * Kodieranweisungen für die automatische und manuelle Kodierung
 * Metadaten für die Interpretation der Ergebnisse
 
-Außerdem enthält das [Assessment Content Package](../content-package/index.qmd) Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.
+Außerdem enthält das [Assessment Package](../content-package/index.qmd) Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.
 
 ![](../assets/response-analyser-vera.png){width="600"}
 
@@ -24,7 +24,7 @@ Das IQB plant, alle für die Online-Durchführung von VERA relevanten Daten übe
 * Daten, die über Spezifikationen in ihrem Format festgelegt sind (XML, JSON usw.) sowie um 
 * Dateien mit spezifischer Funktion (z. B. Testcenter-Booklet).
 
-Das IQB nennt diese Daten **Assessment Content Package** - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Der Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als **Assessment Content Pool** bezeichnet.
+Das IQB nennt diese Daten **Assessment Package** - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Die Webanwendung, die für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als **ContentHub** bezeichnet.
 
 Das Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.
 

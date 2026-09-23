@@ -48,7 +48,7 @@ Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die n�
 
 # Umsetzung in StarS
 
-Im Projekt StarS stellt das IQB die Komponenten IQB-ResponseAnalyser, IQB-ContentHub und IQB-Testcenter bereit. Alle Datenformate des Assessment Content Package sind in diesen Webanwendungen bzw. -services implementiert.
+Im Projekt StarS stellt das IQB die Komponenten IQB-ResponseAnalyser, IQB-ContentHub und IQB-Testcenter bereit. Alle Datenformate des Assessment Package sind in diesen Webanwendungen bzw. -services implementiert.
 
 Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.
 
