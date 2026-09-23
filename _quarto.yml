@@ -58,11 +58,11 @@ website:
       - feedback.qmd
 
       - section: ContentHub
-        href: content-pool/index.qmd
+        href: content-hub/index.qmd
         contents:
-        - href: content-pool/acp-manager.qmd
+        - href: content-hub/ap-manager.qmd
           text: AP-Manager
-        - href: content-pool/acp-views.qmd
+        - href: content-hub/ap-views.qmd
           text: Ansichten
 
 format:

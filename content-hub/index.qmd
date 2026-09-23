@@ -1,6 +1,8 @@
 ---
 lang: de
 title: ContentHub
+aliases: 
+  - /content-pool/index.html
 ---
 
 Der IQB-ContentHub ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern.

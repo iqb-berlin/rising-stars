@@ -1,6 +1,8 @@
 ---
 lang: de
 title: "ContentHub: AP-Manager"
+aliases: 
+  - /content-pool/acp-manager.html
 ---
 
 Ein Assessment Package (AP) muss vorher über einen Nutzer mit der Rolle "Application-Admin" angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle "**AP-Manager**" zugewiesen sein. Nach dem Login erhält ein AP-Manager eine Liste aller AP, auf die er Zugriff hat, und kann in ein AP wechseln. Die Rolle AP-Manager hat das Recht, für das AP folgende Funktionen auszuführen:
