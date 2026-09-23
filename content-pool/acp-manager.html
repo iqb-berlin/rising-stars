@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ContentPool: ACP-Manager – StarS Werkstatt</title>
+<title>ContentHub: AP-Manager – StarS Werkstatt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content-pool/index.html">ContentPool</a></li><li class="breadcrumb-item"><a href="../content-pool/acp-manager.html">ACP-Manager</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content-pool/index.html">ContentHub</a></li><li class="breadcrumb-item"><a href="../content-pool/acp-manager.html">AP-Manager</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../content-package/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Content Package</span></a>
+ <span class="menu-text">Assessment Package</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../content-pool/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ContentPool</span></a>
+ <span class="menu-text">ContentHub</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -227,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content-pool/acp-manager.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">ACP-Manager</span></a>
+ <span class="menu-text">AP-Manager</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -249,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#allgemeines-datenmanagement" id="toc-allgemeines-datenmanagement" class="nav-link active" data-scroll-target="#allgemeines-datenmanagement">Allgemeines Datenmanagement</a></li>
-  <li><a href="#nur-lese-zugriff-auf-das-acp-erteilen" id="toc-nur-lese-zugriff-auf-das-acp-erteilen" class="nav-link" data-scroll-target="#nur-lese-zugriff-auf-das-acp-erteilen">Nur-Lese-Zugriff auf das ACP erteilen</a></li>
+  <li><a href="#nur-lese-zugriff-auf-das-ap-erteilen" id="toc-nur-lese-zugriff-auf-das-ap-erteilen" class="nav-link" data-scroll-target="#nur-lese-zugriff-auf-das-ap-erteilen">Nur-Lese-Zugriff auf das AP erteilen</a></li>
   <li><a href="#funktionen-freigeben-und-konfigurieren" id="toc-funktionen-freigeben-und-konfigurieren" class="nav-link" data-scroll-target="#funktionen-freigeben-und-konfigurieren">Funktionen freigeben und konfigurieren</a></li>
   </ul>
 </nav>
@@ -257,9 +257,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content-pool/index.html">ContentPool</a></li><li class="breadcrumb-item"><a href="../content-pool/acp-manager.html">ACP-Manager</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content-pool/index.html">ContentHub</a></li><li class="breadcrumb-item"><a href="../content-pool/acp-manager.html">AP-Manager</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ContentPool: ACP-Manager</h1>
+<h1 class="title">ContentHub: AP-Manager</h1>
 </div>
 
 
@@ -276,47 +276,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Ein Assessment Content Package (ACP) muss vorher über einen Nutzer mit der Rolle “Application-Admin” angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle “<strong>ACP-Manager</strong>” zugewiesen sein. Nach dem Login erhält ein ACP-Manager eine Liste aller ACP, auf die er Zugriff hat, und kann in ein ACP wechseln. Die Rolle ACP-Manager hat das Recht, für das ACP folgende Funktionen auszuführen:</p>
+<p>Ein Assessment Package (AP) muss vorher über einen Nutzer mit der Rolle “Application-Admin” angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle “<strong>AP-Manager</strong>” zugewiesen sein. Nach dem Login erhält ein AP-Manager eine Liste aller AP, auf die er Zugriff hat, und kann in ein AP wechseln. Die Rolle AP-Manager hat das Recht, für das AP folgende Funktionen auszuführen:</p>
 <section id="allgemeines-datenmanagement" class="level1">
 <h1>Allgemeines Datenmanagement</h1>
 <ul>
-<li>Ansicht, Upload, Download und Ändern von Daten des ACP-Index</li>
-<li>Upload und Download von ACP-Dateien</li>
+<li>Ansicht, Upload, Download und Ändern von Daten des AP-Index</li>
+<li>Upload und Download von AP-Dateien</li>
 <li>Snapshot erzeugen</li>
 <li>Snapshot wiederherstellen</li>
 <li>Download und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare</li>
 </ul>
 </section>
-<section id="nur-lese-zugriff-auf-das-acp-erteilen" class="level1">
-<h1>Nur-Lese-Zugriff auf das ACP erteilen</h1>
-<p>Der ACP-Manager kann einen Nur-Lese-Zugriff auf das ACP erteilen. Hierfür gibt es drei Modelle:</p>
+<section id="nur-lese-zugriff-auf-das-ap-erteilen" class="level1">
+<h1>Nur-Lese-Zugriff auf das AP erteilen</h1>
+<p>Der AP-Manager kann einen Nur-Lese-Zugriff auf das AP erteilen. Hierfür gibt es drei Modelle:</p>
 <ol type="1">
-<li><strong>Keine Beschränkung (Public)</strong>: Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der ACP wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des ACP finden.</li>
-<li><strong>Nutzer des ContentPool</strong>: Ein ACP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das ACP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller ACP, auf die er Zugriff hat, und kann in diese ACP wechseln.</li>
-<li><strong>Benutzername und Kennwort</strong>: Ein ACP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das ACP. Der ACP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein ACP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentPool mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum ACP.</li>
+<li><strong>Keine Beschränkung (Public)</strong>: Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der AP wird auf der Startseite der Webanwendung ContentHub mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des AP finden.</li>
+<li><strong>Nutzer des ContentHub</strong>: Ein AP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das AP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller AP, auf die er Zugriff hat, und kann in diese AP wechseln.</li>
+<li><strong>Benutzername und Kennwort</strong>: Ein AP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das AP. Der AP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein AP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentHub mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum AP.</li>
 </ol>
 <p>Die Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.</p>
 </section>
 <section id="funktionen-freigeben-und-konfigurieren" class="level1">
 <h1>Funktionen freigeben und konfigurieren</h1>
-<p>Folgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung:</p>
+<p>Folgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen AP zur Verfügung:</p>
 <ul>
-<li>Interaktive Ansicht aller Daten eines ACP-Index</li>
-<li>Liste aller Units des ACP</li>
+<li>Interaktive Ansicht aller Daten eines AP-Index</li>
+<li>Liste aller Units des AP</li>
 </ul>
-<p>Der ACP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen ACP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:</p>
+<p>Der AP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen AP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:</p>
 <ul>
-<li>Download des ACP-Index</li>
+<li>Download des AP-Index</li>
 <li>Download von Units (Zip-Datei)</li>
-<li>Download anderer ACP-Dateien</li>
+<li>Download anderer AP-Dateien</li>
 <li>Ansicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,
 <ul>
 <li>ob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist</li>
-<li>ob die Units aus der obigen Liste aller Units des ACP aufgerufen werden können</li>
-<li>ob aus Testcenter-Booklets des ACP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht</li>
+<li>ob die Units aus der obigen Liste aller Units des AP aufgerufen werden können</li>
+<li>ob aus Testcenter-Booklets des AP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht</li>
 <li>ob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können</li>
 </ul></li>
-<li>Erzeugen und Anzeige einer Liste aus allen Items des ACP; hier kann festgelegt werden,
+<li>Erzeugen und Anzeige einer Liste aus allen Items des AP; hier kann festgelegt werden,
 <ul>
 <li>welche Unit- und Item-Metadaten in die Liste kopiert werden sollen,</li>
 <li>ob ein Item bei Klick auf den Listeneintrag angezeigt werden soll</li>
@@ -740,8 +740,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content-pool/index.html" class="pagination-link" aria-label="ContentPool">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ContentPool</span>
+      <a href="../content-pool/index.html" class="pagination-link" aria-label="ContentHub">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ContentHub</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -769,7 +769,7 @@ ul.task-list li input[type="checkbox"] {
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="https://www.iqb.hu-berlin.de">
-<p>IQB 2025</p>
+<p>IQB 2026</p>
 </a>
   </li>  
 </ul>
