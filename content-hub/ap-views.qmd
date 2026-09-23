@@ -5,7 +5,7 @@ aliases:
   - /content-pool/acp-views.html
 ---
 
-Im folgenden werden die Nutzungsszenarien eines AP (Assessment Packages) beschrieben. Dies erfolgt in Form sog. User Journeys. Ob diese Nutzungsszenarien für ein AP zur Verfügung stehen und welche Funktionen jeweils freigegeben sind, wird über die Rolle [AP-Manager](acp-manager.qmd) definiert.
+Im folgenden werden die Nutzungsszenarien eines AP (Assessment Packages) beschrieben. Dies erfolgt in Form sog. User Journeys. Ob diese Nutzungsszenarien für ein AP zur Verfügung stehen und welche Funktionen jeweils freigegeben sind, wird über die Rolle [AP-Manager](ap-manager.qmd) definiert.
 
 # Allgemeine Ansichten
 

@@ -57,13 +57,8 @@ website:
 
       - feedback.qmd
 
-      - section: ContentHub
+      - text: ContentHub
         href: content-hub/index.qmd
-        contents:
-        - href: content-hub/ap-manager.qmd
-          text: AP-Manager
-        - href: content-hub/ap-views.qmd
-          text: Ansichten
 
 format:
   html:
