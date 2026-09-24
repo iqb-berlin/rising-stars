@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-837a04b664f6a2619288a2187ad154e9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d1d88773f38f1a062349f8107734b1dc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -228,14 +228,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Auf dieser Seite</h2>
-   
-  <ul>
-  <li><a href="#zeitplan" id="toc-zeitplan" class="nav-link active" data-scroll-target="#zeitplan">Zeitplan</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -259,22 +253,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Der IQB-ContentHub ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Das folgende Bild stellt die Funktionen des IQB-ContentHub im Zusammenklang mit den anderen Webanwendungen des IQB-Stack dar. Es handelt sich um eine Zielvorstellung (s. unten <a href="#zeitplan">Zeitplan</a>):</p>
-<p><a href="../assets/content-hub1.png" class="lightbox" data-gallery="content-hub"><img src="../assets/content-hub1.png" class="img-fluid" width="600"></a></p>
+<p>Der IQB-ContentHub ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Das folgende Bild stellt die Funktionen des IQB-ContentHub im Zusammenklang mit den anderen Webanwendungen des IQB-Stack dar. Es handelt sich um eine Zielvorstellung<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/content-hub1.png" class="lightbox" data-gallery="content-hub" title="Zusammenwirken von ContentHub mit anderen TBA-Anwendungen"><img src="../assets/content-hub1.png" class="img-fluid figure-img" width="600" alt="Zusammenwirken von ContentHub mit anderen TBA-Anwendungen"></a></p>
+<figcaption>Zusammenwirken von ContentHub mit anderen TBA-Anwendungen</figcaption>
+</figure>
+</div>
 <ul>
 <li>Der ContentHub dient der dauerhaften Ablage von Aufgaben, die mit dem Studio erstellt wurden. Hier erfolgt auch eine Versionierung, d.&nbsp;h. man kann später auf vorherige Entwürfe zurückgreifen. Möglich wird dies, weil jede Unit im TBA-System eine eindeutige ID bekommt. Wir nennen die Speicherfunktion <strong>Aufgabendatenbank</strong>. Es können keine Aufgabendaten geändert werden, aber alle Daten können eingesehen werden.</li>
 <li>Aus den Daten zu Aufgaben und Studien kann man ein <strong>Assessment Package</strong> erstellen und zum Download bereitstellen. Dieses Datenpaket ist darauf ausgerichtet, in Portallösungen zur Durchführung und Auswertung von Lernstandserhebungen geladen zu werden und diese zu steuern. Neben den Testinhalten sind auch Vorschriften enthalten, wie die Datenauswertung z. B. über Fähigkeitsskalen erfolgen kann.</li>
 <li>Aufgaben und Testhefte können direkt in das IQB-Testcenter geladen werden und so in Tests eingesetzt werden. Bei diesem <strong>Testcenter-Export</strong> sind nicht alle Aufgabendaten erforderlich - beispielsweise werden Metadaten und Rich Notes nicht übertragen. Auch ein Kodierschema wird nur dann übertragen, wenn ein Test dynamische Verzweigung enthält (adaptives Testen).</li>
 <li>Bei einem <strong>Kodierbox-Export</strong> werden ebenfalls nur die nötigen Daten übertragen: Aufgaben-UI und Kodierschema. Als Besonderheit kann die Kodierbox direkt das Editieren eines Kodierschemas anbieten. Das ist dann wichtig, wenn während der Kodierung Unstimmigkeiten festgestellt werden und sofort im Prozess eine Verbesserung umgesetzt werden soll. Im Bild oben ist daher auch die Übertragung geänderter Kodierschemata in den ContentHub vorgesehen.</li>
-<li>Nach der Datenanalyse (im Bild über R-Programmierungen “eatTBA” dargestellt) müssen wichtige Eigenschaftsdaten für die Items in den ContentHub übertragen werden. Dieser <strong>Itemkennwerte-Import</strong> stellt sicher, dass Personenfähigkeiten richtig ermittelt werden können.</li>
+<li>Nach der Datenanalyse (im Bild über R-Programmierungen “eatPrepTBA” dargestellt) müssen wichtige Eigenschaftsdaten für die Items in den ContentHub übertragen werden. Dieser <strong>Itemkennwerte-Import</strong> stellt sicher, dass Personenfähigkeiten richtig ermittelt werden können.</li>
 </ul>
-<p><a href="../assets/content-hub2.png" class="lightbox" data-gallery="content-hub"><img src="../assets/content-hub2.png" class="img-fluid" width="600"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/content-hub2.png" class="lightbox" data-gallery="content-hub" title="Funktionsbereiche des ContentHub"><img src="../assets/content-hub2.png" class="img-fluid figure-img" width="600" alt="Funktionsbereiche des ContentHub"></a></p>
+<figcaption>Funktionsbereiche des ContentHub</figcaption>
+</figure>
+</div>
 <p>Das obige Bild zeigt einen genaueren Blick in den ContentHub. Folgende Funktionen sind besonders hervorgehoben:</p>
 <ul>
 <li>Ein <strong>AP-Editor</strong> ermöglicht die Zusammenstellung der Daten für ein Assessment Package. Es sind Metadaten hinzuzufügen (z. B. Zielpopulation), Testphasen zu definieren (z. B. zwei Messzeitpunkte) und die Skalen für die Auswertung zu definieren. Diese Skalen enthalten Aufzählungen von Items mit den jeweils für dieses AP relevanten Itemkennwerten.</li>
 <li>Das Booklet ist die Abfolge von Aufgaben in einer Form, die das Testcenter interpretieren kann. Eine Testung besteht oft aus einer Vielzahl von Booklets, deren Zusammenstellung vielen Kriterien gerecht werden muss (Zeitbeschränkung, bestimmte Schwierigkeitskurve, bestimmte Kompetenzen usw.). Ein <strong>Booklet-Editor</strong> hilft an vielen Stellen des ContentHub bei dieser Zusammenstellung.</li>
-<li>Bei der Vorbereitung einer Studie und auch beim Standard-Setting<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> müssen große Mengen von Items übersichtlich dargestellt, sortiert und gefiltert werden. Der <strong>Item-Explorer</strong> bietet außerdem eine Kommentarfunktion, den Sprung zur Aufgabe (Ansicht mit beispielhaften Antworten) und das Markieren (Taggen) an.</li>
-<li>Die Aufgaben unterliegen einem aufwändigen Review-Prozess. An vielen Stellen des Entwicklungszyklus’ beurteilen Expert*innen verschiedene Aspekte einer Aufgabe. Im IQB-Stack sind drei verschiedene Szenarien des Reviews umgesetzt. Eines davon ist die detaillierte Sicht auf alle Daten einer Aufgabe (einschl. Metadaten, Kodierung, Rich-Notes usw.) im <strong>Unit-Review</strong> des ContentHub<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Es können Kommentare vergeben werden.</li>
+<li>Bei der Vorbereitung einer Studie und auch beim Standard-Setting<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> müssen große Mengen von Items übersichtlich dargestellt, sortiert und gefiltert werden. Der <strong>Item-Explorer</strong> bietet außerdem eine Kommentarfunktion, den Sprung zur Aufgabe (Ansicht mit beispielhaften Antworten) und das Markieren (Taggen) an.</li>
+<li>Die Aufgaben unterliegen einem aufwändigen Review-Prozess. An vielen Stellen des Entwicklungszyklus’ beurteilen Expert*innen verschiedene Aspekte einer Aufgabe. Im IQB-Stack sind drei verschiedene Szenarien des Reviews umgesetzt. Eines davon ist die detaillierte Sicht auf alle Daten einer Aufgabe (einschl. Metadaten, Kodierung, Rich-Notes usw.) im <strong>Unit-Review</strong> des ContentHub<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Es können Kommentare vergeben werden.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -289,32 +293,16 @@ ul.task-list li input[type="checkbox"] {
 <p>Dazu gehören numerische Werte wie empirische Itemschwierigkeit, BISTA-Wert, Infit, Trennschärfe, Lösungsquote. Sie sind einem Item zugeordnet, stammen aber aus einer konkreten Studie. Das bedeutet, dass es mehrere “Sets” von Itemkennwerten geben kann - auch innerhalb einer Studie je nach Testzeitpunkt, Position im Testheft (zu Beginn, zum Ende), Personenmerkmalen (Klassenstufe, Gymnasium ja/nein, ESA-Perspektive ja/nein usw.), Kompetenzbezug (mathematik global oder nur Leitidee 1) und Auswertungsmethode (Partial/Full Credit). Daher können Itemkennwerte nicht unabhängig von einer Studie gespeichert werden.</p>
 </div>
 </div>
-<section id="zeitplan" class="level1">
-<h1>Zeitplan</h1>
-<ul>
-<li>Aufgabendatenbank (nur Import), Itemkennwerte-Import, Item-Explorer, Unit-Review
-<ul>
-<li>Prototyp Q3/2026, Release Q4/2026</li>
-</ul></li>
-<li>Aufgabendatenbank, AP-Editor, Booklet-Editor
-<ul>
-<li>Prototyp Q4/2026, Release Q1/2027</li>
-</ul></li>
-<li>Kodierbox-Export, Testcenter-Export, Assessment Package
-<ul>
-<li>Prototyp Q2/2027, Release Q3/2027</li>
-</ul></li>
-</ul>
 
 
-</section>
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Fußnoten</h2>
 
 <ol>
-<li id="fn1"><p>Das Standard-Setting ist ein Verfahren zur empririsch gestützten Entwicklung eines Kompetenzstufen-Modells.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Die anderen beiden Szenarien werden im IQB-Studio (über Aufgabenfolge ein erster grober Blick auf die Aufgabe; die Kommentare werden direkt zur Unit übertragen) und im Testcenter umgesetzt (Beurteilung der Aufgabe aus Sicht der Testperson im Kontext eines Booklets).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Ein öffentlicher Zeitplan existiert derzeit noch nicht.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Das Standard-Setting ist ein Verfahren zur empririsch gestützten Entwicklung eines Kompetenzstufen-Modells.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Die anderen beiden Szenarien werden im IQB-Studio (über Aufgabenfolge ein erster grober Blick auf die Aufgabe; die Kommentare werden direkt zur Unit übertragen) und im Testcenter umgesetzt (Beurteilung der Aufgabe aus Sicht der Testperson im Kontext eines Booklets).<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
