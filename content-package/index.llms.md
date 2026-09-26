@@ -1,0 +1,34 @@
+# Assessment Package
+
+Inhaltspaket für die Durchführung von Lernstandserhebungen
+
+Unter einem Assessment Package AP verstehen wir alle Daten, die für eine Lernstandserhebung unabhängig von einer konkreten Durchführung bereitgestellt werden. Es handelt sich um
+
+- **AP-Index**: Eine Datei im Format JSON, die als Hauptverzeichnis dient und zahlreiche Datenstrukturen vereint (s. u.),
+- **Content-Dateien**: Dateien in verschiedenen Formaten für die Durchführung sowie Begleitmaterialien (Handreichungen, Auswertungshilfen usw.). Als technische Basis werden Verona-Module vorausgesetzt. Es sind außerdem viele spezifische Dateien und Datenstrukturen enhalten, die die Durchführung über das IQB-Testcenter unterstützen.
+
+Für die Vorbereitung, Durchführung und Auswertung muss die durchführende Institution (Land, Dienstleister) weitere Informationen bereitstellen:
+
+- Listen der Testpersonen,
+- ggf. Leistungsdaten der Testpersonen aus vorangegangenen Testungen zum Vergleich
+- ggf. Leistungsdaten auf Landes- oder Regionalebene zum Vergleich
+
+Auf den folgenden Seiten finden Sie die Erläuterungen für die Spezifikation des AP-Index. Folgende Informationen enthält der AP-Index:
+
+- [Allgemeine Daten](../content-package/header.llms.md): Allgemeine Angaben wie ID, Name und Version für das AP. Mit diesen Daten kann man aus einer Liste diverser Studien die passende auswählen. Die IQB-Webanwendung ContentHub wird diese Daten für die AP-Verwaltung benötigen.
+- [Abschnitte](../content-package/parts.llms.md) des Index
+- [Module und Testhefte](../content-package/instruments.llms.md), z. B. Testmaterial für das Testcenter
+- [Skalenbuch](../content-package/scales.llms.md): Vorschriften dafür, wie die Antworten zu Fähigkeitswerten transformiert werden
+
+Aktuell noch nicht spezifiziert:
+
+- Material zur Unterstützung der Rückmeldung (didaktische Handreichungen)
+- Textbausteine für die Rückmeldung
+- Copyright-Informationen für die Aufgaben
+
+**Spezifikationen**
+
+- [Spezifikation für den Index](https://iqb-specifications.github.io/acp-index)
+- [Metadaten-Profile für AP](https://iqb-vocabs.github.io/p44/)
+
+Zurück nach oben

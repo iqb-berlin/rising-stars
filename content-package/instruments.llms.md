@@ -1,0 +1,130 @@
+# AP-Index: Instrumente
+
+Die folgenden Parameter sind Teil der Datenstruktur `assessmentPart`. Sie bilden zusammen die Voraussetzung, eine Erhebung durchzuführen. Es handelt sich also um die Beschreibung des Testmaterials im engeren Sinne.
+
+Die folgende Abbildung zeigt die übliche Struktur eines Erhebungsinstrumentes. Diese wird in den nachfolgenden Parametern abgebildet.
+
+[![](../assets/booklet-structure.png)](../assets/booklet-structure.png)
+
+- Eine Aufgabenfolge, die die Testperson in einer Testsitzung abarbeiten soll, nennen wir **“Testheft” oder “Instrument”** (synonym). Der Zeitrahmen bei Lernstandserhebungen liegt zwischen 40 bis 120 Minuten. Sollte sich der Test auf verschiedene Tage verteilen, wird man nicht das angefangene Testheft fortsetzen, sondern die Aufgaben auf mehrere Testhefte verteilen.
+- Die Aufgaben werden nicht frei im Testheft platziert, sondern vorher in **Module** gesetzt. Anschließend wird das Modul in verschiedene Testhefte eingefügt. Die Aufteilung eines Testheftes in Module folgt vor allem praktischen Erwägungen. Die Kommunikation ist einfacher, wenn man vom “Leseblock” und “Ergänzungsblock” redet.
+- Dieselbe **Unit** kann in verschiedene Blöcke eingefügt werden – man muss dann halt nur darauf achten, dass die Blöcke entsprechend eingesetzt werden (“Unverträglichkeit”). Es gibt aber auch Units, die bewusst mehrfach im selben Testheft eingesetzt werden, z. B. Fragen zur Motivation.
+- In einer Unit sind dann **Variablen** zu finden, die nach Interaktionen die Antwortdaten generieren. Die Antwortdaten werden zu einem späteren Zeitpunkt zu **Itemwerten** transformiert. Ein Item ist eine Teilaufgabe und auf dieser Ebene wird die Schätzung der Personenfähigkeiten vorgenommen.
+
+# `units`
+
+Es sind alle Units aufgeführt, die in diesem Abschnitt verwendet werden. Jede Unit hat folgende Felder:
+
+- `id` zur eindeutigen Kennzeichnung
+- `name`, `description` und `lang` zur Beschreibung und sprachlichen Verortung
+- `items` listet alle Items innerhalb der Unit auf:
+  - `id` zur eindeutigen Kennzeichnung
+  - wenn `useUnitAliasAsPrefix` ‘true’ ist (Standardwert), dann ist die Item-Id nur innerhalb der Unit eindeutig und benötigt zur externen Referenzierbarkeit die Unit-Id als Präfix.
+  - `name` kann als Beschriftung in Listen verwendet werden
+  - `sourceVariable` bezeichnet die Variable, die nach der Kodierung den Score oder den Code für das Item liefert.
+- `dependencies`: Liste aller Dateien, die im Zusammenhang mit der Unit vorliegen müssen. Neben der ID, die auch einen Pfad enthalten kann, ist ein `type` anzugeben. Die möglichen Ausprägungen `UNIT_INDEX`, `UNIT_CODING_SCHEME`, `UNIT_METADATA`, `UNIT_UI_DEFINITION`, `PLAYER`, `PLAYER_DEPENDENCY`, `WIDGET` ermöglichen eine korrekte Zuordnung zu Funktionen.
+
+# `bookletModules`
+
+- `id`, `name`, `description`, `lang`: Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt `id` sowie Erläuterungen über die Datenfelder `name` und `description` hinterlegt sein. In Auswahllisten oder Protokollen kann dann das Modul gut identifiziert werden. `name` und `description` haben keine separate Sprachmarkierung, denn das Modul wird zu genau einer Sprache entwickelt. Daher ist in einem Feld `lang` die Sprache anzugeben, die dann für alle Einträge des Moduls gilt.
+- `units` listet alle Units des Booklets auf:
+  - `id` referenziert die Unit, so wie sie unabhängig vom Einsatz in Testheften entwickelt wurde. Diese Id muss in der obigen Unitliste zu finden sein.
+  - `alias` bezieht sich auf eine spezifische Unit in einem spezifischen Testheft an einer spezifischen Stelle. Da Units in Testheften mehrfach auftauchen können, kann eine solche Angabe nötig sein. Der `alias` einer Unit wird verwendet, um die Antworten zu speichern – NICHT die `id` der Unit!
+  - `order` kennzeichnet die Position innerhalb des Moduls.
+
+# `instruments`
+
+Module werden in Testhefte platziert (s. obige Struktur).
+
+## `id`, `name`, `metadata`
+
+Im Datenmanagement müssen ein verlässlicher Bezug zu einem Abschnitt `id` sowie Erläuterungen über `name` hinterlegt sein. Das Instrument selbst ist nicht auf die Sprache festgelegt, d. h. der Name muss wieder mit einer Sprachmarkierung versehen sein.
+
+Das IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.
+
+Weitere Informationen und Literatur finden Sie [hier](https://iqb-vocabs.github.io). Die Metadatenprofile, die im AP-Index verwendet werden, finden Sie [hier](https://iqb-vocabs.github.io/p44/)
+
+Beispiel Objekt-Metadaten JSON
+
+``` json
+{
+  "metadata": {
+    "profileId": "https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json",
+    "entries": [
+      {
+        "id": "e1",
+        "label": [
+          {
+            "lang": "de",
+            "value": "Art der Erhebung"
+          }
+        ],
+        "value": [
+          {
+            "id": "https://w3id.org/iqb/v85/dt/1"
+          }
+        ],
+        "valueAsText": [
+          {
+            "lang": "de",
+            "value": "Kompetenz- und Leistungsdaten"
+          }
+        ]
+      },
+      {
+        "id": "kim_type_school",
+        "label": [
+          {
+            "lang": "de",
+            "value": "Schulform"
+          }
+        ],
+        "value": [
+          {
+            "id": "https://w3id.org/kim/schularten/s02"
+          }
+        ],
+        "valueAsText": [
+          {
+            "lang": "de",
+            "value": "Grundschule"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Beispiele: Zeit für Durchführung Minuten gesamt, Art der Erhebung, Kopfhörereinsatz
+
+## `testcenterBooklet`
+
+Diese Liste enthält alle Sprachvarianten für genau ein Booklet. Jeder Eintrag hat folgende Eigenschaften:
+
+- `lang`: Definition der Sprache dieser Variante
+- `definitionId`: ID/Pfad zur XML-Datei, die das Booklet beschreibt und genau so in das Testcenter hochgeladen werden muss.
+- `modules`: Aufzählung aller Module, die in diesem Booklet verwendet wurden. Die `moduleId` verweist in die Liste `bookletModules` des Abschnittes. Es gibt die Möglichkeit, eine Reihenfolge `order` der Module festzulegen.
+
+## `administrationMode`
+
+Es gibt – z. B. bei StarS – Abweichungen vom normalen Szenario “Schüler\*in löst Aufgaben”. Das Booklet kann verschiedene Modi der Durchführung haben:
+
+- `TEST_BY_TEST_TAKER`: Der Test/die Befragung wird von derselben Person durchgeführt, deren Fähigkeiten ermittelt werden sollen (Standard),
+- `TEST_BY_PROCTOR`: Der Test wird durch die Lehrkraft/Aufsicht durchgeführt (Dialog/Beobachtung), um die Fähigkeiten einer anderen Person zu erheben,
+- `STIMULUS_FOR_TEST_TAKER`: Die Testperson geht durch das Booklet, ohne Anworten zu hinterlassen. Sie wird dabei von einer Lehrkraft/Aufsicht begleitet, die die eigentliche Erfassung vornimmt. Im Testcenter wird als Durchführungsmodus `RUN_DEMO` gewählt, d. h. das Booklet dient mehreren Testpersonen als Stimulus und hinterlässt keine Antwort-Daten.
+
+## `handOutsForTestTaker`
+
+Es kann sein, dass für dieses Booklet zusätzliches Material an die Testperson(en) gegeben wird. Entweder dient dieses Material als zusätzlicher Stimulus, oder die Testperson soll eine Handlung damit/darauf ausführen. Beispielsweise soll ein Wort aufgeschrieben oder eine Linie gezogen werden. Die Handlungen der Testperson werden aktuell nicht direkt in die Testergebnisse einbezogen (Scan), sondern es müsste parallel über ein Instrument eine Beobachtung stattfinden, die die Handlung kodiert. Daher kann ein Handout nicht getrennt von einem Instrument definiert werden.
+
+Die Liste enthält Einträge mit folgenden Eigenschaften:
+
+- `order` kann die Anzeigereihenfolge festlegen.
+- `mode` beschreibt die Art des Einsatzes:
+  - `PRINT_SHOW`: Ausdruck nur zum Zeigen. Bei Einzeltestungen reicht dann ein Ausdruck pro Testgruppe.
+  - `PRINT_WRITE_DRAW`: Ausdruck, auf dem die Testperson schreibt oder zeichnet.
+  - `ON_SCREEN`: Anzeige auf einem Bildschirm (Tablet, Laptop).
+- `file` setzt eine Referenz zu der Datei, die als Quelle für das Handout dient. Da es mehrere sprachspezifische Varianten geben kann, ist hier ein Array mit den Werten `id` (ID/Pfad), `lang` für die Sprachangabe und `label` für die UI anzugeben. Auch eine Beschreibung `description` kann hinzugefügt werden.
+
+Zurück nach oben

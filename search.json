@@ -351,37 +351,87 @@
     "href": "response-analyser/index.html",
     "title": "ResponseAnalyser",
     "section": "",
-    "text": "Der IQB-ResponseAnalyser ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der ResponseAnalyser mit anderen Servern, d. h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.",
+    "text": "Der IQB-ResponseAnalyser ist ein Webservice. Es handelt sich also um Software, die auf einem Server installiert werden muss, aber über keine Oberfläche/Frontend verfügt. Andere Programmierungen sollen auf eine automatisierte Art den Service benutzen. In einem produktiven Szenario ist der Webservice nicht von außen erreichbar, sondern nur durch Komponenten in einem lokalen geschützten Netzwerk.",
     "crumbs": [
       "ResponseAnalyser"
     ]
   },
   {
-    "objectID": "response-analyser/index.html#kodieren",
-    "href": "response-analyser/index.html#kodieren",
+    "objectID": "response-analyser/index.html#einbindung-in-portalsystem",
+    "href": "response-analyser/index.html#einbindung-in-portalsystem",
     "title": "ResponseAnalyser",
-    "section": "Kodieren",
-    "text": "Kodieren\nDie erste Aufgabe des ResponseAnalyser besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der Ebene der Variablen passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.\nIm Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d. h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.",
+    "section": "Einbindung in Portalsystem",
+    "text": "Einbindung in Portalsystem\nDer häufigste Anwendungsfall ist die Nutzung durch ein übergreifendes Portalsystem für eine Lernstandserhebung. Dieses Portalsystem bereitet die Testung vor und soll nach der Testung die Antworten so aufbereiten, dass für die Lehrkraft eine Ergebnisrückmeldung erfolgen kann. Der Schritt der Transformation der Roh-Antworten in Fähigkeitswerte pro Person soll automatisch erfolgen: Unmittelbar nach der Testung einer Klasse sind die Ergebnisse darstellbar, ohne dass jemand die Daten manuell umformt.\nDer Dienst “ResponseAnalyser” ist in die Portallösung integriert. Es gibt keine Stand-Alone-Installation des ResponseAnalysers, die mit “irgendeiner” Portallösung kommuniziert.\nEin Portalsystem könnte mehrere verschiedene Testungen gleichzeitig administrieren. Daher ist pro Testung ein isolierter Bereich (“Workspace”) erforderlich. Nur so kann man Verwechslungen von Units unterbinden oder unterschiedliche Missing-Maps gewährleisten. Bei großen Testungen muss eine hohe Last bewältigt werden. Der ResponseAnalyser sollte daher gut skalieren. Die permanenten Daten eines Arbeitsbereiches erfordern für die Replizierbarkeit eine clusterfähige Speicherlösung.\n\n\n\n\n\n\nVorsichtInformationssicherheit\n\n\n\n\nDa nur der integrierte Betrieb innerhalb einer Portallösung und keine Stand-Alone-Installation vorgesehen ist, wird der ResponseAnalyser innerhalb eines lokalen Netzwerkes betrieben. Es ist keine Authentifizierung nötig, da der Zugriff durch die Portallösung immer erlaubt und ein externer Zugriff nicht möglich ist. Es gibt kein Rechte-Rollen-Konzept.\nPersonenbezogene Daten werden nicht gespeichert. Sie sind nur während der Bearbeitung genau eines Requests bekannt.",
     "crumbs": [
       "ResponseAnalyser"
     ]
   },
   {
-    "objectID": "response-analyser/index.html#item-matrix-erstellen",
-    "href": "response-analyser/index.html#item-matrix-erstellen",
+    "objectID": "response-analyser/index.html#nur-kodierungdirekt",
+    "href": "response-analyser/index.html#nur-kodierungdirekt",
     "title": "ResponseAnalyser",
-    "section": "Item-Matrix erstellen",
-    "text": "Item-Matrix erstellen\nIm häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d. h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist im Kodierschema der Aufgabe beschrieben: Es wird für das Item eine neue Variable abgeleitet. So oder so liefert als eine Variable aus dem Kodierschema den Wert für das Item. Es ist stets der Score der Variablen, der für den Itemwert verwendet wird.\nDie Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur zwei Dimensionen: Pro Testperson und Item gibt es einen numerischen Wert. Sollte es einen Fehler gegeben haben, wird üblicherweise die Konvention “negativer Wert” (z. B. -99) umgesetzt.",
+    "section": "Nur Kodierung/Direkt",
+    "text": "Nur Kodierung/Direkt\nFür die Verarbeitung von Antworten nutzt das IQB die Webanwendung IQB-Kodierbox. Wenn man diese komplexe Software nicht installieren möchte, kann man für die automatische Kodierung auch den ResponseAnalyser nutzen. Wenn keine Skalendefinitionen hinterlegt sind, wird nur kodiert. Über Skripte (PowerShell, R usw.) kann man die API entsprechend bedienen. Auch das Erstellen der Item-Liste könnte über den ResponseAnalyser einfacher erfolgen als manuell.\n\n\n\n\n\n\nHinweis\n\n\n\nDie folgenden Darstellungen beziehen sich nur auf das Nutzungsszenario “Portalsystem”.",
     "crumbs": [
       "ResponseAnalyser"
     ]
   },
   {
-    "objectID": "response-analyser/index.html#skalenwerte-ermitteln",
-    "href": "response-analyser/index.html#skalenwerte-ermitteln",
+    "objectID": "response-analyser/index.html#vorbereitung",
+    "href": "response-analyser/index.html#vorbereitung",
     "title": "ResponseAnalyser",
-    "section": "Skalenwerte ermitteln",
-    "text": "Skalenwerte ermitteln\nIm Assessment Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:\n\nListe der Items, die zu dieser Skala beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)\nMethode der Ermittlung und dafür nötige Parameter",
+    "section": "Vorbereitung",
+    "text": "Vorbereitung\nDas Portalsystem sollte eine Funktion “Neue Studie anlegen” oder ähnliches bieten. Teil dieser Funktion sollte das automatische Anlegen eines korrespondierenden Arbeitsbereiches und die Übertragung übergreifender permanenter Daten sein. Man könnte auch den Start der ersten Testung als Gelegenheit implementieren, den Arbeitsbereich anzulegen.\nNach dem Anlegen sollten einmalig alle übergreifenden permanenten Daten in den Arbeitsbereich übertragen werden:\n\nKodierschemata aller Units\nListe aller Items\nMissing-Map\nalle Skalendefinitionen\n\nWenn sich zwischenzeitlich einige dieser Daten ändern (z. B. ein Kodierschema wurde als fehlerhaft erkannt und soll ausgetauscht werden), dann sollten alle Workspace-Daten gelöscht und komplett neu eingespielt werden. Die Portallösung sollte gewährleisten, dass Änderungen die Vergleichbarkeit der Ergebnisse nicht gefährdet und ggf. alle Antworten erneut analysieren lassen.",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#durchführung",
+    "href": "response-analyser/index.html#durchführung",
+    "title": "ResponseAnalyser",
+    "section": "Durchführung",
+    "text": "Durchführung\nWährend der Testung werden fortlaufend die Antworten an den ResponseAnalyser mit Bezug zum korrespondierenden Workspace gegeben:\n\nFür jede Person werden alle verfügbaren Antworten übergeben\nAus der Datenbank werden - sofern vorhanden - für diese Person zusätzliche Daten aus anderen Quellen übergeben (Item-Werte, Skalen-Werte)\n\nDer ResponseAnalyser kennt alle theoretisch möglichen Skalenwerte, meldet aber nur die zurück, zu denen er Daten erhalten hat.\nDer Output des ResponseAnalysers soll in einer Datenbank gespeichert werden. Aus dieser Quelle werden anschließend die Aggregationsdaten (Klasse, Schule usw.) erstellt, die Rückmelde-Diagramme gespeist und ggf. Daten an externe Dashboards übermittelt.\nDer ResponseAnalyser speichert keine personenbezogenen Daten und kennt die ID oder auch Metadaten der Testperson nicht. Sollte eine Testperson an verschiedenen Testungen teilnehmen, kann auch ersteinmal ein unvollständiger Antwort-Satz an den ResponseAnalyser gegeben werden. Dann können Ergebnisrückmeldungen nur teilweise erfolgen. Dieses Vorgehen ist z. B. sinnvoll, wenn Fähigkeitswerte sich jeweils nur aus den Antworten einer Teil-Testung speisen (z. B. Mathematik und Deutsch in getrennten Instrumenten). Sowie jedoch Fähigkeitswerte auf Items aus mehreren Teil-Testungen basieren, müssen alle Antworten aus allen Teil-Testungen an den ResponseAnalyser übergeben werden. Dann werden ggf. schon in der Ergebnisdatenbank vorhandene Werte überschrieben.",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#abschluss",
+    "href": "response-analyser/index.html#abschluss",
+    "title": "ResponseAnalyser",
+    "section": "Abschluss",
+    "text": "Abschluss\nEs sollte in der Portallösung eine Funktion geben, mit der man die Durchführung einer Studie für beendet erklärt. Alle Testungen sind dann durchgeführt und wurden über den ResponseAnalyser ausgewertet. Alle möglichen Ergebnisdaten sind (permanent) gespeichert. Zu diesem Zeitpunkt müsste der korrespondierende Arbeitsbereich im ResponseAnalyser gelöscht werden.",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#antworten",
+    "href": "response-analyser/index.html#antworten",
+    "title": "ResponseAnalyser",
+    "section": "Antworten",
+    "text": "Antworten\nEine Antwort ist eine Datenstruktur, die während der Testdurchführung vom Player erzeugt wird. Sie muss einer Unit und einer Testperson zugeordnet werden.\nUnter Unit ist hier (a) das konkrete Vorkommen der Unit in einem Booklet (=Unit-Alias) und (b) eine Referenz zu einer Unit-Definition (=Unit-ID) gemeint. Normalerweise sind beide Angaben identisch. Aber sollte eine Unit (“Wie motiviert bist Du, den Test durchzuführen?”) mehrfach in einem Booklet auftauchen, gibt es einerseits die Unit-ID zum Auffinden der UI-Definition und des Kodierschemas usw., und außerdem gibt es den Unit-Alias für die Zuordnung der Antwort zur konkreten Nutzung der Unit. Das Testcenter generiert den Alias automatisch, sollte er nicht explizit vorgegeben sein, und speichert die Antworten ausschließlich mit dem Alias, nicht der Unit-ID.\n\n\n\n\n\n\nWarnungBooklet-Zuordnung wird ignoriert\n\n\n\nDer ResponseAnalyser bekommt keine Information darüber, aus welchem Booklet die Antworten kommen. Sollten Antworten einer Person für dieselbe Unit mit demselben Alias in verschiedenen Booklets auftauchen, kann nur eine Antwort pro Unit-Variable verarbeitet werden. Es werden ggf. die Antworten unsystematisch überschrieben. Das Testdesign muss also dann über verschiedene Aliase eine korrekte Verarbeitung sicherstellen.\n\n\nWährend des Kodierprozesses bleibt die Datenstruktur der Antwort erhalten. Es werden ggf. der Status geändert und neue Informationen hinzugefügt (Code, Score).",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#unit",
+    "href": "response-analyser/index.html#unit",
+    "title": "ResponseAnalyser",
+    "section": "Unit",
+    "text": "Unit\n\nFür das automatische Kodieren ist das Kodierschema der Unit erforderlich. Es wird unverändert an den Autocoder weitergegeben, ohne dass der ResponseAnalyser eine Validierung o. ä. vornehmen müsste. Probleme meldet ggf. der Autocoder.\nDie Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfache Key-Value-Struktur überführt werden - der sog. Itemwert-Liste. Für diese Transformation sind die Informationen Item-Liste aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).",
+    "crumbs": [
+      "ResponseAnalyser"
+    ]
+  },
+  {
+    "objectID": "response-analyser/index.html#skalen",
+    "href": "response-analyser/index.html#skalen",
+    "title": "ResponseAnalyser",
+    "section": "Skalen",
+    "text": "Skalen\nUm die Fähigkeitswerte zu ermitteln, werden Itemwerte verarbeitet. Die Regeln hierzu sind in der Datenstruktur Skalendefinition gespeichert.",
     "crumbs": [
       "ResponseAnalyser"
     ]

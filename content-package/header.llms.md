@@ -1,0 +1,161 @@
+# AP-Index: Allgemeine Daten
+
+# `packageId`
+
+Das Inhaltspaket für eine Erhebung muss eine ID haben. Inhalte, die an Länder gegeben wurden oder mit denen umfangreiche Daten erhoben wurden, müssen eindeutig identifizierbar sein. Zusammen mit den Beschreibungen der Testpersonen, den Durchführungsprotokollen und den Ergebnisdaten erhält man ein Archiv, das spätere Analysen ermöglicht. Nur mit einer eindeutigen ID können die richtigen Inhalte wiedergefunden werden.
+
+Es ist zu empfehlen, Inhaltspakete mit einer gewissen Bedeutung mit einer permanenten ID zu versehen. Beispielsweise bieten [w3id](https://w3id.org/) oder [DOI](https://support.datacite.org/docs/doi-basics) ausgereifte und einfach zu bedienende Registrierungen langfristig persistenter Datenobjekte. Das IQB nutzt beide Systeme seit langer Zeit für verschiedene Anwendungen und wird voraussichtlich **w3id** für Inhaltspakete verwenden.
+
+# `version`
+
+Eine Version wird über drei Zahlen und optional einen Suffix beschrieben. Da in der Entwicklungsphase (erste Versionszahl `0`), aber auch nach dem ersten Release Überarbeitungen zu erwarten sind, muss es eine verlässliche Information über den letzten oder demnächst zu erwartende Arbeitsstände geben. Das IQB nutzt für Software und für Spezifikation die [semantische Versionierung](https://semver.org/lang/de/).
+
+Verglichen mit Software und Spezifikation ist es bei Inhalten recht schwierig zu entscheiden, unter welchen Umständen die erste oder zweite Zahl hochgezählt wird. Daher muss dann in den sog. **Release notes** ausführlich beschrieben werden, was geändert wurde. Die Release notes sind Teil der Veröffentlichung und nicht Teil der Daten.
+
+# `name`, `description`
+
+Das Inhaltspaket benötigt einen kurzen Namen und eine Beschreibung, damit man in Listen schnell erkennen kann, ob es relevant für die eigene Arbeit ist oder nicht. Die Einträge hier sind mehrsprachig angelegt.
+
+``` json
+{
+ "name": [
+    {
+      "lang": "de",
+      "value": "IQB VERA Vergleichsarbeiten Durchgang 2027"
+    }
+  ],
+  "description": [
+    {
+      "lang": "de",
+      "value": "Sämtliche Daten und Dokumente für die Online-Durchführung und Auswertung des Durchganges 2027 für VERA Vergleichsarbeiten Durchgang 2027"
+    }
+  ]
+}
+```
+
+Auch wenn es nur eine Sprache geben sollte, müssen ein Array und die Properties `lang` und `value` formuliert werden.
+
+# `maintainerName`, `maintainerUrl`
+
+Bei Testinhalten muss es eine Angabe geben, wer dafür verantwortlich ist. Hierfür gibt es zahlreiche Konzepte und Varianten. Für die vorliegende Datenspezifikation soll ersteinmal “Maintainer” ausreichen - ein Name und eine Url. Hierüber kann man Kontakt aufnehmen.
+
+Wenn Erfahrungen mit Veröffentlichungen vorliegen, wird dies sicher noch erweitert. Dann kann man die Unterscheidung zu Publisher oder Creator schärfen, auch mit Blick auf den Support für Nachfragen.
+
+# `status`
+
+Auch dieses Merkmal vereint einige Informationen, die später eventuell separat und detaillierter geführt werden müssen.
+
+- `IN_DEVELOPMENT` ist der erste und default-Wert und zeigt an, dass keine Veröffentlichung erfolgte
+- `RELEASED_PUBLIC` ist eine Veröffentlichung mit einer [OER-Lizenz](https://open-educational-resources.de/cc-lizenz-infografik/) und keiner Zugriffsbeschränkung, z. B. Demo-Pakete.
+- `RELEASED_CONFIDENTIAL` ist eine Veröffentlichung für einen begrenzten Personenkreis. Beispielsweise erfordern die Inhaltspakete für VERA eine Vertraulichkeit, um die Testergebnisse nicht zu verfälschen.
+- `DISCONTINUED` zeigt an, dass das Inhaltspaket nicht mehr unterstützt wird, nicht mehr zu empfehlen ist oder durch ein anderes Inhaltspaket ersetzt wurde.
+
+Es sind in diesem Merkmal also drei Aspekte vereint, die später voraussichtlich getrennt geführt werden: Reifegrad/Qualität, Vertraulichkeit und Nutzungsrechte.
+
+# `metadata`
+
+Das IQB nutzt seit einigen Jahren konsequent ein eigenes Metadatensystem, das auf internationalen Standards beruht. Kern sind Vokabulare, in denen Wertelisten für spezifische Merkmale veröffentlicht sind. Verschiedene Metadaten werden dann Objekten über sog. Metadatenprofile zugewiesen. Es handelt sich um ein sehr flexibles und universelles Verfahren, digitalen Objekten Zusatzinformationen zuzuweisen, ohne jedes Mal die Spezifikation ändern zu müssen.
+
+Weitere Informationen und Literatur finden Sie [hier](https://iqb-vocabs.github.io). Die Metadatenprofile, die im AP-Index verwendet werden, finden Sie [hier](https://iqb-vocabs.github.io/p44/)
+
+Beispiel Objekt-Metadaten JSON
+
+``` json
+{
+  "metadata": {
+    "profileId": "https://raw.githubusercontent.com/iqb-vocabs/p44/master/index.json",
+    "entries": [
+      {
+        "id": "e1",
+        "label": [
+          {
+            "lang": "de",
+            "value": "Art der Erhebung"
+          }
+        ],
+        "value": [
+          {
+            "id": "https://w3id.org/iqb/v85/dt/1"
+          }
+        ],
+        "valueAsText": [
+          {
+            "lang": "de",
+            "value": "Kompetenz- und Leistungsdaten"
+          }
+        ]
+      },
+      {
+        "id": "kim_type_school",
+        "label": [
+          {
+            "lang": "de",
+            "value": "Schulform"
+          }
+        ],
+        "value": [
+          {
+            "id": "https://w3id.org/kim/schularten/s02"
+          }
+        ],
+        "valueAsText": [
+          {
+            "lang": "de",
+            "value": "Grundschule"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Beispiele: Schulform, Untersuchungsdesign, Erhebungsverfahren
+
+# `codingParameters`
+
+Über diese Eigenschaft werden einige allgemeine Parameter für die Kodierung und Analyse übergeben.
+
+- `itemValues`: Die Itemmatrix, die im Anschluss an die Kodierung aus den Antwortdaten erstellt wird, enthält eigentlich keine numerischen Werte. Statt dessen stehen die Zahlen für Kategorien. Es gibt Konventionen dazu, aber eventuell möchte man davon abweichen. In diesem Fall dient die Eigenschaft `itemValues` dazu, diese Abweichungen zu deklarieren:
+  - `FULL_CREDIT` steht für die vollständig richtige Antwort. Standardwert ist `1`
+  - `NO_CREDIT` steht für eine völlig falsche Antwort. Standardwert ist `0`
+  - `MISSING` weist auf eine fehlende Antwort hin. Der Grund ist an dieser Stelle nicht wichtig, aber es wäre eine Verfälschung der Daten, wenn man hier mit “falsch” oder “richtig” in die Datenanalyse gehen würde. Standardwert ist `-99`
+- `statusMapping`: Wenn der Status der Quellvariablen `CODING_COMPLETE` erreicht wurde, wird deren Score in die Itemmatrix übernommen. Für alle anderen Status-Werte muss definiert werden, welcher Itemwert gewählt wird: `NO_CREDIT` oder `MISSING`. Dies erfolgt über diesen Parameter.
+
+``` json
+{
+ "codingParameters": {
+    "itemValues": [
+      {
+        "type": "MISSING",
+        "value": -9
+      }
+    ],
+    "statusMapping": [
+      {
+        "itemValue": -99,
+        "status": [
+          "UNSET",
+          "NOT_REACHED",
+          "DISPLAYED"
+        ]
+      },
+      {
+        "itemValue": 0,
+        "status": [
+          "INVALID",
+          "CODING_ERROR"
+        ]
+      }
+    ]
+  }
+}
+```
+
+# Abschnitte: `assessmentParts`
+
+Die wesentlichen inhaltlichen Daten finden sich in der Datenstruktur `assessmentPart`. Die großen Studien des IQB “Bidungstrend” und “VERA” sind beispielsweise in Fächer aufgeteilt, deren Daten in separaten Teams entwickelt werden. Aber auch in kleineren Studien kann es sinnvoll sein, für den besseren Überblick die Studie in Abschnitte aufzuteilen.
+
+Auf den folgenden Seiten finden Sie die Eigenschaften des `assessmentPart`-Objektes.
+
+Zurück nach oben

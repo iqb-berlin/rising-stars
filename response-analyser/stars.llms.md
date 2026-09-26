@@ -1,0 +1,33 @@
+# ResponseAnalyser StarS-Szenario
+
+Im Projekt StarS wird ein Portalsystem entwickelt, das übergreifende Management-Funktionen übernimmt (s. [Schema hier](../intro.llms.md#software-komponenten)). Sollte ein Land ein eigenes Portalsystem einsetzen, ist nachfolgend die Funktion des ResponseAnalyser für StarS genauer beleuchtet.
+
+![](../assets/response-analyser-stars.png)
+
+# Inhaltspaket laden
+
+Im **Assessment Package** übermittelt das IQB sämtliche für die Vorbereitung, Durchführung und Auswertung von StarS relevante Daten. Dazu erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten für einen Webservice, der für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist: **Assessment Pool**.
+
+Das Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.
+
+# Management der Personen
+
+Für die Durchführung von StarS müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen bzw. diese Daten aus einem Schulverwaltungssystem importieren. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten).
+
+# Testdurchführung
+
+Das IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.
+
+Das Testcenter bzw. der Player liefert die Antworten der Testperson in einem [standardisierten Format](https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html). Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-ResponseAnalyser müssen die Antworten einer Person zusammengefasst werden.
+
+# Kodierung
+
+Die Variablen im StarS-Kontext sind komplett automatisch kodierbar. Dazu sind die Antworten dem ResponseAnalyser zu übergeben.
+
+# Berechnung der Fähigkeitswerte
+
+Über das Assessment Package gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Alle Skalen sind in StarS eindeutig definiert. Der ermittelte (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
+
+Der ResponseAnalyser versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.
+
+Zurück nach oben

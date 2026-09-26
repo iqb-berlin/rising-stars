@@ -234,14 +234,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#arbeitsweise" id="toc-arbeitsweise" class="nav-link active" data-scroll-target="#arbeitsweise">Arbeitsweise</a></li>
-  <li><a href="#funktionen" id="toc-funktionen" class="nav-link" data-scroll-target="#funktionen">Funktionen</a>
+  <li><a href="#funktionen" id="toc-funktionen" class="nav-link active" data-scroll-target="#funktionen">Funktionen</a></li>
+  <li><a href="#nutzungsszenarien" id="toc-nutzungsszenarien" class="nav-link" data-scroll-target="#nutzungsszenarien">Nutzungsszenarien</a>
   <ul class="collapse">
-  <li><a href="#kodieren" id="toc-kodieren" class="nav-link" data-scroll-target="#kodieren">Kodieren</a></li>
-  <li><a href="#item-matrix-erstellen" id="toc-item-matrix-erstellen" class="nav-link" data-scroll-target="#item-matrix-erstellen">Item-Matrix erstellen</a></li>
-  <li><a href="#skalenwerte-ermitteln" id="toc-skalenwerte-ermitteln" class="nav-link" data-scroll-target="#skalenwerte-ermitteln">Skalenwerte ermitteln</a></li>
+  <li><a href="#einbindung-in-portalsystem" id="toc-einbindung-in-portalsystem" class="nav-link" data-scroll-target="#einbindung-in-portalsystem">Einbindung in Portalsystem</a></li>
+  <li><a href="#nur-kodierungdirekt" id="toc-nur-kodierungdirekt" class="nav-link" data-scroll-target="#nur-kodierungdirekt">Nur Kodierung/Direkt</a></li>
   </ul></li>
-  <li><a href="#api-dokumentation" id="toc-api-dokumentation" class="nav-link" data-scroll-target="#api-dokumentation">API-Dokumentation</a></li>
+  <li><a href="#operationen-und-datenfluss" id="toc-operationen-und-datenfluss" class="nav-link" data-scroll-target="#operationen-und-datenfluss">Operationen und Datenfluss</a>
+  <ul class="collapse">
+  <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link" data-scroll-target="#vorbereitung">Vorbereitung</a></li>
+  <li><a href="#durchführung" id="toc-durchführung" class="nav-link" data-scroll-target="#durchführung">Durchführung</a></li>
+  <li><a href="#abschluss" id="toc-abschluss" class="nav-link" data-scroll-target="#abschluss">Abschluss</a></li>
+  </ul></li>
+  <li><a href="#datenstrukturen" id="toc-datenstrukturen" class="nav-link" data-scroll-target="#datenstrukturen">Datenstrukturen</a>
+  <ul class="collapse">
+  <li><a href="#antworten" id="toc-antworten" class="nav-link" data-scroll-target="#antworten">Antworten</a></li>
+  <li><a href="#unit" id="toc-unit" class="nav-link" data-scroll-target="#unit">Unit</a></li>
+  <li><a href="#skalen" id="toc-skalen" class="nav-link" data-scroll-target="#skalen">Skalen</a></li>
+  </ul></li>
+  <li><a href="#offene-punkte" id="toc-offene-punkte" class="nav-link" data-scroll-target="#offene-punkte">Offene Punkte</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/response-analyser-api"><i class="bi bi-link-45deg"></i>API-Spezifikation</a></li></ul></div></nav>
     </div>
@@ -267,7 +278,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Der IQB-ResponseAnalyser ist eine Webanwendung. Es handelt sich also um Software, die auf einem Server installiert werden muss. Man kann nach der Anmeldung die Daten verwalten und Zugriffe steuern. Für das Kodieren kommuniziert dann der ResponseAnalyser mit anderen Servern, d.&nbsp;h. die Hauptfunktion ist eine spezifische Aufgabe im Prozess der Antwortverarbeitung.</p>
+<p>Der IQB-ResponseAnalyser ist ein Webservice. Es handelt sich also um Software, die auf einem Server installiert werden muss, aber über keine Oberfläche/Frontend verfügt. Andere Programmierungen sollen auf eine automatisierte Art den Service benutzen. In einem produktiven Szenario ist der Webservice nicht von außen erreichbar, sondern nur durch Komponenten in einem lokalen geschützten Netzwerk.</p>
+<section id="funktionen" class="level1">
+<h1>Funktionen</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/response-analyser-func.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Übersicht der Funktionen des ResponseAnalysers"><img src="../assets/response-analyser-func.png" class="img-fluid figure-img" width="400" alt="Übersicht der Funktionen des ResponseAnalysers"></a></p>
+<figcaption>Übersicht der Funktionen des ResponseAnalysers</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Kodierung</strong>: Die Antworten einer Testperson werden übergeben. Es erfolgt eine automatische Kodierung (Einbinden des Autocoders). Damit die Antworten kodiert werden können, muss für jede Unit und jede Variable eine Kodiervorschrift verfügbar sein (sog. Kodierschema).</li>
+<li><strong>Item-Mapping</strong>: Für die Weiterverarbeitung der Antwort-Codes müssen die Variablen umbenannt werden. Hierzu ist eine Item-Liste zu liefern. Außerdem muss das Verfahren für den Fall geklärt werden, dass eine Kodierung nicht möglich war. Dazu dient die Missing-Map, die dann festlegt, ob der Wert ‘0’ oder ein einheitlicher Missing-Wert vergeben wird.</li>
+<li><strong>Skalierung</strong>: Mithilfe der übergebenen Skalendefinitionen werden aus den Itemwerten Fähigkeitswerte ermittelt. In diese Berechnung können für die Testperson weitere Werte einfließen, die separat ermittelt und gespeichert wurden: Weitere Itemwerte (z. B. aus einer Beobachtung durch die Testleitung) oder Fähigkeitswerte aus vorherigen Berechnungen (z. B. aus einer Testung im Vorjahr; dann kann ein Lernfortschritt ermittelt werden).</li>
+</ul>
+</section>
+<section id="nutzungsszenarien" class="level1">
+<h1>Nutzungsszenarien</h1>
+<section id="einbindung-in-portalsystem" class="level2">
+<h2 class="anchored" data-anchor-id="einbindung-in-portalsystem">Einbindung in Portalsystem</h2>
+<p>Der häufigste Anwendungsfall ist die Nutzung durch ein übergreifendes Portalsystem für eine Lernstandserhebung. Dieses Portalsystem bereitet die Testung vor und soll nach der Testung die Antworten so aufbereiten, dass für die Lehrkraft eine Ergebnisrückmeldung erfolgen kann. Der Schritt der Transformation der Roh-Antworten in Fähigkeitswerte pro Person soll automatisch erfolgen: Unmittelbar nach der Testung einer Klasse sind die Ergebnisse darstellbar, ohne dass jemand die Daten manuell umformt.</p>
+<p>Der Dienst “ResponseAnalyser” ist in die Portallösung integriert. Es gibt keine Stand-Alone-Installation des ResponseAnalysers, die mit “irgendeiner” Portallösung kommuniziert.</p>
+<p>Ein Portalsystem könnte mehrere verschiedene Testungen gleichzeitig administrieren. Daher ist pro Testung ein isolierter Bereich (“Workspace”) erforderlich. Nur so kann man Verwechslungen von Units unterbinden oder unterschiedliche Missing-Maps gewährleisten. Bei großen Testungen muss eine hohe Last bewältigt werden. Der ResponseAnalyser sollte daher gut skalieren. Die permanenten Daten eines Arbeitsbereiches erfordern für die Replizierbarkeit eine clusterfähige Speicherlösung.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Vorsicht</span>Informationssicherheit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Da nur der integrierte Betrieb innerhalb einer Portallösung und keine Stand-Alone-Installation vorgesehen ist, wird der ResponseAnalyser innerhalb eines lokalen Netzwerkes betrieben. Es ist keine Authentifizierung nötig, da der Zugriff durch die Portallösung immer erlaubt und ein externer Zugriff nicht möglich ist. Es gibt kein Rechte-Rollen-Konzept.</li>
+<li>Personenbezogene Daten werden nicht gespeichert. Sie sind nur während der Bearbeitung genau eines Requests bekannt.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="nur-kodierungdirekt" class="level2">
+<h2 class="anchored" data-anchor-id="nur-kodierungdirekt">Nur Kodierung/Direkt</h2>
+<p>Für die Verarbeitung von Antworten nutzt das IQB die Webanwendung IQB-Kodierbox. Wenn man diese komplexe Software nicht installieren möchte, kann man für die automatische Kodierung auch den ResponseAnalyser nutzen. Wenn keine Skalendefinitionen hinterlegt sind, wird nur kodiert. Über Skripte (PowerShell, R usw.) kann man die API entsprechend bedienen. Auch das Erstellen der Item-Liste könnte über den ResponseAnalyser einfacher erfolgen als manuell.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -278,56 +330,80 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Die Veröffentlichung eines Prototyps für den IQB-ResponseAnalyser ist Mitte 2026 vorgesehen.</p>
+<p>Die folgenden Darstellungen beziehen sich nur auf das Nutzungsszenario “Portalsystem”.</p>
 </div>
 </div>
-<section id="arbeitsweise" class="level1">
-<h1>Arbeitsweise</h1>
-<p>Nach der Installation werden Arbeitsbereiche “Workspaces” eingerichtet. Darunter ist die Kodierung und Datenanalyse für genau eine Studie bzw. eine Erhebung zu verstehen, z. B. “VERA 2027”. Wenn entsprechende Zugriffsrechte erteilt wurden, werden die Daten des zugehörigen Assessment Package in den Arbeitsbereich geladen (Json-Datei des AP-Index und Inhaltsdateien - hier insbes. die Kodieranweisungen der Units). Das kann manuell über ein Portal erfolgen oder automatisiert über einen Management-Server.</p>
-<p>Danach wird in je <strong>einem Request</strong> die Kodierung und Analyse für genau <strong>eine Testperson</strong> vorgenommen. Dieser Request erfolgt nicht manuell, sondern das Management-Portal, das auch die Kommunikation mit dem IQB-Testcenter übernimmt, stellt die Anfragen an den IQB-ResponseAnalyser:</p>
+</section>
+</section>
+<section id="operationen-und-datenfluss" class="level1">
+<h1>Operationen und Datenfluss</h1>
+<section id="vorbereitung" class="level2">
+<h2 class="anchored" data-anchor-id="vorbereitung">Vorbereitung</h2>
+<p>Das Portalsystem sollte eine Funktion “Neue Studie anlegen” oder ähnliches bieten. Teil dieser Funktion sollte das automatische Anlegen eines korrespondierenden Arbeitsbereiches und die Übertragung übergreifender permanenter Daten sein. Man könnte auch den Start der ersten Testung als Gelegenheit implementieren, den Arbeitsbereich anzulegen.</p>
+<p>Nach dem Anlegen sollten einmalig alle übergreifenden permanenten Daten in den Arbeitsbereich übertragen werden:</p>
 <ul>
-<li>Input:
-<ul>
-<li>Alle Antworten der Testperson, egal aus welchen Testheften.</li>
-<li>Zusätzlich können Itemwerte aus anderen Quellen hinzugefügt werden, die nicht dem IQB-Standardformat der Antworten folgen (z. B. Befragungen).</li>
-</ul></li>
-<li>Output (s. u. Funktionen):
-<ul>
-<li>Bewertung für jede Antwort (Kodierung, also Codes und Scores)</li>
-<li>Alle ermittelten Items mit ihrem numerischen Itemwert</li>
-<li>Werte für alle Skalen, die mindestens ein Item der Testperson enthalten oder von einer solchen Skala abgeleitet sind</li>
-</ul></li>
+<li>Kodierschemata aller Units</li>
+<li>Liste aller Items</li>
+<li>Missing-Map</li>
+<li>alle Skalendefinitionen</li>
 </ul>
-<p>Damit ist man in der Lage, für die Testperson Fähigkeitswerte zu berichten. Es gibt dabei kein “Soll”, d.&nbsp;h. der Service kennt die Person nicht und kann nicht überprüfen, für welche Skalen der Request Werte liefern müsste. Es werden nur Skalenwerte geliefert, zu denen Antworten bzw. Zusatzitems gefunden wurden.</p>
-<p>Nach dem Request verbleiben keine Information über die Testperson auf dem Server.</p>
+<p>Wenn sich zwischenzeitlich einige dieser Daten ändern (z. B. ein Kodierschema wurde als fehlerhaft erkannt und soll ausgetauscht werden), dann sollten alle Workspace-Daten gelöscht und komplett neu eingespielt werden. Die Portallösung sollte gewährleisten, dass Änderungen die Vergleichbarkeit der Ergebnisse nicht gefährdet und ggf. alle Antworten erneut analysieren lassen.</p>
 </section>
-<section id="funktionen" class="level1">
-<h1>Funktionen</h1>
-<p><a href="../assets/response-analyser.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../assets/response-analyser.png" class="img-fluid" width="600"></a></p>
-<p>Die Funktionen bauen aufeinander auf. Sie werden also genau in der Reihenfolge abgearbeitet.</p>
-<section id="kodieren" class="level2">
-<h2 class="anchored" data-anchor-id="kodieren">Kodieren</h2>
-<p>Die erste Aufgabe des ResponseAnalyser besteht darin, die Antworten zu bewerten, also festzulegen, ob im Sinne des Kodierschemas die Antworten richtig oder falsch sind. Es ist hier wichtig zu betonen, dass dies auf der <strong>Ebene der Variablen</strong> passiert. Eine Variable kann eine einfache Auswahl aus einer Optionsliste symbolisieren, aber auch komplexe Interaktionen fein granular abbilden.</p>
-<p>Im Rahmen von StarS werden nur automatisch kodierbare Variablen verwendet. In anderen Lernstandserhebungen sind teilweise manuelle Kodierungen erforderlich, d.&nbsp;h. z. B. eine freie Texteingabe der Testperson wird von der Lehrkraft beurteilt mit Blick auf den Text der Kodiervorschrift.</p>
-</section>
-<section id="item-matrix-erstellen" class="level2">
-<h2 class="anchored" data-anchor-id="item-matrix-erstellen">Item-Matrix erstellen</h2>
-<p>Im häufigsten Fall wird eine Variable auch synonym für das Item stehen. Wenn aus einer Auswahl von Buttons einer gedrückt werden soll, ist das ein Item. Das Datenmodell muss aber flexibler sein, d.&nbsp;h. es können mehrere Interaktionen - also Antworten - zu einem Itemwert beitragen. Beispiel: “Wähle aus und begründe” ist ein übliches Itemformat, das zwei getrennt gegebene Variablenwerte später zu einem Itemwert zusammenführt. Eine solche Zusammenführung ist im Kodierschema der Aufgabe beschrieben: Es wird für das Item eine neue Variable abgeleitet. So oder so liefert als eine Variable aus dem Kodierschema den Wert für das Item. Es ist stets der <strong>Score</strong> der Variablen, der für den Itemwert verwendet wird.</p>
-<p>Die Antworten werden durch das Testcenter in einer Datenstruktur geliefert: Man kann den Status der Antwort (nicht erreicht, bereits kodiert, Fehler), den Wert, sowie nach der Kodierung den Code und den Score ablesen. Die Item-Matrix hat jedoch nur <strong>zwei Dimensionen</strong>: Pro Testperson und Item gibt es einen numerischen Wert. Sollte es einen Fehler gegeben haben, wird üblicherweise die Konvention “negativer Wert” (z. B. -99) umgesetzt.</p>
-</section>
-<section id="skalenwerte-ermitteln" class="level2">
-<h2 class="anchored" data-anchor-id="skalenwerte-ermitteln">Skalenwerte ermitteln</h2>
-<p>Im Assessment Package sind Skalen definiert. Darunter sind nominale oder ordinale Metriken zu verstehen, mit denen das Fähigkeitsniveau einer Testperson ausgedrückt werden kann. Hierzu sind folgende Informationen erforderlich:</p>
+<section id="durchführung" class="level2">
+<h2 class="anchored" data-anchor-id="durchführung">Durchführung</h2>
+<p>Während der Testung werden fortlaufend die Antworten an den ResponseAnalyser mit Bezug zum korrespondierenden Workspace gegeben:</p>
 <ul>
-<li>Liste der Items, die zu dieser Skala beitragen (z. B. Leseverstehen bezieht sich nicht auf Hör-Items)</li>
-<li>Methode der Ermittlung und dafür nötige Parameter</li>
+<li>Für jede Person werden alle verfügbaren Antworten übergeben</li>
+<li>Aus der Datenbank werden - sofern vorhanden - für diese Person zusätzliche Daten aus anderen Quellen übergeben (Item-Werte, Skalen-Werte)</li>
+</ul>
+<p>Der ResponseAnalyser kennt alle theoretisch möglichen Skalenwerte, meldet aber nur die zurück, zu denen er Daten erhalten hat.</p>
+<p>Der Output des ResponseAnalysers soll in einer Datenbank gespeichert werden. Aus dieser Quelle werden anschließend die Aggregationsdaten (Klasse, Schule usw.) erstellt, die Rückmelde-Diagramme gespeist und ggf. Daten an externe Dashboards übermittelt.</p>
+<p>Der ResponseAnalyser speichert keine personenbezogenen Daten und kennt die ID oder auch Metadaten der Testperson nicht. Sollte eine Testperson an verschiedenen Testungen teilnehmen, kann auch ersteinmal ein unvollständiger Antwort-Satz an den ResponseAnalyser gegeben werden. Dann können Ergebnisrückmeldungen nur teilweise erfolgen. Dieses Vorgehen ist z. B. sinnvoll, wenn Fähigkeitswerte sich jeweils nur aus den Antworten einer Teil-Testung speisen (z. B. Mathematik und Deutsch in getrennten Instrumenten). Sowie jedoch Fähigkeitswerte auf Items aus mehreren Teil-Testungen basieren, müssen alle Antworten aus allen Teil-Testungen an den ResponseAnalyser übergeben werden. Dann werden ggf. schon in der Ergebnisdatenbank vorhandene Werte überschrieben.</p>
+</section>
+<section id="abschluss" class="level2">
+<h2 class="anchored" data-anchor-id="abschluss">Abschluss</h2>
+<p>Es sollte in der Portallösung eine Funktion geben, mit der man die Durchführung einer Studie für beendet erklärt. Alle Testungen sind dann durchgeführt und wurden über den ResponseAnalyser ausgewertet. Alle möglichen Ergebnisdaten sind (permanent) gespeichert. Zu diesem Zeitpunkt müsste der korrespondierende Arbeitsbereich im ResponseAnalyser gelöscht werden.</p>
+</section>
+</section>
+<section id="datenstrukturen" class="level1">
+<h1>Datenstrukturen</h1>
+<section id="antworten" class="level2">
+<h2 class="anchored" data-anchor-id="antworten">Antworten</h2>
+<p>Eine Antwort ist eine Datenstruktur, die während der Testdurchführung vom Player erzeugt wird. Sie muss einer Unit und einer Testperson zugeordnet werden.</p>
+<p>Unter Unit ist hier (a) das konkrete Vorkommen der Unit in einem Booklet (=<strong>Unit-Alias</strong>) und (b) eine Referenz zu einer Unit-Definition (=<strong>Unit-ID</strong>) gemeint. Normalerweise sind beide Angaben identisch. Aber sollte eine Unit (“Wie motiviert bist Du, den Test durchzuführen?”) mehrfach in einem Booklet auftauchen, gibt es einerseits die Unit-ID zum Auffinden der UI-Definition und des Kodierschemas usw., und außerdem gibt es den Unit-Alias für die Zuordnung der Antwort zur konkreten Nutzung der Unit. Das Testcenter generiert den Alias automatisch, sollte er nicht explizit vorgegeben sein, und speichert die Antworten ausschließlich mit dem Alias, nicht der Unit-ID.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warnung</span>Booklet-Zuordnung wird ignoriert
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Der ResponseAnalyser bekommt keine Information darüber, aus welchem Booklet die Antworten kommen. Sollten Antworten einer Person für dieselbe Unit mit demselben Alias in verschiedenen Booklets auftauchen, kann nur eine Antwort pro Unit-Variable verarbeitet werden. Es werden ggf. die Antworten unsystematisch überschrieben. Das Testdesign muss also dann über verschiedene Aliase eine korrekte Verarbeitung sicherstellen.</p>
+</div>
+</div>
+<p>Während des Kodierprozesses bleibt die Datenstruktur der Antwort erhalten. Es werden ggf. der Status geändert und neue Informationen hinzugefügt (Code, Score).</p>
+</section>
+<section id="unit" class="level2">
+<h2 class="anchored" data-anchor-id="unit">Unit</h2>
+<ul>
+<li>Für das automatische Kodieren ist das <strong>Kodierschema</strong> der Unit erforderlich. Es wird unverändert an den Autocoder weitergegeben, ohne dass der ResponseAnalyser eine Validierung o. ä. vornehmen müsste. Probleme meldet ggf. der Autocoder.</li>
+<li>Die Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfache Key-Value-Struktur überführt werden - der sog. Itemwert-Liste. Für diese Transformation sind die Informationen <strong>Item-Liste</strong> aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).</li>
 </ul>
 </section>
+<section id="skalen" class="level2">
+<h2 class="anchored" data-anchor-id="skalen">Skalen</h2>
+<p>Um die Fähigkeitswerte zu ermitteln, werden Itemwerte verarbeitet. Die Regeln hierzu sind in der Datenstruktur <strong>Skalendefinition</strong> gespeichert.</p>
 </section>
-<section id="api-dokumentation" class="level1">
-<h1>API-Dokumentation</h1>
-<p>Um mit dem IQB-ResponseAnalyser zu kommunizieren bzw. dessen Funktionen zu nutzen, wurde ein API spezifiziert. Dies an folgender Stelle zu finden:</p>
-<p><a href="https://iqb-specifications.github.io/response-analyser-api">API-Spezifikation</a></p>
+</section>
+<section id="offene-punkte" class="level1">
+<h1>Offene Punkte</h1>
+<ul>
+<li>mehrere Unit-Aliase</li>
+<li>wie meldet der ResponseAnalyser Probleme?</li>
+</ul>
 
 
 </section>

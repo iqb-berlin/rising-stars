@@ -1,0 +1,71 @@
+# ContentHub: AP-Ansichten
+
+Im folgenden werden die Nutzungsszenarien eines AP (Assessment Packages) beschrieben. Dies erfolgt in Form sog. User Journeys. Ob diese Nutzungsszenarien für ein AP zur Verfügung stehen und welche Funktionen jeweils freigegeben sind, wird über die Rolle [AP-Manager](../content-hub/ap-manager.llms.md) definiert.
+
+# Allgemeine Ansichten
+
+## Ansicht Aufgabenfolge
+
+Die Ansicht einer Aufgabenfolge startet mit der Ansicht der ersten in der Aufgabenfolge aufgeführten Unit. Zusätzlich sind ständig zwei Navigationspfeile “Weiter” (gehe zur nächsten Unit) und “Zurück” (gehe zur vorherigen Unit) verfügbar. Diese Navigationspfeile sind ggf. nicht klickbar, wenn die erste oder die letzte Unit angezeigt wird.
+
+Es ist außerdem ein Button verfügbar, über den man die Liste aller Units (nur Name) aufruft und direkt zu einer Unit der Aufgabenfolge springen kann.
+
+Je nach Konfiguration steht zusätzlich ein Button zur Verfügung, über den man eine Dialogbox aufrufen kann. Hier kann man einen Kommentar für die Aufgabenfolge insgessamt vergeben.
+
+Je nach Konfiguration steht zusätzlich ein Button zur Verfügung, über den man alle Units der Aufgabenfolge als Zip-Datei herungerladen kann.
+
+## Ansicht einer Unit
+
+Eine Unit wird so angezeigt, wie sie im IQB-Testcenter im Modus `run-review` angezeigt wird. Es handelt sich also um einen Verona-Player, der für die Anzeige geladen werden muss. Über Pfeil-Buttons kann man spezifische Seiten anspringen, sofern die Unit mehrere Seiten enthält.
+
+Je nach Konfiguration können weitere Daten einer Unit angezeigt werden: Metadaten, Kodierschema und RichText (wie z. B. didaktische Handreichungen). Diese Daten verdecken entweder die Unit oder führen zu einer vertikalen Teilung des Bildschirmes: Unit in der linken Hälfte, Zusatzdaten auf der rechten Hälfte.
+
+Je nach Konfiguration steht ein Button zur Verfügung, über den man eine Dialogbox aufrufen kann. Hier kann man einen Kommentar für die Unit vergeben.
+
+Je nach Konfiguration steht zusätzlich ein Button zur Verfügung, über den man die Unit als Zip-Datei herungerladen kann.
+
+## Ansicht eines Items
+
+Diese Ansicht deckt sich mit der Unit-Ansicht. Zusätzlich wird zu einer bestimmten Seite gesprungen und zu einer bestimmten Stelle auf der Seite geblättert, so dass das Item sichtbar wird. Außerdem wird das Item optisch hervorgehoben (z. B. farbiger Rahmen).
+
+## Ansicht AP-Index
+
+Man kann durch alle Daten des AP-Index klicken und verlinkte Dateien anzeigen. Je nach Dateityp wird ein Download angestoßen (z. B. bei PDF, um die lokal zugewiesene Anwendung zu starten) oder man kommt zu einer Ansicht einer Aufgabenfolge (bei Testheft), einer Unit oder einem Item.
+
+# Ansichten für die Öffentlichkeit
+
+Über eine Url kann man zu folgenden Orten eines ContentHub gelangen:
+
+- Hauptseite des ContentHub. Dann ist auf dieser Seite eine Liste zu finden von allen für die Öffentlichkeit freigegebenen AP. Man wählt einen aus und gelangt zur AP-Startseite.
+- AP-Startseite
+- eine bestimmte Aufgabenfolge eines bestimmten AP
+- eine bestimmte Unit des AP
+- ein bestimmtes Item des AP
+
+Über die AP-Startseite gelangt man
+
+- zu allen freigegebenen Aufgabenfolgen
+- zu allen Units (Liste)
+- zu allen Items (Liste)
+
+Man gelangt von jeder Aufgabenfolge, jeder Unit und jedem Item zur AP-Startseite.
+
+# Download durch autorisierte Personen
+
+Dieses Szenario unterscheidet sich vom vorherigen Szenario “für die Öffentlichkeit” nur durch den erforderlichen Login: Wenn noch keine Autorisierung erfolgt ist, wird man auf die Startseite des ContentHub umgeleitet. Hier muss man sich entscheiden, ob man sich über die Login-Funktion des ContentHub autorisiert (Nur-Lese-Zugriff ist über Nutzerkonto zugewiesen) oder über einen Klick auf das AP. Ein Login ist dann über eine Benutzername-Kennwort-Liste definiert und man kommt zu einem Login-Formular.
+
+# Zwischenspeicher/Backup
+
+Dieses Szenario unterscheidet sich vom vorherigen Szenario “durch autorisierte Personen” dadurch, dass der AP-Index angeschaut und heruntergeladen werden kann.
+
+Außerdem ist in diesem Szenario eine Kommunikation zwischen Servern vorgesehen. Man soll in anderen Webanwendungen (IQB-Studio, IQB-Kodierbox, IQB-Testcenter, Portallösungen der Betreiber, andere Installation des IQB-ContentHub) die Möglichkeit haben, auf einen ContentHub zuzugreifen: Login, verfügbare AP auflisten, AP oder Teile davon in beide Richtungen transferieren.
+
+# Ansicht und Kommentierung von Aufgaben
+
+Dieses Szenario unterscheidet sich vom vorherigen Szenario “durch autorisierte Personen” dadurch, dass kein Download erlaubt ist, aber das Kommentieren.
+
+# Ansicht von Items
+
+Dieses Szenario fokussiert auf die Itemliste (sortierbar, Filter möglich, Markierungen setzen) und den Sprung zu einzelnen Items.
+
+Zurück nach oben

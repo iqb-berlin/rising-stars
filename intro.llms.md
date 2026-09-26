@@ -1,0 +1,52 @@
+# Überblick
+
+Die hier beschriebenen Datenstrukturen beziehen sich auf **Befragungen und Feststellungen des Leistungsniveaus im Bildungswesen**. Dafür wird der Begriff “Test” im allgemeineren Sinne verwendet. Im Englischen steht “Assessment” für Leistungstests.
+
+[![](assets/intro1.png)](assets/intro1.png)
+
+Das obige Bild zeigt das übliche Ablaufschema eines Tests: Nach einer ersten Planungsphase wird festgelegt, was getestet werden soll und welche Personen getestet werden sollen. Nach dem Test werden die Antworten kodiert und analysiert, um abschließend zu berichten.
+
+Rechts in der Darstellung ist mit “Assessment Package” der **Testcontent** für den Test dargestellt:
+
+- Für die Testdurchführung sind Testaufgaben (Aufgaben/Units) und deren Anordnung im Test (Booklets) nötig.
+- Für die Kodierung der Antworten müssen Kodiervorschriften verfügbar sein.
+- Für die Datenanalyse müssen Verfahren festgelegt sein mit spezifischen Parametern (Skalen).
+- Für das Berichten (sog. Rückmeldung) werden Textbausteine und Material zur Förderung bzw. zur Unterrichtsentwicklung bereitgestellt.
+
+Sämtliche Daten stellt das IQB im StarS-Projekt über das **Assessment Package** bereit. Diese Datenstruktur ist [hier erläutert](content-package/index.llms.md).
+
+# Software-Komponenten
+
+Die StarS-Tests werden online vorbereitet, durchgeführt und ausgewertet. Die nötigen Komponenten sind nachfolgend vereinfacht dargestellt.
+
+## Durchführung einer normierten Testung
+
+[![](assets/intro2.png)](assets/intro2.png)
+
+- **Management-Portal**: Im Zentrum steht eine Software, über die die Testung vorbereitet wird und die den gesamten Datenverkehr steuert. Über Portale mit vielen Menüs und Formularen werden Personen und Booklets ausgewählt und der Test organisiert. In einem Szenario wie VERA übernimmt das Management-Portal auch die manuelle Kodierung.
+- **IQB-ContentHub**: Hier werden sämtliche Daten und Dateien vorgehalten, die dann durch das Management-Portal abgerufen und an die anderen Komponenten weitergeleitet werden.
+- **Schulverwaltungssystem**: Diese Komponente steht symbolisch für eine länderseitige Infrastruktur, die für die Testung die erforderlichen Daten der Schüler\*innen liefert.
+- **IQB-Testcenter**: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test durch das Management-Portal abgerufen.
+- **IQB-ResponseAnalyser**: Nach der Testung müssen (a) die Antworten als Richtig oder Falsch kodiert und (b) Fähigkeitswerte der Personen berechnet werden.
+- **Dashboard**: Eine Auswertung durch verschiedene Zielgruppen (Bildungsadministration, Lehrkräfte) benötigt die Fähigkeitswerte der Testpersonen und Vergleichswerte. Eine Rückmeldung hierzu ist im Management-Portal integriert. Für weitergehende Auswertungen steht symbolisch das “Dashboard” in der Abbildung, wo zentral Fähigkeitswerte gespeichert und mit anderen Erhebungen zusammengeführt werden.
+
+## Pilotierung und Normierung zur Vorbereitung einer Testung
+
+[![](assets/intro3.png)](assets/intro3.png)
+
+- **Manuelles Daten-Management**: Für die Entwicklung und Erprobung von Lernstandstest gibt es kaum Prozesse, die mit Routine jedes Mal gleich durchgeführt werden. Die Testpersonen variieren, und die Methodik der Kodierung und Auswertung wird ständig weiterentwickelt. Bei Pilotierungen und Normierungen stehen nicht die Testpersonen im Vordergrund, deren Fähigkeiten ermittelt werden, sondern die Items. Nach einer Pilotierung mit vielen Testheftvarianten werden Items verworfen, überarbeitet oder neu zusammengestellt. Daher ist das Datenmanagement keine Kette fixer Punkte, sondern die Beteiligten aus Wissenschaft und Fachdidaktik gehen flexibel viele Wege.
+- **IQB-Studio**: Mit dieser Webanwendung werden die Aufgaben in einem kollaborativen mehrstufigen Prozess entwickelt.
+- **Excel, XML**: Die Login-Daten der Testpersonen werden über Tabellen verwaltet und mit einfachen Scripten in XML-Dateien für das Testcenter überführt.
+- **IQB-Testcenter**: Diese Software führt den Test durch. Dazu sind Aufgaben (Units) und deren Anordnung im Test (Booklets) sowie die Personenlisten erforderlich. Die Antworten werden nach dem Test manuell (CSV) oder über das Windows-Programm [itc-ToolBox](https://iqb-berlin.github.io/tba-info/study-run/toolbox/) abgerufen.
+- **IQB-KodierBox**: Nach der Testung führt diese Webanwendung wichtige Datenprüfungen und automatische Kodierungen durch. Für die manuellen Kodierungen durch geschultes Pesonal (entfällt bei StarS) stehen komplexe Managementfunktionen zur Verfügung (Kodierdesign entwerfen, Aufträge zuweisen, auswerten, abrechnen). Das Ergebnis ist eine Matrix der Itemwerte, die dann in die manuelle Datenanalyse eingeht.
+- **Bericht**: Dieser Punkt steht symbolisch für die Nutzung der Ergebnisse in diversen Zusammenhängen. Es gibt bei Pilotierungen oder Normierungen keine Rückmeldungen an die Lehrkräfte.
+
+# Umsetzung in StarS
+
+Im Projekt StarS stellt das IQB die Komponenten IQB-ResponseAnalyser, IQB-ContentHub und IQB-Testcenter bereit. Alle Datenformate des Assessment Package sind in diesen Webanwendungen bzw. -services implementiert.
+
+Außerdem wird im Rahmen des StarS-Projektes eine Portallösung programmiert, die das zentrale Datenmanagement übernimmt. Die Rückmeldung ist in diese Lösung integriert.
+
+Die Betreiber einer StarS-Installation (Land, Dienstleister) entscheiden gezielt, welche der Komponenten eingesetzt werden. Das obige Schema ist daher als Integrationsschema zu verstehen: Die Komponenten haben dokumentierte Schnittstellen (API) und die Daten sind für den optimalen Austausch genau spezifiziert. Die Seiten dieses Auftrittes thematisieren diese Spezifikationen für die optimale Unterstützung eines flexiblen Testsystems.
+
+Zurück nach oben

@@ -1,0 +1,56 @@
+# ResponseAnalyser VERA-Szenario
+
+Die Units, die das IQB im Rahmen von [VERA](https://www.iqb.hu-berlin.de/vera/) ausliefert, enthalten viele Daten, die für die länderseitigen Prozesse wichtig sind:
+
+- UI-Definition für die Durchführung über einen Verona-Player (z. B. im Testcenter)
+- Kodieranweisungen für die automatische und manuelle Kodierung
+- Metadaten für die Interpretation der Ergebnisse
+
+Außerdem enthält das [Assessment Package](../content-package/index.llms.md) Definitionen von Skalen für die Auswertung. Auch wenn ein Land nicht genau diese Skalen berichten möchte, enthalten die Skalendefinitionen wichtige Itemparameter für die Datenanalyse.
+
+![](../assets/response-analyser-vera.png)
+
+Aus diesem Grund kann es sinnvoll sein, den ResponseAnalyser in die Infrastruktur der länderseitigen Lernstandserhebungen einzubinden. Das obige Schema schlägt folgende Prozesse vor:
+
+# Inhaltspaket laden
+
+Das IQB plant, alle für die Online-Durchführung von VERA relevanten Daten über eine zentrale Stelle auszuliefern. Es handelt sich um zahlreiche
+
+- Daten, die über Spezifikationen in ihrem Format festgelegt sind (XML, JSON usw.) sowie um
+- Dateien mit spezifischer Funktion (z. B. Testcenter-Booklet).
+
+Das IQB nennt diese Daten **Assessment Package** - Inhaltspaket einer Testung. Ausgangspunkt einer Testung in den Ländern wäre dann also der Download dieses Paketes. Dafür erhalten die Länder bzw. die mit der Durchführung beauftragten Einrichtungen Zugangsdaten. Die Webanwendung, die für die Auslieferung von Inhaltspaketen verschiedener Erhebungen verantwortlich ist, wird dann als **ContentHub** bezeichnet.
+
+Das Inhaltspaket ist versioniert. Sollte es notwendig werden, an dem ausgegebenen Inhaltspaket Änderungen vorzunehmen, wird eine neue Versionsnummer vergeben und alle Beteiligten werden informiert.
+
+> **TIP:**
+>
+> Wenn ein Land Änderungen an den Testinhalten wünscht, müssen die entsprechenden Teile des Inhaltspaketes ausgetauscht bzw. angepasst werden. Für Units wäre es sinnvoll, die Webanwendung IQB-Studio zu installieren und damit die Änderungen vorzunehmen.
+
+# Management der Personen
+
+Für die Durchführung von VERA müssen üblicherweise die Lehrkräfte die Schülerinnen und Schüler klassen- oder kursweise anlegen. Für jede Testperson muss festgelegt werden, welche(s) Testheft(e) absolviert werden sollen. Daraus sind dann Login-Daten zu erstellen (QR-Code, Codelisten) und als XML in das Testcenter hochzuladen.
+
+Für eine möglichst aussagekräftige Rückmeldung sollten die Testpersonen Metadaten erhalten. Dies betrifft administrative Zuordnungen (Kreis, Stadt, Schule) oder Personenmerkmale wie “Klassenwiederholer” oder sozioökonomischer Index.
+
+# Testdurchführung
+
+Das IQB-Testcenter steht in der obigen Darstellung symbolisch für eine Software, die über die Verona-Schnittstelle das Abspielen der vom IQB gelieferten Units ermöglicht. Dies ist die Mindestvoraussetzung dafür, die auf diesen Seiten besprochenen Technologien zu nutzen.
+
+Das Testcenter bzw. der Player liefert die Antworten der Testperson in einem [standardisierten Format](https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html). Diese Antworten sollten zunächst gesammelt oder sonstwie aufbereitet werden für eine Qualitätsprüfung oder für eine effizientere Speicherung. Für die Weiterverarbeitung durch den IQB-ResponseAnalyser müssen die Antworten einer Person zusammengefasst werden.
+
+# Kodierung
+
+Die Variablen im VERA-Kontext sind teilweise automatisch, teilweise manuell zu kodieren. Einige Länder kodieren zentral, andere dezentral über die Lehrkräfte. Einige Länder möchten auch die automatisch kodierbaren Antworten durch die Lehrkräfte kodieren lassen, einige möchten die Arbeitslast der Lehrkräfte möglichst minimieren und geben während der Kodierung Empfehlungen auch über KI.
+
+Das bedeutet, dass es in jedem länderseitigen Portalsystem eine Möglichkeit geben muss, manuell zu kodieren. Die automatisch kodierbaren Antworten können an den ResponseAnalyser gegeben werden. Das kann zu Anfang erfolgen und/oder zwischendurch, denn nach dem Hinzufügen der manuell kodierten Daten kann es nötig sein, abgeleitete Variablen über einen zweiten Autocoderlauf zu ermitteln.
+
+# Berechnung der Fähigkeitswerte
+
+Über das Inhaltspaket gibt es eine Spezifikation, wie Itemwerte in Skalenwerte transformiert werden müssen. Hierzu steht eine generische Syntax zur Verfügung. Dadurch ist es egal, ob die Skala Lösungshäufigkeiten, Prozentränge oder IRT-basierte Skalen abbildet. Im Kern geht es stets darum, den Wert mehrerer Items auf eine Skala zu übersetzen. Der (pseudo-)numerische Skalenwert steht dann für ein bestimmtes Fähigkeitsniveau der Testperson.
+
+Der ResponseAnalyser versucht bei Übergabe der Antworten stets, soweit wie möglich zu kodieren und Itemwerte abzuleiten. Anschließend prüft die Software, ob mit den ermittelten Itemwerten Skalenwerte berechnet werden können. Der Aufrufer erhält also stets Fähigkeitswerte, wenn die Datenlage es hergibt.
+
+Anschließend kann man die gelieferten Skalenwerte weiter nach Bedarf transformieren.
+
+Zurück nach oben

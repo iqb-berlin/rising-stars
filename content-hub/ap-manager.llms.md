@@ -1,0 +1,48 @@
+# ContentHub: AP-Manager
+
+Ein Assessment Package (AP) muss vorher über einen Nutzer mit der Rolle “Application-Admin” angelegt werden. Außerdem muss mindestens einem Nutzer die Rolle “**AP-Manager**” zugewiesen sein. Nach dem Login erhält ein AP-Manager eine Liste aller AP, auf die er Zugriff hat, und kann in ein AP wechseln. Die Rolle AP-Manager hat das Recht, für das AP folgende Funktionen auszuführen:
+
+# Allgemeines Datenmanagement
+
+- Ansicht, Upload, Download und Ändern von Daten des AP-Index
+- Upload und Download von AP-Dateien
+- Snapshot erzeugen
+- Snapshot wiederherstellen
+- Download und Löschen ggf. der über den Nur-Lese-Zugriff vergebenen Kommentare
+
+# Nur-Lese-Zugriff auf das AP erteilen
+
+Der AP-Manager kann einen Nur-Lese-Zugriff auf das AP erteilen. Hierfür gibt es drei Modelle:
+
+1.  **Keine Beschränkung (Public)**: Bei diesem Modell hat jede nicht autorisierte Person Zugriff. Es gibt keine zeitliche Begrenzung. Der AP wird auf der Startseite der Webanwendung ContentHub mit dem Namen und einer Beschreibung aufgeführt, so dass Interessierte zu den Daten des AP finden.
+2.  **Nutzer des ContentHub**: Ein AP-Manager kann einem Nutzer, der vorher durch einen Application-Admin angelegt wurde, für das AP die Rolle Nur-Lese-Zugriff geben. Nach dem Login erhält der Nutzer dann eine Liste aller AP, auf die er Zugriff hat, und kann in diese AP wechseln.
+3.  **Benutzername und Kennwort**: Ein AP-Manager kann eine Liste erstellen oder hochladen, in der pro Zeile ein Benutzername und ein Kennwort festgelegt ist. Diese Daten autorisieren den Nur-Lese-Zugriff für das AP. Der AP-Manager muss den Zugriff über diese Liste zeitlich begrenzen. Es ist ein Zeitraum von maximal 3 Monaten zulässig. Ein AP, das über diesen Weg einen Zugriff erlaubt, wird auf der Startseite der Webanwendung ContentHub mit dem Namen und einer Beschreibung aufgeführt. Nach dem Klicken auf den Namen ist die Eingabe der Login-Daten nötig und dann gelangt man zum AP.
+
+Die Optionen 1 und 3 schließen einander aus. Die Option 2 kann zusätzlich zu den Optionen 1 oder 3 gewählt werden.
+
+# Funktionen freigeben und konfigurieren
+
+Folgende Funktionen stehen für den Nur-Lese-Zugriff in dem jeweiligen AP zur Verfügung:
+
+- Interaktive Ansicht aller Daten eines AP-Index
+- Liste aller Units des AP
+
+Der AP-Manager legt fest, welche weiteren Funktionen für den Nur-Lese-Zugriff in dem jeweiligen AP zur Verfügung stehen und kann diese Funktionen teilweise konfigurieren:
+
+- Download des AP-Index
+- Download von Units (Zip-Datei)
+- Download anderer AP-Dateien
+- Ansicht/Abspielen von Units (über Verona-Player); hier kann festgelegt werden,
+  - ob zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist
+  - ob die Units aus der obigen Liste aller Units des AP aufgerufen werden können
+  - ob aus Testcenter-Booklets des AP Aufgabenfolgen gebildet werden sollen, die dann die Anzeige mehrerer Units in Folge ermöglicht
+  - ob Kommentare zu Units, Items und/oder Aufgabenfolgen gegeben werden können
+- Erzeugen und Anzeige einer Liste aus allen Items des AP; hier kann festgelegt werden,
+  - welche Unit- und Item-Metadaten in die Liste kopiert werden sollen,
+  - ob ein Item bei Klick auf den Listeneintrag angezeigt werden soll
+  - ob bei der Anzeige eines Items zusätzlich die Anzeige von Metadaten, RichText-Inhalten und Kodierschema möglich ist
+  - ob die Itemliste gefiltert und sortiert werden kann
+  - ob für Items in der Liste Markierungen vergeben werden können (Tags); welche Tags sind möglich?
+  - ob die gewählte Sortierung, der gewählte Filter und die vergebenen Markierungen nutzerspezifisch gespeichert werden sollen (nur möglich bei Zugriffsbeschränkung)
+
+Zurück nach oben

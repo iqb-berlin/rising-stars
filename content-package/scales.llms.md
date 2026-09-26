@@ -1,0 +1,451 @@
+# AP-Index: Fähigkeitswerte
+
+Metriken und Skalen
+
+# Allgemeines Modell
+
+## Kompetenzmessungen
+
+Um die von Testteilnehmenden erreichten Kompetenzen über verschiedene Studien hinweg vergleichbar zu machen, müssen alle ermittelten Kompetenzwerte auf einer gemeinsamen Metrik abgebildet werden. Beispielsweise wurde im Fach Deutsch die Berichtsmetrik im IQB-Bildungstrend für die einzelnen Kompetenzbereiche so normiert, dass sie im Jahr 2015 in der Population der Neuntklässler:innen in Deutschland einen Mittelwert von M = 500 Punkten und eine Standardabweichung von SD = 100 Punkten aufweist.
+
+Zur inhaltlichen Einordnung der Messergebnisse aus bildungsstandardbasierten Schulleistungstests wurden darüber hinaus Kompetenzstufenmodelle entwickelt. Diese Modelle unterteilen das kontinuierliche Kompetenzspektrum in eine begrenzte Anzahl inhaltlich interpretierbarer Niveaustufen. Auf Basis dieser Modelle werden die individuellen Testwerte der Teilnehmenden entsprechenden Kompetenzstufen zugeordnet.
+
+Beispielsweise kann eine Person im Kompetenzbereich *Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss – Erkenntnisgewinnung* der Stufe IV zugeordnet werden, die inhaltlich wie folgt beschrieben werden kann „Begründetes Auswählen und Nutzen von naturwissenschaftlichen Methoden der Erkenntnisgewinnung (Experimente und Modelle) in komplexen Zusammenhängen“.
+
+Kompetenzstufenmodelle sind theoretisch fundiert, empirisch validiert und in der Regel öffentlich dokumentiert.
+
+## Bericht der Kompetenzmessungen auf verschiedenen Metriken
+
+Somit ergeben sich verschiedene Metriken, auf denen Testergebnisse bzw. Kompetenzmessungen berichtet werden können. Beispiele:
+
+- Lösungshäufigkeit: 55 %
+- Prozentrang: 65
+- Punktwert (Bildungsstandard-Metrik): 366
+- Kompetenzstufe: Ib
+- Standard: „Mindeststandard“
+
+Jeder dieser Werte repräsentiert eine unterschiedliche Perspektive auf dieselbe zugrunde liegende Kompetenzschätzung – von der rohen Aufgabenlösung bis hin zur normierten Standardmetrik oder kategorialen Einstufung.
+
+Diese Metriken werden im Folgenden und in der gesamten Softwarespezifikation „Skala“ oder „scale“ genannt. Im Kontext der folgenden Spezifikationen des “Assessment Package” bezeichnen „Skalen“ somit Skalen im mathematisch-statistischen Sinn (z. B. ordinal, intervall, ratio) und sind nicht direkt inhaltlich konnotiert.
+
+## Datentyp
+
+Der Skalenwert ist in der vorliegenden Datenspezifikation stets numerisch. Allerdings handelt es sich dabei selten um eine rein kontinuierliche Skala, sondern um Kategorien. Es gibt dann die Werte “2” und “3”, aber der Zwischenwert “2,4” ist nicht definiert. Gleichwohl gilt – da es sich dann um Fähigkeitsstufen handelt – dass “2” eine geringere Fähigkeit ausdrückt als “3”.
+
+Obwohl also der Datentyp numerisch ist, kann mitunter der Wert nicht als numerisch interpretiert werden. Eine Skala kann numerisch, aber nicht metrisch sein. Dann ist ein Wert 4 nicht doppelt so ‘gut’ wie ein Wert 2.
+
+Diese Überlegungen sind sehr wichtig für die Interpretation der Skalenwerte. Eine Präsentation von Ergebnissen im Rahmen von Rückmeldungen oder einem Dashboard muss stets die Aussagekraft der Skalenwerte beachten und verkürzte (z. B. grafische) Darstellungen sehr sorgfältig wählen.
+
+## Ableitung
+
+Die vorliegende Datenspezifikation unterscheidet zwischen Skalen, die direkt aus den Itemwerten berechnet werden (sog. Basisskalen) und Skalen, die aus anderen Skalen abgeleitet werden. Dieses Ableitungsverfahren gestattet eine flexible Transformation von Fähigkeitswerten und damit eine gute Anpassung an die Traditionen der Rückmeldung.
+
+## Referenz zu einem Kompetenzstufenmodell
+
+Die Skalen dieser Datenspezifikation erlauben eine Referenz zu einem öffentlich verfügbaren Kompetenzstufenmodell. Das IQB hat [hier](https://skohub.io/iqb-vocabs/v71/heads/master/) die KMK-Kompetenzstufenmodelle als SKOS-Vokabulare mit permanenten IDs veröffentlicht. Damit ist es möglich, die Ergebnisse einer Lernstandserhebung automatisch mit öffentlich verfügbaren Materialempfehlungen zu verbinden. Dazu muss dann Material bereitgestellt werden, das in den Metadaten z. B. didaktische Hilfen für spezifische Kompetenzstufen ausweist.
+
+Das Prinzip der Referenz beschränkt sich natürlich nicht auf Kompetenzstufenmodelle. Sobald eine kategoriale Skala öffentlich verfügbar ist, kann diese als Referenz genutzt werden.
+
+# Umsetzung als Datenspezifikation
+
+Die Spezifikation einer Skala ist nicht Teil des AP-Index, sondern ist [separat geführt](https://iqb-specifications.github.io/acp-scale/).
+
+## Allgemeine Angaben
+
+Dazu gehören `id`, `name` und `description`. Die ID wird in allen Datenlisten verwendet. Es gibt dafür (noch) keine Konvention, Vorschläge wären z. B. `bs2004.ma.9.global`, `bs2024.ma.9.3`, `fcr.de.reading`.
+
+Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+
+## Typ
+
+Wir unterscheiden drei Typen von Skalen `scaleType`, die jeweils spezifische Parameter benötigen `typeParameters`.
+
+### `BASE`
+
+Eine Basisskala wird direkt aus den Itemwerten ermittelt. Üblicherweise ist dies der Score der Itemvariablen (0, 1, 2 usw. bzw. negative Werte für Missings), in Sonderfällen auch der Code:
+
+- `method`: Hier wird die Methode festgelegt, mit welcher die Itemwerte zum Skalenwert verarbeitet werden. Als Methoden stehen für den Score des Items `SCORE_SUM`, `SCORE_RATIO`, `SCORE_MEAN`, `SCORE_MEDIAN` und `WLE` zur Verfügung. Soll (z. B. für das Berichten von Fehlkonzepten) auf den Code des Items zugegriffen werden, kann die Methode `CODE_COUNT` benutzt werden. Eine ausführliche Dokumentation jeder Methode folgt.
+- `methodParameters`: Sollte eine Methode besondere Zusatzparameter benötigen, sind diese separat zu übergeben. Für `SCORE_RATIO` wäre das beispielsweise `maxValue`, d. h. für die Lösungshäufigkeit wird der 100%-Wert mitgeteilt.
+- `items`: An dieser Stelle müssen alle Items aufgeführt werden, die für die Berechnung des Skalenwertes herangezogen werden müssen.
+  - `id` zur Referenzierung
+  - `parameters`: Je nach Methode kann es erforderlich sein, spezifische Itemkennwerte zu übergeben. Es handelt sich um eine `key`/`value`-Liste. Als Schlüsselwerte sind bisher vorgesehen `LOGIT_FULL_CREDIT`, `LOGIT_PARTIAL_CREDIT_1`, `LOGIT_PARTIAL_CREDIT_2` und `LOGIT_PARTIAL_CREDIT_3`. Diese Parameter sind nötig für die Schätzung von WLE.
+  - `weight`: Mit diesem numerischen Parameter ist es möglich, den Beitrag eines einzelnen Items zu modifizieren
+- `minItemNumber`: Ist dieser Wert größer als ‘0’, dann wird der Fähigkeitswert dieser Skala nur berichtet, wenn diese Mindestanzahl von Items durch die Testperson beantwortet wurde.
+
+### `DERIVED`
+
+Abgeleitete Skalen transformieren den Wert aus einer anderen Skala. Es handelt sich meist darum, metrische Werten in eine ordinale Skala zu überführen (z. B. Bista-Metrik in Kompentenzstufenmodell).
+
+- `source`: Hier ist die Skala anzugeben mit ihrer ID, deren Wert in die neue Skala übersetzt werden soll.
+- `publicVocabularyUrl`: Wenn die Skala einer gut etablierten ordninalen Skala entspricht, ist sie eventuell als Vokabular veröffentlicht. Wenn hier ein Link auf diese Skala eingetragen wird, erhöht man die Interoperabilität: Skalen aus unterschiedlichen Testungen, die auf dieselbe öffentliche Skala verweisen, haben vergleichbare Werte.
+- `mappings`: Der erste Eintrag in dieser Liste, für den ein `true` ermittelt wurde, liefert den neuen Skalenwert. Wird kein zutreffender Eintrag gefunden, bekommt die Skala den Wert von `else` (s. u.). Folgende Eigenschaften sind für jeden Eintrag vorgesehen:
+  - `method`, `methodParameters`: Für die Vergleichsmethode stehen zur Verfügung `EQUALS`, `LESS_THAN`, `MORE_THAN`, `MAX` und `MIN`. Der Operand wird in der Eigenschaft `methodParameters` übergeben. Es handelt sich um ein Array, falls spätere Methoden mehrere Parameter benötigen.
+  - `newValue`: Der neue Wert, der bei Zutreffen der Methode den neuen Skalenwert bildet. Es handelt sich um ein Objekt mit den Eigenschaften `value`, `label`, `description` und `publicVocabularyEntry`. Letzteres ist ein Suffix für einen konkreten Eintrag im öffentlichen Vokabular, das unter `publicVocabularyUrl` genannt wurde
+- `else`: Dieser Wert wird gesetzt, wenn kein Eintrag aus der Mapping-Liste zutrifft. Es handelt sich um ein Objekt mit den Eigenschaften `value`, `label`, `description` und `publicVocabularyEntry`. Letzteres ist ein Suffix für einen konkreten Eintrag im öffentlichen Vokabular, das unter `publicVocabularyUrl` genannt wurde.
+
+### `AGGREGATED`
+
+Aggregierte Skalen bilden einen neuen Wert aus mehreren anderen Skalen.
+
+- `id`, `name`, `description`: Die ID wird in allen Datenlisten verwendet. Ein Name und optional eine Beschreibung unterstützen die UI (sprachdifferenziert).
+- `method`: Mathematische Methode, wie der neue Wert gebildet wird: `SUM` oder `MEAN`.
+- `sources`: Hier sind die Skalen anzugeben mit ihrer ID, deren Wert in die neue Skala eingehen soll. Hier ist die `id` erforderlich, und eine Wichtung kann über den Parameter `weight` vorgenommen werden.
+
+## Beispiele
+
+BASIC Lösungshäufigkeit
+
+``` json
+{
+  "id": "base1.fcr",
+  "name": [
+    {
+      "lang": "de",
+      "value": "Lösungshäufigkeit"
+    },
+    {
+      "lang": "en",
+      "value": "full credit ratio"
+    }
+  ],
+  "description": [
+    {
+      "lang": "de",
+      "value": "Demo Skala vom Typ 'BASE' für Lösungshäufigkeit (Prozent)"
+    },
+    {
+      "lang": "en",
+      "value": "Demo scale BASE for full credit ratio"
+    }
+  ],
+  "scaleType": "BASE",
+  "typeParameters": {
+    "method": "SCORE_RATIO",
+    "methodParameters": {
+      "maxValue": 8
+    },
+    "items": [
+      {
+        "id": "JU7662804"
+      },
+      {
+        "id": "JU7662801"
+      },
+      {
+        "id": "JU7662802"
+      },
+      {
+        "id": "JU7662803"
+      }
+    ]
+  }
+}
+```
+
+Hinweis: Die Obergrenze von 8 resultiert daraus, dass die Items für Full Credit einen Score von 2 liefern.
+
+BASIC Bista-Metrik (WLE)
+
+``` json
+{
+  "id": "base2.wle",
+  "name": [
+    {
+      "lang": "de",
+      "value": "Bista-Metrik (WLE)"
+    }
+  ],
+  "description": [
+    {
+      "lang": "de",
+      "value": "Demo Skala vom Typ 'BASE' für Metrik der Bildungsstandards (WLE)"
+    }
+  ],
+  "scaleType": "BASE",
+  "typeParameters": {
+    "method": "WLE",
+    "items": [
+      {
+        "id": "JU7662804",
+        "parameters": [
+          {
+            "key": "LOGIT_FULL_CREDIT",
+            "value": "0.3345"
+          }
+        ]
+      },
+      {
+        "id": "JU7662801",
+        "parameters": [
+          {
+            "key": "LOGIT_FULL_CREDIT",
+            "value": "0.357845"
+          }
+        ]
+      },
+      {
+        "id": "JU7662802",
+        "parameters": [
+          {
+            "key": "LOGIT_FULL_CREDIT",
+            "value": "0.43945"
+          }
+        ],
+        "weight": 2
+      },
+      {
+        "id": "JU7662803",
+        "parameters": [
+          {
+            "key": "LOGIT_FULL_CREDIT",
+            "value": "0.1305"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Hinweis: Der Parameter `LOGIT_FULL_CREDIT` ist ein sog. Itemkennwert und wird für die Berechnung des WLE benötigt.
+
+DERIVED Prozentrang
+
+``` json
+{
+  "id": "derived1.percent-ranking",
+  "name": [
+    {
+      "lang": "de",
+      "value": "Prozentrang"
+    }
+  ],
+  "description": [
+    {
+      "lang": "de",
+      "value": "Demo-Skala zur Ableitung eines Prozentranges."
+    }
+  ],
+  "scaleType": "DERIVED",
+  "typeParameters": {
+    "source": "base1.fcr",
+    "mappings": [
+      {
+        "method": "MIN",
+        "parameters": [
+          "75"
+        ],
+        "newValue": {
+          "value": 80
+        }
+      },
+      {
+        "method": "MIN",
+        "parameters": [
+          "50"
+        ],
+        "newValue": {
+          "value": 70
+        }
+      },
+      {
+        "method": "MIN",
+        "parameters": [
+          "25"
+        ],
+        "newValue": {
+          "value": 50
+        }
+      }
+    ],
+    "else": {
+      "value": 0
+    }
+  }
+}
+```
+
+Hinweis: Eine Prozentrang-Ableitung verschiebt die Verteilung in einem gewünschtem Maße.
+
+DERIVED Kompetenzstufen
+
+``` json
+{
+  "id": "derived2.comp-level",
+  "name": [
+    {
+      "lang": "de",
+      "value": "Kompetenzstufen Ma-P-GM"
+    }
+  ],
+  "description": [
+    {
+      "lang": "de",
+      "value": "Demo-Skala zur Ableitung einer Kompetenzstufe für das Fach Mathematik Primarstufe Globalmodell."
+    }
+  ],
+  "scaleType": "DERIVED",
+  "typeParameters": {
+    "source": "base2.wle",
+    "publicVocabularyUrl": "https://w3id.org/iqb/v71/mp1/",
+    "mappings": [
+      {
+        "method": "MIN",
+        "parameters": [
+          "600"
+        ],
+        "newValue": {
+          "value": 5,
+          "label": [
+            {
+              "lang": "de",
+              "value": "Stufe V"
+            }
+          ],
+          "description": [
+            {
+              "lang": "de",
+              "value": "Modellierung komplexer Probleme unter selbstständiger Entwicklung geeigneter Strategien"
+            }
+          ],
+          "publicVocabularyEntry": "p2p"
+        }
+      },
+      {
+        "method": "MIN",
+        "parameters": [
+          "530"
+        ],
+        "newValue": {
+          "value": 4,
+          "label": [
+            {
+              "lang": "de",
+              "value": "Stufe IV"
+            }
+          ],
+          "description": [
+            {
+              "lang": "de",
+              "value": "sicheres und flexibles Anwenden von begrifflichem Wissen und Prozeduren im curricularen Umfang"
+            }
+          ],
+          "publicVocabularyEntry": "c2q"
+        }
+      },
+      {
+        "method": "MIN",
+        "parameters": [
+          "460"
+        ],
+        "newValue": {
+          "value": 3,
+          "label": [
+            {
+              "lang": "de",
+              "value": "Stufe III"
+            }
+          ],
+          "description": [
+            {
+              "lang": "de",
+              "value": "einfache Anwendungen von Grundlagenwissen (Routineprozeduren in einem klar strukturierten Kontext)"
+            }
+          ],
+          "publicVocabularyEntry": "a5v"
+        }
+      },
+      {
+        "method": "MIN",
+        "parameters": [
+          "390"
+        ],
+        "newValue": {
+          "value": 2,
+          "label": [
+            {
+              "lang": "de",
+              "value": "Stufe II"
+            }
+          ],
+          "description": [
+            {
+              "lang": "de",
+              "value": "einfache Anwendungen von Grundlagenwissen (Routineprozeduren in einem klar strukturierten Kontext)"
+            }
+          ],
+          "publicVocabularyEntry": "e3y"
+        }
+      }
+    ],
+    "else": {
+      "value": 1,
+      "label": [
+        {
+          "lang": "de",
+          "value": "Stufe I"
+        }
+      ],
+      "description": [
+        {
+          "lang": "de",
+          "value": "technische Grundlagen (Routineprozeduren auf Grundlage einfachen begrifflichen Wissens)"
+        }
+      ],
+      "publicVocabularyEntry": "a9d"
+    }
+  }
+}
+```
+
+Hinweis: Hier wird der numerische Wert einer Metrik “500 100” für Bildungsstandards in eine Kompetenzstufe übersetzt. Die Stufen sind mit Bezeichnungen versehen und außerdem mit einem Online-Vokabular verlinkt.
+
+AGGREGATED
+
+``` json
+{
+  "id": "aggregated.sum-global",
+  "name": [
+    {
+      "lang": "de",
+      "value": "Summieren von Subskalen"
+    }
+  ],
+  "description": [
+    {
+      "lang": "de",
+      "value": "Demo-Skala für das Summieren der Itemsummen aus Subskalen zu einem globalen Skalenwert."
+    }
+  ],
+  "scaleType": "AGGREGATED",
+  "typeParameters": {
+    "method": "SUM",
+    "sources": [
+      {
+        "id": "fcs.subscale1"
+      },
+      {
+        "id": "fcs.subscale2",
+        "weight": 2
+      },
+      {
+        "id": "fcs.subscale3"
+      }
+    ]
+  }
+}
+```
+
+Hinweis: In diesem Beispiel wurden für drei Subskalen die Summen der Itemscores ermittelt. Der Wert der Globalskala ergibt sich aus der Summe dieser Subskalen, da alle Items der Subskalen gleichzeitig zum Globalmodell beitragen. Eine der Subskalen wird doppelt gewichtet.
+
+# StarS und VERA
+
+Im **StarS**-Projekt werden zuerst Lösungshäufigkeiten berechnet (Basisskala). Danach wird dieser Wert in einen Prozentrang transformiert (1. Ableitung). Anschließend wird der Prozentrang mehrerer Sub-Domänen aggregiert (Aggregation) und dann in einen Wert transformiert, der das Erreichen des Minimalstandards im jeweiligen korrespondierenden Kompetenzstufenmodell prognostiziert (2. Ableitung). Diese letzte Skala besteht aus 2 oder 3 Risikostufen.
+
+Für **VERA** sind die Itemschwierigkeiten bekannt. Pro Skala und Item wird dann ein Parameter “LOGIT” bereitgestellt, mit dessen Hilfe die Personenfähigkeit geschätzt werden kann[^1]. Diese Berechnung kann automatisch erfolgen. Hierzu ist dann der Parameter `items` einer Basiskala entsprechend zu erweitern. Zusätzlich werden Skalen für Lösungshäufigkeiten geliefert.
+
+Zurück nach oben
+
+## Fußnoten
+
+[^1]: auf die Metrik der Bildungsstandards transformierter WLE inklusive Vertrauensintervall
