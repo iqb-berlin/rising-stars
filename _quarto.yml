@@ -8,6 +8,7 @@ website:
   site-url: https://iqb-berlin.github.io/rising-stars
   favicon: assets/favicon.ico
   repo-url: https://github.com/iqb-berlin/rising-stars
+  llms-txt: true
   title: StarS Werkstatt
   page-navigation: true
   navbar:
