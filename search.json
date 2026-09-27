@@ -421,7 +421,7 @@
     "href": "response-analyser/index.html#unit",
     "title": "ResponseAnalyser",
     "section": "Unit",
-    "text": "Unit\n\nFür das automatische Kodieren ist das Kodierschema der Unit erforderlich. Es wird unverändert an den Autocoder weitergegeben, ohne dass der ResponseAnalyser eine Validierung o. ä. vornehmen müsste. Probleme meldet ggf. der Autocoder.\nDie Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfache Key-Value-Struktur überführt werden - der sog. Itemwert-Liste. Für diese Transformation sind die Informationen Item-Liste aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).",
+    "text": "Unit\n\nFür das automatische Kodieren ist das Kodierschema der Unit erforderlich. Es wird unverändert an den Autocoder weitergegeben, ohne dass der ResponseAnalyser eine Validierung o. ä. vornehmen müsste. Probleme meldet ggf. der Autocoder.\nDie Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfachere Struktur (id, code, score) überführt werden - der sog. Itemwert-Liste. Für diese Transformation sind die Informationen Item-Liste aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).",
     "crumbs": [
       "ResponseAnalyser"
     ]

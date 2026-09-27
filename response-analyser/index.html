@@ -252,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#unit" id="toc-unit" class="nav-link" data-scroll-target="#unit">Unit</a></li>
   <li><a href="#skalen" id="toc-skalen" class="nav-link" data-scroll-target="#skalen">Skalen</a></li>
   </ul></li>
-  <li><a href="#offene-punkte" id="toc-offene-punkte" class="nav-link" data-scroll-target="#offene-punkte">Offene Punkte</a></li>
+  <li><a href="#konfiguration" id="toc-konfiguration" class="nav-link" data-scroll-target="#konfiguration">Konfiguration</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/response-analyser-api"><i class="bi bi-link-45deg"></i>API-Spezifikation</a></li></ul></div></nav>
     </div>
@@ -390,7 +390,7 @@ Hinweis
 <h2 class="anchored" data-anchor-id="unit">Unit</h2>
 <ul>
 <li>Für das automatische Kodieren ist das <strong>Kodierschema</strong> der Unit erforderlich. Es wird unverändert an den Autocoder weitergegeben, ohne dass der ResponseAnalyser eine Validierung o. ä. vornehmen müsste. Probleme meldet ggf. der Autocoder.</li>
-<li>Die Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfache Key-Value-Struktur überführt werden - der sog. Itemwert-Liste. Für diese Transformation sind die Informationen <strong>Item-Liste</strong> aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).</li>
+<li>Die Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfachere Struktur (id, code, score) überführt werden - der sog. Itemwert-Liste. Für diese Transformation sind die Informationen <strong>Item-Liste</strong> aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).</li>
 </ul>
 </section>
 <section id="skalen" class="level2">
@@ -398,11 +398,17 @@ Hinweis
 <p>Um die Fähigkeitswerte zu ermitteln, werden Itemwerte verarbeitet. Die Regeln hierzu sind in der Datenstruktur <strong>Skalendefinition</strong> gespeichert.</p>
 </section>
 </section>
-<section id="offene-punkte" class="level1">
-<h1>Offene Punkte</h1>
+<section id="konfiguration" class="level1">
+<h1>Konfiguration</h1>
+<p>Neben dem Hochladen der Unitdaten und der Skalen soll der ResponseAnalyser eine Konfiguration erhalten, mit der das Standardverhalten punktuell überschrieben werden kann.</p>
 <ul>
-<li>mehrere Unit-Aliase</li>
-<li>wie meldet der ResponseAnalyser Probleme?</li>
+<li><strong>Missings</strong>: Aus der Datenstruktur der Antwort wird ein Status mitgeliefert. Der gewünschte Status nach der Kodierung ist <code>CODING_COMPLETE</code>. Alle anderen Werte führen dazu, dass entweder das Item den Wert <code>0</code> oder einen negativen Wert für das statistische <code>sysmis</code> erhält. In der Missing-Map kann man steuern, wann welcher der beiden Werte gesetzt wird.</li>
+<li><strong>Itemname</strong>: Sollte für eine Unit keine Itemliste geliefert werden, kann man Items aus den Variablen der Unit automatisch erzeugen. Standardverhalten wäre, dass alle Variablen Items sind und als Präfix den Alias der Unit bekommen. Varianten:
+<ol type="a">
+<li>ein bestimmtes Zeichen soll als Trenner eingefügt werden,</li>
+<li>wenn der Variablenname eine bestimmte Länge überschreitet (z. B. 4), dann soll kein Präfix gesetzt werden,</li>
+<li>wenn es nur eine Variable pro Unit mit <code>CODING_COMPLETE</code> gibt, dann soll das Item den Unit-Alias als Namen bekommen (Weglassen des Variablennamens)</li>
+</ol></li>
 </ul>
 
 
