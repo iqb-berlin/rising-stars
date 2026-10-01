@@ -38,11 +38,11 @@ Achtung: Das IQB-Logo in der linken oberen Ecke wird in der tatsächlichen Durch
 
 ## Herunterladen
 
-1.  [ Herunterladen Player](#dnldts6412)
+1.  [ Herunterladen Player](#dnldts24202)
 
-2.  [ Herunterladen Aufgaben](#dnldts9152)
+2.  [ Herunterladen Aufgaben](#dnldts17975)
 
-3.  [ Herunterladen Testhefte](#dnldts23697)
+3.  [ Herunterladen Testhefte](#dnldts7891)
 
 ### IQB-Testcenter
 
