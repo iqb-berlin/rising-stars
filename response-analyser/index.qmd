@@ -7,6 +7,8 @@ format:
         other-links:
             - text: API-Spezifikation
               href: https://iqb-specifications.github.io/response-analyser-api
+            - text: Konfiguration Itemmatrix
+              href: https://iqb-specifications.github.io/item-matrix-rules/
 aliases: 
   - "/coding-service/index.html"
 ---
@@ -60,10 +62,16 @@ Nach dem Anlegen sollten einmalig alle übergreifenden permanenten Daten in den 
 
 * Kodierschemata aller Units
 * Liste aller Items
-* Konfiguration (Missing-Map usw. s. u.)
 * alle Skalendefinitionen
+* Konfiguration (Missing-Map usw. s. u.; falls abweichend von Standard-Konfiguration)
 
-Wenn sich zwischenzeitlich einige dieser Daten ändern (z. B. ein Kodierschema wurde als fehlerhaft erkannt und soll ausgetauscht werden), dann sollten alle Workspace-Daten gelöscht und komplett neu eingespielt werden. Die Portallösung sollte gewährleisten, dass Änderungen die Vergleichbarkeit der Ergebnisse nicht gefährdet und ggf. alle Antworten erneut analysieren lassen.
+Wenn sich zwischenzeitlich einige dieser Daten ändern (z. B. ein Kodierschema wurde als fehlerhaft erkannt und soll ausgetauscht werden), können einzelne Unit- oder Skalendefinitionen überschrieben werden. Es kann nicht selektiv gelöscht werden, sondern es sollte dann durch die Portallösung der Workspace gelöscht und neu angelegt werden.
+
+:::{.callout-caution}
+
+Das Portalsystem muss alle Konsequenzen einer Änderung von Workspace-Inhalten selbst abschätzen. Es müssten dann wahrscheinlich bereits erfolgte Berechnungen wiederholt werden, ggf. selektiv je nach Änderung.
+
+:::
 
 ## Durchführung
 
@@ -72,7 +80,7 @@ Während der Testung werden fortlaufend die Antworten an den ResponseAnalyser mi
 * Für jede Person werden alle verfügbaren Antworten übergeben
 * Aus der Datenbank werden - sofern vorhanden - für diese Person zusätzliche Daten aus anderen Quellen übergeben (Item-Werte, Skalen-Werte)
 
-Der ResponseAnalyser kennt alle theoretisch möglichen Skalenwerte, meldet aber nur die zurück, zu denen er Daten erhalten hat.
+Der ResponseAnalyser kennt alle theoretisch möglichen Skalenwerte, meldet aber nur die zurück, zu denen er Daten erhalten hat. Sollte ein Fehler aufgetaucht sein bei dem Versuch, einen Skalenwert zu berechnen, dann wird dieser Fehler gemeldet.
 
 Der Output des ResponseAnalysers soll in einer Datenbank gespeichert werden. Aus dieser Quelle werden anschließend die Aggregationsdaten (Klasse, Schule usw.) erstellt, die Rückmelde-Diagramme gespeist und ggf. Daten an externe Dashboards übermittelt.
 
@@ -103,7 +111,7 @@ Während des Kodierprozesses bleibt die Datenstruktur der Antwort erhalten. Es w
 ## Unit
 
 * Für das automatische Kodieren ist das **Kodierschema** der Unit erforderlich. Es wird unverändert an den Autocoder weitergegeben, ohne dass der ResponseAnalyser eine Validierung o. ä. vornehmen müsste. Probleme meldet ggf. der Autocoder.
-* Die Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfachere Struktur (id, code, score) überführt werden - der sog. Itemwert-Liste. Für diese Transformation sind die Informationen **Item-Liste** aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).
+* Die Antworten werden zunächst für jede Unit getrennt auf der Basis von Variablen verarbeitet. Diese Datenstruktur muss vor der Skalierung in eine einfachere Struktur (id, code, score) überführt werden - der sog. Item-Matrix. Für diese Transformation sind die Informationen **Item-Liste** aus den Unitdaten erforderlich sowie allgemeine Regeln zur Umbenennung und zur Behandlung fehlender Werte (s. u.).
 
 ## Skalen
 
@@ -113,8 +121,8 @@ Um die Fähigkeitswerte zu ermitteln, werden Itemwerte verarbeitet. Die Regeln h
 
 Neben dem Hochladen der Unitdaten und der Skalen soll der ResponseAnalyser eine Konfiguration erhalten, mit der das Standardverhalten punktuell überschrieben werden kann.
 
-* **Missings**: Aus der Datenstruktur der Antwort wird ein Status mitgeliefert. Der gewünschte Status nach der Kodierung ist `CODING_COMPLETE`. Alle anderen Werte führen dazu, dass entweder das Item den Wert `0` oder einen negativen Wert für das statistische `sysmis` erhält. In der Missing-Map kann man steuern, wann welcher der beiden Werte gesetzt wird.
 * **Itemname**: Sollte für eine Unit keine Itemliste geliefert werden, kann man Items aus den Variablen der Unit automatisch erzeugen. Standardverhalten wäre, dass alle Variablen Items sind und als Präfix den Alias der Unit bekommen. Varianten:
   (a) ein bestimmtes Zeichen soll als Trenner eingefügt werden,
   (b) wenn der Variablenname eine bestimmte Länge überschreitet (z. B. 4), dann soll kein Präfix gesetzt werden,
   (c) wenn es nur eine Variable pro Unit mit `CODING_COMPLETE` gibt, dann soll das Item den Unit-Alias als Namen bekommen (Weglassen des Variablennamens)
+* **Missings**: Aus der Datenstruktur der Antwort wird ein Status mitgeliefert. Der gewünschte Status nach der Kodierung ist `CODING_COMPLETE`. Alle anderen Werte führen dazu, dass entweder das Item den Wert `0` oder einen negativen Wert für das statistische `sysmis` erhält. In der Missing-Map kann man steuern, wann welcher der beiden Werte gesetzt wird.
